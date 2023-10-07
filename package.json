@@ -1,0 +1,53 @@
+{
+    "name": "robinson",
+    "version": "1.0.0",
+    "description": "",
+    "main": "/dist/esm/index.js",
+    "scripts": {
+        "doc": "api-extractor run --local --verbose && api-documenter markdown -i temp -o etc/doc",
+        "doc:debug": "api-extractor run --local --verbose --diagnostics && api-documenter markdown -i temp -o etc/doc",
+        "trace": "tsc dist/types/index.d.ts --traceResolution > trace.log",
+        "docs:dev": "vitepress dev",
+        "docs:build": "vitepress build",
+        "docs:preview": "vitepress preview",
+        "commit": "cz",
+        "prepare": "husky install",
+        "test": "jest",
+        "lint": "eslint --fix --ext .js,.vue src",
+        "build": "npx rollup -c"
+    },
+    "author": "",
+    "license": "ISC",
+    "config": {
+        "commitizen": {
+            "path": "./node_modules/cz-conventional-changelog"
+        }
+    },
+    "devDependencies": {
+        "fast-glob": "^3.3.1",
+        "@babel/core": "^7.22.20",
+        "@babel/preset-env": "^7.22.20",
+        "@rollup/plugin-babel": "^6.0.3",
+        "@babel/preset-typescript": "^7.22.15",
+        "@microsoft/api-documenter": "^7.23.2",
+        "@microsoft/api-extractor": "^7.37.0",
+        "@rollup/plugin-alias": "^5.0.0",
+        "@rollup/plugin-terser": "^0.4.3",
+        "@types/node": "^20.6.4",
+        "rollup-plugin-dts": "^6.0.2",
+        "rollup-plugin-typescript2": "^0.35.0",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.2.2",
+        "eslint": "^8.50.0",
+        "@typescript-eslint/parser": "^6.7.4",
+        "@typescript-eslint/eslint-plugin": "^6.7.4",
+        "husky": "^8.0.0",
+        "commitizen": "^4.3.0",
+        "cz-conventional-changelog": "^3.3.0",
+        "jest": "^29.7.0",
+        "jest-environment-jsdom": "^29.7.0",
+        "vitepress": "1.0.0-rc.20",
+        "vue": "^3.3.4",
+        "rollup": "^3.29.2"
+    }
+}
