@@ -2,7 +2,6 @@
 /.vitepress/dist
 /.vitepress/cache
 /dist
-/src/
 /doc/
 /coverage
 /temp

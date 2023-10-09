@@ -1,3 +1,8 @@
-/node_modules
-/dist
-/doc 
+/node_modules/
+/dist/
+/doc
+/.eslintrc.js
+/test/
+/rollup.config.js/
+./index.test.js
+./.eslintrc.js
