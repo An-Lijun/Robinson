@@ -1,4 +1,4 @@
-import { getStringType, is, isEmpty } from '../src/index';
+import { getStringType, is, isEmpty,hasTypeIn } from '../src/index';
 describe('getStringType', () => {
   test('undefined ', () => {
     expect(getStringType(undefined)).toBe('[object undefined]');
@@ -87,8 +87,10 @@ describe('is', () => {
     expect(is(new Array(), 'array')).toBe(true);
   });
 });
+
+
 let s1 = new Set('1');
-let isEmptyArr = [
+let isEmptyTest = [
   [null, true],
   [undefined, true],
   [void 0, true],
@@ -104,11 +106,11 @@ let isEmptyArr = [
   [Infinity, false],
   [-Infinity, false],
   [123n, false],
-  [new Number(), false],
+  [new Number(), true],
   ['', true],
   ['0', false],
   ['1', false],
-  [new String(), false],
+  [new String(), true],
   [Symbol(), false],
   [Symbol(), false],
   [[], true],
@@ -129,14 +131,41 @@ let isEmptyArr = [
   [new WeakSet(), true]
 
 ];
-// describe('isEmpty', ()=>{
-//   isEmptyArr.forEach((element, index) => {
-//     test(`${index}`, () => {
-//       console.log(element, isEmpty(element[0]));
-//       expect(isEmpty(element[0])).toBe(element[1]);
-//     });
-//   });
-// });
+describe('isEmpty', ()=>{
+  isEmptyTest.forEach((element, index) => {
+    test(`${index}`, () => {
+      // console.log(element, isEmpty(element[0]));
+      expect(isEmpty(element[0])).toBe(element[1]);
+    });
+  });
+});
+
+let hasTypeInTest=[
+  { desc: '1',
+  data: ['1',['number','string']],
+  expect: true },
+  { desc: '1',
+  data: ['1',['number','array']],
+  expect: false },
+  { desc: 'new String',
+  data: [new String(),['number','string']],
+  expect: true },
+  { desc: 'new Number',
+  data: [new Number(),['number','string']],
+  expect: true },
+  { desc: '{}',
+  data: [{a:123},['number','string']],
+  expect: false }
+]
+describe('hasTypeIn',()=>{
+  hasTypeInTest.forEach((item, index) => {
+    test(item.desc, () => {
+      expect(hasTypeIn(...item.data)).toBe(item.expect);
+    });
+  });
+})
+
+
 // describe('TEST', ()=>{
 //   let a = new Set('1');
 //   console.log(a.size);

@@ -1,76 +1,161 @@
 import { isArray, chunkArray, getRelArray } from '../src/index';
-// let stringArr = [
-//   '',
-//   '2.1',
-//   new String()
-// ];
-// let numberArr = [
-//   1,
-//   1.1,
-//   NaN,
-//   Infinity,
-//   0,
-//   -13,
-//   -Infinity
-// ];
+
+let isArrayTest = [
+  { desc: 'null',
+    data: null,
+    expect: false },
+  { desc: 'undefined',
+    data: undefined,
+    expect: false },
+  { desc: 'void 0',
+    data: void 0,
+    expect: false },
+  { desc: 'NaN',
+    data: NaN,
+    expect: false },
+  { desc: '1',
+    data: 1,
+    expect: false },
+  { desc: '1.1',
+    data: '987',
+    expect: false },
+  { desc: '987',
+    data: 987,
+    expect: false },
+  { desc: '+0',
+    data: +0,
+    expect: false },
+  { desc: '-0',
+    data: -0,
+    expect: false },
+  { desc: '0',
+    data: 0,
+    expect: false },
+  { desc: '-1',
+    data: -1,
+    expect: false },
+  { desc: '3.125e7',
+    data: 3.125e7,
+    expect: false },
+  { desc: '-3.125e7',
+    data: -3.125e7,
+    expect: false },
+  { desc: 'Infinity',
+    data: Infinity,
+    expect: false },
+  { desc: '-Infinity',
+    data: -Infinity,
+    expect: false },
+  { desc: '-123n',
+    data: -123n,
+    expect: false },
+  { desc: '123n',
+    data: 123n,
+    expect: false },
+  { desc: 'new Number()',
+    data: new Number(),
+    expect: false },
+  { desc: '',
+    data: '',
+    expect: false },
+  { desc: '11',
+    data: '11',
+    expect: false },
+  { desc: 'new String()',
+    data: new String(),
+    expect: false },
+  { desc: 'Symbol()',
+    data: Symbol(),
+    expect: false },
+  { desc: 'Symbol(12)',
+    data: Symbol(12),
+    expect: false },
+  { desc: '[]',
+    data: [],
+    expect: true },
+  { desc: '[1,2,3]',
+    data: [1, 2, 3],
+    expect: true },
+    { desc: 'new Array',
+    data: new Array(),
+    expect: true },
+  { desc: '{}',
+    data: {},
+    expect: false },
+  { desc: '{ a: 123,b: 456 }',
+    data: { a: 123,
+      b: 456 },
+    expect: false },
+  { desc: 'new Object()',
+    data: new Object(),
+    expect: false },
+  { desc: 'new Set()',
+    data: new Set(),
+    expect: false },
+  { desc: 'new Set()',
+    data: new Set(),
+    expect: false },
+  { desc: 'new Set("1")',
+    data: new Set('1'),
+    expect: false },
+  { desc: 'new Map()',
+    data: new Map(),
+    expect: false }, { desc: 'new Map(xxx)',
+    data: (()=>{
+      let map = new Map();
+      map.set({}, 789);
+      return map;
+    })(),
+    expect: false },
+  { desc: 'new WeakSet()',
+    data: new WeakSet(),
+    expect: false },
+  { desc: 'new WeakMap()',
+    data: new WeakMap(),
+    expect: false }
+];
+
 describe('isArray', () => {
-  test('undefined to equal false', () => {
-    expect(isArray(undefined)).toBe(false);
+  isArrayTest.forEach((item) => {
+    test(`${item.desc}`, () => {
+      expect(isArray(item.data)).toBe(item.expect);
+    });
   });
-  test('NaN to equal false', () => {
-    expect(isArray(NaN)).toBe(false);
-  });
-  test('1 to equal false', () => {
-    expect(isArray('1')).toBe(false);
-  });
-  test('1.1 to equal false', () => {
-    expect(isArray('1.1')).toBe(false);
-  });
-  test('new Number to equal false', () => {
-    expect(isArray(new Number())).toBe(false);
-  });
-
-  test('1.1 to equal false', () => {
-    expect(isArray(1.1)).toBe(false);
-  });
-  test('new String to equal false', () => {
-    expect(isArray(new String())).toBe(false);
-  });
-  test('true to equal false', () => {
-    expect(isArray(true)).toBe(false);
-  });
-  test('new Boolean to equal false', () => {
-    expect(isArray(new Boolean)).toBe(false);
-  });
-  test('{} to equal false', () => {
-    expect(isArray({})).toBe(false);
-  });
-  test('new Object to equal false', () => {
-    expect(isArray(new Object())).toBe(false);
-  });
-  test('[] to equal true', () => {
-    expect(isArray([])).toBe(true);
-  });
-  test('new Array to equal true', () => {
-    expect(isArray(new Array())).toBe(true);
-  });
-
 });
 
+let chunkArrayTest = [
+  { desc: '[1,2,3,4],2',
+    data: [[1, 2, 3, 4], 2],
+    expect: [[1, 2], [3, 4]] },
+  { desc: '[1,2,3,4],3',
+    data: [[1, 2, 3, 4], 3],
+    expect: [[1, 2, 3], [ 4]] },
+  { desc: '[1,2,3,4,5],4',
+    data: [[1, 2, 3, 4,5], 4],
+    expect: [[1, 2, 3,4], [ 5]] },
+  { desc: '{},2',
+    data: [{}, 2],
+    expect: 'params is not a array' }
+];
 describe('chunkArray', () => {
-  test('[1,2,3,4],2 to equal [[1,2],[3,4]]', () => {
-    expect(chunkArray([1, 2, 3, 4], 2)).toEqual([[1, 2], [3, 4]]);
-  });
-  test('{},2 to equal ERROR', () => {
-    try {
-      chunkArray({}, 2);
-    } catch (error) {
-      expect(error.message).toBe('params is not a array');
-    }
+  chunkArrayTest.forEach((item) => {
+    test(`${item.desc}`, () => {
+      try {
+        chunkArray(...item.data);
+        expect(chunkArray(...item.data)).toEqual(item.expect);
+      } catch (error) {
+        expect(error.message).toEqual('params is not a array');
+      }
+    });
   });
 });
 describe('getRelArray', () => {
   test('[1,2,3,null,undefined,4,[],{},NaN,void 0] to equal[1,2,3,4]', ()=>{
-    expect(getRelArray([1, 2, 3, null, undefined, 4, [], {}, NaN, void 0])).toEqual([1, 2, 3, 4]);
+    console.log(getRelArray([1, 2, 3, null, undefined, 4, [], {}, NaN, void 0,{a:123},
+      new String(),new Number(),new Object(),new Set(), new Map(), new Set('1')
+    ]));
+    expect(getRelArray([1, 2, 3, null, undefined, 4, [], {}, NaN, void 0,{a:123},
+      new String(),new Number(),new Object(),new Set(), new Map(), new Set('1')
+    ])).toEqual([1, 2, 3, 4,{a:123},new Set('1')]);
   });
 });
