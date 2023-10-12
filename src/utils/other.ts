@@ -1,4 +1,4 @@
-import { is } from './common';
+import { is } from './common/index';
 
 /**** null **** */
 

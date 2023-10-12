@@ -1,4 +1,4 @@
-import { isSimpleValue, is } from './common';
+import { isSimpleType, is } from './common/index';
 
 /**
  * @description 该函数检查给定值是函数还是异步函数。
@@ -130,7 +130,7 @@ export function deepClone (originalValue:any):any {
     return Symbol(originalValue.description);
   }
   //步骤 一 :如果是普通值则直接返回原值
-  if (isSimpleValue(originalValue)) {return originalValue;}
+  if (isSimpleType(originalValue)) {return originalValue;}
   //步骤 二 :如果是Set 集合
   if (originalValue instanceof Set) {
     let set = new Set();

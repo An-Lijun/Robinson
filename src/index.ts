@@ -1,6 +1,6 @@
 export * from './utils/array';
 export * from './utils/boolean';
-export * from './utils/common';
+export * from './utils/common/index';
 export * from './utils/getVariableType';
 export * from './utils/math';
 export * from './utils/number';

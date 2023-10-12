@@ -76,7 +76,7 @@ let isArrayTest = [
   { desc: '[1,2,3]',
     data: [1, 2, 3],
     expect: true },
-    { desc: 'new Array',
+  { desc: 'new Array',
     data: new Array(),
     expect: true },
   { desc: '{}',
@@ -131,8 +131,8 @@ let chunkArrayTest = [
     data: [[1, 2, 3, 4], 3],
     expect: [[1, 2, 3], [ 4]] },
   { desc: '[1,2,3,4,5],4',
-    data: [[1, 2, 3, 4,5], 4],
-    expect: [[1, 2, 3,4], [ 5]] },
+    data: [[1, 2, 3, 4, 5], 4],
+    expect: [[1, 2, 3, 4], [ 5]] },
   { desc: '{},2',
     data: [{}, 2],
     expect: 'params is not a array' }
@@ -151,11 +151,11 @@ describe('chunkArray', () => {
 });
 describe('getRelArray', () => {
   test('[1,2,3,null,undefined,4,[],{},NaN,void 0] to equal[1,2,3,4]', ()=>{
-    console.log(getRelArray([1, 2, 3, null, undefined, 4, [], {}, NaN, void 0,{a:123},
-      new String(),new Number(),new Object(),new Set(), new Map(), new Set('1')
+    console.log(getRelArray([1, 2, 3, null, undefined, 4, [], {}, NaN, void 0, { a: 123 },
+      new String(), new Number(), new Object(), new Set(), new Map(), new Set('1')
     ]));
-    expect(getRelArray([1, 2, 3, null, undefined, 4, [], {}, NaN, void 0,{a:123},
-      new String(),new Number(),new Object(),new Set(), new Map(), new Set('1')
-    ])).toEqual([1, 2, 3, 4,{a:123},new Set('1')]);
+    expect(getRelArray([1, 2, 3, null, undefined, 4, [], {}, NaN, void 0, { a: 123 },
+      new String(), new Number(), new Object(), new Set(), new Map(), new Set('1')
+    ])).toEqual([1, 2, 3, 4, { a: 123 }, new Set('1')]);
   });
 });

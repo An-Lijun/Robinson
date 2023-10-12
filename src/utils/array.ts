@@ -1,4 +1,4 @@
-import { isEmpty } from './common';
+import { isEmpty } from './common/index';
 
 /**
  * @description 接受一个任意类型判断该类型是否是数组并返回。
