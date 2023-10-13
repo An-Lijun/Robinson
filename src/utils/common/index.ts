@@ -4,7 +4,7 @@ import is from './is';
 import isEmpty from './isEmpty';
 import isSimpleType from './isSimpleType';
 import isReferenceType from './isReferenceType';
-
+import isEqType from './isEqType';
 /**
  * @param {Any} value
  * @param {Any} value2
@@ -22,5 +22,6 @@ import isReferenceType from './isReferenceType';
 // }
 
 export {
-  getStringType, hasTypeIn, is, isEmpty, isSimpleType, isReferenceType
+  getStringType, hasTypeIn, is, isEmpty,
+  isSimpleType, isReferenceType, isEqType
 };

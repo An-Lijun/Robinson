@@ -1,4 +1,4 @@
-import { isArray, chunkArray, getRelArray } from '../src/index';
+import { isArray } from '../../src/index';
 
 let isArrayTest = [
   { desc: 'null',
@@ -120,42 +120,5 @@ describe('isArray', () => {
     test(`${item.desc}`, () => {
       expect(isArray(item.data)).toBe(item.expect);
     });
-  });
-});
-
-let chunkArrayTest = [
-  { desc: '[1,2,3,4],2',
-    data: [[1, 2, 3, 4], 2],
-    expect: [[1, 2], [3, 4]] },
-  { desc: '[1,2,3,4],3',
-    data: [[1, 2, 3, 4], 3],
-    expect: [[1, 2, 3], [ 4]] },
-  { desc: '[1,2,3,4,5],4',
-    data: [[1, 2, 3, 4, 5], 4],
-    expect: [[1, 2, 3, 4], [ 5]] },
-  { desc: '{},2',
-    data: [{}, 2],
-    expect: 'params is not a array' }
-];
-describe('chunkArray', () => {
-  chunkArrayTest.forEach((item) => {
-    test(`${item.desc}`, () => {
-      try {
-        chunkArray(...item.data);
-        expect(chunkArray(...item.data)).toEqual(item.expect);
-      } catch (error) {
-        expect(error.message).toEqual('params is not a array');
-      }
-    });
-  });
-});
-describe('getRelArray', () => {
-  test('[1,2,3,null,undefined,4,[],{},NaN,void 0] to equal[1,2,3,4]', ()=>{
-    console.log(getRelArray([1, 2, 3, null, undefined, 4, [], {}, NaN, void 0, { a: 123 },
-      new String(), new Number(), new Object(), new Set(), new Map(), new Set('1')
-    ]));
-    expect(getRelArray([1, 2, 3, null, undefined, 4, [], {}, NaN, void 0, { a: 123 },
-      new String(), new Number(), new Object(), new Set(), new Map(), new Set('1')
-    ])).toEqual([1, 2, 3, 4, { a: 123 }, new Set('1')]);
   });
 });

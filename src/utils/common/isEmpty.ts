@@ -1,5 +1,5 @@
 import { is } from './index';
-import { isArray } from '../array';
+import { isArray } from '../../index';
 /**
  * @description 该函数通过将 JSON 表示形式与空数组或对象进行比较来检查值是否为空。
  * @param {any} value - “value”参数可以是任何数据类型。这是您要检查它是否为空的值。

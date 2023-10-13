@@ -1,4 +1,4 @@
-import { is } from './common/index';
+import { is } from '../common/index';
 
 /**
  * @description 函数“isBoolean”检查值是否为布尔类型。
@@ -10,6 +10,6 @@ import { is } from './common/index';
  *    let str = "true"; isBoolean(boo) => false
  * ```
  */
-export function isBoolean (value:any):boolean {
+export default function isBoolean (value:any):boolean {
   return is(value, 'Boolean');
 }
