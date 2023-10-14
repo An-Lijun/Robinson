@@ -3,7 +3,7 @@ export * from './utils/array/index';
 export * from './utils/boolean/index';
 export * from './utils/math/index';
 export * from './utils/number/index';
-export * from './utils/getVariableType';
+export * from './utils/function/index';
 export * from './utils/object';
 export * from './utils/other';
 export * from './utils/string';

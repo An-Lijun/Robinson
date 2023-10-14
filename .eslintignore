@@ -1,8 +1,9 @@
 /node_modules/
 /dist/
 /doc
+# /test
 /.eslintrc.js
-/test/
-/rollup.config.js/
-./index.test.js
-./.eslintrc.js
+# *.test.js
+rollup.config.js
+.eslintrc.js
+/docs/

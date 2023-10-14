@@ -20,11 +20,11 @@ module.exports = defineConfig([{ input: ['./src/index.ts'], //入口文件
     alias({ entries: [{ find: '@',
       replacement: path.resolve(__dirname, './src') }] }),
     ts({ tsconfig: path.resolve(__dirname, 'tsconfig.json') }),
-    getBabelOutputPlugin({ allowAllFormats: true,
-      exclude: 'node_modules/**',
-      'presets': [
-        '@babel/preset-env'
-      ] }),
+    // getBabelOutputPlugin({ allowAllFormats: true,
+    //   exclude: 'node_modules/**',
+    //   'presets': [
+    //     '@babel/preset-env'
+    //   ] }),
     terser()
   ] },
 // 类型文件

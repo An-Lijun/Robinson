@@ -12,7 +12,15 @@
  */
 export default function getRandom (min:number, max:number, point :number = 0):number {
   let res = `${Math.random() * (max - min + 1) + min }`;
-  let pointLen = point;
-  point && pointLen++;
-  return Number(res.slice(0, res.lastIndexOf('.') + pointLen));
+  let [integer, float] = res.split('.');
+  if (integer === `${max}`) {
+    integer += '.';
+    for (let i = 0; i < point; i++) {
+      integer += '0';
+    }
+  } else {
+    integer += '.';
+    integer += float.slice(0, point);
+  }
+  return Number(integer);
 }
