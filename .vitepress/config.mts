@@ -71,8 +71,8 @@ const docs: DefaultTheme.SidebarItem[] = treeToItems(tree)
 export default defineConfig({
   title: 'Robinson',
   description: 'Documentations of @taiyuuki/utils',
-  base:'/',
-  outDir: "./dist/doc",
+  base:'/Robinson/',
+  outDir: "./docs",
   themeConfig: {
   // https://vitepress.dev/reference/default-theme-config
       nav: [
