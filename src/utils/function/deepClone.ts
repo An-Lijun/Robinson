@@ -8,8 +8,15 @@ interface deepData {
  * @description “deepClone”函数用于创建对象或数组的深层副本，包括处理复杂类型，例如集合、映射和符号。
  * @param {any} originalValue - OriginalValue 参数是您要深度克隆的值。它可以是任何数据类型，包括对象、数组、集合、映射、函数以及字符串或数字等简单值。
  * @returns 函数“deepClone”返回“originalValue”参数的深度克隆。
+ * @example
+ * ```JavaScript
+ *    let data ={
+ *      a:[1,2]
+ *    }
+ *    let cloneDat =deepClone(data);
+ * ```
  */
-export function deepClone (originalValue:any):any {
+export default function deepClone (originalValue:any):any {
   //步骤 零 : 如果值是Symbol
   if (is(originalValue, 'symbol')) {
     return Symbol(originalValue.description);

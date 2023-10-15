@@ -2,7 +2,8 @@
  * 参数1 回调
  * 参数2 延迟时间
  * 参数3 第一次是否立即执行
- *
+ * @description
+ * @param {any}
  * 返回值 返回一个 防抖函数,这个防抖函数的返回值是  debounce函数中传入的第一个函数参数的返回值
  *      const fn =debounce(function (){},time)
  *      取消执行 fn.cancel();
@@ -12,9 +13,18 @@
  *    3. 绑定this 传入参数
  *    4. 首次立即执行
  *    5. 返回返回值
+ * @returns
+ * @example
+ * ```JavaScript
+ *    let data ={
+ *      a:[1,2]
+ *    }
+ *    let cloneDat =deepClone(data);
+ * ```
  */
-export function debounce (fn:Function, delay:number, isLimmediate:boolean = false) {
-  let timer = null;
+
+export default function debounce (fn:Function, delay:number, isLimmediate:boolean = false) {
+  let timer:any = null;
   let limmediate = isLimmediate;
   //函数体
   const _debounceFn = function (...args:any) {
@@ -26,7 +36,8 @@ export function debounce (fn:Function, delay:number, isLimmediate:boolean = fals
         //如果是true 那就以为这第一次需要马上执行
         if (limmediate) {
           limmediate = false;
-          return resolve(fn.apply(this, args));
+          resolve(fn.apply(this, args));
+          return;
         }
 
         //正常的执行

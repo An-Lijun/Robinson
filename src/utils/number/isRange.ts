@@ -12,5 +12,5 @@
  * ```
 */
 export default function isRange (value:number, min:number, max:number) {
-  return value >= min && value < max;
+  return value >= min && value <= max;
 }

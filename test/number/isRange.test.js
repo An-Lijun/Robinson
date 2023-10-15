@@ -14,10 +14,13 @@ let isRangeTest = [
     data: [1, 1, 3],
     expect: true },
   { desc: '[1,3]',
-    data: [1, 1, 3],
+    data: [3, 1, 3],
     expect: true },
   { desc: '[1,3]',
-    data: [1, 1, 3],
+    data: [4, 1, 3],
+    expect: false },
+  { desc: '[1,3]',
+    data: [1.1, 1, 3],
     expect: true }
 
 ];
