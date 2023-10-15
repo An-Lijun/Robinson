@@ -5,6 +5,10 @@ import is from '../common/is';
  * @param {number} number1 - “number1”参数是您要相乘的第一个数字。
  * @param {number} number2 - “number2”参数是一个数字，将在“mult”函数中与“number1”相乘。
  * @returns 执行一些计算后“number1”和“number2”的乘积。
+ * @example
+ * ```JavaScript
+ *    mult(0.1,0.2) => 0.02
+ * ```
  */
 export default function mult (number1:number, number2:number):number {
   if (!is(number1, 'number') || !is(number2, 'number')) {

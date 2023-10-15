@@ -6,6 +6,10 @@ import is from '../common/is';
  * @param {number} number1 - 要添加的第一个数字。它可以是正值，也可以是负值。
  * @param {number} number2 - “number2”参数是要添加到“number1”的第二个数字。
  * @returns 两个输入数字的总和。
+ * @example
+ * ```JavaScript
+ *   add (0.1,0.2)=> 0.3
+ * ```
  */
 export default function add (number1:number, number2:number) {
   if (!is(number1, 'number') || !is(number2, 'number')) {

@@ -1,7 +1,7 @@
 import { is } from '../common/index';
 
 /**
- * @description 该函数检查给定值是函数还是异步函数。
+ * @description 该函数检查给定值是函数。
  * @param {any} value - “value”参数是我们想要检查它是否是函数的任何值。
  * @returns 一个布尔值。
  */

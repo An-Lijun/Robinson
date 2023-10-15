@@ -88,7 +88,7 @@ export default defineConfig({
       ],
 
       socialLinks: [
-          { icon: 'github', link: 'https://github.com/taiyuuki/utils' },// 这里要替换成你自己的仓库地址
+          { icon: 'github', link: 'https://github.com/An-Lijun/Robinson' },// 这里要替换成你自己的仓库地址
       ],
 
       search: {

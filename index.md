@@ -14,7 +14,7 @@ hero:
       text: 在 GitHub 上查看
       link: https://github.com/An-Lijun/Robinson
   image:
-    src: /Robinson/assets/robinson.png
+    src: /assets/robinson.png
     alt: 网页的logo图标
 
 features:

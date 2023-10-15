@@ -7,7 +7,6 @@
  * @returns 正在返回柯里化函数。
  * @example
  * ```JavaScript
- *
  * ```
  */
 export default function currying (fn:Function) {
