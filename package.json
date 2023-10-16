@@ -1,10 +1,10 @@
 {
     "name": "robinson",
-    "version": "1.0.4",
+    "version": "1.0.6",
     "description": "",
     "main": "/dist/esm/index.js",
     "files": ["/dist/*"],
-    "keywords": ["modules","wen","util"],
+    "keywords": ["modules","web","util"],
     "scripts": {
         "doc": "api-extractor run --local --verbose && api-documenter markdown -i temp -o etc/doc",
         "doc:debug": "api-extractor run --local --verbose --diagnostics && api-documenter markdown -i temp -o etc/doc",

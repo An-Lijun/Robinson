@@ -1,10 +1,12 @@
 # robinson
 a simple web utils 
-
+building power by edar-cli (skd)
+downloda https://www.npmjs.com/package/edar-cli
+github   https://github.com/An-Lijun/Edar-cli
 
 ## Installation
 ```JavaScript
-  $ npm i lodash
+  $ npm i robinson
   import {xxx} from 'robinson'
 ```
 ## docs
