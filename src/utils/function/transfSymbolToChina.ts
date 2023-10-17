@@ -1,4 +1,4 @@
 
-export default transfSymbolToChina(value:String):String{
-  
+export default function transfSymbolToChina (value:String):String {
+  return `${value} `;
 }
