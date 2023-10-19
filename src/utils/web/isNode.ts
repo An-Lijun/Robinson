@@ -5,6 +5,7 @@ import hasTypeIn from '../common/hasTypeIn';
  * @param {Element} el - `el` 参数的类型是 `Element`，它表示 HTML DOM 中的一个元素。
  * @returns 一个布尔值。如果给定元素的 nodeType 为 1 (ELEMENT_NODE)、9 (DOCUMENT_NODE) 或 11
  * (DOCUMENT_FRAGMENT_NODE)，则返回 true。否则，返回 false。
+ * @example
  * ```JavaScript
  *    let div =document.createElement('div');
  *    isNode(div) =>true

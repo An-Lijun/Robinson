@@ -1,9 +1,9 @@
 
 /**
  * 函数 `nodeToString` 接受一个 HTML 元素并返回它的字符串表示形式。
- * @param {Element} node - <html>`node` 参数的类型为 `Element`，它表示 DOM（文档对象模型）中的 HTML 元素。它可以是任何 HTML
- * 元素，例如`<div> `,`<p> `、` <span>` 等</span>
+ * @param {Element} node - `node` 参数的类型为 `Element`，它表示 DOM（文档对象模型）中的 HTML 元素。它可以是任何 HTML元素
  * @returns 所提供的 HTML 元素的字符串表示形式。
+ * @example
  * ```JavaScript
  *    let div =document.createElement('div');
  *    nodeToString(div) => '<div></div>'

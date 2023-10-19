@@ -13,6 +13,7 @@ type position = 'beforebegin'|'afterbegin'|'beforeend'|'afterend'
  * afterbegin  parentDom元素内部的第一个子节点之前
  * beforeend parentDom元素内部的最后一个子节点之后
  * afterend parentDom元素的后面
+ * @example
  * ```JavaScript
  *  let parent =document.querySelect('#box');
  *  let newDom =document.createElement('div')
