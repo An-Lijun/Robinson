@@ -1,4 +1,4 @@
-import { is } from '../common/index';
+import { is } from '../../common/index';
 
 /**
  * @description 函数isString 检查给定值是否是字符串。

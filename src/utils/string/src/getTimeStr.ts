@@ -1,4 +1,4 @@
-import is from '../common/is';
+import is from '../../common/src/is';
 
 /**
  * 函数“getTimeStr”接受一个字符串和一个数字作为参数，并返回一个重复输入字符串指定次数的新字符串。

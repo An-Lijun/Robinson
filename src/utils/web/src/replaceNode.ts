@@ -1,4 +1,4 @@
-import isString from '../string/isString';
+import isString from '../../string/src/isString';
 
 /**
  * 函数“replaceNode”用新的 DOM 元素或给定父元素中的字符串替换旧的 DOM 元素。

@@ -1,4 +1,4 @@
-import { is } from '../common/index';
+import { is } from '../../common/index';
 
 /**
  * @description 该函数检查给定值是函数。

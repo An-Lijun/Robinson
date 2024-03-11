@@ -1,5 +1,5 @@
-import add from './add';
-import mult from './mult';
-import minus from './minus';
-import division from './division';
+import add from './src/add';
+import mult from './src/mult';
+import minus from './src/minus';
+import division from './src/division';
 export { add, mult, minus, division };

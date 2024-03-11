@@ -1,4 +1,4 @@
-import { is } from './index';
+import { is } from '../index';
 /**
  * 该函数检查给定值的类型是否存在于给定类型数组中。
  * @param {any} value - “value”参数是您要检查其类型的值。它可以是任何类型，例如数字、字符串、对象等。

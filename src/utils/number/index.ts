@@ -1,9 +1,9 @@
-import isFinite from './isFinite';
-import isInt from './isInt';
-import isNaN from './isNaN';
-import isNumber from './isNumber';
-import isRange from './isRange';
-import getRandom from './getRandom';
+import isFinite from './src/isFinite';
+import isInt from './src/isInt';
+import isNaN from './src/isNaN';
+import isNumber from './src/isNumber';
+import isRange from './src/isRange';
+import getRandom from './src/getRandom';
 export {
   isFinite, isInt, isNaN, isNumber, isRange, getRandom
 };

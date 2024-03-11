@@ -1,4 +1,4 @@
-import is from '../common/is';
+import is from '../../common/src/is';
 
 /**
  * 函数“getEtc”接受一个字符串值并返回指定长度的子字符串，并在末尾附加一个可选的“etcStr”。

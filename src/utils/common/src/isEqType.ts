@@ -1,4 +1,4 @@
-import { getStringType } from '../../index';
+import { getStringType } from '../../../index';
 
 /**
  * 函数“isEqType”检查两个值的类型是否相等。

@@ -1,4 +1,4 @@
-import { hasTypeIn, isEqType, isSimpleType } from '../common/index';
+import { hasTypeIn, isEqType, isSimpleType } from '../index';
 
 /**
  * 函数“isEqValue”比较两个值，如果它们的值和类型相等则返回 true。

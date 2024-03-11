@@ -1,4 +1,4 @@
-import { getStringType } from './index';
+import { getStringType } from '../index';
 /**
  *
  * @description 返回是某个类型的判断结果

@@ -1,4 +1,4 @@
-import is from '../common/is';
+import is from '../../common/src/is';
 
 export default function division (number1:number, number2:number, digit:number):number {
   if (!is(number1, 'number') || !is(number2, 'number')) {

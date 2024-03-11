@@ -1,4 +1,4 @@
-import { is } from '../../index';
+import { is } from '../../../index';
 
 /**
  * 该函数检查值是否为数字。

@@ -1,4 +1,4 @@
-import { is } from '../common/index';
+import { is } from '../../common/index';
 
 /**
  * @description 函数“isBoolean”检查值是否为布尔类型。

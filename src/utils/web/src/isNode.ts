@@ -1,4 +1,4 @@
-import hasTypeIn from '../common/hasTypeIn';
+import hasTypeIn from '../../common/src/hasTypeIn';
 
 /**
  * 该函数检查元素是否是节点。

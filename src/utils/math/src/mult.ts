@@ -1,4 +1,4 @@
-import is from '../common/is';
+import is from '../../common/src/is';
 
 /**
  * `mult` 函数接受两个数字作为参数，并以十进制精度返回它们的乘积。

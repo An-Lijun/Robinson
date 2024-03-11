@@ -1,2 +1,2 @@
-import isObjectLike from './isObjectLike';
+import isObjectLike from './src/isObjectLike';
 export { isObjectLike };

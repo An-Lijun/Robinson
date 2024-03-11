@@ -1,22 +1,22 @@
-import addClass from './addClass';
-import addNode from './addNode';
-import bind from './bind';
-import cache from './cache';
-import eventBus from './eventBus';
-import getNodes from './getNodes';
-import getNode from './getNode';
+import addClass from './src/addClass';
+import addNode from './src/addNode';
+import bind from './src/bind';
+import cache from './src/cache';
+import eventBus from './src/eventBus';
+import getNodes from './src/getNodes';
+import getNode from './src/getNode';
 
-import nodeToString from './nodeToString';
-import hasClass from './hasClass';
-import isNode from './isNode';
-import preventDefault from './preventDefault';
-import removeClass from './removeClass';
-import removeNode from './removeNode';
-import replaceClass from './replaceClass';
-import { replaceNode } from './replaceNode';
-import stopPropagation from './stopPropagation';
-import stringToNode from './stringToNode';
-import unBind from './unBind';
+import nodeToString from './src/nodeToString';
+import hasClass from './src/hasClass';
+import isNode from './src/isNode';
+import preventDefault from './src/preventDefault';
+import removeClass from './src/removeClass';
+import removeNode from './src/removeNode';
+import replaceClass from './src/replaceClass';
+import { replaceNode } from './src/replaceNode';
+import stopPropagation from './src/stopPropagation';
+import stringToNode from './src/stringToNode';
+import unBind from './src/unBind';
 
 export {
   eventBus,

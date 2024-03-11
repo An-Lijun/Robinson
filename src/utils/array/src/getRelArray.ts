@@ -1,4 +1,4 @@
-import { isEmpty } from '../common/index';
+import { isEmpty } from '../../common/index';
 import isArray from './isArray';
 /**
  * @description 函数“getRelArray”接受一个数组作为输入，并返回一个包含所有非空元素的新数组。

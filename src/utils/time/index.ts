@@ -1,2 +1,2 @@
-import formatTime from './formatTime';
+import formatTime from './src/formatTime';
 export { formatTime };

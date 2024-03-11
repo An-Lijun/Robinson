@@ -1,10 +1,10 @@
-import getStringType from './getStringType';
-import hasTypeIn from './hasTypeIn';
-import is from './is';
-import isEmpty from './isEmpty';
-import isSimpleType from './isSimpleType';
-import isReferenceType from './isReferenceType';
-import isEqType from './isEqType';
+import getStringType from './src/getStringType';
+import hasTypeIn from './src/hasTypeIn';
+import is from './src/is';
+import isEmpty from './src/isEmpty';
+import isSimpleType from './src/isSimpleType';
+import isReferenceType from './src/isReferenceType';
+import isEqType from './src/isEqType';
 /**
  * @param {Any} value
  * @param {Any} value2

@@ -3,11 +3,11 @@
 
 // }
 
-import currying from './currying';
-import debounce from './debounce';
-import deepClone from './deepClone';
-import isFunction from './isFunction';
-import throttle from './throttle';
+import currying from './src/currying';
+import debounce from './src/debounce';
+import deepClone from './src/deepClone';
+import isFunction from './src/isFunction';
+import throttle from './src/throttle';
 export {
   currying, debounce, deepClone, isFunction, throttle
 };

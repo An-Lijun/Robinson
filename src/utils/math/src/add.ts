@@ -1,5 +1,5 @@
 
-import is from '../common/is';
+import is from '../../common/src/is';
 
 /**
  * @description TypeScript 中的“add”函数接受两个数字作为输入并返回它们的总和，考虑正数、负数以及小数位。这里规避了相加的精度问题
@@ -22,6 +22,7 @@ export default function add (number1:number, number2:number) {
 
   let [n1] = `${number1 * len}`.split('.');
   let [n2] = `${number2 * len}`.split('.');
+
   return (Number(n1) + Number(n2)) / len;
 }
 //相乘

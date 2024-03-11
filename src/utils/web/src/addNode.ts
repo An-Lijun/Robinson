@@ -1,5 +1,5 @@
 
-import { isNode, nodeToString } from '../../index';
+import { isNode, nodeToString } from '../../../index';
 
 type position = 'beforebegin'|'afterbegin'|'beforeend'|'afterend'
 

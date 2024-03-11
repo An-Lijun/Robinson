@@ -1,4 +1,4 @@
-import { isSimpleType, is } from '../common/index';
+import { isSimpleType, is } from '../../common/index';
 
 interface deepData {
   [index:string ]:any

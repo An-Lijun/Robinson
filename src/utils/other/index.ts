@@ -1,6 +1,6 @@
-import isNull from './isNull';
-import isSymbol from './isSymbol';
-import isUndefined from './isUndefined';
+import isNull from './src/isNull';
+import isSymbol from './src/isSymbol';
+import isUndefined from './src/isUndefined';
 
 export { isNull,
   isSymbol,
