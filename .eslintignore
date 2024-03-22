@@ -7,3 +7,4 @@
 rollup.config.js
 .eslintrc.js
 /docs/
+/src/utils/script

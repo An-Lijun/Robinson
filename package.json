@@ -3,8 +3,14 @@
     "version": "1.0.6",
     "description": "",
     "main": "/dist/esm/index.js",
-    "files": ["/dist/*"],
-    "keywords": ["modules","web","util"],
+    "files": [
+        "/dist/*"
+    ],
+    "keywords": [
+        "modules",
+        "web",
+        "util"
+    ],
     "scripts": {
         "doc": "api-extractor run --local --verbose && api-documenter markdown -i temp -o etc/doc",
         "doc:debug": "api-extractor run --local --verbose --diagnostics && api-documenter markdown -i temp -o etc/doc",
@@ -52,5 +58,10 @@
         "typescript": "^5.2.2",
         "vitepress": "1.0.0-rc.20",
         "vue": "^3.3.4"
+    },
+    "dependencies": {
+        "@types/big.js": "^6.2.2",
+        "big.js": "^6.2.1",
+        "dayjs": "^1.11.10"
     }
 }
