@@ -1,3 +1,24 @@
+// import Coolies from 'js-cookie'
+
+// export function getCookie (key) {
+//   const data = Cookies.get(key);
+//   try {
+//     return JSON.parse(data);
+//   } catch (error) {
+//     return data;
+//   }
+// }
+// export function setCookie (key, value) {
+//   let data = value;
+//   if (typeof value === 'object' && value !== null) {
+//     data = JSON.stringify(value);
+//   }
+//   return Cookies.set(key, data);
+// }
+// export function removeCookie (key) {
+//   return Cookies.remove(key);
+// }
+
 /**
  * 合并对象
  * 这里与Object.asign 的区别是 asignData 只会合并 obj1 中存在的key
@@ -95,21 +116,7 @@ export function pipe (...funcs) {
   return () => funcs.reduce((result, func) => func(result));
 }
 
-/**
- * hex转rgba
- * @param {*} hex 色值
- * @param {*} opacity 透明度
- * @returns
- */
-export function hexToRgba (hex, opacity = 0.3) {
-  return `rgba(
-    ${parseInt(`0x${ hex.slice(1, 3)}`, 10)}, 
-    ${parseInt(`0x${ hex.slice(3, 5)}`, 10)},
-    ${parseInt(`0x${ hex.slice(5, 7)}`, 10)},
-    ${opacity}
-    )
-  `;
-}
+
 
 // 高亮关键词
 export function transHightLight (str, keyWords, color = '#0053db') {

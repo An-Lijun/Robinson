@@ -158,3 +158,8 @@ export function isIdCard (id:string) {
   }
   return true;
 }
+export function isUrl (url) {
+  /* eslint-disable-next-line */
+  const reg = /(((^https?:(?:\/\/)?)(?:[-;:&=\+\$,\w]+@)?[A-Za-z0-9.-]+(?::\d+)?|(?:www.|[-;:&=\+\$,\w]+@)[A-Za-z0-9.-]+)((?:\/[\+~%\/.\w-_]*)?\??(?:[-\+=&;%@.\w_]*)#?(?:[\w]*))?)$/;
+  return reg.test(url);
+}
