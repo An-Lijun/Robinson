@@ -208,15 +208,20 @@ export function printByBlob (blob:Blob, type = 'appliaction/pdf') {
 
 // -----------------------  其他方法  -----------------------
 
-// 压缩图片
+/**
+ * 图片压缩
+ * @param file 源文件
+ * @param size 指定压缩大小 单位M
+ * @returns
+ */
 export function imgCompression (file:File, size:number) {
   const reader = new FileReader();
-  reader.readAsDataUrl(file);
+  reader.readAsDataURL(file);
 
   return new Promise((resolve)=>{
-    reader.onload = (e) =>{
+    reader.onload = (e)=>{
       const image = new Image();
-      image.src = e.target.result;
+      image.src = e.target?.result as string;
       image.onload = ()=>{
         let quality = 1;
         const canvas = document.createElement('canvas');
@@ -228,7 +233,7 @@ export function imgCompression (file:File, size:number) {
         height = width / scale;
         canvas.width = width;
         canvas.height = height;
-        ctx.drawImage(image, 0, 0, width, height);
+        ctx?.drawImage(image, 0, 0, width, height);
         let dataURL = canvas.toDataURL(file.type, quality);
         while (dataURL.length / 1024 / 1024 > size) {
           quality -= 0.1;

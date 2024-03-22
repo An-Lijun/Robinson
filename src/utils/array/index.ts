@@ -1,8 +1,5 @@
-import isArray from './src/isArray';
-import getRelArray from './src/getRelArray';
-import getChunkArray from './src/getChunkArray';
 
-export { isArray, getRelArray, getChunkArray };
+export * from './src';
 
 /**
  * @param {Array} array

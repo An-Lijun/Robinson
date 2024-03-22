@@ -10,6 +10,6 @@ import { is } from '../../common/index';
  *    let str = "true"; isBoolean(boo) => false
  * ```
  */
-export default function isBoolean (value:any):boolean {
+export function isBoolean (value:any):boolean {
   return is(value, 'Boolean');
 }

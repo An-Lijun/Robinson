@@ -1,6 +1,6 @@
-import is from '../../common/src/is';
+import { is } from '../../common';
 
-export default function division (number1:number, number2:number, digit:number):number {
+export function division (number1:number, number2:number, digit:number):number {
   if (!is(number1, 'number') || !is(number2, 'number')) {
     throw new Error('parmas must be number');
   }

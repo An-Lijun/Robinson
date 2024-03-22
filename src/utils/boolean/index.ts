@@ -1,2 +1,1 @@
-import isBoolean from './src/isBoolean';
-export { isBoolean };
+export * from './src/index';

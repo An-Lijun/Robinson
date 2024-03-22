@@ -1,4 +1,5 @@
-import isUndefined from '../../other/src/isUndefined';
+import { isUndefined } from '../../../index';
+
 interface ParamsInter{
   encode:Function,
   decode:Function,

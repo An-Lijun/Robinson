@@ -1,5 +1,4 @@
-
-import is from '../../common/src/is';
+import { is } from '../../common';
 
 /**
  * @description TypeScript 中的“add”函数接受两个数字作为输入并返回它们的总和，考虑正数、负数以及小数位。这里规避了相加的精度问题

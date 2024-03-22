@@ -1,6 +1,6 @@
 
-import isString from '../../string/src/isString';
-import hasTypeIn from '../../common/src/hasTypeIn';
+import isString from '../../string/src';
+import hasTypeIn from '../../common/src';
 
 type position = 'beforebegin'|'afterbegin'|'beforeend'|'afterend'
 

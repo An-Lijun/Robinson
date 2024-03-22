@@ -1,10 +1,4 @@
-import getStringType from './src/getStringType';
-import hasTypeIn from './src/hasTypeIn';
-import is from './src/is';
-import isEmpty from './src/isEmpty';
-import isSimpleType from './src/isSimpleType';
-import isReferenceType from './src/isReferenceType';
-import isEqType from './src/isEqType';
+export * from './src';
 /**
  * @param {Any} value
  * @param {Any} value2
@@ -20,8 +14,3 @@ import isEqType from './src/isEqType';
 //     return Object.is(value, value2);
 //   }
 // }
-
-export {
-  getStringType, hasTypeIn, is, isEmpty,
-  isSimpleType, isReferenceType, isEqType
-};

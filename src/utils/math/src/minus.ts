@@ -1,5 +1,5 @@
 
-import is from '../../common/src/is';
+import { is } from '../../common';
 
 /**
  * “minus”函数以小数精度减去两个数字。
