@@ -1,4 +1,4 @@
-import { getStringType } from '../../helper';
+import { getStringType, isEqArray } from '../../helper';
 import { isArray } from '../../../index';
 /**
  *
@@ -92,27 +92,13 @@ export function hasTypeIn (value:any, types:Array<string>):boolean {
 }
 
 /**
- * 函数“isSimpleValue”确定给定值是否为简单值（数字、字符串、布尔值、符号、null、undefined 或 bigint）。
- * @param {any} value - `isSimpleValue` 函数接受一个 `any` 类型的参数 `value`，它可以是 JavaScript
- * 中的任何数据类型。该函数检查“value”是否是简单值（数字、字符串、布尔值、符号、null、未定义或 bigint）或复杂值（
- * @returns 函数“isSimpleValue”返回一个布尔值，指示输入“value”是否为简单值（数字、字符串、布尔值、符号、null、undefined 或 bigint）。
- */
-export function isSimpleValue (value:any):boolean {
-  const type = typeof value;
-  // 简单值 number string boolean symbol null undefined bigint
-  // 复杂值function Object array set map
-  if (value === null) {return true;}
-  return type !== 'object' && type !== 'function';
-}
-
-/**
  * @description 该函数检查值是否为简单值（数字、字符串、布尔值、符号、null、undefined 或 bigint）或复杂值（函数、对象、数组、集合、映射）。
  * @param {any} value - 参数“value”的类型为“any”，这意味着它可以接受任何类型的值。
- * @returns 函数 isSimpleValue 返回一个布尔值。
+ * @returns 函数 isSimpleType 返回一个布尔值。
  * @example
  * ```JavaScript
- *    let num =123; isSimpleValue(num) => true
- *    let obj ={};  isSimpleValue(obj) => false
+ *    let num =123; isSimpleType(num) => true
+ *    let obj ={};  isSimpleType(obj) => false
  * ```
  */
 export function isSimpleType (value:any):boolean {
@@ -128,11 +114,11 @@ export function isSimpleType (value:any):boolean {
  * @returns 一个布尔值。
  * @example
  * ```JavaScript
- *    let num =123; isReferenceType(num) => true
- *    let obj ={};  isReferenceType(obj) => false
+ *    let num =123; isRefType(num) => true
+ *    let obj ={};  isRefType(obj) => false
  * ```
  */
-export function isReferenceType (value:any):boolean {
+export function isRefType (value:any):boolean {
   return value instanceof Object;
 }
 
@@ -171,23 +157,56 @@ export function isEqValue (value1:any, value2:any):boolean {
   if (!isEqType(value1, value2)) {
     return false;
   }
-  if (isSimpleType(value1)) {
+  if (isSimpleType(value1) || is(value1, 'function')) {
     return Object.is(value1, value2);
   }
 
   // 如果是 set map 比较 size
   if (hasTypeIn(value1, ['set', 'map'])) {
-    if (value1.size === value2.size) {
+    if (value1.size !== value2.size) {
       return false;
     }
-    //递归
+    if (value1.size === 0) {
+      return true;
+    }
+    if (is(value1, 'map')) {
+      for (let [key, val] of value1) {
+        if (value2.has(key)) {
+          let flag = isEqValue(val, value2.get(key));
+          if (!flag) {
+            return false;
+          }
+        }
+      }
+      return true;
+    }
+    if (is(value1, 'set')) {
+      let v1 = Array.from(value1);
+      let v2 = Array.from(value2);
+      return isEqArray(v1, v2);
+    }
+
   }
   if (hasTypeIn(value1, ['array', 'object'])) {
   // 如果是 array object 判断keys
-    if (Object.keys(value1).length !== Object.keys(value2).length) {
+    let valKeys = Object.keys(value1);
+    if (valKeys.length !== Object.keys(value2).length) {
       return false;
     }
-    //递归
+    if (valKeys.length === 0) {
+      return true;
+    }
+    if (is(value1, 'array')) {
+      return isEqArray(value1, value2);
+    }
+    for (const key of valKeys) {
+      const flag = isEqValue(value1[key], value2[key]);
+      if (!flag) {
+        return false;
+      }
+    }
+    return true;
+
   }
   return false;
 }

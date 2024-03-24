@@ -11,7 +11,7 @@ export * from './src/validate';
 //     return false;
 //   }
 //   //如果是简单类型
-//   if (!isReferenceType) {
+//   if (!isRefType) {
 //     return Object.is(value, value2);
 //   }
 // }

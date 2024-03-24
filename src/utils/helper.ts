@@ -1,3 +1,4 @@
+import { isEqValue } from '..';
 
 export interface IRgba {
   r: number;
@@ -75,4 +76,15 @@ export const toRgbaString = (colorObj: IRgba, n = 10000) => {
  */
 export function getStringType (value:any):String {
   return Object.prototype.toString.call(value).toLowerCase();
+}
+
+export function isEqArray (v1, v2) {
+  let len = v1.length;
+  for (let i = 0; i < len; i++) {
+    const flag = isEqValue(v1[i], v2[i]);
+    if (!flag) {
+      return false;
+    }
+  }
+  return true;
 }

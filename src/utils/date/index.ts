@@ -72,7 +72,7 @@ export function getDaysDiff (start:Tday, end:Tday, unitType:dayjs.OpUnitType, fl
 
 /**
  * 判断是否是闰年
- * @param {string|number} year 要判断1的年份
+ * @param {string|number} year 要判断的年份
  * @returns {Boolean}
  */
 export function isLeapYear (year:string|number) {
