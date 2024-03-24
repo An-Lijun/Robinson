@@ -59,28 +59,6 @@ export default function deepClone (originalValue:any):any {
   return newValue;
 }
 
-/**
- * 合并对象
- * 这里与Object.asign 的区别是 asignData 只会合并 obj1 中存在的key
- * 如:
- * let o ={
- *  a:123,
- * }
- * let b ={
- *  a:456,
- *  b:111
- * }
- * asignData(o,b)
- * o:{
- *  a:456
- * }
- */
-
-/**
- * 从右到左的顺序执行函数
- * @param  {...any} funcs
- * @returns
- */
 export function compose (...funcs:Array<Function>) {
   return () => funcs.reduceRight((result, fn) => fn(result));
 }
@@ -329,6 +307,23 @@ export function transfSymbolToChina (value:String):String {
  * @param extraFn -
  * “asignData”函数中的“extraFn”参数是一个回调函数，可以作为参数传递。如果提供，此函数将在“obj2”中的数据分配给“obj1”后执行。这允许额外的自定义逻辑或操作
  */
+/**
+ * 合并对象
+ * 这里与Object.asign 的区别是 asignData 只会合并 obj1 中存在的key
+ * 如:
+ * let o ={
+ *  a:123,
+ * }
+ * let b ={
+ *  a:456,
+ *  b:111
+ * }
+ * asignData(o,b)
+ * o:{
+ *  a:456
+ * }
+ */
+
 interface DAMNU_ENABLE {
   [key: string]: any,
 }

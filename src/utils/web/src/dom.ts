@@ -1,7 +1,5 @@
 
-import isString from '../../string/src';
-import hasTypeIn from '../../common/src';
-
+import { hasTypeIn, isString } from '../../../index';
 type position = 'beforebegin'|'afterbegin'|'beforeend'|'afterend'
 
 // 节点方法 ---------------------------------------

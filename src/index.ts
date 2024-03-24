@@ -8,3 +8,4 @@ export * from './utils/object/index';
 // export * from './utils/other/index';
 export * from './utils/string/index';
 export * from './utils/web/index';
+export * from './utils/color';

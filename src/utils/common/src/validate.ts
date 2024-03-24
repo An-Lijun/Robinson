@@ -1,19 +1,5 @@
-
+import { getStringType } from '../../helper';
 import { isArray } from '../../../index';
-/**
- * @description 函数“getStringType”以字符串形式返回输入值的类型。
- * @param {any} value - “value”参数可以是任何数据类型或您想要确定其类型的值。
- * @returns 返回输入值类型的字符串表示形式 如 [object object]。
- * @example
- * ```JavaScript
- *    let num =123; getStringType(num) => '[object number]'
- *    let obj ={}; getStringType(obj) => '[object object]'
- * ```
- */
-export function getStringType (value:any):String {
-  return Object.prototype.toString.call(value).toLowerCase();
-}
-
 /**
  *
  * @description 返回是某个类型的判断结果
@@ -30,6 +16,7 @@ export function getStringType (value:any):String {
 export function is (value:any, type:string):boolean {
   return getStringType(value) === `[object ${type.toLowerCase()}]`;
 }
+
 /**
  * @description 该函数通过将 JSON 表示形式与空数组或对象进行比较来检查值是否为空。
  * @param {any} value - “value”参数可以是任何数据类型。这是您要检查它是否为空的值。
@@ -62,19 +49,6 @@ export function isEmpty (value:any):boolean {
   }
   // 排除其他
   return !value;
-}
-
-/**
- * @description 该函数检查值是否是Symbol 类型的对象。
- * @param {any} value - 参数“value”可以是任何数据类型。
- * @returns 函数 isSymbol 返回一个布尔值。
- * @example
- * ```JavaScript
- * let a =Symbol(); isSymbol(a) => true
- * ```
- */
-export function isSymbol (value:any):boolean {
-  return typeof value === 'symbol' || is(value, 'Symbol');
 }
 
 /**
@@ -161,6 +135,7 @@ export function isSimpleType (value:any):boolean {
 export function isReferenceType (value:any):boolean {
   return value instanceof Object;
 }
+
 /**
  * 函数“isEqType”检查两个值的类型是否相等。
  * @param {any} value - “value”参数的类型为“any”，这意味着它可以接受任何类型的值。
@@ -213,8 +188,6 @@ export function isEqValue (value1:any, value2:any):boolean {
       return false;
     }
     //递归
-
   }
-
   return false;
 }

@@ -1,4 +1,5 @@
-export * from './src';
+export * from './src/validate';
+
 /**
  * @param {Any} value
  * @param {Any} value2

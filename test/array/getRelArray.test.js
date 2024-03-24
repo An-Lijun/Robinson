@@ -9,7 +9,6 @@ describe('getRelArray', () => {
   test('{}', ()=>{
     try {
       expect(getRelArray({}));
-
     } catch (error) {
       expect(error.message).toEqual('not a array');
     }
