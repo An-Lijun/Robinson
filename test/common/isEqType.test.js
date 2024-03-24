@@ -17,6 +17,9 @@ let isEqTypeTest = [
   { desc: 'NaN Number',
     data: [NaN, 1],
     expect: true },
+  { desc: '+0 -0 ',
+    data: [+0, -0],
+    expect: true },
   { desc: 'null Object',
     data: [null, {}],
     expect: false }

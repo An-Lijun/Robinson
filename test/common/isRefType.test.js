@@ -1,6 +1,6 @@
-import { isReferenceType } from '../../src/index';
+import { isRefType } from '../../src/index';
 
-let isReferenceTypeTest = [
+let isRefTypeTest = [
   { desc: 'null',
     data: null,
     expect: false },
@@ -112,10 +112,10 @@ let isReferenceTypeTest = [
     expect: true }
 ];
 
-describe('isReferenceType', ()=>{
-  isReferenceTypeTest.forEach((item) => {
+describe('isRefType', ()=>{
+  isRefTypeTest.forEach((item) => {
     test(item.desc, () => {
-      expect(isReferenceType(item.data)).toBe(item.expect);
+      expect(isRefType(item.data)).toBe(item.expect);
     });
   });
 });
