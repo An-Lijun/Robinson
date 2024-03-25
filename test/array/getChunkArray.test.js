@@ -1,12 +1,12 @@
 import { getChunkArray } from '../../src/index';
-
+let arr = [1, 2, 3, 4];
 let getChunkArrayTest = [
   { desc: '[1,2,3,4],2',
     data: [[1, 2, 3, 4], 2],
     expect: [[1, 2], [3, 4]] },
   { desc: '[1,2,3,4],3',
     data: [[1, 2, 3, 4], 3],
-    expect: [[1, 2, 3], [ 4]] },
+    expect: [[1, 2, 3], [4]] },
   { desc: '[1,2,3,4,5],4',
     data: [[1, 2, 3, 4, 5], 4],
     expect: [[1, 2, 3, 4], [ 5]] },
@@ -24,13 +24,15 @@ let getChunkArrayTest = [
     expect: 'params is not a array' },
   { desc: 'new Array,2',
     data: [new Array(...[1, 2, 3, 4]), 2],
-    expect: [[1, 2], [3, 4]] }
+    expect: [[1, 2], [3, 4]] },
+  { desc: 'new Array,2',
+    data: [[1, 2, 3, 4]],
+    expect: [ [ 1 ], [ 2 ], [ 3 ], [ 4 ] ] }
 ];
 describe('getChunkArray', () => {
   getChunkArrayTest.forEach((item) => {
     test(`${item.desc}`, () => {
       try {
-        getChunkArray(...item.data);
         expect(getChunkArray(...item.data)).toEqual(item.expect);
       } catch (error) {
         expect(error.message).toEqual('params is not a array');
