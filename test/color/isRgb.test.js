@@ -21,6 +21,9 @@ let isRgbArr = [
     expect: false },
   { desc: '#fff',
     data: '#fff',
+    expect: false },
+  { desc: '',
+    data: '',
     expect: false }
 
 ];
