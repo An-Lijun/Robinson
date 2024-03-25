@@ -13,7 +13,6 @@ let getBeforeDateTest = [
 describe('getBeforeDate', ()=>{
   getBeforeDateTest.forEach((item, index) => {
     test(item.desc, () => {
-      console.log(dayjs);
       expect(getBeforeDate(...item.data)).toBe(item.expect);
     });
   });

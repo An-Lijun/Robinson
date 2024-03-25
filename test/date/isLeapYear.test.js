@@ -1,5 +1,4 @@
 import { isLeapYear } from '../../src';
-import dayjs from '../../src/utils/date';
 
 let isLeapYearTest = [
   { desc: '2024',
@@ -19,7 +18,7 @@ let isLeapYearTest = [
     expect: true }
 ];
 describe('isLeapYear', ()=>{
-  isLeapYearTest.forEach((item, index) => {
+  isLeapYearTest.forEach((item) => {
     test(item.desc, () => {
       expect(isLeapYear(item.data)).toBe(item.expect);
     });

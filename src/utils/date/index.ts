@@ -130,6 +130,7 @@ export function isBefore (start: dayjs.ConfigType, end: dayjs.ConfigType) {
 export function isAfter (start: dayjs.ConfigType, end: dayjs.ConfigType) {
   return dayjs(start).isAfter(end);
 }
+
 // export default function formatTime (timestamp:string|Date, fmtString:string) {
 //   // yyyy-MM-dd hh:mm:ss
 //   let result = fmtString;

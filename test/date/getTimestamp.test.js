@@ -11,7 +11,6 @@ let getTimestampTest = [
 describe('getTimestamp', ()=>{
   getTimestampTest.forEach((item, index) => {
     test(item.desc, () => {
-      console.log(dayjs);
       expect(getTimestamp(item.data)).toBe(item.expect);
     });
   });

@@ -44,7 +44,6 @@ let isEmptyTest = [
 describe('isEmpty', ()=>{
   isEmptyTest.forEach((element, index) => {
     test(`${index}`, () => {
-      // console.log(element, isEmpty(element[0]));
       expect(isEmpty(element[0])).toBe(element[1]);
     });
   });

@@ -15,7 +15,16 @@ let getChunkArrayTest = [
     expect: 'params is not a array' },
   { desc: '{},2',
     data: [123456, 2],
-    expect: 'params is not a array' }
+    expect: 'params is not a array' },
+  { desc: '{},2',
+    data: [null, 2],
+    expect: 'params is not a array' },
+  { desc: '{},2',
+    data: [undefined, 2],
+    expect: 'params is not a array' },
+  { desc: 'new Array,2',
+    data: [new Array(...[1, 2, 3, 4]), 2],
+    expect: [[1, 2], [3, 4]] }
 ];
 describe('getChunkArray', () => {
   getChunkArrayTest.forEach((item) => {

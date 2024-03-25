@@ -9,7 +9,6 @@ let getAfterDateTest = [
 describe('getAfterDate', ()=>{
   getAfterDateTest.forEach((item, index) => {
     test(item.desc, () => {
-      console.log(dayjs);
       expect(getAfterDate(...item.data)).toBe(item.expect);
     });
   });
