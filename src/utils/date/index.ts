@@ -64,7 +64,7 @@ export function getAfterDate (date:Tday, option:IOptions) {
  * @param {Tday} end  结束日期
  * @param {dayjs.OpUnitType} unitType 日期类型
  * @param  {Boolean} float 是否返回浮点型
- * @returns {number} 相差的单位
+ * @returns {number} 相差的时间
  */
 export function getDaysDiff (start:Tday, end:Tday, unitType:dayjs.OpUnitType, float = false) {
   return dayjs(formatDate(end)).diff(formatDate(start), unitType, float);

@@ -3,7 +3,7 @@ import { isArray } from '../../../index';
 /**
  *
  * @description 返回是某个类型的判断结果
- * @param {Any}value 要判断的数据
+ * @param {Any} value 要判断的数据
  * @param {String}type  判断他是这个类型
  * @returns 布尔值
  * @example
@@ -69,7 +69,7 @@ export function isNull (value:any):boolean {
  * @returns 函数 isUndefined 返回一个布尔值。
  * @example
  * ```JavaScript
- * let a; isUndefined(a) => true
+ *    let a; isUndefined(a) => true
  * ```
  */
 export function isUndefined (value:any):boolean {
@@ -83,8 +83,8 @@ export function isUndefined (value:any):boolean {
  * @returns 一个布尔值。
  * @example
  * ```JavaScript
- * let a ="123"; isTypeIn(a,['number','array','string']) => true
- * let a ={}; isTypeIn(a,['number','array','string']) => false
+*     let a ="123"; isTypeIn(a,['number','array','string']) => true
+*     let a ={}; isTypeIn(a,['number','array','string']) => false
  * ```
  */
 export function hasTypeIn (value:any, types:Array<string>):boolean {

@@ -13,6 +13,7 @@ import { isEmpty } from '../../common/index';
 export function isArray (value:any):boolean {
   return Array.isArray(value);
 }
+
 /**
  * @description 函数“getRelArray”接受一个数组作为输入，并返回一个包含所有非空元素的新数组。
  * @param {Array} array - 参数“array”是任意类型的数组。
@@ -28,8 +29,8 @@ export function getRelArray (array:Array<any>):Array<any> {
 }
 
 /**
- * `chunkArray` 函数接受一个数组和一个大小参数，并返回一个新数组，其中原始数组被分割成指定大小的较小数组。
- * @param array - `array` 参数是任何类型的数组。它是需要被分成更小的数组的数组。
+ * @description `chunkArray` 函数接受一个数组和一个大小参数，并返回一个新数组，其中原始数组被分割成指定大小的较小数组。
+ * @param {Array} - `array` 参数是任何类型的数组。它是需要被分成更小的数组的数组。
  * @param {number} [size=1] - “size”参数指定数组每个块中应包含的元素数量。默认情况下，它设置为 1，这意味着每个元素将位于其自己的单独块中。
  * @returns 数组的数组。每个内部数组都包含原始数组中的一块元素。每个块的大小由“size”参数确定。
  * @example
