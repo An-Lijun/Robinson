@@ -1,7 +1,7 @@
 import { getStringType, isEqArray } from '../../helper';
 import { isArray } from '../../../index';
+
 /**
- *
  * @description 返回是某个类型的判断结果
  * @param {Any} value 要判断的数据
  * @param {String}type  判断他是这个类型

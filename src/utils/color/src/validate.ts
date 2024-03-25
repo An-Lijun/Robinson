@@ -1,4 +1,4 @@
-import { is } from '@/index';
+import { is } from '../../../index';
 
 /**
  * @description 判断是否为 16进制颜色

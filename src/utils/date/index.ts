@@ -13,19 +13,27 @@ interface IOptions{
 }
 
 /**
- * 获取当前日期的时间戳
+ * @description 获取当前日期的时间戳
  * @param {Tday} date
  * @returns string
+ * @example
+ * ```javascript
+ *    getTimestamp(dayjs('2024-03-01 08:00:00')) => 1709251200000
+ * ```
  */
 export function getTimestamp (date:Tday) {
   return dayjs(date).valueOf();
 }
 
 /**
- * 格式化时间
+ * @description 格式化时间
  * @param {string} date 时间,
  * @param pattern 格式化规则 'YYYY-MM-DD'
  * @returns 返回格式化后的时间
+ * @example
+ * ```javascript
+ *    formatDate(dayjs('2024-03-01 08:00:00'), 'YYYY年MM月DD日') => '2024年03月01日'
+ * ```
  */
 export function formatDate (date:Tday, pattern = 'YYYY-MM-DD') {
   if (!date) {return '';}
@@ -33,10 +41,17 @@ export function formatDate (date:Tday, pattern = 'YYYY-MM-DD') {
 }
 
 /**
- * 日期减少
+ * @description 日期减少
  * @param {Tday} date 起始日期
  * @param {IOptions} option
  * @returns {Tday}
+ * ```javascript
+ *    getBeforeDate(dayjs('2024-03-02 08:00:00'), { pattern: 'YYYY年MM月DD日' }) => '2024年03月01日'
+ *    getBeforeDate(dayjs('2024-03-02 08:00:00'), {
+ *      unitType:'M',
+ *      pattern:'YYYY年MM月DD日'
+ *    }) => '2024年02月02日'
+ * ```
  */
 export function getBeforeDate (date:Tday, option:IOptions) {
   const { unit = 1,
@@ -46,10 +61,17 @@ export function getBeforeDate (date:Tday, option:IOptions) {
 }
 
 /**
- * 日期增加
+ * @description 日期增加
  * @param {Tday} date 起始日期
  * @param {IOptions} option
  * @returns {Tday}
+ * ```javascript
+ *    getAfterDate(dayjs('2024-03-02 08:00:00'), { pattern: 'YYYY年MM月DD日' }) => '2024年03月03日'
+ *    getAfterDate(dayjs('2024-03-02 08:00:00'), {
+ *      unitType:'M',
+ *      pattern: 'YYYY年MM月DD日'
+ *    }) => '2024年04月02日'
+ * ```
  */
 export function getAfterDate (date:Tday, option:IOptions) {
   const { unit = 1,
@@ -65,8 +87,12 @@ export function getAfterDate (date:Tday, option:IOptions) {
  * @param {dayjs.OpUnitType} unitType 日期类型
  * @param  {Boolean} float 是否返回浮点型
  * @returns {number} 相差的时间
+ * ```javascript
+ *    getDiff(dayjs('2024-03-02 08:00:00'), dayjs('2024-03-03 08:00:00'), 'd') => 1
+ *    getDiff(dayjs('2024-03-02 08:00:00'), dayjs('2024-04-03 08:00:00'), 'd') => 32
+ * ```
  */
-export function getDaysDiff (start:Tday, end:Tday, unitType:dayjs.OpUnitType, float = false) {
+export function getDiff (start:Tday, end:Tday, unitType:dayjs.OpUnitType, float = false) {
   return dayjs(formatDate(end)).diff(formatDate(start), unitType, float);
 }
 
@@ -74,6 +100,13 @@ export function getDaysDiff (start:Tday, end:Tday, unitType:dayjs.OpUnitType, fl
  * 判断是否是闰年
  * @param {string|number} year 要判断的年份
  * @returns {Boolean}
+ * ```javascript
+ *    isLeapYear('2024') => true
+ *    isLeapYear('2025') => false
+ *    isLeapYear('2026') => false
+ *    isLeapYear('2027') => false
+ *    isLeapYear('2028') => true
+ * ```
  */
 export function isLeapYear (year:string|number) {
   return dayjs(`${year}-01-01`).isLeapYear();
