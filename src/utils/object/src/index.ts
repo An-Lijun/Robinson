@@ -12,14 +12,14 @@ import { is } from '../../common';
  * ```
  */
 export function isObjectLike (value:any):boolean {
-  return value !== null && typeof value === 'object';
+  return value !== null && (typeof value === 'object' || typeof value === 'function');
 }
 /**
  * 是否为日期格式
  * @param val
  * @returns
  */
-export function isDate (val:any):Boolean {
+export function isOriginDate (val:any):Boolean {
   return is(val, 'Date');
 }
 
@@ -37,15 +37,7 @@ export function isPromise (val:any):Boolean {
  * @returns
  */
 export function isRegExp (val:any):Boolean {
-  return is(val, 'Promise');
-}
-/**
- * 是否为window格式
- * @param val
- * @returns
- */
-export function isWindow (val:any):Boolean {
-  return is(val, 'window');
+  return is(val, 'RegExp');
 }
 
 /**
@@ -59,12 +51,24 @@ export function isElement (val:any):Boolean {
 
 let userAgentArr = ['MSIE', 'TRIDENT', 'EDGE'];
 
+interface Iwindow{
+  navigator:{
+    userAgent:string
+  }
+}
+
 /**
  * 判断是否是ie浏览器
  * @returns
  */
-export function isIE () {
-  const usera = window.navigator.userAgent.toUpperCase();
+export function isIE (win:Iwindow) {
+  if (!win || !is(win, 'object')) {
+    return false;
+  }
+  if (!win.navigator || !win.navigator.userAgent) {
+    return false;
+  }
+  const usera = win.navigator.userAgent.toUpperCase();
   if (userAgentArr.includes(usera)) {
     return true;
   }
