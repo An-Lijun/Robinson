@@ -15,7 +15,10 @@ let calcTest = [
     expect: 0.02 },
   { desc: '0.5,0.2 /',
     data: [0.5, 0.2, '/'],
-    expect: 2.5 }
+    expect: 2.5 },
+  { desc: '0.5,0.2 /1',
+    data: [0.5, 0.2, '/1'],
+    expect: '' }
 ];
 describe('calc', () => {
   calcTest.forEach(item=>{

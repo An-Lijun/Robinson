@@ -208,4 +208,5 @@ export function isEqValue (value1:any, value2:any):boolean {
     }
     return true;
   }
+  return false;
 }

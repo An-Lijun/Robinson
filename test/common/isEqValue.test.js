@@ -1,6 +1,5 @@
 import { isEqValue } from '../../src';
 let fn = ()=>{
-
 };
 let hexToRgbaArr = [
   { desc: '1 1',

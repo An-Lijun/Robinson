@@ -3,6 +3,28 @@ import { isSimpleType, is } from '../../common/index';
 interface deepData {
   [index:string ]:any
 }
+interface DAMNU_ENABLE {
+  [key: string]: any,
+}
+interface optionsObj{
+	key:String,
+	keyValue:string,
+	label:string,
+  type:String
+}
+
+type options = String|optionsObj
+type enumData=Object|Array<Object>
+type result =Object|String|undefined
+
+/**
+ * @description 该函数检查给定值是函数。
+ * @param {any} value - “value”参数是我们想要检查它是否是函数的任何值。
+ * @returns 一个布尔值。
+ */
+export function isFunction (value:any):boolean {
+  return is(value, 'Function') || is(value, 'AsyncFunction');
+}
 
 /**
  * @description “deepClone”函数用于创建对象或数组的深层副本，包括处理复杂类型，例如集合、映射和符号。
@@ -16,7 +38,7 @@ interface deepData {
  *    let cloneDat =deepClone(data);
  * ```
  */
-export default function deepClone (originalValue:any):any {
+export function deepClone (originalValue:any):any {
   //步骤 零 : 如果值是Symbol
   if (is(originalValue, 'symbol')) {
     return Symbol(originalValue.description);
@@ -57,6 +79,94 @@ export default function deepClone (originalValue:any):any {
     newValue[Symbol(symbolKey.description)as any] = deepClone(originalValue[symbolKey]);
   }
   return newValue;
+}
+
+/**
+ * 函数“asignData”将属性从“obj2”复制到“obj1”，并可选择执行附加函数。
+ * @param obj1 - obj1 是第一个将被分配数据的对象。
+ * @param obj2 - obj2 是一个对象，其中包含将根据匹配键分配给 obj1 的数据。
+ * @param extraFn -
+ * “asignData”函数中的“extraFn”参数是一个回调函数，可以作为参数传递。如果提供，此函数将在“obj2”中的数据分配给“obj1”后执行。这允许额外的自定义逻辑或操作
+ */
+/**
+ * 合并对象
+ * 这里与Object.asign 的区别是 asignData 只会合并 obj1 中存在的key
+ * 如:
+ * let o ={
+ *  a:123,
+ * }
+ * let b ={
+ *  a:456,
+ *  b:111
+ * }
+ * asignData(o,b)
+ * o:{
+ *  a:456
+ * }
+ */
+
+export function asignData (obj1:DAMNU_ENABLE, obj2:DAMNU_ENABLE) {
+  let obj = deepClone(obj1);
+  for (const key in obj1) {
+    if (Object.hasOwnProperty.call(obj2, key)) {
+      obj[key] = deepClone(obj2[key]);
+    }
+  }
+  return obj;
+}
+
+/**
+ *
+ * @param {*} enumData  Object||Array
+ * @param {*} options   Object ||Stirng
+ * @param {*} expty    String ||Number
+ * @returns Object || String
+ *
+ * 注意这里是一个映射函数可以将数据进行枚举映射
+ *
+ * 当枚举是Array[Object]类型时 options必须传递对象
+ * 此时options 需要传递
+ *  options.key 要寻找的数组对象中某一个唯一key
+ *  options.keyValue 要寻找的数组对象中某一个唯一key 的值
+ *  options.label 当type是value 时返回寻找的对象中的label对应的值
+ *  options.type 返回的枚举类型
+ * 如:
+ * let enum1 = [{value:'USD',label:'美元'},{value:'AUD',label:'澳大利亚元'}]
+ *
+ * mapping(enum1,{key:'value',keyValue:'USD',label:'label',type:'object'})
+ * //{value:'USD',label:'美元'}
+ * mapping(enum1,{key:'value',keyValue:'USD',label:'label',type:'value'}) //美元
+ *
+ * 当枚举数据是Object时 此时 options 需要填写String
+ *
+ *
+ * 如果枚举中寻找不到 那么返回 第三个参数expty 默认值为 '--'
+ *
+ */
+export function mapping (enumData:enumData, options:options, expty = '--'):result {
+  if (Array.isArray(enumData) && is(options, 'object')) {
+    // @ts-ignore
+    let data = enumData.find(item => item[options.key] === options.keyValue);
+    if (data) {
+    // @ts-ignore
+      switch (options.type) {
+      case 'value':
+        // @ts-ignore
+        return data[options.label] || expty;
+      case 'object':
+        return data;
+      default:
+        return data;
+      }
+    }
+    return expty;
+  }
+  else if (Object.prototype.toString.call(enumData) === '[object Object]') {
+    // @ts-ignore
+    if (options in enumData) {return enumData[options];}
+    return expty;
+  }
+  return expty;
 }
 
 export function compose (...funcs:Array<Function>) {
@@ -148,80 +258,6 @@ export function debounce (fn:Function, delay:number, isLimmediate:boolean = fals
 }
 
 /**
- * @description 该函数检查给定值是函数。
- * @param {any} value - “value”参数是我们想要检查它是否是函数的任何值。
- * @returns 一个布尔值。
- */
-export function isFunction (value:any):boolean {
-  return is(value, 'Function') || is(value, 'AsyncFunction');
-}
-interface optionsObj{
-	key:String,
-	keyValue:string,
-	label:string,
-  type:String
-}
-type options = String|optionsObj
-type enumData=Object|Array<Object>
-type result =Object|String|undefined
-
-/**
- *
- * @param {*} enumData  Object||Array
- * @param {*} options   Object ||Stirng
- * @param {*} expty    String ||Number
- * @returns Object || String
- *
- * 注意这里是一个映射函数可以将数据进行枚举映射
- *
- * 当枚举是Array[Object]类型时 options必须传递对象
- * 此时options 需要传递
- *  options.key 要寻找的数组对象中某一个唯一key
- *  options.keyValue 要寻找的数组对象中某一个唯一key 的值
- *  options.label 当type是value 时返回寻找的对象中的label对应的值
- *  options.type 返回的枚举类型
- * 如:
- * let enum1 = [{value:'USD',label:'美元'},{value:'AUD',label:'澳大利亚元'}]
- *
- * mapping(enum1,{key:'value',keyValue:'USD',label:'label',type:'object'})
- * //{value:'USD',label:'美元'}
- * mapping(enum1,{key:'value',keyValue:'USD',label:'label',type:'value'}) //美元
- *
- * 当枚举数据是Object时 此时 options 需要填写String
- *
- *
- * 如果枚举中寻找不到 那么返回 第三个参数expty 默认值为 '--'
- *
- */
-export function mapping (enumData:enumData, options:options, expty = '--'):result {
-  if (Array.isArray(enumData) && is(options, 'object')) {
-    // @ts-ignore
-    let data = enumData.find(item => item[options.key] === options.keyValue);
-    if (data) {
-    // @ts-ignore
-      switch (options.type) {
-      case 'value':
-        // @ts-ignore
-        return data[options.label];
-      case 'object':
-        return data;
-      default:
-        return data;
-      }
-    }
-    return expty;
-  }
-  else if (Object.prototype.toString.call(enumData) === '[object Object]') {
-    // @ts-ignore
-    if (options in enumData) {return enumData[options];}
-    return expty;
-  }
-
-  console.warn('type Error');
-  return void 0;
-
-}
-/**
  * 从左向右执行函数
  * @param  {...any} funcs
  * @returns
@@ -278,77 +314,4 @@ export function throttle (fn:Function, immediate:number, leading = true, trailin
     timer = null;
   };
   return _throttle;
-}
-
-export function transfSymbolToChina (value:String):String {
-  return `${value} `;
-}
-
-/**
- * 合并对象
- * 这里与Object.asign 的区别是 asignData 只会合并 obj1 中存在的key
- * 如:
- * let o ={
- *  a:123,
- * }
- * let b ={
- *  a:456,
- *  b:111
- * }
- * asignData(o,b)
- * o:{
- *  a:456
- * }
- */
-/**
- * 函数“asignData”将属性从“obj2”复制到“obj1”，并可选择执行附加函数。
- * @param obj1 - obj1 是第一个将被分配数据的对象。
- * @param obj2 - obj2 是一个对象，其中包含将根据匹配键分配给 obj1 的数据。
- * @param extraFn -
- * “asignData”函数中的“extraFn”参数是一个回调函数，可以作为参数传递。如果提供，此函数将在“obj2”中的数据分配给“obj1”后执行。这允许额外的自定义逻辑或操作
- */
-/**
- * 合并对象
- * 这里与Object.asign 的区别是 asignData 只会合并 obj1 中存在的key
- * 如:
- * let o ={
- *  a:123,
- * }
- * let b ={
- *  a:456,
- *  b:111
- * }
- * asignData(o,b)
- * o:{
- *  a:456
- * }
- */
-
-interface DAMNU_ENABLE {
-  [key: string]: any,
-}
-export function asignData (obj1:DAMNU_ENABLE, obj2:DAMNU_ENABLE, extraFn: Function) {
-  for (const key in obj1) {
-    if (Object.hasOwnProperty.call(obj2, key)) {
-      obj1[key] = deepClone(obj2[key]);
-    }
-  }
-  if (extraFn && typeof extraFn === 'function') {
-    extraFn();
-  }
-}
-
-// 高亮关键词
-export function transHightLight (str:string, keyWords, color = '#0053db') {
-  const reg = new RegExp(`(${keyWords.split('').join('|')})`, 'ig');
-  return str.replace(reg, `<span style="color:${color}">$1</span>`);
-}
-
-export function copyToClipboard (text:string) {
-  const dom = document.createElement('input');
-  dom.value = text;
-  document.body.appendChild(dom);
-  dom.select();
-  document.execCommand('copy');
-  document.body.removeChild(dom);
 }
