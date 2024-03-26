@@ -101,6 +101,14 @@ let isSimpleTypeTest = [
     return map;
   })(),
   expect: false },
+  { desc: `(()=>{
+    let map = new Map();
+  })`,
+  data: ()=>{
+    let map = new Map();
+    map.set({}, 789);
+  },
+  expect: false },
   { desc: 'new Set(1)',
     data: new Set('1'),
     expect: false },

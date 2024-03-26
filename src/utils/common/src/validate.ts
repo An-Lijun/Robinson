@@ -176,6 +176,8 @@ export function isEqValue (value1:any, value2:any):boolean {
           if (!flag) {
             return false;
           }
+        } else {
+          return false;
         }
       }
       return true;
@@ -185,7 +187,6 @@ export function isEqValue (value1:any, value2:any):boolean {
       let v2 = Array.from(value2);
       return isEqArray(v1, v2);
     }
-
   }
   if (hasTypeIn(value1, ['array', 'object'])) {
   // 如果是 array object 判断keys
@@ -206,7 +207,5 @@ export function isEqValue (value1:any, value2:any):boolean {
       }
     }
     return true;
-
   }
-  return false;
 }
