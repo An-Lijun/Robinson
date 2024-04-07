@@ -13,6 +13,7 @@ import { is } from '../../../index';
 export function isNumber (value:any):boolean {
   return typeof value === 'number' || is(value, 'Number');
 }
+
 /**
  * 该函数检查值是否为 NaN。
  * @param {any} value - value 参数可以是任何数据类型，例如数字、字符串或对象。
