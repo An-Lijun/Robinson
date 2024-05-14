@@ -78,7 +78,7 @@ export function getStringType (value:any):String {
   return Object.prototype.toString.call(value).toLowerCase();
 }
 
-export function isEqArray (v1, v2) {
+export function isEqArray (v1:Array<any>, v2:Array<any>) {
   let len = v1.length;
   for (let i = 0; i < len; i++) {
     const flag = isEqValue(v1[i], v2[i]);

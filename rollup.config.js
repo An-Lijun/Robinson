@@ -28,18 +28,18 @@ module.exports = defineConfig([{ input: ['./src/index.ts'], //入口文件
     terser()
   ] },
 // 类型文件
-{ input: 'src/index.ts',
-  output: { dir: 'dist/esm/types',
-    format: 'esm',
-    preserveModules: true },
-  plugins: [
-    dts()
-  ] },
-{ input: 'src/index.ts',
-  output: { dir: 'dist/cjs/types',
-    format: 'cjs',
-    preserveModules: true },
-  plugins: [
-    dts()
-  ] }
+// { input: 'src/index.ts',
+//   output: { dir: 'dist/esm/types',
+//     format: 'esm',
+//     preserveModules: true },
+//   plugins: [
+//     dts()
+//   ] },
+// { input: 'src/index.ts',
+//   output: { dir: 'dist/cjs/types',
+//     format: 'cjs',
+//     preserveModules: true },
+//   plugins: [
+//     dts()
+//   ] }
 ]);
