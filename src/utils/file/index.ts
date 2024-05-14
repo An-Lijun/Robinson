@@ -294,19 +294,19 @@ export function getFileChunk (file:File, chunkSize = 1024 * 1024):Array<IChunk> 
  * @param chunks 切片数据
  */
 
-export function createHashByWorker (chunks:Array<IChunk>):Promise<string> {
-  return new Promise((reslove)=>{
-    const worker = new Worker(new URL('./worker/hash.worker.js', import.meta.url));
+// export function createHashByWorker (chunks:Array<IChunk>):Promise<string> {
+//   return new Promise((reslove)=>{
+//     const worker = new Worker(new URL('./worker/hash.worker.js', import.meta.url));
 
-    worker.postMessage({ chunks });
+//     worker.postMessage({ chunks });
 
-    worker.onmessage = (e) => {
-      const { hash } = e.data;
-      hash && reslove(hash);
-    };
+//     worker.onmessage = (e) => {
+//       const { hash } = e.data;
+//       hash && reslove(hash);
+//     };
 
-  });
-}
+//   });
+// }
 
 /**
  * 上传文件

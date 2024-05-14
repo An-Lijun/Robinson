@@ -10,4 +10,6 @@ export * from './utils/web/index';
 export * from './utils/color';
 export * from './utils/symbol';
 export * from './utils/date';
+export * from './utils/file';
+
 // export * from './utils/other/index';
