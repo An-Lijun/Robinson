@@ -22,7 +22,8 @@
         "prepare": "husky install",
         "test": "jest",
         "lint": "eslint --fix --ext .js,.vue src",
-        "build": "npx rollup -c"
+        "build": "npx rollup -c",
+        "pub": "npm version patch && npm run build && npm publish && exit 1"
     },
     "author": "",
     "license": "ISC",
