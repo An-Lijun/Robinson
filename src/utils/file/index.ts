@@ -115,7 +115,7 @@ export function downloadByBlob (blob:BlobPart, fileNm:string, mime = 'applicatio
   const blobURL = window.URL.createObjectURL(newBlob);
   const linkEl = document.createElement('a');
   linkEl.href = blobURL;
-  linkEl.setAttribute('download', `${fileNm}.${mime}`);
+  linkEl.setAttribute('download', `${fileNm}`);
 
   if (typeof linkEl.download === 'undefined') {
     linkEl.setAttribute('target', '_blank');

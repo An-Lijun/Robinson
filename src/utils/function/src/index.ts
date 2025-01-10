@@ -195,6 +195,7 @@ export function currying (fn:Function) {
   };
 }
 
+//防抖
 /**
  * 参数1 回调
  * 参数2 延迟时间
