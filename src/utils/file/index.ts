@@ -1,17 +1,187 @@
-interface unitMap{
-  [index:string]:number
+interface unitMap {
+  [index: string]: number
 }
-interface IChunk{index: Number, file:Blob}
+interface IChunk { index: Number, file: Blob }
+
+/**
+ * 获取文件的mime类型
+ * @param fileName 文件名
+ * @returns
+ */
+
+// 方法过长需要忽略eslint 规则
+/* eslint-disable */
+// mozilla MimeType https://developer.mozilla.org/zh-CN/docs/Web/HTTP/MIME_types/Common_types
+
+export function getMimeType(mime: String) {
+  switch (mime.toLowerCase()) {
+    case 'aac':
+      return 'audio/aac';
+    case 'abw':
+      return 'application/x-abiword';
+    case 'apng':
+      return 'image/apng';
+    case 'arc':
+      return 'application/x-freearc';
+    case 'avif':
+      return 'image/avif';
+    case 'avi':
+      return 'video/x-msvideo';
+    case 'azw':
+      return 'application/vnd.amazon.ebook';
+    case 'bin':
+      return 'application/octet-stream';
+    case 'bmp':
+      return 'image/bmp';
+    case 'bz':
+      return 'application/x-bzip';
+    case 'bz2':
+      return 'application/x-bzip2';
+    case 'cda':
+      return 'application/x-cdf';
+    case 'csh':
+      return 'application/x-csh';
+    case 'css':
+      return 'text/css';
+    case 'csv':
+      return 'text/csv';
+    case 'doc':
+      return 'application/msword';
+    case 'docx':
+      return 'application/vnd.openxmlformats-officedocument.wordprocessingml.document';
+    case 'eot':
+      return 'application/vnd.ms-fontobject';
+    case 'epub':
+      return 'application/epub+zip';
+    case 'gz':
+      return 'application/gzip';
+    case 'gif':
+      return 'image/gif';
+    case 'htm':
+    case 'html':
+      return 'text/html';
+    case 'ico':
+      return 'image/x-icon';
+    case 'ics':
+      return '	text/calendar';
+    case 'jar':
+      return 'application/java-archive';
+    case 'jpeg':
+    case 'jpg':
+      return 'image/jpeg';
+    case 'js':
+      return 'text/javascript';
+    case 'json':
+      return 'application/json';
+    case 'jsonld':
+      return 'application/ld+json';
+    case 'mid':
+    case 'midi':
+      return 'audio/midi';
+    case 'mjs':
+      return 'text/javascript';
+    case 'mp3':
+      return 'audio/mpeg';
+    case 'mp4':
+      return 'video/mp4';
+    case 'mpeg':
+      return 'video/mpeg';
+    case 'mpkg':
+      return 'application/vnd.apple.installer+xml';
+    case 'odp':
+      return 'application/vnd.oasis.opendocument.presentation';
+    case 'ods':
+      return 'application/vnd.oasis.opendocument.spreadsheet';
+    case 'odt':
+      return 'application/vnd.oasis.opendocument.text';
+    case 'oga':
+      return 'audio/ogg';
+    case 'ogv':
+      return 'video/ogg';
+    case 'ogx':
+      return 'application/ogg';
+    case 'opus':
+      return 'audio/opus';
+    case 'otf':
+      return 'font/otf';
+    case 'png':
+      return 'image/png';
+    case 'php':
+      return 'application/x-httpd-php';
+    case 'pdf':
+      return 'application/pdf';
+    case 'ppt':
+      return 'application/vnd.ms-powerpoint';
+    case 'pptx':
+      return 'application/vnd.openxmlformats-officedocument.presentationml.presentation';
+    case 'rar':
+      return 'application/vnd.rar';
+    case 'rtf':
+      return 'application/rtf';
+    case 'sh':
+      return 'application/x-sh';
+    case 'svg':
+      return 'image/svg+xml';
+    case 'swf':
+      return 'application/x-shockwave-flash';
+    case 'tar':
+      return 'application/x-tar';
+    case 'tif':
+    case 'tiff':
+      return 'image/tiff';
+    case 'ts':
+      return 'video/mp2t';
+    case 'ttf':
+      return 'application/x-font-ttf';
+    case 'txt':
+      return 'text/plain';
+    case 'vsd':
+      return 'application/vnd.visio';
+    case 'wav':
+      return 'audio/wav';
+    case 'weba':
+      return 'audio/webm';
+    case 'webm':
+      return 'video/webm';
+    case 'webp':
+      return 'image/webp';
+    case 'woff':
+      return 'font/woff';
+    case 'woff2':
+      return 'font/woff2';
+    case 'xhtml':
+      return 'application/xhtml+xml';
+    case 'xls':
+      return 'application/vnd.ms-excel';
+    case 'xlsx':
+      return 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet';
+    case 'xml':
+      return 'application/xml';
+    case 'xul':
+      return 'application/vnd.mozilla.xul+xml';
+    case 'zip':
+      return 'application/zip';
+    case '3gp':
+      return 'video/3gpp';
+    case '3g2':
+      return 'video/32';
+    case '7z':
+      return 'application/x-7z-compressed';
+    default: return '';
+  }
+}
+/* eslint-enable */
+
 // -----------------------  转换方法  -----------------------
 
 /**
- *
- * @param blob 流
- * @param mime mime类型
- * @returns
- */
-export function blobToBase64 (blob:BlobPart, mime = 'png') {
-  return new Promise((resolve, reject)=>{
+   *
+   * @param blob 流
+   * @param mime mime类型
+   * @returns
+   */
+export function blobToBase64 (blob: BlobPart, mime = 'png') {
+  return new Promise((resolve, reject) => {
     try {
       const newBlob = new Blob([blob], { type: mime });
       const reader = new FileReader();
@@ -28,11 +198,11 @@ export function blobToBase64 (blob:BlobPart, mime = 'png') {
 }
 
 /**
- * base64 转blob
- * @param {*} base64
- * @returns {Blob}
- */
-export function base64ToBlob (base64:string):Blob {
+   * base64 转blob
+   * @param {*} base64
+   * @returns {Blob}
+   */
+export function base64ToBlob (base64: string): Blob {
   const [typeItem, base] = base64.split(',');
   const mime = typeItem.match(/:(.*?);/)![1];
   const bstr = window.atob(base);
@@ -45,19 +215,19 @@ export function base64ToBlob (base64:string):Blob {
 }
 
 /**
- * img url 转为base64
- * @param {*} url
- * @param {*} mime
- * @returns
- */
-export function urlToBase64 (url:string, mime = 'image/png'):Promise<string> {
-  return new Promise((resolve, reject)=>{
-    let canvas:HTMLCanvasElement|null = document.createElement('canvas');
+   * img url 转为base64
+   * @param {*} url
+   * @param {*} mime
+   * @returns
+   */
+export function urlToBase64 (url: string, mime = 'image/png'): Promise<string> {
+  return new Promise((resolve, reject) => {
+    let canvas: HTMLCanvasElement | null = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
 
     const img = new Image();
     img.crossOrigin = '';
-    img.onload = ()=> {
+    img.onload = () => {
       canvas!.height = img.height;
       canvas!.width = img.width;
       ctx?.drawImage(img, 0, 0);
@@ -65,7 +235,7 @@ export function urlToBase64 (url:string, mime = 'image/png'):Promise<string> {
       canvas = null;
       resolve(dataURL);
     };
-    img.onerror = (err)=>{
+    img.onerror = (err) => {
       reject(err);
     };
   });
@@ -74,13 +244,13 @@ export function urlToBase64 (url:string, mime = 'image/png'):Promise<string> {
 // -----------------------  下载方法  -----------------------
 
 /**
- * 下载图片到本地
- * @param url  图片路径
- * @param filename 下载后的文件名
- * @param type 下载后的文件类型
- * @returns
- */
-export function downloadByUrl (url:string, filename?:string, type?:string) {
+   * 下载图片到本地
+   * @param url  图片路径
+   * @param filename 下载后的文件名
+   * @param type 下载后的文件类型
+   * @returns
+   */
+export function downloadByUrl (url: string, filename?: string, type?: string) {
   const linkEl = document.createElement('a');
   const event = new MouseEvent('click');
   linkEl.href = url;
@@ -93,7 +263,7 @@ export function downloadByUrl (url:string, filename?:string, type?:string) {
     iframe.style.height = '0';
     iframe.src = url;
     document.body.appendChild(iframe);
-    const timer = setTimeout(()=>{
+    const timer = setTimeout(() => {
       iframe.remove();
       clearTimeout(timer);
     }, 1000);
@@ -103,14 +273,14 @@ export function downloadByUrl (url:string, filename?:string, type?:string) {
 }
 
 /**
- * blob流下载文件
- * @param blob blob文件流
- * @param fileNm 下载后的文件名
- * @param mime 下载后的文件类型
- */
-export function downloadByBlob (blob:BlobPart, fileNm:string, mime = 'application/octet-stream') {
+   * blob流下载文件
+   * @param blob blob文件流
+   * @param fileNm 下载后的文件名
+   * @param mime 下载后的文件类型
+   */
+export function downloadByBlob (blob: BlobPart, fileNm: string, mime = 'txt') {
 
-  const newBlob = new Blob([blob], { type: mime });
+  const newBlob = new Blob([blob], { type: getMimeType(mime) });
 
   const blobURL = window.URL.createObjectURL(newBlob);
   const linkEl = document.createElement('a');
@@ -124,23 +294,23 @@ export function downloadByBlob (blob:BlobPart, fileNm:string, mime = 'applicatio
 }
 
 /**
- * base64 下载文件
- * @param buf  base64
- * @param fileNm  下载后的文件名
- * @param mime 下载后的文件类型
- */
-export function downloadByBase64 (buf:string, fileNm:string, mime:string) {
+   * base64 下载文件
+   * @param buf  base64
+   * @param fileNm  下载后的文件名
+   * @param mime 下载后的文件类型
+   */
+export function downloadByBase64 (buf: string, fileNm: string, mime: string) {
   const blobBuf = base64ToBlob(buf);
   downloadByBlob(blobBuf, fileNm, mime);
 }
 
 // -----------------------  打印方法  -----------------------
 /**
- * @author Yutian改(加了移除iframe)
- * @param {*} el
- * @param {*} custStyle
- */
-export function printByDom (el:HTMLElement, custStyle = '') {
+   * @author Yutian改(加了移除iframe)
+   * @param {*} el
+   * @param {*} custStyle
+   */
+export function printByDom (el: HTMLElement, custStyle = '') {
 
   const iframe = document.createElement('iframe');
   iframe.style.position = 'fixed';
@@ -170,7 +340,7 @@ export function printByDom (el:HTMLElement, custStyle = '') {
   `;
   iframeDoc.head.appendChild(style);
 
-  (iframeDoc.body as HTMLBodyElement).onafterprint = ()=>{
+  (iframeDoc.body as HTMLBodyElement).onafterprint = () => {
     (iframeDoc.body as HTMLBodyElement).onafterprint = null;
     document.body.removeChild(iframe);
   };
@@ -180,11 +350,11 @@ export function printByDom (el:HTMLElement, custStyle = '') {
 }
 
 /**
- * @author Yutian
- * @param {*} blob
- * @param {*} type
- */
-export function printByBlob (blob:Blob, type = 'appliaction/pdf') {
+   * @author Yutian
+   * @param {*} blob
+   * @param {*} type
+   */
+export function printByBlob (blob: Blob, type = 'appliaction/pdf') {
 
   let newBlob = new Blob([blob], { type });
 
@@ -197,11 +367,11 @@ export function printByBlob (blob:Blob, type = 'appliaction/pdf') {
   const iframeDoc = iframe.contentWindow!.document;
   document.body.appendChild(iframe);
 
-  (iframeDoc.body as HTMLBodyElement).onafterprint = ()=>{
+  (iframeDoc.body as HTMLBodyElement).onafterprint = () => {
     (iframeDoc.body as HTMLBodyElement).onafterprint = null;
     document.body.removeChild(iframe);
   };
-  setTimeout(()=>{
+  setTimeout(() => {
     iframe.contentWindow!.print();
   });
 }
@@ -209,20 +379,20 @@ export function printByBlob (blob:Blob, type = 'appliaction/pdf') {
 // -----------------------  其他方法  -----------------------
 
 /**
- * 图片压缩
- * @param file 源文件
- * @param size 指定压缩大小 单位M
- * @returns
- */
-export function imgCompression (file:File, size:number) {
+   * 图片压缩
+   * @param file 源文件
+   * @param size 指定压缩大小 单位M
+   * @returns
+   */
+export function imgCompression (file: File, size: number) {
   const reader = new FileReader();
   reader.readAsDataURL(file);
 
-  return new Promise((resolve)=>{
-    reader.onload = (e)=>{
+  return new Promise((resolve) => {
+    reader.onload = (e) => {
       const image = new Image();
       image.src = e.target?.result as string;
-      image.onload = ()=>{
+      image.onload = () => {
         let quality = 1;
         const canvas = document.createElement('canvas');
         const ctx = canvas.getContext('2d');
@@ -246,13 +416,13 @@ export function imgCompression (file:File, size:number) {
 }
 
 /**
- * 获取文件大小
- * @param {File} file 源文件
- * @param {unit} 单位
- * @returns {number} 文件大小
- */
-export function getFileSize (file:File, unit:string = 'b') {
-  const unitMap:unitMap = { 'b': 0,
+   * 获取文件大小
+   * @param {File} file 源文件
+   * @param {unit} 单位
+   * @returns {number} 文件大小
+   */
+export function getFileSize (file: File, unit: string = 'b') {
+  const unitMap: unitMap = { 'b': 0,
     'kb': 1,
     'm': 2,
     'g': 3 };
@@ -264,21 +434,21 @@ export function getFileSize (file:File, unit:string = 'b') {
 }
 
 /**
- *
- * @param {File} file 源文件
- * @returns 文件后缀
- */
-export function getFileType (file:File) {
+   *
+   * @param {File} file 源文件
+   * @returns 文件后缀
+   */
+export function getFileType (file: File) {
   return file.name.split('.').pop();
 }
 
 /**
- * 生成切片数组
- * @param {*} file
- * @param {*} chunkSize
- * @returns { Array<IChunk>}
- */
-export function getFileChunk (file:File, chunkSize = 1024 * 1024):Array<IChunk> {
+   * 生成切片数组
+   * @param {*} file
+   * @param {*} chunkSize
+   * @returns { Array<IChunk>}
+   */
+export function getFileChunk (file: File, chunkSize = 1024 * 1024): Array<IChunk> {
   const chunks = [];
   let cur = 0;
   const fileSize = file.size;
