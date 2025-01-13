@@ -57,17 +57,20 @@ logNextLone();
 
 exec('npm config set registry https://registry.npmmirror.com', (error, stdout, stderr) => {
   if (error) {
-    logError('设置 npm 镜像失败: ', error);
-
-  } else {
-    return logSuccess('已成功将 npm 镜像设置为源镜像:', stdout);
-
+    return logError('设置 npm 镜像失败: ', error);
   }
+  logSuccess('已成功将 npm 镜像设置为源镜像:', stdout);
+
   console.log('正在打包中...');
 
   exec('npm run build', (error, stdout)=>{
     if (error) {
       logError('npm run build 失败: ', error);
+      if (error.code === 1) {
+        logError('可能是权限问题或 package.json 文件有问题，请检查文件权限和文件内容');
+      } else if (error.code === 2) {
+        logError('可能是网络问题，请检查网络连接');
+      }
       return;
 
     }
