@@ -55,22 +55,32 @@ function publish () {
 logLogo();
 logNextLone();
 
-console.log('正在打包中...');
-
-exec('npm run build', (error, stdout)=>{
+exec('npm config set registry https://registry.npmmirror.com', (error, stdout, stderr) => {
   if (error) {
-    logError('npm run build 失败: ', error);
-    return;
+    logError('设置 npm 镜像失败: ', error);
+
+  } else {
+    return logSuccess('已成功将 npm 镜像设置为源镜像:', stdout);
 
   }
-  console.log('正在提升版本号...');
+  console.log('正在打包中...');
 
-  exec('npm version patch', (error, stdout, stderr) => {
+  exec('npm run build', (error, stdout)=>{
     if (error) {
-      logError('npm version 失败: ', error);
+      logError('npm run build 失败: ', error);
       return;
+
     }
-    // npm version patch && npm run build && npm publish && exit 1
-    publish();
+    console.log('正在提升版本号...');
+
+    exec('npm version patch', (error, stdout, stderr) => {
+      if (error) {
+        logError('npm version 失败: ', error);
+        return;
+      }
+      // npm version patch && npm run build && npm publish && exit 1
+      publish();
+    });
   });
+
 });
