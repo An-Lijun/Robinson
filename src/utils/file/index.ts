@@ -1,7 +1,6 @@
 interface unitMap {
   [index: string]: number
 }
-interface IChunk { index: Number, file: Blob }
 
 /**
  * 获取文件的mime类型
@@ -446,9 +445,11 @@ export function getFileType (file: File) {
    * 生成切片数组
    * @param {*} file
    * @param {*} chunkSize
-   * @returns { Array<IChunk>}
+   * @returns { Array<{ index: Number, file: Blob }>}
    */
-export function getFileChunk (file: File, chunkSize = 1024 * 1024): Array<IChunk> {
+
+// eslint-disable-next-line
+export function getFileChunk (file: File, chunkSize = 1024 * 1024): Array<{ index: Number, file: Blob }> {
   const chunks = [];
   let cur = 0;
   const fileSize = file.size;
@@ -463,8 +464,8 @@ export function getFileChunk (file: File, chunkSize = 1024 * 1024): Array<IChunk
  * 生成hash值
  * @param chunks 切片数据
  */
-
-// export function createHashByWorker (chunks:Array<IChunk>):Promise<string> {
+// eslint-disable-next-line
+// export function createHashByWorker (chunks:Array<{ index: Number, file: Blob }>):Promise<string> {
 //   return new Promise((reslove)=>{
 //     const worker = new Worker(new URL('./worker/hash.worker.js', import.meta.url));
 

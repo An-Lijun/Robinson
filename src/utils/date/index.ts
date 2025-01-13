@@ -109,6 +109,7 @@ export function getDiff (start:Tday, end:Tday, unitType:dayjs.OpUnitType, float 
  * ```
  */
 export function isLeapYear (year:string|number) {
+  // @ts-ignore
   return dayjs(`${year}-01-01`).isLeapYear();
 }
 

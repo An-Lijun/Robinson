@@ -15,11 +15,11 @@ module.exports = defineConfig([{
       format: 'esm', //打包格式
       preserveModules: true // 开启单独打包有利于树摇晃
     },
-    {
-      dir: 'dist/cjs',
-      format: 'cjs',
-      preserveModules: true
-    },
+    // {
+    //   dir: 'dist/cjs',
+    //   format: 'cjs',
+    //   preserveModules: true
+    // },
     {
       file: 'dist/iife.js',
       format: 'iife',
@@ -39,17 +39,18 @@ module.exports = defineConfig([{
     //   'presets': [
     //     '@babel/preset-env'
     //   ] }),
-    terser()
+    terser(),
+
   ]
 },
   // 类型文件
-  // { input: 'src/index.ts',
-  //   output: { dir: 'dist/esm/types',
-  //     format: 'esm',
-  //     preserveModules: true },
-  //   plugins: [
-  //     dts()
-  //   ] },
+  { input: 'src/index.ts',
+    output: { dir: 'dist/esm/types',
+      format: 'esm',
+      preserveModules: true },
+    plugins: [
+      dts()
+    ] }
   // { input: 'src/index.ts',
   //   output: { dir: 'dist/cjs/types',
   //     format: 'cjs',

@@ -1,4 +1,4 @@
-import { is } from '../../common';
+import { is } from '../../common/index';
 
 /**
  * @description 该函数检查值是否是类对象like 类型。

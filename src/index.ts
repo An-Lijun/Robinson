@@ -7,9 +7,9 @@ export * from './utils/function/index';
 export * from './utils/object/index';
 export * from './utils/string/index';
 export * from './utils/web/index';
-export * from './utils/color';
-export * from './utils/symbol';
-export * from './utils/date';
-export * from './utils/file';
+export * from './utils/color/index';
+export * from './utils/symbol/index';
+export * from './utils/date/index';
+export * from './utils/file/index';
 
 // export * from './utils/other/index';
