@@ -23,7 +23,8 @@
         "test": "jest",
         "lint": "eslint --fix --ext .js,.vue src",
         "build": "npx rollup -c",
-        "pub": "npm version patch && npm run build && npm publish && exit 1"
+        "pub": "node ./script/publish.js",
+        "p": "node ./script/publish.js"
     },
     "author": "",
     "license": "ISC",
@@ -42,6 +43,7 @@
         "@rollup/plugin-alias": "^5.0.0",
         "@rollup/plugin-babel": "^6.0.3",
         "@rollup/plugin-terser": "^0.4.3",
+        "@types/big.js": "^6.2.2",
         "@types/node": "^20.6.4",
         "@typescript-eslint/eslint-plugin": "^6.7.4",
         "@typescript-eslint/parser": "^6.7.4",
@@ -58,11 +60,11 @@
         "ts-node": "^10.9.1",
         "typescript": "^5.2.2",
         "vitepress": "1.0.0-rc.20",
-        "vue": "^3.3.4",
-        "@types/big.js": "^6.2.2"
+        "vue": "^3.3.4"
     },
     "dependencies": {
         "big.js": "^6.2.1",
+        "chalk": "^2.4.2",
         "dayjs": "^1.11.10"
     }
 }
