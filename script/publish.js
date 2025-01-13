@@ -55,7 +55,7 @@ function publish () {
 logLogo();
 logNextLone();
 
-exec('npm config set registry https://registry.npmmirror.com', (error, stdout, stderr) => {
+exec('npm config set registry https://registry.npmjs.org/', (error, stdout, stderr) => {
   if (error) {
     return logError('设置 npm 镜像失败: ', error);
   }
