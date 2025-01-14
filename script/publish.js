@@ -68,18 +68,9 @@ function publish () {
   });
 
   // 当有数据输出到标准错误时的处理
-  buildProcess.stderr.on('data', (blob) => {
+  buildProcess.stderr.on('data', (buff) => {
     // 创建一个 FileReader 对象
-    let reader = new FileReader();
-    // 定义 onload 事件处理函数
-    reader.onload = function (event) {
-      // 获取转换后的字符串内容
-      let content = reader.result;
-      console.log(content);
-    };
-
-    // 读取 Blob 对象并将其转换为字符串
-    reader.readAsText(blob);
+    buff.toString();
   });
 
   // 当进程结束时的处理
