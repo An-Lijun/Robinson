@@ -12,7 +12,9 @@
         "util"
     ],
     "scripts": {
-        "doc": "api-extractor run --local --verbose && api-documenter markdown -i temp -o etc/doc",
+        "doc": "api-extractor run --local --verbose",
+        "docetc": "api-documenter markdown -i temp -o etc/doc",
+        "genDoc":"node ./script/genDoc.js",
         "doc:debug": "api-extractor run --local --verbose --diagnostics && api-documenter markdown -i temp -o etc/doc",
         "trace": "tsc dist/types/index.d.ts --traceResolution > trace.log",
         "docs:dev": "vitepress dev",

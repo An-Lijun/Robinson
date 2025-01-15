@@ -14,7 +14,8 @@ interface IndexTree {
 function resolveTitle(title: string) {
    title === 'doc' ? title : title.replace('doc.', '')
    title === 'etc' ? title : title.replace('etc.', '')
-   title.replace('robinson.','')
+   
+   title =title.replace('robinson.','')
    return title
 }
 

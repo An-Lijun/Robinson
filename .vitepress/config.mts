@@ -2,6 +2,7 @@ import { defineConfig } from 'vitepress'
 
 import docs from './script'
 
+
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
   title: 'Robinson',
@@ -9,20 +10,23 @@ export default defineConfig({
   base:'/',
   outDir: "./docs",
   themeConfig: {
-      // https://vitepress.dev/reference/default-theme-config
+  // https://vitepress.dev/reference/default-theme-config
       nav: [
           { text: '主页', link: '/index.html' },
           { text: 'API', link: '/etc/doc/index.html' },
       ],
+
       sidebar: [
           {
               text: 'API',
               items: docs,
           },
       ],
+
       socialLinks: [
-          { icon: 'github', link: 'https://github.com/An-Lijun/Robinson' },
+          { icon: 'github', link: 'https://github.com/An-Lijun/Robinson' },// 这里要替换成你自己的仓库地址
       ],
+
       search: {
           provider: 'local'
       },
