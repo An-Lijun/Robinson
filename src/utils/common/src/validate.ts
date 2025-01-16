@@ -6,7 +6,7 @@ import { isArray } from '../../../index';
  * @description 返回是某个类型的判断结果
  * @param {Any} value 要判断的数据
  * @param {String}type  判断他是这个类型
- * @returns 布尔值
+ * @returns {boolean} 布尔值
  * @example
  * ```JavaScript
  *    let a = 1; is(a,'number')// true
@@ -22,7 +22,8 @@ export function is (value:any, type:string):boolean {
  * @beta
  * @description 该函数通过将 JSON 表示形式与空数组或对象进行比较来检查值是否为空。
  * @param {any} value - “value”参数可以是任何数据类型。这是您要检查它是否为空的值。
- * @returns 一个布尔值。如果值为空（空数组或空对象）或值为假（例如 null、undefined、false、0 或空字符串），则返回 true。否则，返回 false。
+ * @returns {boolean} 一个布尔值。如果值为空（空数组或空对象）或值为假（例如 null、undefined、false、0 或空字符串），
+ * 则返回 true。否则，返回 false。
  * @example
  * ```JavaScript
  *    let a =null; isEmpty(a) // true
@@ -57,7 +58,7 @@ export function isEmpty (value:any):boolean {
  * @beta
  * @description 函数“isNull”检查给定值是否为空。
  * @param {any} value - 参数“value”的类型为“any”，这意味着它可以接受任何数据类型。
- * @returns 函数 isNull 返回一个布尔值。
+ * @returns {boolean} 函数 isNull 返回一个布尔值。
  * ```JavaScript
  *  let a =null; isNull(a)// true
  * ```
@@ -70,7 +71,7 @@ export function isNull (value:any):boolean {
  * @beta
  * @description  函数“isUndefined”检查值是否未定义。
  * @param {any} value - “value”参数的类型为“any”，这意味着它可以接受任何类型的值。
- * @returns 函数 isUndefined 返回一个布尔值。
+ * @returns {boolean} 函数 isUndefined 返回一个布尔值。
  * @example
  * ```JavaScript
  *    let a; isUndefined(a) // true
@@ -85,7 +86,7 @@ export function isUndefined (value:any):boolean {
  * @description 该函数检查给定值的类型是否存在于给定类型数组中。
  * @param {any} value - “value”参数是您要检查其类型的值。它可以是任何类型，例如数字、字符串、对象等。
  * @param types - 表示要检查的类型的字符串数组。
- * @returns 一个布尔值。
+ * @returns {boolean} 一个布尔值。
  * @example
  * ```JavaScript
 *     let a ="123"; isTypeIn(a,['number','array','string']) // true
@@ -100,7 +101,7 @@ export function hasTypeIn (value:any, types:Array<string>):boolean {
  * @beta
  * @description 该函数检查值是否为简单值（数字、字符串、布尔值、符号、null、undefined 或 bigint）或复杂值（函数、对象、数组、集合、映射）。
  * @param {any} value - 参数“value”的类型为“any”，这意味着它可以接受任何类型的值。
- * @returns 函数 isSimpleType 返回一个布尔值。
+ * @returns {boolean} 函数 isSimpleType 返回一个布尔值。
  * @example
  * ```JavaScript
  *    let num =123; isSimpleType(num) // true
@@ -118,7 +119,7 @@ export function isSimpleType (value:any):boolean {
  * @beta
  * @description 该函数检查值是否为引用类型。
  * @param {any} value - “value”参数的类型为“any”，这意味着它可以接受任何类型的值。
- * @returns 一个布尔值。
+ * @returns {boolean} 一个布尔值。
  * @example
  * ```JavaScript
  *    let num =123; isRefType(num) // true
@@ -134,7 +135,7 @@ export function isRefType (value:any):boolean {
  * @description 函数“isEqType”检查两个值的类型是否相等。
  * @param {any} value - “value”参数的类型为“any”，这意味着它可以接受任何类型的值。
  * @param {any} value2 - “value2”参数是您要与之比较类型的第二个值。
- * @returns 一个布尔值。
+ * @returns {boolean} 一个布尔值。
  * ```JavaScript
  * let a =1;
  * let b =new Number();
@@ -155,7 +156,7 @@ export function isEqType (value:any, value2:any):boolean {
  * @description 函数“isEqValue”比较两个值，如果它们的值和类型相等则返回 true。
  * @param {any} value1 - 要比较的第一个值。它可以是任何类型。
  * @param {any} value2 - “value2”参数是要与“value1”比较的第二个值。
- * @returns 一个布尔值。
+ * @returns {boolean} 一个布尔值。
  * @example
  * ```JavaScript
  * let a =NaN;let b = NaN; isEqValue(a,b) //true

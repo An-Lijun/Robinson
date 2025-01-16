@@ -25,3 +25,9 @@ none (now useing for self)
 ## 测试
 npm run test 
 
+## TsType
+@bata //是否正式版
+@description //函数描述
+@param //参数
+@returns //返回值
+@example //例子
