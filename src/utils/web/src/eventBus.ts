@@ -1,7 +1,17 @@
 interface EventFn {
   [key: string] :Array<Function>
 }
-/* `EventBus` 类是事件总线的 TypeScript 实现，允许订阅和发出事件，以及取消订阅和清除事件。 */
+/**
+ * @beta
+ * @description 函数“on”将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。
+ * @param {string} eventName - 表示事件的名称的字符串。
+ * @param {Function} eventFn - 当指定事件发生时将执行的函数。
+ * @example
+ * const eventBus = new EventBus();
+ * eventBus.on('myEvent', () => {
+ *   console.log('myEvent triggered');
+ * });
+ */
 export default class EventBus {
   #eventObj:EventFn;
 

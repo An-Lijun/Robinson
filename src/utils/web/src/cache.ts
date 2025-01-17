@@ -6,7 +6,8 @@ interface ParamsInter{
 }
 
 /**
- * createCache 函数创建一个缓存对象，该对象可以使用指定的存储机制和编码/解码函数来存储和检索数据。
+ * @beta
+ * @description createCache 函数创建一个缓存对象，该对象可以使用指定的存储机制和编码/解码函数来存储和检索数据。
  * @param {any} storage - `storage` 参数是一个可选参数，它指定用于缓存的存储机制。它可以是实现与 localStorage 对象相同接口的任何对象，例如
  * sessionStorage 或自定义存储实现。如果没有提供存储对象，则`localStorage`
  * @param {ParamsInter} parmas -

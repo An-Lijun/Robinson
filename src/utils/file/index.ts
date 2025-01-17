@@ -3,17 +3,20 @@ interface unitMap {
 }
 
 /**
- * 获取文件的mime类型
- * @param fileName 文件名
- * @returns
+ * @beta
+ * @description 获取文件的MIME类型
+ * @param suffix 文件扩展名
+ * @returns 对应的MIME类型字符串
+ * @example
+ * getMimeType('jpg'); // 返回 'image/jpeg'
+ * getMimeType('docx');
+ * //返回'application/vnd.openxmlformats-officedocument.wordprocessingml.document'
  */
-
-// 方法过长需要忽略eslint 规则
 /* eslint-disable */
 // mozilla MimeType https://developer.mozilla.org/zh-CN/docs/Web/HTTP/MIME_types/Common_types
 
-export function getMimeType(mime: String) {
-  switch (mime.toLowerCase()) {
+export function getMimeType(suffix: String) {
+  switch (suffix.toLowerCase()) {
     case 'aac':
       return 'audio/aac';
     case 'abw':
@@ -62,7 +65,7 @@ export function getMimeType(mime: String) {
     case 'ico':
       return 'image/x-icon';
     case 'ics':
-      return '	text/calendar';
+      return 'text/calendar';
     case 'jar':
       return 'application/java-archive';
     case 'jpeg':
@@ -174,15 +177,19 @@ export function getMimeType(mime: String) {
 // -----------------------  转换方法  -----------------------
 
 /**
-   *
-   * @param blob 流
-   * @param mime mime类型
-   * @returns
-   */
-export function blobToBase64 (blob: BlobPart, mime = 'png') {
+ * @beta
+ * @description 将Blob对象转换为Base64编码的字符串
+ * @param blob Blob对象
+ * @param suffix 文件后缀，默认为'png'
+ * @returns Promise对象，解析为Base64编码的字符串
+ * @example
+ * blobToBase64(new Blob(['Hello, world!'], { type: 'text/plain' }))
+ * .then(base64 => console.log(base64));
+ */
+export function blobToBase64 (blob: BlobPart, suffix = 'png') {
   return new Promise((resolve, reject) => {
     try {
-      const newBlob = new Blob([blob], { type: mime });
+      const newBlob = new Blob([blob], { type: getMimeType(suffix) });
       const reader = new FileReader();
       reader.onload = function () {
         const dataURL = reader.result as string;
@@ -197,10 +204,13 @@ export function blobToBase64 (blob: BlobPart, mime = 'png') {
 }
 
 /**
-   * base64 转blob
-   * @param {*} base64
-   * @returns {Blob}
-   */
+ * @beta
+ * @description 将Base64编码的字符串转换为Blob对象
+ * @param base64 Base64编码的字符串
+ * @returns Blob对象
+ * @example
+ * const blob = base64ToBlob('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...');
+ */
 export function base64ToBlob (base64: string): Blob {
   const [typeItem, base] = base64.split(',');
   const mime = typeItem.match(/:(.*?);/)![1];
@@ -214,12 +224,15 @@ export function base64ToBlob (base64: string): Blob {
 }
 
 /**
-   * img url 转为base64
-   * @param {*} url
-   * @param {*} mime
-   * @returns
-   */
-export function urlToBase64 (url: string, mime = 'image/png'): Promise<string> {
+ * @beta
+ * @description 将图片URL转换为Base64编码的字符串
+ * @param url 图片URL
+ * @param suffix 文件后缀，默认为'image/png'
+ * @returns Promise对象，解析为Base64编码的字符串
+ * @example
+ * urlToBase64('https://example.com/image.png').then(base64 => console.log(base64));
+ */
+export function urlToBase64 (url: string, suffix = 'png'): Promise<string> {
   return new Promise((resolve, reject) => {
     let canvas: HTMLCanvasElement | null = document.createElement('canvas');
     const ctx = canvas.getContext('2d');
@@ -230,25 +243,28 @@ export function urlToBase64 (url: string, mime = 'image/png'): Promise<string> {
       canvas!.height = img.height;
       canvas!.width = img.width;
       ctx?.drawImage(img, 0, 0);
-      const dataURL = canvas!.toDataURL(mime);
+      const dataURL = canvas!.toDataURL(getMimeType(suffix));
       canvas = null;
       resolve(dataURL);
     };
     img.onerror = (err) => {
       reject(err);
     };
+    img.src = url;
   });
 }
 
 // -----------------------  下载方法  -----------------------
 
 /**
-   * 下载图片到本地
-   * @param url  图片路径
-   * @param filename 下载后的文件名
-   * @param type 下载后的文件类型
-   * @returns
-   */
+ * @beta
+ * @description 通过URL下载图片到本地
+ * @param url 图片路径
+ * @param filename 下载后的文件名
+ * @param type 下载后的文件类型
+ * @example
+ * downloadByUrl('https://example.com/image.png', 'example.png');
+ */
 export function downloadByUrl (url: string, filename?: string, type?: string) {
   const linkEl = document.createElement('a');
   const event = new MouseEvent('click');
@@ -272,14 +288,16 @@ export function downloadByUrl (url: string, filename?: string, type?: string) {
 }
 
 /**
-   * blob流下载文件
-   * @param blob blob文件流
-   * @param fileNm 下载后的文件名
-   * @param mime 下载后的文件类型
-   */
-export function downloadByBlob (blob: BlobPart, fileNm: string, mime = 'txt') {
-
-  const newBlob = new Blob([blob], { type: getMimeType(mime) });
+ * @beta
+ * @description 通过Blob对象下载文件
+ * @param blob Blob文件流
+ * @param fileNm 下载后的文件名
+ * @param suffix 下载后的文件类型，默认为'txt'
+ * @example
+ * downloadByBlob(new Blob(['Hello, world!'], { type: 'text/plain' }), 'example.txt');
+ */
+export function downloadByBlob (blob: BlobPart, fileNm: string, suffix = 'txt') {
+  const newBlob = new Blob([blob], { type: getMimeType(suffix) });
 
   const blobURL = window.URL.createObjectURL(newBlob);
   const linkEl = document.createElement('a');
@@ -293,24 +311,30 @@ export function downloadByBlob (blob: BlobPart, fileNm: string, mime = 'txt') {
 }
 
 /**
-   * base64 下载文件
-   * @param buf  base64
-   * @param fileNm  下载后的文件名
-   * @param mime 下载后的文件类型
-   */
-export function downloadByBase64 (buf: string, fileNm: string, mime: string) {
+ * @beta
+ * @description 通过Base64编码的字符串下载文件
+ * @param buf Base64编码的字符串
+ * @param fileNm 下载后的文件名
+ * @param suffix 下载后的文件后缀
+ * @example
+ * downloadByBase64('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...', 'example.png', 'png');
+ */
+export function downloadByBase64 (buf: string, fileNm: string, suffix: string) {
   const blobBuf = base64ToBlob(buf);
-  downloadByBlob(blobBuf, fileNm, mime);
+  downloadByBlob(blobBuf, fileNm, suffix);
 }
 
 // -----------------------  打印方法  -----------------------
-/**
-   * @author Yutian改(加了移除iframe)
-   * @param {*} el
-   * @param {*} custStyle
-   */
-export function printByDom (el: HTMLElement, custStyle = '') {
 
+/**
+ * @beta
+ * @description 通过DOM元素打印内容
+ * @param el 要打印的DOM元素
+ * @param custStyle 自定义CSS样式
+ * @example
+ * printByDom(document.getElementById('print-content'), 'body { font-size: 12px; }');
+ */
+export function printByDom (el: HTMLElement, custStyle = '') {
   const iframe = document.createElement('iframe');
   iframe.style.position = 'fixed';
   iframe.style.zIndex = '-99';
@@ -329,7 +353,7 @@ export function printByDom (el: HTMLElement, custStyle = '') {
     table{
       width:100%;
       border:1px solid;
-      border-collpase:collapse;
+      border-collapse:collapse;
     }
     table td,table th{
       border:1px solid;
@@ -349,12 +373,14 @@ export function printByDom (el: HTMLElement, custStyle = '') {
 }
 
 /**
-   * @author Yutian
-   * @param {*} blob
-   * @param {*} type
-   */
-export function printByBlob (blob: Blob, type = 'appliaction/pdf') {
-
+ * @beta
+ * @description 通过Blob对象打印内容
+ * @param blob Blob对象
+ * @param type MIME类型，默认为'application/pdf'
+ * @example
+ * printByBlob(new Blob(['Hello, world!'], { type: 'text/plain' }));
+ */
+export function printByBlob (blob: Blob, type = 'application/pdf') {
   let newBlob = new Blob([blob], { type });
 
   const url = URL.createObjectURL(newBlob);
@@ -378,11 +404,14 @@ export function printByBlob (blob: Blob, type = 'appliaction/pdf') {
 // -----------------------  其他方法  -----------------------
 
 /**
-   * 图片压缩
-   * @param file 源文件
-   * @param size 指定压缩大小 单位M
-   * @returns
-   */
+ * @beta
+ * @description 压缩图片文件
+ * @param file 源文件
+ * @param size 指定压缩大小（单位：MB）
+ * @returns Promise对象，解析为压缩后的Base64编码字符串
+ * @example
+ * imgCompression(fileInput.files[0], 0.5).then(compressedBase64 => console.log(compressedBase64));
+ */
 export function imgCompression (file: File, size: number) {
   const reader = new FileReader();
   reader.readAsDataURL(file);
@@ -415,11 +444,14 @@ export function imgCompression (file: File, size: number) {
 }
 
 /**
-   * 获取文件大小
-   * @param {File} file 源文件
-   * @param {unit} 单位
-   * @returns {number} 文件大小
-   */
+ * @beta
+ * @description 获取文件大小
+ * @param file 源文件
+ * @param unit 单位（'b', 'kb', 'm', 'g'），默认为'b'
+ * @returns 文件大小（指定单位）
+ * @example
+ * getFileSize(fileInput.files[0], 'kb'); // 返回文件大小（KB）
+ */
 export function getFileSize (file: File, unit: string = 'b') {
   const unitMap: unitMap = { 'b': 0,
     'kb': 1,
@@ -433,23 +465,28 @@ export function getFileSize (file: File, unit: string = 'b') {
 }
 
 /**
-   *
-   * @param {File} file 源文件
-   * @returns 文件后缀
-   */
+ * @beta
+ * @description 获取文件后缀名
+ * @param file 源文件
+ * @returns 文件后缀名
+ * @example
+ * getFileType(fileInput.files[0]); // 返回文件后缀名（如 'jpg'）
+ */
 export function getFileType (file: File) {
   return file.name.split('.').pop();
 }
 
 /**
-   * 生成切片数组
-   * @param {*} file
-   * @param {*} chunkSize
-   * @returns { Array<{ index: Number, file: Blob }>}
-   */
-
+ * @beta
+ * @description 生成文件切片数组
+ * @param file 文件对象
+ * @param chunkSize 每个切片的大小（字节），默认为1MB
+ * @returns 切片数组，每个元素包含索引和Blob对象
+ * @example
+ * getFileChunk(fileInput.files[0], 1024 * 1024).forEach(chunk => console.log(chunk));
+ */
 // eslint-disable-next-line
-export function getFileChunk (file: File, chunkSize = 1024 * 1024): Array<{ index: Number, file: Blob }> {
+export function getFileChunk (file: File, chunkSize = 1024 * 1024): Array<{ index: number, file: Blob }> {
   const chunks = [];
   let cur = 0;
   const fileSize = file.size;

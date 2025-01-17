@@ -4,7 +4,8 @@ type position = 'beforebegin'|'afterbegin'|'beforeend'|'afterend'
 
 // 节点方法 ---------------------------------------
 /**
- * 该函数检查元素是否是节点。
+ * @beta
+ * @description 该函数检查元素是否是节点。
  * @param {Element} el - `el` 参数的类型是 `Element`，它表示 HTML DOM 中的一个元素。
  * @returns 一个布尔值。如果给定元素的 nodeType 为 1 (ELEMENT_NODE)、9 (DOCUMENT_NODE) 或 11
  * (DOCUMENT_FRAGMENT_NODE)，则返回 true。否则，返回 false。
@@ -21,7 +22,8 @@ export function isNode (el:any) :Boolean {
   return el.nodeType === 1 || el.nodeType === 9 || el.nodeType === 11;
 }
 /**
- * 函数 `nodeToString` 接受一个 HTML 元素并返回它的字符串表示形式。
+ * @beta
+ * @description 函数 `nodeToString` 接受一个 HTML 元素并返回它的字符串表示形式。
  * @param {Element} node - `node` 参数的类型为 `Element`，它表示 DOM（文档对象模型）中的 HTML 元素。它可以是任何 HTML元素
  * @returns 所提供的 HTML 元素的字符串表示形式。
  * @example
@@ -39,10 +41,11 @@ export function nodeToString (node:Element):string {
   return str;
 }
 /**
- * 函数“addNode”将 DOM 元素或字符串插入到父 DOM 元素的指定位置。
+ * @beta
+ * @description 函数“addNode”将 DOM 元素或字符串插入到父 DOM 元素的指定位置。
  * @param {Element} parentDom - `parentDom` 参数是将新节点插入的 DOM 元素。
  * @param {Element} dom - “dom”参数可以是“Element”或“String”。它表示需要添加到“parentDom”的元素或 HTML 字符串。
-*  @param {position} [position=afterbegin] - “position”参数是可选的，默认值为“afterbegin”。它指定新节点相对于父节点应插入的位置。
+ *  @param {position} [position=afterbegin] - “position”参数是可选的，默认值为“afterbegin”。它指定新节点相对于父节点应插入的位置。
  * “position。它可以具有以下值之一：
  * beforebegin parentDom元素的前面
  * afterbegin  parentDom元素内部的第一个子节点之前
@@ -68,7 +71,8 @@ export function addNode (
   parentDom.insertAdjacentHTML(position, strDom);
 }
 /**
- * 该函数接受一个字符串并返回新创建的 div 元素的第一个子节点，并将该字符串作为其innerHTML。
+ * @beta
+ * @description 该函数接受一个字符串并返回新创建的 div 元素的第一个子节点，并将该字符串作为其innerHTML。
  * @param {string} str - `str` 参数是一个字符串，表示一个 HTML 元素或一组 HTML 元素。
  * @returns 创建的 div 元素的第一个子节点。
  * @example
@@ -83,7 +87,8 @@ export function stringToNode (str:string):Node |null {
   return tempNode.firstChild;
 }
 /**
- * 函数“replaceNode”用新的 DOM 元素或给定父元素中的字符串替换旧的 DOM 元素。
+ * @beta
+ * @description 函数“replaceNode”用新的 DOM 元素或给定父元素中的字符串替换旧的 DOM 元素。
  * @param {Element} parentNode - ParentNode 参数是包含 oldDom 元素的元素。它是发生替换的父元素。
  * @param {string|Node} newDom - `newDom` 参数可以是字符串或 Node。如果它是一个字符串，
  * 则它表示将使用“stringToNode”函数转换为节点的 HTML
@@ -110,7 +115,8 @@ export function replaceNode (parentNode:Element, newDom:string|Node, oldDom:Elem
   parentNode.replaceChild(dom, oldDom);
 }
 /**
- * 该函数从其父节点中删除指定的 DOM 元素。
+ * @beta
+ * @description 该函数从其父节点中删除指定的 DOM 元素。
  * @param {Element} parentNode - `parentNode` 参数是包含 `dom` 元素的元素。它是您要从中删除“dom”元素的元素。
  * @param {Element} dom - `dom` 参数是要从其父节点中删除的元素。
  * @example
@@ -124,7 +130,8 @@ export function removeNode (parentNode:Element, dom:Element) {
   parentNode.removeChild(dom);
 }
 /**
- * 函数 getNode 将 DOM 元素名称作为输入，如果找到则返回相应的元素，否则返回 null。
+ * @beta
+ * @description 函数 getNode 将 DOM 元素名称作为输入，如果找到则返回相应的元素，否则返回 null。
  * @param {string} domName - `domName` 参数是一个字符串，表示您要选择的 DOM 元素的名称。
  * @returns Element 对象或 null。
  * @example
@@ -136,7 +143,8 @@ export function getNode (domName:string):Element|null {
   return document.querySelector(domName);
 }
 /**
- * 函数“getNodes”返回与给定选择器匹配的 DOM 节点的 NodeList，如果未找到节点，则返回 null。
+ * @beta
+ * @description 函数“getNodes”返回与给定选择器匹配的 DOM 节点的 NodeList，如果未找到节点，则返回 null。
  * @param {string} domName - `domName` 参数是一个字符串，表示您要选择的 DOM 元素的名称。
  * @returns NodeList 或 null。
  * @example
@@ -150,7 +158,8 @@ export function getNodes (domName:string):NodeList|null {
 
 //事件方法   ----------------------------------------
 /**
- * 该函数将事件侦听器绑定到 TypeScript 中的 DOM 元素。
+ * @beta
+ * @description 该函数将事件侦听器绑定到 TypeScript 中的 DOM 元素。
  * @param {Node} dom - `dom` 参数是将事件监听器附加到的 DOM 元素。它可以是任何有效的 DOM 元素
  * @param {string} eventType - eventType 参数是一个字符串，指定要侦听的事件类型。事件类型的示例包括“单击”、“按下键”、“鼠标悬停”等。
  * @param {EventListenerOrEventListenerObject} callBack -
@@ -172,7 +181,8 @@ export function bind (dom:Node, eventType:string,
 }
 
 /**
- * 函数 unBind 从 DOM 元素中删除事件侦听器。
+ * @beta
+ * @description 函数 unBind 从 DOM 元素中删除事件侦听器。
  * @param {Node} dom - `dom` 参数是事件监听器所附加的 DOM 元素。
  * @param {string} eventType - eventType 参数是一个字符串，指定要删除的事件的类型。事件类型的示例包括“单击”、“按下键”、“鼠标悬停”等。
  * @param {EventListenerOrEventListenerObject} fnName - `fnName`
@@ -191,7 +201,8 @@ export function unBind (dom:Node, eventType:string,
   dom.removeEventListener(eventType, fnName, false);
 }
 /**
- * 函数 stopPropagation 阻止事件在事件链中向上冒泡。
+ * @beta
+ * @description 函数 stopPropagation 阻止事件在事件链中向上冒泡。
  * @param {Event} event -
  * 事件参数是一个表示发生的事件的对象。它包含有关事件的信息，例如事件类型、目标元素以及与事件关联的任何其他数据。在这种情况下，事件参数的类型为Event，它是一个通用事件对象，可以
  */
@@ -210,7 +221,8 @@ export function preventDefault (event:Event) {
 
 // class方法 ----------------------------------------
 /**
- * 该函数将一个类添加到 DOM 元素。
+ * @beta
+ * @description 该函数将一个类添加到 DOM 元素。
  * @param {Element} dom - `dom` 参数的类型为 `Element`，表示要添加该类的 DOM 元素。
  * @param {string} classNm - `classNm` 参数是一个字符串，表示要添加到 `dom` 元素的类的名称。
  * @example
@@ -224,7 +236,8 @@ export function addClass (dom:Element, classNm:string) {
   dom.classList.add(classNm);
 }
 /**
- * 该函数从给定的 DOM 元素中删除指定的类名。
+ * @beta
+ * @description 该函数从给定的 DOM 元素中删除指定的类名。
  * @param {Element} dom - “dom”参数的类型为“Element”，表示要从中删除类的 DOM 元素。
  * @param {string} classNm - “classNm”参数是一个字符串，表示要从“dom”元素中删除的类的名称。
  * @example
@@ -255,7 +268,8 @@ export function replaceClass (dom:Node, newClass:string, oldClass:string) {
 }
 
 /**
- * 该函数检查元素是否具有特定的类名。
+ * @beta
+ * @description 该函数检查元素是否具有特定的类名。
  * @param {Element} dom - “dom”参数的类型为“Element”，表示我们要检查其是否存在类的 DOM 元素。
  * @param {String} classNm - “classNm”参数是一个字符串，表示您要在“dom”元素中检查的类名。
  * @returns 一个布尔值，指示给定的 DOM 元素是否具有指定的类名。
@@ -273,7 +287,8 @@ export function hasClass (dom:Element, classNm:String) {
 
 // 渲染方法 -------------------------------------------
 /**
- * 该函数获取元素的InnerHtml字符串模板,填写好内容并返回
+ * @beta
+ * @description 该函数获取元素的InnerHtml字符串模板,填写好内容并返回
  * @param {string} selecter css 选择器
  * @param {any} data - `dom` 模板需要的数据
  * @example

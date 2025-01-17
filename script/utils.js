@@ -1,9 +1,11 @@
-const chalk = require('chalk'); //@ 我用的是 2.4.2 因为是nodejs脚本所以用老版本的cjs模块化 npm i chalk@2.4.2
+//@ 我用的是 2.4.2 因为是nodejs脚本所以用老版本的cjs模块化 npm i chalk@2.4.2
+const chalk = require('chalk');
 
 /**
  * 输出logo
  */
-function logLogo () { // 生成网站  https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+// 生成网站  https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
+function logLogo () {
   console.log(chalk.green(`
       _   _      _ _        ______      _     _                 
      | | | |    | | |       | ___ \\    | |   (_)                
