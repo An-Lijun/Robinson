@@ -67,6 +67,8 @@ export function addNode (
   let strDom = '';
   if (isNode(dom)) {
     strDom = nodeToString(dom as Element);
+  } else if (isString(dom)) {
+    strDom = dom as string;
   }
   parentDom.insertAdjacentHTML(position, strDom);
 }
@@ -82,6 +84,9 @@ export function addNode (
  * ```
  */
 export function stringToNode (str:string):Node |null {
+  if (!str) {
+    return null;
+  }
   let tempNode = document.createElement('div');
   tempNode.innerHTML = str;
   return tempNode.firstChild;
@@ -108,11 +113,11 @@ export function stringToNode (str:string):Node |null {
 export function replaceNode (parentNode:Element, newDom:string|Node, oldDom:Element) {
   let dom;
   if (isString(newDom)) {
-    dom = this.stringToNode(newDom);
+    dom = stringToNode((newDom as string));
   } else {
     dom = newDom;
   }
-  parentNode.replaceChild(dom, oldDom);
+  parentNode.replaceChild((dom as Element), oldDom);
 }
 /**
  * @beta
@@ -153,6 +158,9 @@ export function getNode (domName:string):Element|null {
  * ```
  */
 export function getNodes (domName:string):NodeList|null {
+  if (!domName) {
+    return null;
+  }
   return document.querySelectorAll(domName);
 }
 
@@ -263,8 +271,8 @@ export function removeClass (dom:Element, classNm:string) {
  * ```
  */
 export function replaceClass (dom:Node, newClass:string, oldClass:string) {
-  this.removeClass(dom, oldClass);
-  this.addClass(dom, newClass);
+  removeClass(dom, oldClass);
+  addClass(dom, newClass);
 }
 
 /**

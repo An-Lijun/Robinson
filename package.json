@@ -68,7 +68,6 @@
     },
     "dependencies": {
         "big.js": "^6.2.1",
-        "chalk": "^2.4.2",
         "dayjs": "^1.11.10"
     }
 }
