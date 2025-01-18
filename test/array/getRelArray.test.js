@@ -14,3 +14,39 @@ describe('getRelArray', () => {
     }
   });
 });
+
+describe('getRelArray', () => {
+  it('should throw TypeError if input is not an array', () => {
+    expect(() => getRelArray('not an array')).toThrow(TypeError);
+    expect(() => getRelArray(123)).toThrow(TypeError);
+    expect(() => getRelArray({})).toThrow(TypeError);
+  });
+
+  it('should filter out null values', () => {
+    expect(getRelArray([null, 1, 2, null])).toEqual([1, 2]);
+  });
+
+  it('should filter out undefined values', () => {
+    expect(getRelArray([undefined, 1, 2, undefined])).toEqual([1, 2]);
+  });
+
+  it('should filter out empty strings', () => {
+    expect(getRelArray(['', 1, 2, ''])).toEqual([1, 2]);
+  });
+
+  it('should filter out empty arrays', () => {
+    expect(getRelArray([[], 1, 2, []])).toEqual([1, 2]);
+  });
+
+  it('should filter out empty objects', () => {
+    expect(getRelArray([{}, 1, 2, {}])).toEqual([1, 2]);
+  });
+
+  it('should return the array as is if no empty values are present', () => {
+    expect(getRelArray([1, 2, 3])).toEqual([1, 2, 3]);
+  });
+
+  it('should filter out mixed empty values', () => {
+    expect(getRelArray([null, undefined, '', [], {}, 1, 2])).toEqual([1, 2]);
+  });
+});

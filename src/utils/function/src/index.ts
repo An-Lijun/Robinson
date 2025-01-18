@@ -162,7 +162,7 @@ export function mapping (enumData: enumData, options: options, expty = '--'): re
 /**
  * @beta
  * @description 组合函数，将多个函数从右到左依次调用。
- * @param {...Function} funcs - 要组合的函数。
+ * @param {...Function} fns - 要组合的函数。
  * @returns {Function} - 返回一个组合后的函数。
  * @example
  * ```JavaScript
@@ -172,10 +172,14 @@ export function mapping (enumData: enumData, options: options, expty = '--'): re
  * composed(2);// 返回 6
  * ```
  */
-export function compose (...funcs: Array<Function>): Function {
-  return () => funcs.reduceRight((result, fn) => fn(result));
+export function compose (...fns: Array<Function>): Function {
+  if (!fns.length) {
+    return ()=>void 0;
+  }
+  return function (...args:Array<any>) {
+    return fns.reduceRight((acc, fn) => fn(acc), fns.pop()(...args));
+  };
 }
-
 /**
  * @beta
  * @description 柯里化函数接受一个函数作为输入并返回一个新函数，该函数可以使用多个参数或以柯里化方式调用。
@@ -255,7 +259,7 @@ export function debounce (fn: Function, delay: number, isLimmediate: boolean = f
 /**
  * @beta
  * @description 从左向右执行函数。
- * @param {...Function} funcs - 要组合的函数。
+ * @param {...Function} fns - 要组合的函数。
  * @returns {Function} - 返回一个组合后的函数。
  * @example
  * ```JavaScript
@@ -265,8 +269,14 @@ export function debounce (fn: Function, delay: number, isLimmediate: boolean = f
  * piped(2);// 返回 6
  * ```
  */
-export function pipe (...funcs: Array<Function>): Function {
-  return () => funcs.reduce((result, func) => func(result));
+export function pipe (...fns: Array<Function>): Function {
+
+  if (!fns.length) {
+    return ()=>void 0;
+  }
+  return function (...args:Array<any>) {
+    return fns.reduce((acc, fn) => fn(acc), fns.shift()(...args));
+  };
 }
 
 /**

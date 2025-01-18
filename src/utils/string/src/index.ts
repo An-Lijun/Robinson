@@ -127,7 +127,8 @@ export function isEmail (s: string): boolean {
  * ```
  */
 export function isMobileNum (s: string | number): boolean {
-  return (/^1\d{10}$/).test(String(s));
+  // return (/^1\d{10}$/).test(String(s));
+  return (/^1[3-9]\d{9}$/).test(String(s));
 }
 
 /**
