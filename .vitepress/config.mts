@@ -1,7 +1,7 @@
 import { defineConfig } from 'vitepress'
 
 import docs from './script'
-import sliderbarRollup from '../selfDocs/index'
+import sliderbarRollup from '../etc/docs/index'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -13,8 +13,8 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: '主页', link: '/index.html' },
-            { text: 'Rollup', link: '/selfDocs/src/introduce' },
-            { text: 'API', link: '/etc/doc/index.html' },
+            { text: 'Rollup', link: '/etc/docs/src/introduce' },
+            { text: 'API', link: '/etc/doc/index' },
         ],
 
         sidebar: {
@@ -25,13 +25,11 @@ export default defineConfig({
                 },
             ],
             ...sliderbarRollup
-
         },
 
         socialLinks: [
             { icon: 'github', link: 'https://github.com/An-Lijun/Robinson' },// 这里要替换成你自己的仓库地址
         ],
-
         search: {
             provider: 'local'
         },
