@@ -8,7 +8,7 @@
  */
 export function transHightLight (str:string, keyWords:string | Array<string>, color = '#0053db') {
   // 创建一个正则表达式，用于匹配所有关键字
-  let reg = '';
+  let reg;
   if (Array.isArray(keyWords)) {
     reg = new RegExp(`(${keyWords.join('|')})`, 'ig');
   } else {

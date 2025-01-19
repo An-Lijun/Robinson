@@ -69,6 +69,7 @@
     },
     "dependencies": {
         "big.js": "^6.2.1",
-        "dayjs": "^1.11.10"
+        "dayjs": "^1.11.10",
+        "rollup-plugin-visualizer": "^5.14.0"
     }
 }

@@ -270,7 +270,7 @@ export function removeClass (dom:Element, classNm:string) {
  *  replaceClass(div,'a22','a11')
  * ```
  */
-export function replaceClass (dom:Node, newClass:string, oldClass:string) {
+export function replaceClass (dom:Element, newClass:string, oldClass:string) {
   removeClass(dom, oldClass);
   addClass(dom, newClass);
 }

@@ -5,7 +5,7 @@ const alias = require('@rollup/plugin-alias');
 const terser = require('@rollup/plugin-terser');
 const { getBabelOutputPlugin } = require('@rollup/plugin-babel');
 const { dts } = require('rollup-plugin-dts');
-
+const {visualizer} =require('rollup-plugin-visualizer');
 // 由于暂时不写cjs 的nodejs 包所以这里就忽略cjs的模块了
 module.exports = defineConfig([{
   input: ['./src/index.ts'], //入口文件
@@ -40,7 +40,13 @@ module.exports = defineConfig([{
     //     '@babel/preset-env'
     //   ] }),
     terser(),
-
+    visualizer({
+      filename: 'stats.html', // 生成的分析文件名称
+      open: true, // 是否在生成后自动打开浏览器
+      template: 'treemap', // 可视化模板，可选 'sunburst', 'network', 'treemap', 'raw-data'
+      gzipSize: true, // 是否显示 gzip 压缩后的大小
+      brotliSize: true // 是否显示 brotli 压缩后的大小
+    })
   ]
 },
   // 类型文件

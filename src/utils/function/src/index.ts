@@ -1,5 +1,4 @@
 import { isSimpleType, is } from '../../common/index';
-
 interface deepData {
   [index: string]: any;
 }
@@ -173,11 +172,17 @@ export function mapping (enumData: enumData, options: options, expty = '--'): re
  * ```
  */
 export function compose (...fns: Array<Function>): Function {
-  if (!fns.length) {
+  if (!fns.length || !fns) {
     return ()=>void 0;
   }
+  const popFn = fns.pop();
+
+  if (isFunction(popFn) && !fns.length) {
+    return popFn as Function;
+  }
+
   return function (...args:Array<any>) {
-    return fns.reduceRight((acc, fn) => fn(acc), fns.pop()(...args));
+    return fns.reduceRight((acc, fn) => fn(acc), (popFn as Function)(...args));
   };
 }
 /**
@@ -270,12 +275,16 @@ export function debounce (fn: Function, delay: number, isLimmediate: boolean = f
  * ```
  */
 export function pipe (...fns: Array<Function>): Function {
-
-  if (!fns.length) {
+  if (!fns.length || !fns) {
     return ()=>void 0;
   }
+  const shiftfN = fns.shift();
+  if (isFunction(shiftfN) && !fns.length) {
+    return shiftfN as Function;
+  }
+
   return function (...args:Array<any>) {
-    return fns.reduce((acc, fn) => fn(acc), fns.shift()(...args));
+    return fns.reduce((acc, fn) => fn(acc), (shiftfN as Function)(...args));
   };
 }
 
