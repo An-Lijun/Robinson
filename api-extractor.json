@@ -6,10 +6,12 @@
         "tsconfigFilePath": "./tsconfig.json"
     },
     "apiReport": {
-        "enabled": true
+        "enabled": true,
+        "reportTempFolder": "./vitepress/temp/"
     },
     "docModel": {
-        "enabled": true
+        "enabled": true,
+        "apiJsonFilePath": "./vitepress/temp/robinson.api.json"
     },
     "dtsRollup": {
         "enabled": true

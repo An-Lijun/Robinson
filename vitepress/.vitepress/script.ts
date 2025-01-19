@@ -57,13 +57,12 @@ function treeToItems(tree: IndexTree) {
 }
 
 const tree
-= fg.sync(['./etc/doc/**/*.md'])
+= fg.sync(['./vitepress/etc/doc/*.md'])
   .map((path) => basename(path))
   .reduce((tree, file) => {
       getTree(file, '', tree)
       return tree
   }, {})
   
-
 const docs: DefaultTheme.SidebarItem[] = treeToItems(tree)
 export default docs

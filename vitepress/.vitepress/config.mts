@@ -7,7 +7,7 @@ import sliderbarRollup from '../etc/docs/index'
 export default defineConfig({
     title: 'Robinson',
     description: 'Documentations of @taiyuuki/utils',
-    base: '/',
+    base: '/Robinson/',
     outDir: "./docs",
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
