@@ -13,9 +13,9 @@
 
 ```typescript
 createCache: (storage: any, parmas?: ParamsInter) => {
-    "__#4644@#storage": any;
-    "__#4644@#encode": Function;
-    "__#4644@#decode": Function;
+    "__#20@#storage": any;
+    "__#20@#encode": Function;
+    "__#20@#decode": Function;
     setCache(key: string, value: any, expire: number): void;
     getCache(encodeKey: string): any;
     removeCache(key: string): void;
@@ -34,7 +34,7 @@ createCache: (storage: any, parmas?: ParamsInter) => {
 
 **Returns:**
 
-{ "\_\_\#4644@\#storage": any; "\_\_\#4644@\#encode": Function; "\_\_\#4644@\#decode": Function; setCache(key: string, value: any, expire: number): void; getCache(encodeKey: string): any; removeCache(key: string): void; has(key: string): boolean; length(): any; clear(): void; }
+{ "\_\_\#20@\#storage": any; "\_\_\#20@\#encode": Function; "\_\_\#20@\#decode": Function; setCache(key: string, value: any, expire: number): void; getCache(encodeKey: string): any; removeCache(key: string): void; has(key: string): boolean; length(): any; clear(): void; }
 
 函数“createCache”返回“Cache”类的实例。 setCache(key:String,value:Any,expire:超时时间) 设置单个缓存 return undefined getCache(key:String) 根据传入key获取单个缓存 return undefined removeCache(key:String)根据传入KEY删除单个缓存 return undefined has(key:String) 根据传入key 判断是否已经有这个数据了 return Boolean length(), return 缓存总条数 clear() 清空缓存
 

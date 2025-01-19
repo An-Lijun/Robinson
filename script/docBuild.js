@@ -56,7 +56,7 @@ function build () {
 
   // 当进程结束时的处理
   buildProcess.on('close', (code) => {
-    copyFile(sourceFilePath, targetFilePath);
+    // copyFile(sourceFilePath, targetFilePath);
     logSuccess('文档打包成功', packageJson.version);
   });
 }

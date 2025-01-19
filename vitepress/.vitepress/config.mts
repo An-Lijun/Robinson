@@ -8,7 +8,7 @@ export default defineConfig({
     title: 'Robinson',
     description: 'Documentations of @taiyuuki/utils',
     base: '/Robinson/',
-    outDir: "./docs",
+    outDir: "./docsDist",
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [

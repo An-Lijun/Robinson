@@ -27,5 +27,5 @@ declare function transHightLight(str: string, keyWords: string | Array<string>, 
 
 string
 
-返回一个新的字符串，其中关键字被包裹在带有指定颜色样式的 <span> 标签中。
+返回一个新的字符串，其中关键字被包裹在带有指定颜色样式的 span 标签中。
 

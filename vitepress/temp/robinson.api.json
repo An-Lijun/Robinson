@@ -623,7 +623,7 @@
             },
             {
               "kind": "Content",
-              "text": "{\n    \"__#4644@#storage\": any;\n    \"__#4644@#encode\": "
+              "text": "{\n    \"__#20@#storage\": any;\n    \"__#20@#encode\": "
             },
             {
               "kind": "Reference",
@@ -632,7 +632,7 @@
             },
             {
               "kind": "Content",
-              "text": ";\n    \"__#4644@#decode\": "
+              "text": ";\n    \"__#20@#decode\": "
             },
             {
               "kind": "Reference",
