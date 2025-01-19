@@ -6,9 +6,14 @@
  * @param color - 高亮显示的颜色，默认为 '#0053db'。
  * @returns 返回一个新的字符串，其中关键字被包裹在带有指定颜色样式的 <span> 标签中。
  */
-export function transHightLight (str:string, keyWords:string, color = '#0053db') {
+export function transHightLight (str:string, keyWords:string | Array<string>, color = '#0053db') {
   // 创建一个正则表达式，用于匹配所有关键字
-  const reg = new RegExp(`(${keyWords.split('').join('|')})`, 'ig');
+  let reg = '';
+  if (Array.isArray(keyWords)) {
+    reg = new RegExp(`(${keyWords.join('|')})`, 'ig');
+  } else {
+    reg = new RegExp(`(${keyWords})`, 'ig');
+  }
   // 使用正则表达式替换字符串中的关键字，并将其包裹在 <span> 标签中
   return str.replace(reg, `<span style="color:${color}">$1</span>`);
 }

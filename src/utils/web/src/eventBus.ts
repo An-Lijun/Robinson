@@ -42,6 +42,9 @@ export default class EventBus {
 
   /* `EventBus` 类中的 `off` 方法用于从事件对象中删除特定的事件监听器。它有两个参数：“eventName”（表示事件名称的字符串）和“fn”（要删除的事件函数）。 */
   off (eventName:string, fn:Function) {
+    if (!this.#eventObj[eventName]) {
+      return;
+    }
     this.#eventObj[eventName].forEach((item, index) => {
       if (item === fn) {
         this.#eventObj[eventName]?.splice(index, 1);
