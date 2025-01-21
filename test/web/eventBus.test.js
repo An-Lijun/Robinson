@@ -1,5 +1,5 @@
 // 导入所需的模块和函数
-import { eventBus as EventBus } from '../../src/index';
+import { EventBus } from '../../src/index';
 
 describe('EventBus', () => {
   let eventBus;

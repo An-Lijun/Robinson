@@ -1,4 +1,4 @@
-import { cache as createCache } from '../../src/index';
+import { createCache } from '../../src/index';
 
 describe('createCache', () => {
   let storage;
