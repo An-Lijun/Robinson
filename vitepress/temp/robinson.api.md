@@ -33,9 +33,9 @@ export function blobToBase64(blob: BlobPart, suffix?: string): Promise<unknown>;
 //
 // @beta
 export const cache: (storage: any, parmas?: ParamsInter) => {
-    "__#20@#storage": any;
-    "__#20@#encode": Function;
-    "__#20@#decode": Function;
+    "__#16551@#storage": any;
+    "__#16551@#encode": Function;
+    "__#16551@#decode": Function;
     setCache(key: string, value: any, expire: number): void;
     getCache(encodeKey: string): any;
     removeCache(key: string): void;

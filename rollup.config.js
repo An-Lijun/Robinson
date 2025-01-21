@@ -3,17 +3,18 @@ const path = require('path');
 const ts = require('rollup-plugin-typescript2');
 const alias = require('@rollup/plugin-alias');
 const terser = require('@rollup/plugin-terser');
-const { getBabelOutputPlugin } = require('@rollup/plugin-babel');
 const { dts } = require('rollup-plugin-dts');
 const { visualizer } = require('rollup-plugin-visualizer');
-// 由于暂时不写cjs 的nodejs 包所以这里就忽略cjs的模块了
+const {recordInfo} = require('./plugin')
+// const { getBabelOutputPlugin } = require('@rollup/plugin-babel');
 module.exports = defineConfig([{
   input: ['./src/index.ts'], //入口文件
   output: [
     {
       dir: 'dist/esm', //出口文件
       format: 'esm', //打包格式
-      preserveModules: true // 开启单独打包有利于树摇晃
+      preserveModules: true, // 开启单独打包有利于树摇晃
+      plugins:[recordInfo()]
     },
     {
       dir: 'dist/cjs',
@@ -59,6 +60,17 @@ module.exports = defineConfig([{
   },
   plugins: [
     dts()
+  ]
+},
+{
+  input: 'src/index.ts',
+  output: {
+    dir: 'dist/types',
+    format: 'esm',
+    preserveModules: true
+  },
+  plugins: [
+    dts({respectExternal:false})
   ]
 },
 {

@@ -21,7 +21,7 @@ interface ParamsInter{
  *  length(), return 缓存总条数
  *  clear() 清空缓存
  */
-const createCache = (storage:any,
+export const createCache = (storage:any,
   parmas:ParamsInter = { encode: (value:any) => value,
     decode: (value:any) => value }) => {
   const { encode, decode } = parmas;
@@ -111,5 +111,3 @@ const createCache = (storage:any,
   }
   return new Cache();
 };
-
-export default createCache;

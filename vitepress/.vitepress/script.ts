@@ -1,6 +1,6 @@
 import { basename } from 'path'
 import type { DefaultTheme } from 'vitepress'
-
+import info from '../temp/info.json'
 import fg from 'fast-glob'
 
 interface IndexTree {
@@ -14,13 +14,13 @@ interface IndexTree {
 function resolveTitle(title: string) {
    title === 'doc' ? title : title.replace('doc.', '')
    title === 'etc' ? title : title.replace('etc.', '')
-   
    title =title.replace('robinson.','')
    return title
 }
 
 // 将md文档列表转为树结构
 function getTree(file: string, prefix: string, tree = {}) {
+  
   const [ cur, ...rest ] = file.replace('.md', '').split('.')
   const curPath = prefix + cur
   if (!tree[curPath]) {
@@ -64,5 +64,27 @@ const tree
       return tree
   }, {})
   
-const docs: DefaultTheme.SidebarItem[] = treeToItems(tree)
+let docs: DefaultTheme.SidebarItem[] = treeToItems(tree)
+// console.log(docs);
+
+// let obj ={}
+// docs[1].items.forEach(item=>{
+//   // console.log();
+//   // item.text,item.link
+//   let folder =info[item.text]
+//   if(obj[folder]){
+//     obj[folder].push(item)
+//   }else{
+//     obj[folder]=[item]
+//   }
+// })
+// docs.pop()
+
+// for (const key in obj) {
+//   if (Object.prototype.hasOwnProperty.call(obj, key)) {
+//     const element = obj[key];
+    
+//   }
+// }
+
 export default docs

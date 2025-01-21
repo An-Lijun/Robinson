@@ -12,7 +12,7 @@ interface EventFn {
  *   console.log('myEvent triggered');
  * });
  */
-export default class EventBus {
+export class EventBus {
   #eventObj:EventFn;
 
   constructor () {
