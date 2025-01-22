@@ -10,6 +10,17 @@ interface IndexTree {
   }
 }
 
+const baseDocs ={
+  index: { link: '/etc/doc/index.md' },
+  robinson:{ link: '/etc/doc/robinson.md' }
+}
+Object.values(info).forEach(item=>{
+  baseDocs[item] ={
+      text:item,
+      items:[]
+  }
+})
+
 // 目录标题去除utils.前缀
 function resolveTitle(title: string) {
    title === 'doc' ? title : title.replace('doc.', '')
@@ -23,6 +34,16 @@ function getTree(file: string, prefix: string, tree = {}) {
   
   const [ cur, ...rest ] = file.replace('.md', '').split('.')
   const curPath = prefix + cur
+
+  if(baseDocs[info[cur.toLowerCase()]]){
+    baseDocs[info[cur.toLowerCase()]].items.push(
+      { 
+        text:cur,
+        link: '/etc/doc/' + curPath + '.md',
+      }
+    )
+  }
+
   if (!tree[curPath]) {
       tree[curPath] = {
           link: '/etc/doc/' + curPath + '.md',
@@ -64,8 +85,8 @@ const tree
       return tree
   }, {})
   
-let docs: DefaultTheme.SidebarItem[] = treeToItems(tree)
-// console.log(docs);
+ treeToItems(tree)
+//  let docs: DefaultTheme.SidebarItem[] =
 
 // let obj ={}
 // docs[1].items.forEach(item=>{
@@ -86,5 +107,17 @@ let docs: DefaultTheme.SidebarItem[] = treeToItems(tree)
     
 //   }
 // }
+// console.log(baseDocs);
+let docsOut =[]
 
-export default docs
+Object.keys(baseDocs).forEach(item=>{
+  if(item === 'index' || item === 'robinson'){
+    docsOut.push(baseDocs[item])
+  }else{
+    docsOut.push({
+      text:item,
+      items:baseDocs[item].items
+    })
+  }
+})
+export default docsOut
