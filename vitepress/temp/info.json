@@ -1,104 +1,410 @@
 {
-  "eventbus": "web",
-  "addclass": "web",
-  "addnode": "web",
-  "asigndata": "function",
-  "base64toblob": "file",
-  "bind": "web",
-  "blobtobase64": "file",
-  "calc": "math",
-  "compose": "function",
-  "copytoclipboard": "web",
-  "createcache": "web",
-  "currying": "function",
-  "debounce": "function",
-  "deepclone": "function",
-  "downloadbybase64": "file",
-  "downloadbyblob": "file",
-  "downloadbyurl": "file",
-  "formatdate": "date",
-  "getafterdate": "date",
-  "getbeforedate": "date",
-  "getchunkarray": "array",
-  "getdiff": "date",
-  "getetc": "string",
-  "getfilechunk": "file",
-  "getfilesize": "file",
-  "getfiletype": "file",
-  "getmimetype": "file",
-  "getnode": "web",
-  "getnodes": "web",
-  "getrandom": "number",
-  "getrelarray": "array",
-  "gettimestamp": "date",
-  "getuniqueid": "string",
-  "hasclass": "web",
-  "hastypein": "common",
-  "hextorgb": "color",
-  "hextorgba": "color",
-  "imgcompression": "file",
-  "insertstr": "string",
-  "is": "common",
-  "isafter": "date",
-  "isarray": "array",
-  "isbefore": "date",
-  "isboolean": "boolean",
-  "isdecimal": "number",
-  "iselement": "object",
-  "isemail": "string",
-  "isempty": "common",
-  "iseqtype": "common",
-  "iseqvalue": "common",
-  "isexternal": "string",
-  "isfinite": "number",
-  "isfunction": "function",
-  "ishex": "color",
-  "isie": "object",
-  "isidcard": "string",
-  "isint": "number",
-  "isleapyear": "date",
-  "ismobilenum": "string",
-  "isnan": "number",
-  "isnode": "web",
-  "isnull": "common",
-  "isnumber": "number",
-  "isobjectlike": "object",
-  "isorigindate": "object",
-  "ispromise": "object",
-  "isrange": "number",
-  "isreftype": "common",
-  "isregexp": "object",
-  "isrgb": "color",
-  "isrgba": "color",
-  "issimpletype": "common",
-  "isstring": "string",
-  "issymbol": "symbol",
-  "isundefined": "common",
-  "isurl": "string",
-  "mapping": "function",
-  "nodetostring": "web",
-  "parsecolorstring": "color",
-  "parsehexcolor": "color",
-  "parsergbacolor": "color",
-  "pipe": "function",
-  "preventdefault": "web",
-  "printbyblob": "file",
-  "printbydom": "file",
-  "removeclass": "web",
-  "removenode": "web",
-  "rendertmp": "web",
-  "replaceclass": "web",
-  "replacenode": "web",
-  "rgbtohex": "color",
-  "rgbatohex": "color",
-  "stoppropagation": "web",
-  "stringtonode": "web",
-  "throttle": "function",
-  "torgbastring": "color",
-  "transhightlight": "web",
-  "unbind": "web",
-  "urltobase64": "file",
-  "default": "date",
-  "getstringtype": "helper",
-  "iseqarray": "helper"
+  "eventbus": {
+    "folderNm": "web",
+    "functionNm": "EventBus"
+  },
+  "addclass": {
+    "folderNm": "web",
+    "functionNm": "addClass"
+  },
+  "addnode": {
+    "folderNm": "web",
+    "functionNm": "addNode"
+  },
+  "asigndata": {
+    "folderNm": "function",
+    "functionNm": "asignData"
+  },
+  "base64toblob": {
+    "folderNm": "file",
+    "functionNm": "base64ToBlob"
+  },
+  "bind": {
+    "folderNm": "web",
+    "functionNm": "bind"
+  },
+  "blobtobase64": {
+    "folderNm": "file",
+    "functionNm": "blobToBase64"
+  },
+  "calc": {
+    "folderNm": "math",
+    "functionNm": "calc"
+  },
+  "compose": {
+    "folderNm": "function",
+    "functionNm": "compose"
+  },
+  "copytoclipboard": {
+    "folderNm": "web",
+    "functionNm": "copyToClipboard"
+  },
+  "createcache": {
+    "folderNm": "web",
+    "functionNm": "createCache"
+  },
+  "currying": {
+    "folderNm": "function",
+    "functionNm": "currying"
+  },
+  "debounce": {
+    "folderNm": "function",
+    "functionNm": "debounce"
+  },
+  "deepclone": {
+    "folderNm": "function",
+    "functionNm": "deepClone"
+  },
+  "downloadbybase64": {
+    "folderNm": "file",
+    "functionNm": "downloadByBase64"
+  },
+  "downloadbyblob": {
+    "folderNm": "file",
+    "functionNm": "downloadByBlob"
+  },
+  "downloadbyurl": {
+    "folderNm": "file",
+    "functionNm": "downloadByUrl"
+  },
+  "formatdate": {
+    "folderNm": "date",
+    "functionNm": "formatDate"
+  },
+  "getafterdate": {
+    "folderNm": "date",
+    "functionNm": "getAfterDate"
+  },
+  "getbeforedate": {
+    "folderNm": "date",
+    "functionNm": "getBeforeDate"
+  },
+  "getchunkarray": {
+    "folderNm": "array",
+    "functionNm": "getChunkArray"
+  },
+  "getdiff": {
+    "folderNm": "date",
+    "functionNm": "getDiff"
+  },
+  "getetc": {
+    "folderNm": "string",
+    "functionNm": "getEtc"
+  },
+  "getfilechunk": {
+    "folderNm": "file",
+    "functionNm": "getFileChunk"
+  },
+  "getfilesize": {
+    "folderNm": "file",
+    "functionNm": "getFileSize"
+  },
+  "getfiletype": {
+    "folderNm": "file",
+    "functionNm": "getFileType"
+  },
+  "getmimetype": {
+    "folderNm": "file",
+    "functionNm": "getMimeType"
+  },
+  "getnode": {
+    "folderNm": "web",
+    "functionNm": "getNode"
+  },
+  "getnodes": {
+    "folderNm": "web",
+    "functionNm": "getNodes"
+  },
+  "getrandom": {
+    "folderNm": "number",
+    "functionNm": "getRandom"
+  },
+  "getrelarray": {
+    "folderNm": "array",
+    "functionNm": "getRelArray"
+  },
+  "gettimestamp": {
+    "folderNm": "date",
+    "functionNm": "getTimestamp"
+  },
+  "getuniqueid": {
+    "folderNm": "string",
+    "functionNm": "getUniqueId"
+  },
+  "hasclass": {
+    "folderNm": "web",
+    "functionNm": "hasClass"
+  },
+  "hastypein": {
+    "folderNm": "common",
+    "functionNm": "hasTypeIn"
+  },
+  "hextorgb": {
+    "folderNm": "color",
+    "functionNm": "hexToRgb"
+  },
+  "hextorgba": {
+    "folderNm": "color",
+    "functionNm": "hexToRgba"
+  },
+  "imgcompression": {
+    "folderNm": "file",
+    "functionNm": "imgCompression"
+  },
+  "insertstr": {
+    "folderNm": "string",
+    "functionNm": "insertStr"
+  },
+  "is": {
+    "folderNm": "common",
+    "functionNm": "is"
+  },
+  "isafter": {
+    "folderNm": "date",
+    "functionNm": "isAfter"
+  },
+  "isarray": {
+    "folderNm": "array",
+    "functionNm": "isArray"
+  },
+  "isbefore": {
+    "folderNm": "date",
+    "functionNm": "isBefore"
+  },
+  "isboolean": {
+    "folderNm": "boolean",
+    "functionNm": "isBoolean"
+  },
+  "isdecimal": {
+    "folderNm": "number",
+    "functionNm": "isDecimal"
+  },
+  "iselement": {
+    "folderNm": "object",
+    "functionNm": "isElement"
+  },
+  "isemail": {
+    "folderNm": "string",
+    "functionNm": "isEmail"
+  },
+  "isempty": {
+    "folderNm": "common",
+    "functionNm": "isEmpty"
+  },
+  "iseqtype": {
+    "folderNm": "common",
+    "functionNm": "isEqType"
+  },
+  "iseqvalue": {
+    "folderNm": "common",
+    "functionNm": "isEqValue"
+  },
+  "isexternal": {
+    "folderNm": "string",
+    "functionNm": "isExternal"
+  },
+  "isfinite": {
+    "folderNm": "number",
+    "functionNm": "isFinite"
+  },
+  "isfunction": {
+    "folderNm": "function",
+    "functionNm": "isFunction"
+  },
+  "ishex": {
+    "folderNm": "color",
+    "functionNm": "isHex"
+  },
+  "isie": {
+    "folderNm": "object",
+    "functionNm": "isIE"
+  },
+  "isidcard": {
+    "folderNm": "string",
+    "functionNm": "isIdCard"
+  },
+  "isint": {
+    "folderNm": "number",
+    "functionNm": "isInt"
+  },
+  "isleapyear": {
+    "folderNm": "date",
+    "functionNm": "isLeapYear"
+  },
+  "ismobilenum": {
+    "folderNm": "string",
+    "functionNm": "isMobileNum"
+  },
+  "isnan": {
+    "folderNm": "number",
+    "functionNm": "isNaN"
+  },
+  "isnode": {
+    "folderNm": "web",
+    "functionNm": "isNode"
+  },
+  "isnull": {
+    "folderNm": "common",
+    "functionNm": "isNull"
+  },
+  "isnumber": {
+    "folderNm": "number",
+    "functionNm": "isNumber"
+  },
+  "isobjectlike": {
+    "folderNm": "object",
+    "functionNm": "isObjectLike"
+  },
+  "isorigindate": {
+    "folderNm": "object",
+    "functionNm": "isOriginDate"
+  },
+  "ispromise": {
+    "folderNm": "object",
+    "functionNm": "isPromise"
+  },
+  "isrange": {
+    "folderNm": "number",
+    "functionNm": "isRange"
+  },
+  "isreftype": {
+    "folderNm": "common",
+    "functionNm": "isRefType"
+  },
+  "isregexp": {
+    "folderNm": "object",
+    "functionNm": "isRegExp"
+  },
+  "isrgb": {
+    "folderNm": "color",
+    "functionNm": "isRgb"
+  },
+  "isrgba": {
+    "folderNm": "color",
+    "functionNm": "isRgba"
+  },
+  "issimpletype": {
+    "folderNm": "common",
+    "functionNm": "isSimpleType"
+  },
+  "isstring": {
+    "folderNm": "string",
+    "functionNm": "isString"
+  },
+  "issymbol": {
+    "folderNm": "symbol",
+    "functionNm": "isSymbol"
+  },
+  "isundefined": {
+    "folderNm": "common",
+    "functionNm": "isUndefined"
+  },
+  "isurl": {
+    "folderNm": "string",
+    "functionNm": "isUrl"
+  },
+  "mapping": {
+    "folderNm": "function",
+    "functionNm": "mapping"
+  },
+  "nodetostring": {
+    "folderNm": "web",
+    "functionNm": "nodeToString"
+  },
+  "parsecolorstring": {
+    "folderNm": "color",
+    "functionNm": "parseColorString"
+  },
+  "parsehexcolor": {
+    "folderNm": "color",
+    "functionNm": "parseHexColor"
+  },
+  "parsergbacolor": {
+    "folderNm": "color",
+    "functionNm": "parseRgbaColor"
+  },
+  "pipe": {
+    "folderNm": "function",
+    "functionNm": "pipe"
+  },
+  "preventdefault": {
+    "folderNm": "web",
+    "functionNm": "preventDefault"
+  },
+  "printbyblob": {
+    "folderNm": "file",
+    "functionNm": "printByBlob"
+  },
+  "printbydom": {
+    "folderNm": "file",
+    "functionNm": "printByDom"
+  },
+  "removeclass": {
+    "folderNm": "web",
+    "functionNm": "removeClass"
+  },
+  "removenode": {
+    "folderNm": "web",
+    "functionNm": "removeNode"
+  },
+  "rendertmp": {
+    "folderNm": "web",
+    "functionNm": "renderTmp"
+  },
+  "replaceclass": {
+    "folderNm": "web",
+    "functionNm": "replaceClass"
+  },
+  "replacenode": {
+    "folderNm": "web",
+    "functionNm": "replaceNode"
+  },
+  "rgbtohex": {
+    "folderNm": "color",
+    "functionNm": "rgbToHex"
+  },
+  "rgbatohex": {
+    "folderNm": "color",
+    "functionNm": "rgbaToHex"
+  },
+  "stoppropagation": {
+    "folderNm": "web",
+    "functionNm": "stopPropagation"
+  },
+  "stringtonode": {
+    "folderNm": "web",
+    "functionNm": "stringToNode"
+  },
+  "throttle": {
+    "folderNm": "function",
+    "functionNm": "throttle"
+  },
+  "torgbastring": {
+    "folderNm": "color",
+    "functionNm": "toRgbaString"
+  },
+  "transhightlight": {
+    "folderNm": "web",
+    "functionNm": "transHightLight"
+  },
+  "unbind": {
+    "folderNm": "web",
+    "functionNm": "unBind"
+  },
+  "urltobase64": {
+    "folderNm": "file",
+    "functionNm": "urlToBase64"
+  },
+  "default": {
+    "folderNm": "date",
+    "functionNm": "default"
+  },
+  "getstringtype": {
+    "folderNm": "helper",
+    "functionNm": "getStringType"
+  },
+  "iseqarray": {
+    "folderNm": "helper",
+    "functionNm": "isEqArray"
+  }
 }

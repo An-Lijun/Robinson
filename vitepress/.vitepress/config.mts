@@ -9,6 +9,7 @@ export default defineConfig({
     description: 'Documentations of @taiyuuki/utils',
     base: '/Robinson/',
     outDir: "./docsDist",
+    lastUpdated: true,
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
         nav: [
@@ -16,7 +17,6 @@ export default defineConfig({
             { text: 'Rollup', link: '/etc/docs/src/introduce' },
             { text: 'API', link: '/etc/doc/index' },
         ],
-
         sidebar: {
             "etc/doc": [
                 {

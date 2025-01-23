@@ -15,8 +15,8 @@ const baseDocs ={
   robinson:{ link: '/etc/doc/robinson.md' }
 }
 Object.values(info).forEach(item=>{
-  baseDocs[item] ={
-      text:item,
+  baseDocs[item.folderNm.toLowerCase()] ={
+      text:item.functionNm,
       items:[]
   }
 })
@@ -34,11 +34,10 @@ function getTree(file: string, prefix: string, tree = {}) {
   
   const [ cur, ...rest ] = file.replace('.md', '').split('.')
   const curPath = prefix + cur
-
-  if(baseDocs[info[cur.toLowerCase()]]){
-    baseDocs[info[cur.toLowerCase()]].items.push(
+  if(info[cur.toLowerCase()]&&baseDocs[info[cur.toLowerCase()]?.folderNm]){
+    baseDocs[info[cur.toLowerCase()]?.folderNm].items.push(
       { 
-        text:cur,
+        text:info[cur.toLowerCase()].functionNm,
         link: '/etc/doc/' + curPath + '.md',
       }
     )
@@ -116,6 +115,7 @@ Object.keys(baseDocs).forEach(item=>{
   }else{
     docsOut.push({
       text:item,
+      collapsed:true,
       items:baseDocs[item].items
     })
   }

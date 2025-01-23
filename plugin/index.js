@@ -10,7 +10,8 @@ function recordInfo () {
         let exports = bundle[fileName].exports;
         if (exports.length) {
           exports.forEach(item=>{
-            folderObj[item.toLowerCase()] = folder;
+            folderObj[item.toLowerCase()] = { folderNm: folder,
+              functionNm: item };
           });
         }
 
