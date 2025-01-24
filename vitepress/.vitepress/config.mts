@@ -1,6 +1,6 @@
 import { defineConfig } from 'vitepress'
 
-import docs from './script'
+import getDosc from './script'
 import sliderbarRollup from '../etc/docs/index'
 
 // https://vitepress.dev/reference/site-config
@@ -21,7 +21,7 @@ export default defineConfig({
             "etc/doc": [
                 {
                     text: 'API',
-                    items: docs,
+                    items: getDosc('./vitepress/etc/doc/*.md','/etc/doc/'),
                 },
             ],
             ...sliderbarRollup
