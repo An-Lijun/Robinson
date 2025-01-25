@@ -1,5 +1,5 @@
 import { isPromise } from '../../src/index';
-import dayjs from '../../src/utils/date';
+import dayjs from '../../src/core/date';
 
 let isPromiseTest = [
   { desc: 'null',

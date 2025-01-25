@@ -1,6 +1,6 @@
 import { formatDate } from '../../src/index';
 
-import dayjs from '../../src/utils/date';
+import dayjs from '../../src/core/date';
 
 let formatDateTest = [
   { desc: '2024-03-01',

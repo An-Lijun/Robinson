@@ -1,6 +1,6 @@
 import { getTimestamp } from '../../src/index';
 
-import dayjs from '../../src/utils/date';
+import dayjs from '../../src/core/date';
 
 let getTimestampTest = [
   { desc: '2024-03-01',

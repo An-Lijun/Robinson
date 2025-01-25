@@ -1,5 +1,5 @@
 import { getBeforeDate } from '../../src';
-import dayjs from '../../src/utils/date';
+import dayjs from '../../src/core/date';
 
 let getBeforeDateTest = [
   { desc: '2024-03-02',

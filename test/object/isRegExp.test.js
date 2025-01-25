@@ -1,5 +1,5 @@
 import { isRegExp } from '../../src/index';
-import dayjs from '../../src/utils/date';
+import dayjs from '../../src/core/date';
 
 let isRegExpTest = [
   { desc: 'null',

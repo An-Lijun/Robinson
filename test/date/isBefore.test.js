@@ -1,6 +1,6 @@
 import { isBefore } from '../../src/index';
 
-import dayjs from '../../src/utils/date';
+import dayjs from '../../src/core/date';
 
 let isBeforeTest = [
   { desc: '2024-03-01',
