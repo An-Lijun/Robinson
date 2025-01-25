@@ -29,21 +29,6 @@ export function bind(dom: Node, eventType: string, callBack: EventListenerOrEven
 // @beta
 export function blobToBase64(blob: BlobPart, suffix?: string): Promise<unknown>;
 
-// Warning: (ae-forgotten-export) The symbol "ParamsInter" needs to be exported by the entry point index.d.ts
-//
-// @beta
-export const cache: (storage: any, parmas?: ParamsInter) => {
-    "__#16551@#storage": any;
-    "__#16551@#encode": Function;
-    "__#16551@#decode": Function;
-    setCache(key: string, value: any, expire: number): void;
-    getCache(encodeKey: string): any;
-    removeCache(key: string): void;
-    has(key: string): boolean;
-    length(): any;
-    clear(): void;
-};
-
 // Warning: (ae-forgotten-export) The symbol "TOperate" needs to be exported by the entry point index.d.ts
 //
 // @beta
@@ -54,6 +39,21 @@ export function compose(...fns: Array<Function>): Function;
 
 // @beta
 export function copyToClipboard(text: string): void;
+
+// Warning: (ae-forgotten-export) The symbol "ParamsInter" needs to be exported by the entry point index.d.ts
+//
+// @beta
+export const createCache: (storage: any, parmas?: ParamsInter) => {
+    "__#9309@#storage": any;
+    "__#9309@#encode": Function;
+    "__#9309@#decode": Function;
+    setCache(key: string, value: any, expire: number): void;
+    getCache(encodeKey: string): any;
+    removeCache(key: string): void;
+    has(key: string): boolean;
+    length(): any;
+    clear(): void;
+};
 
 // @beta
 export function currying(fn: Function): Function;
@@ -74,7 +74,7 @@ export function downloadByBlob(blob: BlobPart, fileNm: string, suffix?: string):
 export function downloadByUrl(url: string, filename?: string, type?: string): void;
 
 // @beta
-export class eventBus {
+export class EventBus {
     constructor();
     clear(eventName: string): void;
     emit(eventName: string, ...Args: any): void;

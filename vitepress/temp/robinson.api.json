@@ -207,7 +207,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -288,7 +288,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 9,
             "endIndex": 10
@@ -360,7 +360,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -414,7 +414,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -485,7 +485,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 9,
             "endIndex": 10
@@ -568,7 +568,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 7
@@ -594,82 +594,6 @@
             }
           ],
           "name": "blobToBase64"
-        },
-        {
-          "kind": "Function",
-          "canonicalReference": "robinson!cache:function(1)",
-          "docComment": "/**\n * @description createCache 函数创建一个缓存对象，该对象可以使用指定的存储机制和编码/解码函数来存储和检索数据。\n *\n * @param storage - `storage` 参数是一个可选参数，它指定用于缓存的存储机制。它可以是实现与 localStorage 对象相同接口的任何对象，例如 sessionStorage 或自定义存储实现。如果没有提供存储对象，则`localStorage`\n *\n * @param parmas - “parmas”参数是一个包含两个属性的对象：“encode”和“decode”。这些属性是用于在将值存储到缓存之前对值进行编码和解码的函数。 这些函数的默认值是恒等函数，这意味着它们不执行任何编码或解码。\n *\n * @returns 函数“createCache”返回“Cache”类的实例。 setCache(key:String,value:Any,expire:超时时间) 设置单个缓存 return undefined getCache(key:String) 根据传入key获取单个缓存 return undefined removeCache(key:String)根据传入KEY删除单个缓存 return undefined has(key:String) 根据传入key 判断是否已经有这个数据了 return Boolean length(), return 缓存总条数 clear() 清空缓存\n *\n * @beta\n */\n",
-          "excerptTokens": [
-            {
-              "kind": "Content",
-              "text": "createCache: (storage: "
-            },
-            {
-              "kind": "Content",
-              "text": "any"
-            },
-            {
-              "kind": "Content",
-              "text": ", parmas?: "
-            },
-            {
-              "kind": "Reference",
-              "text": "ParamsInter",
-              "canonicalReference": "robinson!~ParamsInter:interface"
-            },
-            {
-              "kind": "Content",
-              "text": ") => "
-            },
-            {
-              "kind": "Content",
-              "text": "{\n    \"__#16551@#storage\": any;\n    \"__#16551@#encode\": "
-            },
-            {
-              "kind": "Reference",
-              "text": "Function",
-              "canonicalReference": "!Function:interface"
-            },
-            {
-              "kind": "Content",
-              "text": ";\n    \"__#16551@#decode\": "
-            },
-            {
-              "kind": "Reference",
-              "text": "Function",
-              "canonicalReference": "!Function:interface"
-            },
-            {
-              "kind": "Content",
-              "text": ";\n    setCache(key: string, value: any, expire: number): void;\n    getCache(encodeKey: string): any;\n    removeCache(key: string): void;\n    has(key: string): boolean;\n    length(): any;\n    clear(): void;\n}"
-            }
-          ],
-          "fileUrlPath": "dist/types/utils/web/src/cache.d.ts",
-          "returnTypeTokenRange": {
-            "startIndex": 5,
-            "endIndex": 10
-          },
-          "releaseTag": "Beta",
-          "overloadIndex": 1,
-          "parameters": [
-            {
-              "parameterName": "storage",
-              "parameterTypeTokenRange": {
-                "startIndex": 1,
-                "endIndex": 2
-              },
-              "isOptional": false
-            },
-            {
-              "parameterName": "parmas",
-              "parameterTypeTokenRange": {
-                "startIndex": 3,
-                "endIndex": 4
-              },
-              "isOptional": true
-            }
-          ],
-          "name": "cache"
         },
         {
           "kind": "Function",
@@ -716,7 +640,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/math/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/math/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -792,7 +716,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 6,
             "endIndex": 7
@@ -837,7 +761,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/other.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/other.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -855,6 +779,82 @@
             }
           ],
           "name": "copyToClipboard"
+        },
+        {
+          "kind": "Function",
+          "canonicalReference": "robinson!createCache:function(1)",
+          "docComment": "/**\n * @description createCache 函数创建一个缓存对象，该对象可以使用指定的存储机制和编码/解码函数来存储和检索数据。\n *\n * @param storage - `storage` 参数是一个可选参数，它指定用于缓存的存储机制。它可以是实现与 localStorage 对象相同接口的任何对象，例如 sessionStorage 或自定义存储实现。如果没有提供存储对象，则`localStorage`\n *\n * @param parmas - “parmas”参数是一个包含两个属性的对象：“encode”和“decode”。这些属性是用于在将值存储到缓存之前对值进行编码和解码的函数。 这些函数的默认值是恒等函数，这意味着它们不执行任何编码或解码。\n *\n * @returns 函数“createCache”返回“Cache”类的实例。 setCache(key:String,value:Any,expire:超时时间) 设置单个缓存 return undefined getCache(key:String) 根据传入key获取单个缓存 return undefined removeCache(key:String)根据传入KEY删除单个缓存 return undefined has(key:String) 根据传入key 判断是否已经有这个数据了 return Boolean length(), return 缓存总条数 clear() 清空缓存\n *\n * @beta\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "createCache: (storage: "
+            },
+            {
+              "kind": "Content",
+              "text": "any"
+            },
+            {
+              "kind": "Content",
+              "text": ", parmas?: "
+            },
+            {
+              "kind": "Reference",
+              "text": "ParamsInter",
+              "canonicalReference": "robinson!~ParamsInter:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ") => "
+            },
+            {
+              "kind": "Content",
+              "text": "{\n    \"__#9309@#storage\": any;\n    \"__#9309@#encode\": "
+            },
+            {
+              "kind": "Reference",
+              "text": "Function",
+              "canonicalReference": "!Function:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    \"__#9309@#decode\": "
+            },
+            {
+              "kind": "Reference",
+              "text": "Function",
+              "canonicalReference": "!Function:interface"
+            },
+            {
+              "kind": "Content",
+              "text": ";\n    setCache(key: string, value: any, expire: number): void;\n    getCache(encodeKey: string): any;\n    removeCache(key: string): void;\n    has(key: string): boolean;\n    length(): any;\n    clear(): void;\n}"
+            }
+          ],
+          "fileUrlPath": "dist/esm/types/utils/web/src/cache.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 10
+          },
+          "releaseTag": "Beta",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "storage",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "parmas",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": true
+            }
+          ],
+          "name": "createCache"
         },
         {
           "kind": "Function",
@@ -884,7 +884,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -947,7 +947,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -1008,7 +1008,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -1069,7 +1069,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -1147,7 +1147,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -1224,7 +1224,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -1261,7 +1261,7 @@
         },
         {
           "kind": "Class",
-          "canonicalReference": "robinson!eventBus:class",
+          "canonicalReference": "robinson!EventBus:class",
           "docComment": "/**\n * @description 函数“on”将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。\n *\n * @param eventName - 表示事件的名称的字符串。\n *\n * @param eventFn - 当指定事件发生时将执行的函数。\n *\n * @example\n *\n * const eventBus = new EventBus(); eventBus.on('myEvent', () => { console.log('myEvent triggered'); });\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
@@ -1269,15 +1269,15 @@
               "text": "declare class EventBus "
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/eventBus.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/eventBus.d.ts",
           "releaseTag": "Beta",
           "isAbstract": false,
-          "name": "eventBus",
+          "name": "EventBus",
           "preserveMemberOrder": false,
           "members": [
             {
               "kind": "Constructor",
-              "canonicalReference": "robinson!eventBus:constructor(1)",
+              "canonicalReference": "robinson!EventBus:constructor(1)",
               "docComment": "/**\n * Constructs a new instance of the `EventBus` class\n */\n",
               "excerptTokens": [
                 {
@@ -1292,7 +1292,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "robinson!eventBus#clear:member(1)",
+              "canonicalReference": "robinson!EventBus#clear:member(1)",
               "docComment": "/**\n * clear 函数从 eventObj 对象中删除事件。\n *\n * @param eventName - eventName 参数是一个字符串，表示要清除的事件的名称。\n */\n",
               "excerptTokens": [
                 {
@@ -1340,7 +1340,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "robinson!eventBus#emit:member(1)",
+              "canonicalReference": "robinson!EventBus#emit:member(1)",
               "docComment": "/**\n * “emit”函数触发与特定事件名称关联的所有事件处理程序，并将任何参数传递给它们。\n *\n * @param eventName - 表示要发出的事件名称的字符串。\n *\n * @param Args - Args 是一个剩余参数，允许将无限数量的参数传递给 emit 函数。这些参数可以是任何类型。\n */\n",
               "excerptTokens": [
                 {
@@ -1404,7 +1404,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "robinson!eventBus#off:member(1)",
+              "canonicalReference": "robinson!EventBus#off:member(1)",
               "docComment": "",
               "excerptTokens": [
                 {
@@ -1469,7 +1469,7 @@
             },
             {
               "kind": "Method",
-              "canonicalReference": "robinson!eventBus#on:member(1)",
+              "canonicalReference": "robinson!EventBus#on:member(1)",
               "docComment": "/**\n * 函数“on”将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。\n *\n * @param eventName - eventName 是一个字符串参数，表示事件的名称。它用于标识eventObj对象中的事件。\n *\n * @param eventFn - eventFn 参数是当指定事件发生时将执行的函数。\n */\n",
               "excerptTokens": [
                 {
@@ -1570,7 +1570,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -1633,7 +1633,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -1696,7 +1696,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -1776,7 +1776,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/array/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/array/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 6,
             "endIndex": 10
@@ -1856,7 +1856,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 9,
             "endIndex": 10
@@ -1941,7 +1941,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -2025,7 +2025,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 9
@@ -2087,7 +2087,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -2141,7 +2141,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -2187,7 +2187,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -2237,7 +2237,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 5
@@ -2287,7 +2287,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 5
@@ -2348,7 +2348,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/number/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/number/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -2419,7 +2419,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/array/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/array/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 4,
             "endIndex": 6
@@ -2465,7 +2465,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -2502,7 +2502,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 1,
             "endIndex": 2
@@ -2548,7 +2548,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -2614,7 +2614,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 6,
             "endIndex": 7
@@ -2667,7 +2667,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -2712,7 +2712,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -2771,7 +2771,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 7
@@ -2840,7 +2840,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -2909,7 +2909,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -2972,7 +2972,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -3025,7 +3025,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/array/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/array/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3080,7 +3080,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -3133,7 +3133,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/boolean/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/boolean/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3178,7 +3178,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/number/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/number/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3223,7 +3223,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/object/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/object/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3268,7 +3268,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3313,7 +3313,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3366,7 +3366,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -3427,7 +3427,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -3480,7 +3480,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3525,7 +3525,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/number/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/number/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3570,7 +3570,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3615,7 +3615,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/color/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/color/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3660,7 +3660,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3706,7 +3706,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/object/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/object/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3751,7 +3751,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/number/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/number/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3796,7 +3796,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3841,7 +3841,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3886,7 +3886,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/number/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/number/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3932,7 +3932,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3977,7 +3977,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4022,7 +4022,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/number/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/number/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4067,7 +4067,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/object/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/object/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4112,7 +4112,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/object/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/object/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4157,7 +4157,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/object/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/object/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4218,7 +4218,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/number/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/number/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -4279,7 +4279,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4324,7 +4324,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/object/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/object/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4369,7 +4369,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/color/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/color/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4414,7 +4414,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/color/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/color/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4459,7 +4459,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4504,7 +4504,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4549,7 +4549,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/symbol/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/symbol/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4594,7 +4594,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4639,7 +4639,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4703,7 +4703,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -4765,7 +4765,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4811,7 +4811,7 @@
               "text": " | string"
             }
           ],
-          "fileUrlPath": "dist/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 5
@@ -4853,7 +4853,7 @@
               "canonicalReference": "robinson!~IRgba:interface"
             }
           ],
-          "fileUrlPath": "dist/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4895,7 +4895,7 @@
               "canonicalReference": "robinson!~IRgba:interface"
             }
           ],
-          "fileUrlPath": "dist/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4955,7 +4955,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 6,
             "endIndex": 7
@@ -5001,7 +5001,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -5055,7 +5055,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -5117,7 +5117,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -5179,7 +5179,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -5242,7 +5242,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -5303,7 +5303,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -5373,7 +5373,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -5457,7 +5457,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 8,
             "endIndex": 9
@@ -5518,7 +5518,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -5563,7 +5563,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -5609,7 +5609,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -5659,7 +5659,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 5
@@ -5730,7 +5730,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 9,
             "endIndex": 10
@@ -5804,7 +5804,7 @@
               "text": "string"
             }
           ],
-          "fileUrlPath": "dist/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -5882,7 +5882,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/other.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/other.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 9,
             "endIndex": 10
@@ -5961,7 +5961,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -6035,7 +6035,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 7

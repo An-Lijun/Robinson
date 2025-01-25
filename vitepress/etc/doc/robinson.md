@@ -8,7 +8,7 @@
 
 |  Class | Description |
 |  --- | --- |
-|  [eventBus](./robinson.eventbus.md) | **_(BETA)_**  函数“on”将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。 |
+|  [EventBus](./robinson.eventbus.md) | **_(BETA)_**  函数“on”将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。 |
 
 ## Functions
 
@@ -20,10 +20,10 @@
 |  [base64ToBlob(base64)](./robinson.base64toblob.md) | **_(BETA)_**  将Base64编码的字符串转换为Blob对象 |
 |  [bind(dom, eventType, callBack, isCatch)](./robinson.bind.md) | **_(BETA)_**  该函数将事件侦听器绑定到 TypeScript 中的 DOM 元素。 |
 |  [blobToBase64(blob, suffix)](./robinson.blobtobase64.md) | **_(BETA)_**  将Blob对象转换为Base64编码的字符串 |
-|  [cache(storage, parmas)](./robinson.cache.md) | **_(BETA)_**  createCache 函数创建一个缓存对象，该对象可以使用指定的存储机制和编码/解码函数来存储和检索数据。 |
 |  [calc(number1, number2, operate)](./robinson.calc.md) | **_(BETA)_**  数值计算 |
 |  [compose(fns)](./robinson.compose.md) | **_(BETA)_**  组合函数，将多个函数从右到左依次调用。 |
 |  [copyToClipboard(text)](./robinson.copytoclipboard.md) | **_(BETA)_**  将文本复制到剪贴板。 |
+|  [createCache(storage, parmas)](./robinson.createcache.md) | **_(BETA)_**  createCache 函数创建一个缓存对象，该对象可以使用指定的存储机制和编码/解码函数来存储和检索数据。 |
 |  [currying(fn)](./robinson.currying.md) | **_(BETA)_**  柯里化函数接受一个函数作为输入并返回一个新函数，该函数可以使用多个参数或以柯里化方式调用。 |
 |  [debounce(fn, delay, isLimmediate)](./robinson.debounce.md) | **_(BETA)_**  防抖函数，限制函数调用的频率。 |
 |  [deepClone(originalValue)](./robinson.deepclone.md) | **_(BETA)_**  “deepClone”函数用于创建对象或数组的深层副本，包括处理复杂类型，例如集合、映射和符号。 |

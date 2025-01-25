@@ -1,17 +1,17 @@
 {
     "$schema": "https://developer.microsoft.com/json-schemas/api-extractor/v7/api-extractor.schema.json",
-    "mainEntryPointFilePath": "./dist/esm/types/index.d.ts",
+    "mainEntryPointFilePath": "../dist/esm/types/index.d.ts",
     "bundledPackages": [],
     "compiler": {
-        "tsconfigFilePath": "./tsconfig.json"
+        "tsconfigFilePath": "../tsconfig.json"
     },
     "apiReport": {
         "enabled": true,
-        "reportTempFolder": "./vitepress/temp/"
+        "reportTempFolder": "../vitepress/temp/"
     },
     "docModel": {
         "enabled": true,
-        "apiJsonFilePath": "./vitepress/temp/robinson.api.json"
+        "apiJsonFilePath": "../vitepress/temp/robinson.api.json"
     },
     "dtsRollup": {
         "enabled": true
