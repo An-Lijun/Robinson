@@ -36,13 +36,12 @@ export default function getDocs(docsPath: string, filePath: string) {
    */
   const baseDocs = Object.values(info).reduce((obj: TbaseDocs, item: Titem): TbaseDocs => {
     obj[item.folderNm.toLowerCase()] = {
-      text: item.functionNm,
+      text: item.folderNm,
       collapsed: true,
       items: []
     }
     return obj
   }, {})
-
   /**
    * 递归生成文档树结构
    * @param file 文件名，用于提取当前处理的文档路径
@@ -56,18 +55,20 @@ export default function getDocs(docsPath: string, filePath: string) {
     // 获取当前路径对应的文档信息
     const infoCur = info[cur]
     // 如果文档信息存在，将其添加到对应的文档夹中
+    
     if (infoCur) {
       baseDocs[infoCur.folderNm].items.push({
         text: infoCur.functionNm,
         link: filePath + curPath + '.md',
       })
+
     }
     // 如果还有剩余路径，递归调用自身处理剩余路径
     if (rest.length > 0) {
       getTree(rest.join('.'), curPath + '.')
     }
   }
-
+  
   // 同步获取文档路径下的所有文件，并处理这些文件生成一个树形结构
   fg.sync([docsPath])
     // 将每个文件路径转换为文件名
@@ -79,6 +80,5 @@ export default function getDocs(docsPath: string, filePath: string) {
       // 返回累积的树形结构对象，作为下一次迭代的基础
       return tree
     }, {})
-
   return Object.keys(baseDocs).map(item => baseDocs[item])
 }
