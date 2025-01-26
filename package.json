@@ -31,7 +31,11 @@
         "lint": "eslint --fix --ext .js,.vue src",
         "build": "npx rollup -c",
         "pub": "node ./script/publish.js",
-        "p": "node ./script/publish.js"
+        "p": "node ./script/publish.js",
+        "report": "node ./script/report.js",
+        "updatelog": "node ./script/updatelog.js"
+
+
     },
     "author": "",
     "license": "ISC",
@@ -75,6 +79,7 @@
     },
     "dependencies": {
         "big.js": "^6.2.1",
-        "dayjs": "^1.11.10"
+        "dayjs": "^1.11.10",
+        "html-to-md": "^0.8.6"
     }
 }

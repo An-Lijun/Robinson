@@ -15,7 +15,14 @@ export default defineConfig({
         nav: [
             { text: '主页', link: '/index.html' },
             { text: 'Rollup', link: '/etc/docs/src/introduce' },
-            { text: 'API', link: '/etc/doc/index' },
+            { text: 'API', items:[
+                {   
+                    text: '1.x 文档',
+                    link: '/etc/doc/index'
+                }
+            ] },
+            { text: '测试报告', link: '/etc/report' },
+            { text: '更新日志', link: '/etc/changelog' },
         ],
         sidebar: {
             "etc/doc": [

@@ -37,3 +37,23 @@ features:
     
 footer: MIT Licensed | Copyright © 2019-present Evan You
 ---
+<style >
+/* 设置流光 */
+@keyframes sun{
+    100%{
+        background-position: -400% 0;
+    }
+}
+
+ .box .title{
+    background: linear-gradient(90deg,#03a9f4,#fff,#f441a5,#ffeb3b,#03a9f4,#fff);
+    background-size: 400%;position: relative;
+      /* 将背景裁剪到文本 */
+      -webkit-background-clip: text;
+      /* 让文本填充色透明，这样才能显示出背景的渐变效果 */
+      -webkit-text-fill-color: transparent;
+      color: red; 
+    animation: sun 10s linear  infinite;
+
+  }
+</style>

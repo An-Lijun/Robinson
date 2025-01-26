@@ -14,6 +14,9 @@ importers:
       dayjs:
         specifier: ^1.11.10
         version: 1.11.10
+      html-to-md:
+        specifier: ^0.8.6
+        version: 0.8.6
     devDependencies:
       '@babel/core':
         specifier: ^7.22.20
@@ -2139,6 +2142,9 @@ packages:
 
   html-escaper@2.0.2:
     resolution: {integrity: sha512-H2iMtd0I4Mt5eYiapRdIDjp+XzelXQ0tFE4JS7YFwFevXXMmOp9myNrUvCg0D6ws8iqkRPBfKHgbwig1SmlLfg==}
+
+  html-to-md@0.8.6:
+    resolution: {integrity: sha512-KaRoYxML9AIETfgz5tgI1ioCsT8+skHTIILzrDV66XwCxuWUVjwCcpbnfeUwT9r8VBrfDAa8B5p5b5Pcs9LtRg==}
 
   http-proxy-agent@5.0.0:
     resolution: {integrity: sha512-n2hY8YdoRE1i7r6M0w9DIw5GgZN0G25P8zLCRQ8rjXtTU3vsNFBI/vWK/UIeE6g5MUUz6avwAPXmL6Fy9D/90w==}
@@ -5799,6 +5805,8 @@ snapshots:
       whatwg-encoding: 2.0.0
 
   html-escaper@2.0.2: {}
+
+  html-to-md@0.8.6: {}
 
   http-proxy-agent@5.0.0:
     dependencies:
