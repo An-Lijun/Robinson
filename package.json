@@ -34,8 +34,6 @@
         "p": "node ./script/publish.js",
         "report": "node ./script/report.js",
         "updatelog": "node ./script/updatelog.js"
-
-
     },
     "author": "",
     "license": "ISC",
@@ -64,6 +62,7 @@
         "cz-conventional-changelog": "^3.3.0",
         "eslint": "^8.50.0",
         "fast-glob": "^3.3.1",
+        "gulp": "^5.0.0",
         "husky": "^8.0.0",
         "jest": "^29.7.0",
         "jest-environment-jsdom": "^29.7.0",
