@@ -3,6 +3,12 @@ import { defineConfig } from 'vitepress'
 import getDosc from './script'
 import sliderbarRollup from '../etc/rollup/index'
 import sliderbarJest from '../etc/jest/index'
+import sliderbarVitepress from '../etc/vitepress/index'
+import sliderbarApiExtractor from '../etc/apiExtractor/index'
+import sliderbarGulp from '../etc/gulp/index'
+
+
+
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -29,6 +35,11 @@ export default defineConfig({
                 items:[
                     { text: 'Rollup文档', link: '/etc/rollup/src/introduce' },
                     { text: 'Jest文档', link: '/etc/jest/src/introduction' },
+                    { text: 'vitepress文档', link: '/etc/vitepress/src/introduce' },
+                    { text: 'apiExtractor文档', link: '/etc/apiExtractor/src/introduce' },
+                    { text: 'gulp文档', link: '/etc/gulp/src/introduce' },
+
+
                 ]
             }
         ],
@@ -40,7 +51,11 @@ export default defineConfig({
                 },
             ],
             ...sliderbarRollup,
-            ...sliderbarJest
+            ...sliderbarJest,
+            ...sliderbarVitepress,
+            ...sliderbarApiExtractor,
+            ...sliderbarGulp
+
         },
 
         socialLinks: [
