@@ -13,7 +13,7 @@ npm install rollup @rollup/plugin-typescript typescript tslib -D
 
 2. 配置rollup
 
-```
+```javascript
 // www.javascriptcn.com code example
 import typescript from '@rollup/plugin-typescript';
 
@@ -31,7 +31,7 @@ export default {
 
 3. 配置 tsconfig.json
 在项目根目录下创建 `tsconfig.json` 文件，配置 TypeScript 编译选项：
-```
+```json
 {
   "compilerOptions": {
     "target": "es5",

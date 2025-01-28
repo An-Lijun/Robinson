@@ -2,7 +2,7 @@
 缓存可以显著提高构建速度，特别是在开发环境中。
 
 
-```
+```javascript
 import { rollup } from 'rollup';
 
 const inputOptions = {
@@ -38,7 +38,7 @@ Rollup 的缓存机制是指在构建过程中，Rollup 会将模块的解析结
 
 在某些情况下，你可能需要手动管理缓存。例如，你可以通过 `rollup.rollup` 方法的返回值来获取当前的缓存对象，并在后续构建中复用这个缓存对象：
 
-```
+```javascript
 // www.javascriptcn.com code example
 async function build() {
   const bundle = await rollup(inputOptions);

@@ -1,6 +1,6 @@
-const root = '/etc/docs/src/';
+const root = '/etc/rollup/src/';
 
-export default { 'etc/docs/src': [
+export default { 'etc/rollup/src': [
   { text: 'rollup',
     items: [
       { text: '介绍',

@@ -10,6 +10,7 @@ Rollup 的插件机制通过钩子函数（Hooks）实现，插件可以在 Roll
 
 一个 Rollup 插件通常是一个 JavaScript 对象，包含一个 `name` 属性和多个钩子函数。例如：
 
+  ```javascript
     export default function myPlugin() {
       return {
         name: 'my-plugin',
@@ -19,6 +20,7 @@ Rollup 的插件机制通过钩子函数（Hooks）实现，插件可以在 Roll
         }
       };
     }
+  ```
 
 ## 钩子函数
 

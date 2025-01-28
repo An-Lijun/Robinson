@@ -1,7 +1,8 @@
 import { defineConfig } from 'vitepress'
 
 import getDosc from './script'
-import sliderbarRollup from '../etc/docs/index'
+import sliderbarRollup from '../etc/rollup/index'
+import sliderbarJest from '../etc/jest/index'
 
 // https://vitepress.dev/reference/site-config
 export default defineConfig({
@@ -14,7 +15,7 @@ export default defineConfig({
         // https://vitepress.dev/reference/default-theme-config
         nav: [
             { text: '主页', link: '/index.html' },
-            { text: 'Rollup', link: '/etc/docs/src/introduce' },
+
             { text: 'API', items:[
                 {   
                     text: '1.x 文档',
@@ -23,6 +24,13 @@ export default defineConfig({
             ] },
             { text: '测试报告', link: '/etc/report' },
             { text: '更新日志', link: '/etc/changelog' },
+            {
+                text:'工程化',
+                items:[
+                    { text: 'Rollup文档', link: '/etc/rollup/src/introduce' },
+                    { text: 'Jest文档', link: '/etc/jest/src/introduction' },
+                ]
+            }
         ],
         sidebar: {
             "etc/doc": [
@@ -31,7 +39,8 @@ export default defineConfig({
                     items: getDosc('./vitepress/etc/doc/*.md','/etc/doc/'),
                 },
             ],
-            ...sliderbarRollup
+            ...sliderbarRollup,
+            ...sliderbarJest
         },
 
         socialLinks: [

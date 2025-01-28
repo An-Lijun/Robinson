@@ -5,7 +5,7 @@
 npm install rollup rollup-plugin-vue vue-template-compiler -D
 ```
 
-```
+```vue
 <template>
   <div>
     <h1>{{ message }}</h1>
