@@ -33,7 +33,9 @@
         "pub": "node ./script/publish.js",
         "p": "node ./script/publish.js",
         "report": "node ./script/report.js",
-        "updatelog": "node ./script/updatelog.js"
+        "updatelog": "node ./script/updatelog.js",
+        "gupdatelog": "gulp  --gulpfile script/updateLogGulp.js"
+
     },
     "author": "",
     "license": "ISC",
