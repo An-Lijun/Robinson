@@ -1,5 +1,8 @@
 //@ 我用的是 2.4.2 因为是nodejs脚本所以用老版本的cjs模块化 npm i chalk@2.4.2
 const chalk = require('chalk');
+const { spawn } = require('child_process');
+const npmNM = process.platform === 'win32' ? 'npm.cmd' : 'npm';
+const packageJson = require('../package.json');
 
 /**
  * 输出logo
@@ -38,7 +41,29 @@ function logSuccess (...arg) {
 
 }
 
+
+function build (fun) {
+  console.log('正在打包...');
+  const buildProcess = spawn(npmNM, ['run', 'buildViteDocs']);
+
+  // 当有数据输出到标准输出时的处理
+  buildProcess.stdout.on('data', (data) => {
+    console.log(`stdout: ${data}`);
+  });
+
+  // 当有数据输出到标准错误时的处理
+  buildProcess.stderr.on('data', (data) => {
+    console.error(`stderr: ${data}`);
+  });
+
+  // 当进程结束时的处理
+  buildProcess.on('close', (code) => {
+    logSuccess('文档打包成功', packageJson.version);
+    fun()
+  });
+}
+
 module.exports = { logNextLone,
   logError,
   logSuccess,
-  logLogo };
+  logLogo ,build};

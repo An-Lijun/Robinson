@@ -17,7 +17,32 @@ https://an-lijun.github.io/Robinson/
 ## Support
 none (now useing for self)
 
+## 脚本
 
+  "doc": "api-extractor run --config ./config/api-extractor.json  --local --verbose ",// 不推荐使用 生成函数json
+        "doc:trace": "api-extractor run --config ./config/api-extractor.json  --local --verbose --traceResolution",//不推荐使用 生成函数md文件
+        "doc:debug": "api-extractor run --local --verbose --diagnostics && api-documenter markdown -i temp -o vitepress/etc/doc", // 不推荐使用 调试使用
+        "trace": "tsc dist/types/index.d.ts --traceResolution > trace.log", // 不推荐使用 调试使用
+        "buildViteDocs": "vitepress build vitepress", // 不推荐使用 打包vitepress 应该使用docs:build命令
+        "oldupdatelog": "node ./script/updatelog.js", //不推荐使用 生成更新日志md命令 应该使用 updatelog
+        "pub": "node ./script/publish.js", //不推荐使用 旧版本构建发布函数命令
+        
+        "prepare": "husky install", // git commit钩子
+        "test": "jest", //测试命令
+        "lint": "eslint --fix --ext .js,.vue src",//Eslint格式化命令
+        "commit": "cz", // 提交命令
+
+        "build": "npx rollup -c", //打包函数命令
+        "buildAllDocs": "gulp --gulpfile script/genDoc.js", // 生成全部md文档
+        "docs:dev": "vitepress dev vitepress", // 开发vitepressDosc使用
+        "docs:build": "node ./script/docBuild.js", // 打包vitepress
+        "docs:preview": "vitepress preview", // 预览vitepressDosc使用
+                
+        "publishRobinson": "node ./script/publish.js",   //构建发布函数命令
+
+        "genEtc": "api-documenter markdown -i vitepress/temp -o vitepress/etc/doc", //生成函数md文件
+        "genUpdatelog": "gulp  --gulpfile script/updateLogGulp.js", //生成更新日志md命令
+        "genReport" :"gulp  --gulpfile script/report.js", //生成测试报告
 ## 生成文档
 1. npm run doc  
 2. npm run docs:build

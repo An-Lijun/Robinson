@@ -5,6 +5,14 @@
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
                     1.
+                    <span style="color:var(--vp-c-text-2);margin-right:10px">feat(script): 引入gulp对脚本进行顺序执行</span> 
+                    <i style="color:var(--vp-c-text-3)">2025-01-28</i> 
+                </div> 
+                <a href="mailto:nj_yutian@qq.com" class="mail-link" title="02453b0311857a411ae53f7065e13f17448ec47a">yutian</a> </li>  
+ </ul>
+ <ul> <li style="display:flex;justify-content:space-between">
+                <div>
+                    2.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">docs(changelog.md): 对script生成gitlog脚本进行优化</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-27</i> 
                 </div> 
@@ -12,7 +20,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    2.
+                    3.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">增加文档</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-26</i> 
                 </div> 
@@ -20,7 +28,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    3.
+                    4.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">迁移config 文件</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-25</i> 
                 </div> 
@@ -28,7 +36,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    4.
+                    5.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">修改文件目录</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-25</i> 
                 </div> 
@@ -36,7 +44,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    5.
+                    6.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">对文档脚本进行修改</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-25</i> 
                 </div> 
@@ -44,7 +52,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    6.
+                    7.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">对文档脚本进行修改</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-24</i> 
                 </div> 
@@ -52,7 +60,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    7.
+                    8.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">docs 文档重新编辑</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-23</i> 
                 </div> 
@@ -60,7 +68,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    8.
+                    9.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">docs 文档重新编辑</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-23</i> 
                 </div> 
@@ -68,7 +76,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    9.
+                    10.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">对文档脚本进行修改</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-22</i> 
                 </div> 
@@ -76,7 +84,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    10.
+                    11.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">修改测试引入目录</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-21</i> 
                 </div> 
@@ -84,7 +92,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    11.
+                    12.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">添加文件插件</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-21</i> 
                 </div> 
@@ -92,7 +100,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    12.
+                    13.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">删除无用文件</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-20</i> 
                 </div> 
@@ -100,7 +108,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    13.
+                    14.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">feat 优化打包目录</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-19</i> 
                 </div> 
@@ -108,7 +116,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    14.
+                    15.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">feat 优化依赖</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-19</i> 
                 </div> 
@@ -116,7 +124,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    15.
+                    16.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">feat 优化文件目录</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-19</i> 
                 </div> 
@@ -124,7 +132,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    16.
+                    17.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">feat 优化文件目录</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-19</i> 
                 </div> 
@@ -132,7 +140,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    17.
+                    18.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">feat 对打包文件添加打包分析</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-19</i> 
                 </div> 
@@ -140,7 +148,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    18.
+                    19.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">feat 添加rollup文档</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-19</i> 
                 </div> 
@@ -148,7 +156,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    19.
+                    20.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">feat 对文件单元测试进行增加</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-19</i> 
                 </div> 
@@ -156,7 +164,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    20.
+                    21.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">feat 对文件单元测试进行增加</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-18</i> 
                 </div> 
@@ -164,7 +172,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    21.
+                    22.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">feat 对文件单元测试进行增加</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-18</i> 
                 </div> 
@@ -172,7 +180,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    22.
+                    23.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">对文档添加注释</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-17</i> 
                 </div> 
@@ -180,7 +188,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    23.
+                    24.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">对文档添加注释</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-16</i> 
                 </div> 
@@ -188,7 +196,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    24.
+                    25.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">对文档添加注释</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-16</i> 
                 </div> 
@@ -196,7 +204,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    25.
+                    26.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">对文档添加注释</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-16</i> 
                 </div> 
@@ -204,7 +212,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    26.
+                    27.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">对文档添加注释</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-16</i> 
                 </div> 
@@ -212,7 +220,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    27.
+                    28.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">打包docs进行修复</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-15</i> 
                 </div> 
@@ -220,7 +228,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    28.
+                    29.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">对文档脚本进行调整</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-15</i> 
                 </div> 
@@ -228,7 +236,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    29.
+                    30.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">对 文档脚本进行抽取</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-15</i> 
                 </div> 
@@ -236,7 +244,7 @@
  </ul>
  <ul> <li style="display:flex;justify-content:space-between">
                 <div>
-                    30.
+                    31.
                     <span style="color:var(--vp-c-text-2);margin-right:10px">1.0.16</span> 
                     <i style="color:var(--vp-c-text-3)">2025-01-14</i> 
                 </div> 
