@@ -1,4 +1,3 @@
-
 const { spawn, exec } = require('child_process');
 const packageJson = require('../package.json');
 const npmNM = process.platform === 'win32' ? 'npm.cmd' : 'npm';
