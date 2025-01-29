@@ -1,6 +1,6 @@
 {
     "name": "robinson",
-    "version": "1.0.16",
+    "version": "1.0.17",
     "description": "",
     "main": "/dist/esm/index.js",
     "files": [
@@ -20,28 +20,22 @@
         "doc:trace": "api-extractor run --config ./config/api-extractor.json  --local --verbose --traceResolution",
         "doc:debug": "api-extractor run --local --verbose --diagnostics && api-documenter markdown -i temp -o vitepress/etc/doc",
         "trace": "tsc dist/types/index.d.ts --traceResolution > trace.log",
-        "buildViteDocs": "vitepress build vitepress", 
+        "buildViteDocs": "vitepress build vitepress",
         "oldupdatelog": "node ./script/updatelog.js",
         "pub": "node ./script/publish.js",
-        
         "prepare": "husky install",
         "test": "jest",
         "lint": "eslint --fix --ext .js,.vue src",
         "commit": "cz",
-
         "build": "npx rollup -c",
         "genAllDocs": "gulp --gulpfile script/genDoc.js",
         "docs:dev": "vitepress dev vitepress",
         "docs:build": "node ./script/docBuild.js",
         "docs:preview": "vitepress preview",
-                
         "publishRobinson": "node ./script/publish.js",
-
         "genEtc": "api-documenter markdown -i vitepress/temp -o vitepress/etc/doc",
         "genUpdatelog": "gulp  --gulpfile script/updateLogGulp.js",
-        "genReport" :"gulp  --gulpfile script/report.js"
-
-
+        "genReport": "gulp  --gulpfile script/report.js"
     },
     "author": "",
     "license": "ISC",
