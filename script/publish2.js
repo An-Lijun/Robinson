@@ -8,7 +8,7 @@ const { logNextLone,logSuccess,logLogo,logError } = require('./utils')
 task('publish-fun',(done)=>{
   console.log('正在发布...');
 
-  exec('npm publish', (error, stdout) => {
+  exec('npm publish --prefix ../package.json', (error, stdout) => {
     if (error) {
       // 当 npm publish 命令执行失败时，error 对象将包含错误信息
       logError('npm publish 失败: ', error);
@@ -20,9 +20,7 @@ task('publish-fun',(done)=>{
         logError('npm publish 失败: 可能是网络问题或 npm 服务器问题', error);
 
       }
-      logNextLone();
       logError('npm publish 失败，正在重试...', error);
-      publish();
       // 可以根据需要添加更多的错误码判断
     } else {
       logSuccess(`npm publish 成功: version:${packageJson.version}`);
