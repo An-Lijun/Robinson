@@ -1,3 +1,5 @@
+import dayjs from 'dayjs';
+
 export * from './core/common/index';
 export * from './core/array/index';
 export * from './core/boolean/index';
@@ -13,3 +15,4 @@ export * from './core/date/index';
 export * from './core/file/index';
 
 // export * from './core/other/index';
+export default dayjs
