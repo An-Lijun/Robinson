@@ -23,8 +23,8 @@ task('publish-fun',(done)=>{
       logError('npm publish 失败，正在重试...', error);
       // 可以根据需要添加更多的错误码判断
     } else {
-      logSuccess(`npm publish 成功: version:${packageJson.version}`);
       done()
+      logSuccess(`npm publish 成功: version:${packageJson.version}`);
     }
   });
 })
@@ -38,8 +38,8 @@ task('update-version',(done)=>{
       logError('npm version 失败: ', error);
       return;
     }
-    logSuccess('版本号更新成功');
     done()
+    logSuccess('版本号更新成功');
     // npm version patch && npm run build && npm publish && exit 1
   });
 })
@@ -58,8 +58,8 @@ task('build-fun',(done)=>{
       return;
 
     }
-    logSuccess('打包成功');
     done()
+    logSuccess('打包成功');
   });
 })
 
@@ -68,8 +68,8 @@ task('delete-proxy',(done)=>{
     if (err) {
       return logError('删除代理失败: ', err);
     }
-    logSuccess('已成功将 删除代理:', stdout);
     done()
+    logSuccess('已成功将 删除代理:', stdout);
   });
 })
 
