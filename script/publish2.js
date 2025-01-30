@@ -8,7 +8,7 @@ const { logNextLone,logSuccess,logLogo,logError } = require('./utils')
 task('publish-fun',(done)=>{
   console.log('正在发布...');
 
-  exec('npm publish --prefix ../', (error, stdout) => {
+  exec('npm publish ../', (error, stdout) => {
     if (error) {
       // 当 npm publish 命令执行失败时，error 对象将包含错误信息
       logError('npm publish 失败: ', error);
