@@ -15,7 +15,7 @@ export default defineConfig({
     title: 'Robinson',
     description: 'Documentations of @taiyuuki/utils',
     base: '/Robinson/',
-    outDir: "./docsDist",
+    outDir: "../docs/",
     lastUpdated: true,
     themeConfig: {
         // https://vitepress.dev/reference/default-theme-config
