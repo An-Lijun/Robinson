@@ -91,8 +91,8 @@ Fourth item
 
 ### 图片语法
 
-::v-pre
-    [![沙漠中的岩石图片](/assets/img/shiprock.jpg "Shiprock")](https://markdown.com.cn)
+:::v-pre
+    [![沙漠中的岩石图片](https://www.example.com/assets/img/shiprock.jpg "Shiprock")](https://markdown.com.cn)
 :::
 
 ### 其他

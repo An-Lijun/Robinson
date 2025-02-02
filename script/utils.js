@@ -59,7 +59,9 @@ function build (fun) {
   // 当进程结束时的处理
   buildProcess.on('close', (code) => {
     logSuccess('文档打包成功', packageJson.version);
-    fun()
+    if(fun){
+      fun()
+    }
   });
 }
 
