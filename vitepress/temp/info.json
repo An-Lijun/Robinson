@@ -55,6 +55,10 @@
     "folderNm": "function",
     "functionNm": "deepClone"
   },
+  "default": {
+    "folderNm": "date",
+    "functionNm": "default"
+  },
   "downloadbybase64": {
     "folderNm": "file",
     "functionNm": "downloadByBase64"
@@ -394,10 +398,6 @@
   "urltobase64": {
     "folderNm": "file",
     "functionNm": "urlToBase64"
-  },
-  "default": {
-    "folderNm": "date",
-    "functionNm": "default"
   },
   "getstringtype": {
     "folderNm": "helper",

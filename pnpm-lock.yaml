@@ -14,9 +14,6 @@ importers:
       dayjs:
         specifier: ^1.11.10
         version: 1.11.10
-      html-to-md:
-        specifier: ^0.8.6
-        version: 0.8.6
     devDependencies:
       '@babel/core':
         specifier: ^7.22.20
@@ -75,6 +72,9 @@ importers:
       gulp:
         specifier: ^5.0.0
         version: 5.0.0
+      html-to-md:
+        specifier: ^0.8.6
+        version: 0.8.6
       husky:
         specifier: ^8.0.0
         version: 8.0.0

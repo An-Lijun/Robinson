@@ -14,6 +14,7 @@ module.exports = defineConfig([{
       dir: 'dist/esm', //出口文件
       format: 'esm', //打包格式
       preserveModules: true, // 开启单独打包有利于树摇晃
+      entryFileNames: '[name].mjs',
       plugins:[recordInfo()]
     },
     {
