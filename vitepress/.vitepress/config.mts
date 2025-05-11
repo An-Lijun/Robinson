@@ -6,7 +6,7 @@ import sliderbarJest from '../etc/jest/index'
 import sliderbarVitepress from '../etc/vitepress/index'
 import sliderbarApiExtractor from '../etc/apiExtractor/index'
 import sliderbarGulp from '../etc/gulp/index'
-
+import llmstxt from 'vitepress-plugin-llms'
 
 
 
@@ -75,5 +75,10 @@ export default defineConfig({
             dark: 'github-dark',
         },
     },
+    vite:{
+        plugins: [
+            llmstxt()
+        ]
+    }
 })
 

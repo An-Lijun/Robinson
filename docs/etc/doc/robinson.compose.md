@@ -1,0 +1,37 @@
+---
+url: /etc\doc/robinson.compose.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [compose](./robinson.compose.md)
+
+## compose() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+组合函数，将多个函数从右到左依次调用。
+
+**Signature:**
+
+```typescript
+declare function compose(...fns: Array<Function>): Function;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  fns | Array\<Function> | 要组合的函数。 |
+
+**Returns:**
+
+Function
+
+{Function} - 返回一个组合后的函数。
+
+## Example
+
+```JavaScript
+const addOne = x => x + 1;
+const double = x => x * 2;
+const composed = compose(double, addOne);
+composed(2);// 返回 6
+```

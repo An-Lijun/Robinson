@@ -1,0 +1,34 @@
+---
+url: /etc\doc/robinson.issymbol.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [isSymbol](./robinson.issymbol.md)
+
+## isSymbol() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+该函数检查值是否是Symbol 类型的对象。
+
+**Signature:**
+
+```typescript
+declare function isSymbol(value: any): boolean;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  value | any | 参数“value”可以是任何数据类型。 |
+
+**Returns:**
+
+boolean
+
+{boolean} 函数 isSymbol 返回一个布尔值。
+
+## Example
+
+```JavaScript
+let a =Symbol(); isSymbol(a) // true
+```

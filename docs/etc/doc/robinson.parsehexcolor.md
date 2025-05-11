@@ -1,0 +1,38 @@
+---
+url: /etc\doc/robinson.parsehexcolor.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [parseHexColor](./robinson.parsehexcolor.md)
+
+## parseHexColor() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+解析十六进制颜色字符串为RGBA对象
+
+该函数接受一个十六进制颜色字符串（例如 "#RRGGBB" 或 "#RGB"）， 并将其解析为一个包含红（r）、绿（g）、蓝（b）和透明度（a）分量的对象
+
+**Signature:**
+
+```typescript
+parseHexColor: (color: string) => IRgba
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  color | string | 十六进制颜色字符串 |
+
+**Returns:**
+
+IRgba
+
+{{r:"",g:"",b:"",a:""}} 包含RGBA分量的对象
+
+## Example
+
+```javascript
+parseHexColor('#FF0000'); // { r: 255, g: 0, b: 0, a: 1 }
+parseHexColor('#F00');    // { r: 255, g: 0, b: 0, a: 1 }
+parseHexColor('#FF0000FF'); // { r: 255, g: 0, b: 0, a: 1 }
+```

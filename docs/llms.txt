@@ -1,0 +1,216 @@
+# Robinson
+
+> A Simple Web Utils to implement functionality 
+
+一个简单的web工具库
+
+## Table of Contents
+
+### API
+
+#### web
+
+
+#### function
+
+
+#### file
+
+
+#### math
+
+
+#### date
+
+
+#### array
+
+
+#### string
+
+
+#### number
+
+
+#### common
+
+
+#### color
+
+
+#### boolean
+
+
+#### object
+
+
+#### symbol
+
+
+### rollup
+
+
+### rollup
+
+
+### vitepress
+
+
+### apiExtractor
+
+
+### gulp
+
+
+### Other
+
+- [部署](/etc\vitepress\src/build.md)
+- [处理文件](/etc\gulp\src/file.md)
+- [处理循环依赖](/etc\rollup\src/circularDev.md)
+- [国际化](/etc\vitepress\src/internation.md)
+- [核心概念](/etc\gulp\src/core.md)
+- [核心概念](/etc\rollup\src/core.md)
+- [或者](/etc\jest\src/install.md)
+- [或者](/etc\jest\src/report.md)
+- [集成Ts](/etc\rollup\src/withTs.md)
+- [介绍](/etc\gulp\src/introduce.md)
+- [介绍](/etc\rollup\src/introduce.md)
+- [介绍](/etc\vitepress\src/introduce.md)
+- [进阶](/etc\rollup\src/advance.md)
+- [快速上手](/etc\apiExtractor\src/quick.md)
+- [快速上手](/etc\gulp\src/quick.md)
+- [快速上手](/etc\rollup\src/quick.md)
+- [路由](/etc\vitepress\src/router.md)
+- [默认主题](/etc\vitepress\src/theme.md)
+- [使用插件](/etc\gulp\src/usePlugin.md)
+- [使用缓存](/etc\rollup\src/use.md)
+- [手动开发一个插件](/etc\rollup\src/dev.md)
+- [搜索](/etc\vitepress\src/search.md)
+- [在md使用vue](/etc\vitepress\src/withVue.md)
+- [作用域提升](/etc\rollup\src/scope.md)
+- [All files](/etc/report.md)
+- [api-extractor.json的配置](/etc\apiExtractor\src/introduce.md)
+- [Apis](/etc\gulp\src/other.md)
+- [Markdown语法与扩展](/etc\vitepress\src/mdLang.md)
+- [rollup 插件是怎样工作的](/etc\rollup\src/howWork.md)
+- [rollup 集成vue](/etc\rollup\src/withVue.md)
+- [rollup 优化](/etc\rollup\src/more.md)
+- [treeshaking](/etc\rollup\src/treeshaking.md)
+- [Untitled](/etc\apiExtractor\src/config.md)
+- [Untitled](/etc\doc/robinson.addclass.md)
+- [Untitled](/etc/changelog.md)
+- [Untitled](/etc\doc/robinson.addnode.md)
+- [Untitled](/etc/doc.md)
+- [Untitled](/etc\doc/robinson.asigndata.md)
+- [Untitled](/etc\doc/robinson.base64toblob.md)
+- [Untitled](/etc\doc/robinson.bind.md)
+- [Untitled](/etc\doc/robinson.blobtobase64.md)
+- [Untitled](/etc\doc/robinson.calc.md)
+- [Untitled](/etc\doc/robinson.compose.md)
+- [Untitled](/etc\doc/robinson.createcache.md)
+- [Untitled](/etc\doc/robinson.currying.md)
+- [Untitled](/etc\doc/robinson.copytoclipboard.md)
+- [Untitled](/etc\doc/robinson.debounce.md)
+- [Untitled](/etc\doc/robinson.deepclone.md)
+- [Untitled](/etc\doc/robinson.downloadbybase64.md)
+- [Untitled](/etc\doc/robinson.eventbus._constructor_.md)
+- [Untitled](/etc\doc/robinson.downloadbyurl.md)
+- [Untitled](/etc\doc/robinson.downloadbyblob.md)
+- [Untitled](/etc\doc/robinson.eventbus.clear.md)
+- [Untitled](/etc\doc/robinson.eventbus.emit.md)
+- [Untitled](/etc\doc/robinson.eventbus.md)
+- [Untitled](/etc\doc/robinson.eventbus.off.md)
+- [Untitled](/etc\doc/robinson.eventbus.on.md)
+- [Untitled](/etc\doc/robinson.formatdate.md)
+- [Untitled](/etc\doc/robinson.getafterdate.md)
+- [Untitled](/etc\doc/robinson.getbeforedate.md)
+- [Untitled](/etc\doc/robinson.getchunkarray.md)
+- [Untitled](/etc\doc/robinson.getdiff.md)
+- [Untitled](/etc\doc/robinson.getetc.md)
+- [Untitled](/etc\doc/robinson.getfilechunk.md)
+- [Untitled](/etc\doc/robinson.getfilesize.md)
+- [Untitled](/etc\doc/robinson.getfiletype.md)
+- [Untitled](/etc\doc/robinson.getmimetype.md)
+- [Untitled](/etc\doc/robinson.getnode.md)
+- [Untitled](/etc\doc/robinson.getnodes.md)
+- [Untitled](/etc\doc/robinson.getrandom.md)
+- [Untitled](/etc\doc/robinson.getrelarray.md)
+- [Untitled](/etc\doc/robinson.gettimestamp.md)
+- [Untitled](/etc\doc/robinson.getuniqueid.md)
+- [Untitled](/etc\doc/robinson.hastypein.md)
+- [Untitled](/etc\doc/robinson.hasclass.md)
+- [Untitled](/etc\doc/robinson.hextorgb.md)
+- [Untitled](/etc\doc/robinson.hextorgba.md)
+- [Untitled](/etc\doc/robinson.imgcompression.md)
+- [Untitled](/etc\doc/robinson.insertstr.md)
+- [Untitled](/etc\doc/robinson.is.md)
+- [Untitled](/etc\doc/robinson.isafter.md)
+- [Untitled](/etc\doc/robinson.isarray.md)
+- [Untitled](/etc\doc/robinson.isbefore.md)
+- [Untitled](/etc\doc/robinson.isboolean.md)
+- [Untitled](/etc\doc/robinson.isdecimal.md)
+- [Untitled](/etc\doc/robinson.iselement.md)
+- [Untitled](/etc\doc/robinson.isemail.md)
+- [Untitled](/etc\doc/robinson.isempty.md)
+- [Untitled](/etc\doc/robinson.iseqtype.md)
+- [Untitled](/etc\doc/robinson.iseqvalue.md)
+- [Untitled](/etc\doc/robinson.isexternal.md)
+- [Untitled](/etc\doc/robinson.isfunction.md)
+- [Untitled](/etc\doc/robinson.isfinite_2.md)
+- [Untitled](/etc\doc/robinson.ishex.md)
+- [Untitled](/etc\doc/robinson.isidcard.md)
+- [Untitled](/etc\doc/robinson.isie.md)
+- [Untitled](/etc\doc/robinson.isint.md)
+- [Untitled](/etc\doc/robinson.isleapyear.md)
+- [Untitled](/etc\doc/robinson.ismobilenum.md)
+- [Untitled](/etc\doc/robinson.isnan_2.md)
+- [Untitled](/etc\doc/robinson.isnode.md)
+- [Untitled](/etc\doc/robinson.isnull.md)
+- [Untitled](/etc\doc/robinson.isnumber.md)
+- [Untitled](/etc\doc/robinson.isobjectlike.md)
+- [Untitled](/etc\doc/robinson.isorigindate.md)
+- [Untitled](/etc\doc/robinson.ispromise.md)
+- [Untitled](/etc\doc/robinson.isrange.md)
+- [Untitled](/etc\doc/robinson.isreftype.md)
+- [Untitled](/etc\doc/robinson.isregexp.md)
+- [Untitled](/etc\doc/robinson.isrgb.md)
+- [Untitled](/etc\doc/robinson.isrgba.md)
+- [Untitled](/etc\doc/robinson.isstring.md)
+- [Untitled](/etc\doc/robinson.issimpletype.md)
+- [Untitled](/etc\doc/robinson.issymbol.md)
+- [Untitled](/etc\doc/robinson.isundefined.md)
+- [Untitled](/etc\doc/robinson.isurl.md)
+- [Untitled](/etc\doc/robinson.mapping.md)
+- [Untitled](/etc\doc/robinson.md)
+- [Untitled](/etc\doc/robinson.nodetostring.md)
+- [Untitled](/etc\doc/robinson.parsecolorstring.md)
+- [Untitled](/etc\doc/robinson.parsehexcolor.md)
+- [Untitled](/etc\doc/robinson.parsergbacolor.md)
+- [Untitled](/etc\doc/robinson.pipe.md)
+- [Untitled](/etc\doc/robinson.preventdefault.md)
+- [Untitled](/etc\doc/robinson.printbyblob.md)
+- [Untitled](/etc\doc/robinson.printbydom.md)
+- [Untitled](/etc\doc/robinson.removenode.md)
+- [Untitled](/etc\doc/robinson.removeclass.md)
+- [Untitled](/etc\doc/robinson.rendertmp.md)
+- [Untitled](/etc\doc/robinson.replaceclass.md)
+- [Untitled](/etc\doc/robinson.replacenode.md)
+- [Untitled](/etc\doc/robinson.rgbatohex.md)
+- [Untitled](/etc\doc/robinson.rgbtohex.md)
+- [Untitled](/etc\doc/robinson.stringtonode.md)
+- [Untitled](/etc\doc/robinson.stoppropagation.md)
+- [Untitled](/etc\doc/robinson.throttle.md)
+- [Untitled](/etc\doc/robinson.transhightlight.md)
+- [Untitled](/etc\doc/robinson.torgbastring.md)
+- [Untitled](/etc\doc/robinson.unbind.md)
+- [Untitled](/etc\doc/robinson.urltobase64.md)
+- [Untitled](/etc\jest\src/average.md)
+- [Untitled](/etc\jest\src/introduce.md)
+- [Untitled](/etc\jest\src/introduction.md)
+- [Untitled](/etc\jest\src/mockFun.md)
+- [Untitled](/etc\jest\src/quick.md)
+- [Untitled](/etc\jest\src/testAsync.md)
+- [Untitled](/etc\jest\src/use.md)
+- [Untitled](/etc\vitepress\src/install.md)
+- [Untitled](/index.md)
+- [Untitled](/temp/robinson.api.md)

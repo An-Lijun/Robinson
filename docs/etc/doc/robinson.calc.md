@@ -1,0 +1,39 @@
+---
+url: /etc\doc/robinson.calc.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [calc](./robinson.calc.md)
+
+## calc() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+数值计算
+
+**Signature:**
+
+```typescript
+declare function calc(number1: BigSource, number2: BigSource, operate?: TOperate): string;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  number1 | BigSource | 第一个数字。 |
+|  number2 | BigSource | 第二个数字。 |
+|  operate | TOperate | *(Optional)* 操作符，默认为 '+'。 |
+
+**Returns:**
+
+string
+
+{number} - 计算结果。
+
+## Example
+
+```javascript
+calc(0.1, 0.2);// 返回 0.3
+calc(0.1, 0.2, '-');// 返回 -0.1
+calc(0.1, 0.2, '*');// 返回 0.02
+calc(0.1, 0.2, '/');// 返回 0.5
+```

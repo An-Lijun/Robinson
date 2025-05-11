@@ -1,0 +1,40 @@
+---
+url: /etc\doc/robinson.getchunkarray.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [getChunkArray](./robinson.getchunkarray.md)
+
+## getChunkArray() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+`chunkArray` 函数接受一个数组和一个大小参数，并返回一个新数组，其中原始数组被分割成指定大小的较小数组。
+
+**Signature:**
+
+```typescript
+declare function getChunkArray(array: Array<any>, size?: number): Array<Array<any>>;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  array | Array\<any> |  |
+|  size | number | *(Optional)* “size”参数指定数组每个块中应包含的元素数量。默认情况下，它设置为 1，这意味着每个元素将位于其自己的单独块中。 |
+
+**Returns:**
+
+Array\<Array\<any>>
+
+{\[Array]} 数组的数组。每个内部数组都包含原始数组中的一块元素。每个块的大小由“size”参数确定。
+
+## Example
+
+```JavaScript
+let a=[1,2,3,4,5,6]
+ getChunkArray(a,2) // [[1,2],[3,4],[5,6]]
+let a=[1,2,3,4,5,6]
+ getChunkArray(a,3) // [[1,2,3],[4,5,6]]
+let a={}
+ getChunkArray(a,3) // params is not a array
+```

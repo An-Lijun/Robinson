@@ -1,0 +1,37 @@
+---
+url: /etc\doc/robinson.isarray.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [isArray](./robinson.isarray.md)
+
+## isArray() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+接受一个任意类型判断该类型是否是数组并返回。
+
+**Signature:**
+
+```typescript
+declare function isArray(value: any): boolean;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  value | any | 参数“value”的类型为“any”，这意味着它可以接受任何数据类型。 |
+
+**Returns:**
+
+boolean
+
+{boolean} 一个布尔值。
+
+## Example
+
+```javascript
+   let a ="789";
+   isArray(a) // false
+   let n=[]
+   isArray(n)   //true
+```

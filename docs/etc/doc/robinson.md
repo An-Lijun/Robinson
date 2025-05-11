@@ -1,0 +1,115 @@
+---
+url: /etc\doc/robinson.md
+---
+[Home](./index.md) > [robinson](./robinson.md)
+
+## robinson package
+
+## Classes
+
+|  Class | Description |
+|  --- | --- |
+|  [EventBus](./robinson.eventbus.md) | ***(BETA)***  函数“on”将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。 |
+
+## Functions
+
+|  Function | Description |
+|  --- | --- |
+|  [addClass(dom, classNm)](./robinson.addclass.md) | ***(BETA)***  该函数将一个类添加到 DOM 元素。 |
+|  [addNode(parentDom, dom, position)](./robinson.addnode.md) | ***(BETA)***  函数“addNode”将 DOM 元素或字符串插入到父 DOM 元素的指定位置。 |
+|  [asignData(obj1, obj2)](./robinson.asigndata.md) | ***(BETA)***  函数“asignData”将属性从“obj2”复制到“obj1”，并可选择执行附加函数。 |
+|  [base64ToBlob(base64)](./robinson.base64toblob.md) | ***(BETA)***  将Base64编码的字符串转换为Blob对象 |
+|  [bind(dom, eventType, callBack, isCatch)](./robinson.bind.md) | ***(BETA)***  该函数将事件侦听器绑定到 TypeScript 中的 DOM 元素。 |
+|  [blobToBase64(blob, suffix)](./robinson.blobtobase64.md) | ***(BETA)***  将Blob对象转换为Base64编码的字符串 |
+|  [calc(number1, number2, operate)](./robinson.calc.md) | ***(BETA)***  数值计算 |
+|  [compose(fns)](./robinson.compose.md) | ***(BETA)***  组合函数，将多个函数从右到左依次调用。 |
+|  [copyToClipboard(text)](./robinson.copytoclipboard.md) | ***(BETA)***  将文本复制到剪贴板。 |
+|  [createCache(storage, parmas)](./robinson.createcache.md) | ***(BETA)***  createCache 函数创建一个缓存对象，该对象可以使用指定的存储机制和编码/解码函数来存储和检索数据。 |
+|  [currying(fn)](./robinson.currying.md) | ***(BETA)***  柯里化函数接受一个函数作为输入并返回一个新函数，该函数可以使用多个参数或以柯里化方式调用。 |
+|  [debounce(fn, delay, isLimmediate)](./robinson.debounce.md) | ***(BETA)***  防抖函数，限制函数调用的频率。 |
+|  [deepClone(originalValue)](./robinson.deepclone.md) | ***(BETA)***  “deepClone”函数用于创建对象或数组的深层副本，包括处理复杂类型，例如集合、映射和符号。 |
+|  [downloadByBase64(buf, fileNm, suffix)](./robinson.downloadbybase64.md) | ***(BETA)***  通过Base64编码的字符串下载文件 |
+|  [downloadByBlob(blob, fileNm, suffix)](./robinson.downloadbyblob.md) | ***(BETA)***  通过Blob对象下载文件 |
+|  [downloadByUrl(url, filename, type)](./robinson.downloadbyurl.md) | ***(BETA)***  通过URL下载图片到本地 |
+|  [formatDate(date, pattern)](./robinson.formatdate.md) | ***(BETA)***  格式化时间。 |
+|  [getAfterDate(date, option)](./robinson.getafterdate.md) | ***(BETA)***  计算给定日期之后的日期，并返回格式化后的结果。 |
+|  [getBeforeDate(date, option)](./robinson.getbeforedate.md) | ***(BETA)***  计算给定日期之前的日期，并返回格式化后的结果。 |
+|  [getChunkArray(array, size)](./robinson.getchunkarray.md) | ***(BETA)***  chunkArray 函数接受一个数组和一个大小参数，并返回一个新数组，其中原始数组被分割成指定大小的较小数组。 |
+|  [getDiff(start, end, unitType, float)](./robinson.getdiff.md) | ***(BETA)***  计算两个日期之间的差值。 |
+|  [getEtc(value, len, etcStr)](./robinson.getetc.md) | ***(BETA)***  函数“getEtc”接受一个字符串值并返回指定长度的子字符串，并在末尾附加一个可选的“etcStr”。 |
+|  [getFileChunk(file, chunkSize)](./robinson.getfilechunk.md) | ***(BETA)***  生成文件切片数组 |
+|  [getFileSize(file, unit)](./robinson.getfilesize.md) | ***(BETA)***  获取文件大小 |
+|  [getFileType(file)](./robinson.getfiletype.md) | ***(BETA)***  获取文件后缀名 |
+|  [getMimeType(suffix)](./robinson.getmimetype.md) | ***(BETA)***  获取文件的MIME类型 |
+|  [getNode(domName)](./robinson.getnode.md) | ***(BETA)***  函数 getNode 将 DOM 元素名称作为输入，如果找到则返回相应的元素，否则返回 null。 |
+|  [getNodes(domName)](./robinson.getnodes.md) | ***(BETA)***  函数“getNodes”返回与给定选择器匹配的 DOM 节点的 NodeList，如果未找到节点，则返回 null。 |
+|  [getRandom(min, max, point)](./robinson.getrandom.md) | ***(BETA)***  函数 getRandom 生成指定范围内具有指定小数位数的随机数。 |
+|  [getRelArray(array)](./robinson.getrelarray.md) | ***(BETA)***  函数“getRelArray”接受一个数组作为输入，并返回一个包含所有非空元素的新数组。 |
+|  [getTimestamp(date)](./robinson.gettimestamp.md) | ***(BETA)***  获取当前日期的时间戳。 |
+|  [getUniqueId()](./robinson.getuniqueid.md) | ***(BETA)***  该函数使用随机字符串模式生成唯一 ID。 |
+|  [hasClass(dom, classNm)](./robinson.hasclass.md) | ***(BETA)***  该函数检查元素是否具有特定的类名。 |
+|  [hasTypeIn(value, types)](./robinson.hastypein.md) | ***(BETA)***  该函数检查给定值的类型是否存在于给定类型数组中。 |
+|  [hexToRgb(hex)](./robinson.hextorgb.md) | ***(BETA)***  将十六进制颜色字符串转换为rgb颜色字符串 |
+|  [hexToRgba(hex)](./robinson.hextorgba.md) | ***(BETA)***  将十六进制颜色字符串转换为rgba颜色字符串 |
+|  [imgCompression(file, size)](./robinson.imgcompression.md) | ***(BETA)***  压缩图片文件 |
+|  [insertStr(str, start, char)](./robinson.insertstr.md) | ***(BETA)***  函数“insertStr”接受一个字符串、一个起始索引和一个字符，并返回一个新字符串，其中在指定索引处插入了该字符。 |
+|  [is(value, type)](./robinson.is.md) | ***(BETA)***  返回是某个类型的判断结果 |
+|  [isAfter(start, end)](./robinson.isafter.md) | ***(BETA)***  判断一个日期是否在另一个日期之后。 |
+|  [isArray(value)](./robinson.isarray.md) | ***(BETA)***  接受一个任意类型判断该类型是否是数组并返回。 |
+|  [isBefore(start, end)](./robinson.isbefore.md) | ***(BETA)***  判断一个日期是否在另一个日期之前。 |
+|  [isBoolean(value)](./robinson.isboolean.md) | ***(BETA)***  函数“isBoolean”检查值是否为布尔类型。 |
+|  [isDecimal(s)](./robinson.isdecimal.md) | ***(BETA)***  检查变量是否为实数 |
+|  [isElement(val)](./robinson.iselement.md) | ***(BETA)***  是否为DOM元素 |
+|  [isEmail(s)](./robinson.isemail.md) | ***(BETA)***  检查字符串是否为合法email地址 |
+|  [isEmpty(value)](./robinson.isempty.md) | ***(BETA)***  该函数通过将 JSON 表示形式与空数组或对象进行比较来检查值是否为空。 |
+|  [isEqType(value, value2)](./robinson.iseqtype.md) | ***(BETA)***  函数“isEqType”检查两个值的类型是否相等。 |
+|  [isEqValue(value1, value2)](./robinson.iseqvalue.md) | ***(BETA)***  函数“isEqValue”比较两个值，如果它们的值和类型相等则返回 true。 |
+|  [isExternal(path)](./robinson.isexternal.md) | ***(BETA)***  判断是否为外链 |
+|  [isFinite\_2(value)](./robinson.isfinite_2.md) | ***(BETA)***  该函数检查一个值是否是有限数,原生的已经很好用了 这里是为了保存api统一。 |
+|  [isFunction(value)](./robinson.isfunction.md) | ***(BETA)***  该函数检查给定值是否是函数。 |
+|  [isHex(color)](./robinson.ishex.md) | ***(BETA)***  判断是否为16进制颜色 |
+|  [isIdCard(id)](./robinson.isidcard.md) | ***(BETA)***  检查是否为有效的身份证号 |
+|  [isIE(win)](./robinson.isie.md) | ***(BETA)***  判断是否是IE浏览器 |
+|  [isInt(value)](./robinson.isint.md) | ***(BETA)***  函数“isInteger”检查给定值是否为整数,原生的判断已经很好用了 es6+。 |
+|  [isLeapYear(year)](./robinson.isleapyear.md) | ***(BETA)***  判断给定年份是否为闰年。 |
+|  [isMobileNum(s)](./robinson.ismobilenum.md) | ***(BETA)***  是否为合法手机号 |
+|  [isNaN\_2(value)](./robinson.isnan_2.md) | ***(BETA)***  该函数检查值是否为 NaN。 |
+|  [isNode(el)](./robinson.isnode.md) | ***(BETA)***  该函数检查元素是否是节点。 |
+|  [isNull(value)](./robinson.isnull.md) | ***(BETA)***  函数“isNull”检查给定值是否为空。 |
+|  [isNumber(value)](./robinson.isnumber.md) | ***(BETA)***  该函数检查值是否为数字。 |
+|  [isObjectLike(value)](./robinson.isobjectlike.md) | ***(BETA)***  该函数检查值是否是类对象like 类型。 |
+|  [isOriginDate(val)](./robinson.isorigindate.md) | ***(BETA)***  是否为日期格式 |
+|  [isPromise(val)](./robinson.ispromise.md) | ***(BETA)***  是否为Promise格式 |
+|  [isRange(value, min, max)](./robinson.isrange.md) | ***(BETA)***  该函数检查给定值是否在指定范围内。 |
+|  [isRefType(value)](./robinson.isreftype.md) | ***(BETA)***  该函数检查值是否为引用类型。 |
+|  [isRegExp(val)](./robinson.isregexp.md) | ***(BETA)***  是否为正则格式 |
+|  [isRgb(color)](./robinson.isrgb.md) | ***(BETA)***  判断是否为rgb颜色 |
+|  [isRgba(color)](./robinson.isrgba.md) | ***(BETA)***  判断是否为rgba颜色 |
+|  [isSimpleType(value)](./robinson.issimpletype.md) | ***(BETA)***  该函数检查值是否为简单值（数字、字符串、布尔值、符号、null、undefined 或 bigint）或复杂值（函数、对象、数组、集合、映射）。 |
+|  [isString(value)](./robinson.isstring.md) | ***(BETA)***  函数isString 检查给定值是否是字符串。 |
+|  [isSymbol(value)](./robinson.issymbol.md) | ***(BETA)***  该函数检查值是否是Symbol 类型的对象。 |
+|  [isUndefined(value)](./robinson.isundefined.md) | ***(BETA)***  函数“isUndefined”检查值是否未定义。 |
+|  [isUrl(url)](./robinson.isurl.md) | ***(BETA)***  检查是否为有效的URL |
+|  [mapping(enumData, options, expty)](./robinson.mapping.md) | ***(BETA)***  映射函数可以将数据进行枚举映射。 |
+|  [nodeToString(node)](./robinson.nodetostring.md) | ***(BETA)***  函数 nodeToString 接受一个 HTML 元素并返回它的字符串表示形式。 |
+|  [parseColorString(color)](./robinson.parsecolorstring.md) | ***(BETA)***  解析颜色字符串为颜色对象该函数可以解析十六进制颜色字符串或rgba颜色字符串为颜色对象 |
+|  [parseHexColor(color)](./robinson.parsehexcolor.md) | ***(BETA)***  解析十六进制颜色字符串为RGBA对象该函数接受一个十六进制颜色字符串（例如 "#RRGGBB" 或 "#RGB"）， 并将其解析为一个包含红（r）、绿（g）、蓝（b）和透明度（a）分量的对象 |
+|  [parseRgbaColor(color)](./robinson.parsergbacolor.md) | ***(BETA)***  解析rgba颜色字符串为颜色对象 |
+|  [pipe(fns)](./robinson.pipe.md) | ***(BETA)***  从左向右执行函数。 |
+|  [preventDefault(event)](./robinson.preventdefault.md) | 该函数可防止事件的默认行为。 |
+|  [printByBlob(blob, type)](./robinson.printbyblob.md) | ***(BETA)***  通过Blob对象打印内容 |
+|  [printByDom(el, custStyle)](./robinson.printbydom.md) | ***(BETA)***  通过DOM元素打印内容 |
+|  [removeClass(dom, classNm)](./robinson.removeclass.md) | ***(BETA)***  该函数从给定的 DOM 元素中删除指定的类名。 |
+|  [removeNode(parentNode, dom)](./robinson.removenode.md) | ***(BETA)***  该函数从其父节点中删除指定的 DOM 元素。 |
+|  [renderTmp(selecter, data)](./robinson.rendertmp.md) | ***(BETA)***  该函数获取元素的InnerHtml字符串模板,填写好内容并返回 |
+|  [replaceClass(dom, newClass, oldClass)](./robinson.replaceclass.md) | 该函数将给定 DOM 元素上的旧类替换为新类。 |
+|  [replaceNode(parentNode, newDom, oldDom)](./robinson.replacenode.md) | ***(BETA)***  函数“replaceNode”用新的 DOM 元素或给定父元素中的字符串替换旧的 DOM 元素。 |
+|  [rgbaToHex(color)](./robinson.rgbatohex.md) | ***(BETA)***  将rgba颜色字符串转换为十六进制颜色字符串 |
+|  [rgbToHex(color)](./robinson.rgbtohex.md) | ***(BETA)***  将rgb颜色字符串转换为十六进制颜色字符串 |
+|  [stopPropagation(event)](./robinson.stoppropagation.md) | ***(BETA)***  函数 stopPropagation 阻止事件在事件链中向上冒泡。 |
+|  [stringToNode(str)](./robinson.stringtonode.md) | ***(BETA)***  该函数接受一个字符串并返回新创建的 div 元素的第一个子节点，并将该字符串作为其innerHTML。 |
+|  [throttle(fn, immediate, leading, trailing)](./robinson.throttle.md) | ***(BETA)***  节流函数，限制函数调用的频率。 |
+|  [toRgbaString(colorObj, n)](./robinson.torgbastring.md) | ***(BETA)***  将颜色对象转换为rgba颜色字符串 |
+|  [transHightLight(str, keyWords, color)](./robinson.transhightlight.md) | ***(BETA)***  将字符串中的关键词高亮显示。 |
+|  [unBind(dom, eventType, fnName)](./robinson.unbind.md) | ***(BETA)***  函数 unBind 从 DOM 元素中删除事件侦听器。 |
+|  [urlToBase64(url, suffix)](./robinson.urltobase64.md) | ***(BETA)***  将图片URL转换为Base64编码的字符串 |
