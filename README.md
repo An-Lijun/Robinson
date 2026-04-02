@@ -16,13 +16,21 @@ github   https://github.com/An-Lijun/Edar-cli
 ## docs
 https://an-lijun.github.io/Robinson/
 
+## 贡献指南
+
+欢迎贡献！请查看 [贡献指南](./CONTRIBUTING.md) 了解如何参与项目开发。
+
+## 开发者文档
+
+开发者请参考 [开发者文档](./DEVELOPER.md) 获取详细的技术指导和最佳实践。
+
 
 # Robinson 项目架构文档
 
 ## 1. 项目概述
 
 
-Robinson 是一个简单的 Web 工具集，由 `edar-cli` 构建而成。该项目主要提供一些 Web 开发相关的实用功能，目前仅供内部使用。
+Robinson 是一个简单的 Web 工具集，由 `edar-cli` 构建而成。该项目主要提供一些 Web 开发相关的实用功能，目前仅供内部使用。
 
 ## 2. 项目目录结构
 ``` plaintext
@@ -85,23 +93,23 @@ Robinson/
 
 ### 2.2 文件夹说明
 
--   **`plugin/`** ：插件相关的代码目录，目前只有一个 `index.js` 文件。
+-   **`plugin/`** ：插件相关的代码目录，目前只有一个 `index.js` 文件。
 
 -   **`vitepress/`** ：用于构建项目文档的 VitePress 相关目录。
 
     -   **`.vitepress/`** ：VitePress 的配置目录。
     -   **`assets/`** ：文档相关的静态资源目录。
     -   **`docsDist/`** ：文档构建后的输出目录。
-    -   **`etc/`** ：文档源文件目录，包含 `advance.md` 和 `quick.md` 等文档文件。
+    -   **`etc/`** ：文档源文件目录，包含 `advance.md` 和 `quick.md` 等文档文件。
     -   **`temp/`** ：临时文件目录。
 
--   **`.husky/`** ：Git Hooks 配置目录，包含 `pre-commit` 钩子文件。
+-   **`.husky/`** ：Git Hooks 配置目录，包含 `pre-commit` 钩子文件。
 
--   **`.vscode/`** ：VSCode 相关的配置目录，包含 `settings.json` 文件。
+-   **`.vscode/`** ：VSCode 相关的配置目录，包含 `settings.json` 文件。
 
 -   **`script/`** ：项目脚本目录，包含文档构建、发布等相关脚本文件。
 
--   **`src/`** ：项目的源代码目录，包含 `index.ts` 和 `utils/` 目录。
+-   **`src/`** ：项目的源代码目录，包含 `index.ts` 和 `utils/` 目录。
 
 -   **`test/`** ：项目的测试代码目录。
 
@@ -154,7 +162,7 @@ npm run test
 ### 3.3 TsType 注释规范
 
 
-项目中使用了一些自定义的 TsType 注解，包括 `@bata`、`@description`、`@param`、`@returns` 和 `@example`，用于对函数进行描述和注释。
+项目中使用了一些自定义的 TsType 注解，包括 `@bata`、`@description`、`@param`、`@returns` 和 `@example`，用于对函数进行描述和注释。
 
 项目代码中使用了特定的注释规范，用于描述函数的相关信息，如：
 ```javascript
@@ -166,14 +174,14 @@ npm run test
 ```
 ## 4. 依赖管理
 
-项目使用 pnpm 作为包管理器，`pnpm-lock.yaml` 文件记录了项目依赖的具体版本信息。主要的依赖包括：
+项目使用 pnpm 作为包管理器，`pnpm-lock.yaml` 文件记录了项目依赖的具体版本信息。主要的依赖包括：
 
 -   **开发依赖**：ESLint、Babel、Jest、Rollup 等。
 -   **运行时依赖**：一些 Web 开发相关的工具库。
 
 ## 5. 构建与打包
 
-项目使用 Rollup 进行模块打包，通过 `rollup.config.js` 进行配置。在 `package.json` 中可以定义打包脚本，例如：
+项目使用 Rollup 进行模块打包，通过 `rollup.config.js` 进行配置。在 `package.json` 中可以定义打包脚本，例如：
 
 ``` json
 {
@@ -186,5 +194,18 @@ npm run test
 ## 6. 文档编写与展示
 
 
-项目使用 VitePress 进行文档编写和展示，文档源文件位于 `vitepress/etc/docs/src/` 目录下，包括 `advance.md` 和 `quick.md` 等文件。通过 VitePress 可以将这些 Markdown 文件构建成静态网站。
+项目使用 VitePress 进行文档编写和展示，文档源文件位于 `vitepress/etc/docs/src/` 目录下，包括 `advance.md` 和 `quick.md` 等文件。通过 VitePress 可以将这些 Markdown 文件构建成静态网站。
 
+### 短期优化（1-2周）
+1. 完善 renderTmp 函数 ：支持更复杂的模板语法
+2. 增加更多类型定义 ：减少 any 类型的使用
+3. 优化文档注释 ：统一格式和风格
+### 中期优化（1-2个月）
+1. 增加高级功能 ：深度比较、数据验证等
+2. 性能监控 ：添加性能测试和基准测试
+3. 错误处理 ：统一错误处理机制
+### 长期优化（3-6个月）
+1. 功能扩展 ：添加网络请求、状态管理等高级功能
+2. 生态建设 ：提供更多插件和扩展
+3. 社区建设 ：增加贡献指南和开发者文档
+## 总结
