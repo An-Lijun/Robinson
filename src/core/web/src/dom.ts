@@ -172,15 +172,15 @@ export function getNodes (domName:string):NodeList|null {
  * @param {string} eventType - eventType 参数是一个字符串，指定要侦听的事件类型。事件类型的示例包括“单击”、“按下键”、“鼠标悬停”等。
  * @param {EventListenerOrEventListenerObject} callBack -
  * `callBack` 参数是当 DOM 元素上发生指定事件时将执行的函数。它可以是实现EventListener 或 EventListenerObject 接口的函数或对象。
- * @param [isCatch=false] - isCatch
+ * @param {boolean} [isCatch=false] - isCatch
  * 参数是一个布尔值，用于确定事件监听器在处理事件时是否应使用捕获阶段（true）或冒泡阶段（false）。默认情况下，它设置为“false”，这意味着事件侦听器将使用冒泡阶段。
  *
  * @example
  * ```JavaScript
- *    let btn =document.querySelect('button');
- *    bind(btn,'clic',()=>{
- *      console.log('123')
- *    })
+ *    let btn = document.querySelector('button');
+ *    bind(btn, 'click', () => {
+ *      console.log('123');
+ *    });
  * ```
 */
 export function bind (dom:Node, eventType:string,
@@ -197,11 +197,12 @@ export function bind (dom:Node, eventType:string,
  * 参数是要从指定 DOM 元素中删除的事件侦听器函数或事件侦听器对象的名称。
  * @example
  * ```JavaScript
- *    let div = document.querySelect('#btn');
- *    div.onclik =()=>{
- *      console.log('11')
- *    }
- *    unBind(div,'click')
+ *    let div = document.querySelector('#btn');
+ *    const handleClick = () => {
+ *      console.log('11');
+ *    };
+ *    bind(div, 'click', handleClick);
+ *    unBind(div, 'click', handleClick);
  * ```
  */
 export function unBind (dom:Node, eventType:string,
@@ -279,18 +280,17 @@ export function replaceClass (dom:Element, newClass:string, oldClass:string) {
  * @beta
  * @description 该函数检查元素是否具有特定的类名。
  * @param {Element} dom - “dom”参数的类型为“Element”，表示我们要检查其是否存在类的 DOM 元素。
- * @param {String} classNm - “classNm”参数是一个字符串，表示您要在“dom”元素中检查的类名。
+ * @param {string} classNm - “classNm”参数是一个字符串，表示您要在“dom”元素中检查的类名。
  * @returns 一个布尔值，指示给定的 DOM 元素是否具有指定的类名。
  * @example
  * ```JavaScript
  *    let div =document.createElement('div');
- *    div.classList="a1 a2 a3"
+ *    div.classList.add('a1', 'a2', 'a3');
  *    hasClass(div,'a1')  => true
  * ```
  */
-export function hasClass (dom:Element, classNm:String) {
-  let array = Array.prototype.slice.call(dom.classList, 0);
-  return array.some(item => item === classNm);
+export function hasClass (dom: Element, classNm: string): boolean {
+  return dom.classList.contains(classNm);
 }
 
 // 渲染方法 -------------------------------------------
