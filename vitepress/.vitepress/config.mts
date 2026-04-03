@@ -30,6 +30,7 @@ export default defineConfig({
             ] },
             { text: '测试报告', link: '/etc/report' },
             { text: '更新日志', link: '/etc/changelog' },
+            { text: '性能报告', link: '/etc/performance-report' },
             {
                 text:'工程化',
                 items:[
