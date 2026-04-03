@@ -43,7 +43,9 @@
         "publishRobinson": "gulp  --gulpfile script/publish2.js",
         "genEtc": "api-documenter markdown -i vitepress/temp -o vitepress/etc/doc",
         "genUpdatelog": "gulp  --gulpfile script/updateLogGulp.js",
-        "genReport": "gulp  --gulpfile script/report.js"
+        "genReport": "gulp  --gulpfile script/report.js",
+        "test:performance": "node test/performance.test.js",
+        "genPerformanceReport": "gulp --gulpfile script/performanceReport.js"
     },
     "author": "",
     "license": "ISC",

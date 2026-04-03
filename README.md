@@ -24,6 +24,74 @@ https://an-lijun.github.io/Robinson/
 
 开发者请参考 [开发者文档](./DEVELOPER.md) 获取详细的技术指导和最佳实践。
 
+## 性能测试
+
+项目提供完整的性能测试和报告功能，帮助开发者了解函数性能表现并进行优化。
+
+### 运行性能测试
+
+```bash
+# 运行性能测试
+npm run test:performance
+
+# 生成性能报告
+npm run genPerformanceReport
+```
+
+### 性能测试内容
+
+性能测试覆盖以下方面：
+
+- **数组操作性能**：`isArray`、`getRelArray`、`getChunkArray` 等函数
+- **DOM 操作性能**：`hasClass`、`getNode`、`getNodes` 等函数
+- **函数式编程性能**：`compose`、`pipe`、`debounce`、`throttle` 等函数
+- **对象操作性能**：`isObjectLike`、`deepClone` 等函数
+- **边界情况测试**：空数组、单元素数组、大数组等特殊情况
+- **内存使用测试**：大对象处理、内存泄漏检测
+
+### 性能报告
+
+性能测试完成后，会生成详细的 Markdown 报告，包含：
+
+- 📊 测试摘要（总测试数、通过率、平均执行时间）
+- 📋 详细测试结果（每个函数的执行时间和性能评级）
+- 💡 性能优化建议（针对性能瓶颈的具体建议）
+- 📈 性能趋势分析（历史版本性能对比）
+
+报告位置：`vitepress/etc/performance-report.md`
+
+### 性能评级标准
+
+- 🚀 **优秀**：执行时间 < 100ms
+- ⚡ **良好**：执行时间 100-500ms
+- ⏳ **一般**：执行时间 500-1000ms
+- 🐢 **需要优化**：执行时间 > 1000ms
+
+### 自定义性能测试
+
+你可以创建自己的性能测试文件：
+
+```javascript
+const { PerformanceTester } = require('../script/performanceTester');
+const { yourFunction } = require('../dist/esm/index.js');
+
+const tester = new PerformanceTester();
+
+// 测试你的函数
+tester.testFunction(
+  'yourFunction - 性能测试',
+  () => yourFunction(testData),
+  1000,
+  '测试你的函数性能'
+);
+
+// 生成报告
+tester.printSummary();
+tester.saveResults('./custom-performance-results.json');
+```
+
+更多详细信息请参考 [性能测试使用指南](./PERFORMANCE_TESTING.md)。
+
 
 # Robinson 项目架构文档
 
@@ -68,6 +136,8 @@ Robinson/
 │   ├── genDoc.js
 │   ├── publish.js
 │   ├── publish2.js
+│   ├── performanceReport.js
+│   ├── performanceTester.js
 │   └── utils.js
 ├── src/
 │   ├── index.ts
@@ -141,6 +211,8 @@ Robinson/
     "genEtc": "api-documenter markdown -i vitepress/temp -o vitepress/etc/doc", //生成函数md文件
     "genUpdatelog": "gulp  --gulpfile script/updateLogGulp.js", //生成更新日志md命令
     "genReport" :"gulp  --gulpfile script/report.js", //生成测试报告
+    "test:performance": "node test/performance.test.js", // 运行性能测试
+    "genPerformanceReport": "gulp --gulpfile script/performanceReport.js" // 生成性能报告
  }
 ```
 

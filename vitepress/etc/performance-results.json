@@ -1,0 +1,132 @@
+{
+  "timestamp": "2026-04-03T13:16:54.440Z",
+  "tests": [
+    {
+      "name": "isArray - 大数组检查",
+      "description": "检查 10000 个元素的数组",
+      "executionTime": 0.87,
+      "memoryUsage": 0,
+      "passed": true,
+      "timestamp": "2026-04-03T13:16:54.269Z"
+    },
+    {
+      "name": "getRelArray - 过滤空值",
+      "description": "过滤包含空值的数组",
+      "executionTime": 1.27,
+      "memoryUsage": -0.07,
+      "passed": true,
+      "timestamp": "2026-04-03T13:16:54.270Z"
+    },
+    {
+      "name": "getChunkArray - 数组分块",
+      "description": "将 10000 个元素分块为 100 个一组",
+      "executionTime": 8.69,
+      "memoryUsage": 1.37,
+      "passed": true,
+      "timestamp": "2026-04-03T13:16:54.279Z"
+    },
+    {
+      "name": "hasClass - 类名检查",
+      "description": "检查元素是否包含指定类名",
+      "executionTime": 0.87,
+      "memoryUsage": 0,
+      "passed": true,
+      "timestamp": "2026-04-03T13:16:54.280Z"
+    },
+    {
+      "name": "compose - 函数组合",
+      "description": "组合两个函数并执行",
+      "executionTime": 2.77,
+      "memoryUsage": -1.37,
+      "passed": true,
+      "timestamp": "2026-04-03T13:16:54.283Z"
+    },
+    {
+      "name": "pipe - 函数管道",
+      "description": "通过管道执行两个函数",
+      "executionTime": 1.77,
+      "memoryUsage": 2.56,
+      "passed": true,
+      "timestamp": "2026-04-03T13:16:54.285Z"
+    },
+    {
+      "name": "isObjectLike - 对象类型检查",
+      "description": "检查大型对象是否为类对象类型",
+      "executionTime": 0.52,
+      "memoryUsage": 0,
+      "passed": true,
+      "timestamp": "2026-04-03T13:16:54.286Z"
+    },
+    {
+      "name": "deepClone - 复杂对象克隆",
+      "description": "克隆包含嵌套对象和数组的复杂结构",
+      "executionTime": 4.53,
+      "memoryUsage": -2.59,
+      "passed": true,
+      "timestamp": "2026-04-03T13:16:54.291Z"
+    },
+    {
+      "name": "debounce - 防抖函数",
+      "description": "快速调用防抖函数 100 次",
+      "executionTime": 11.15,
+      "memoryUsage": 1.49,
+      "passed": true,
+      "timestamp": "2026-04-03T13:16:54.303Z"
+    },
+    {
+      "name": "throttle - 节流函数",
+      "description": "快速调用节流函数 100 次",
+      "executionTime": 0.46,
+      "memoryUsage": 0.31,
+      "passed": true,
+      "timestamp": "2026-04-03T13:16:54.304Z"
+    },
+    {
+      "name": "getChunkArray - 空数组",
+      "description": "处理空数组",
+      "executionTime": 0.28,
+      "memoryUsage": 0.76,
+      "passed": true,
+      "timestamp": "2026-04-03T13:16:54.305Z"
+    },
+    {
+      "name": "getChunkArray - 单元素数组",
+      "description": "处理单元素数组",
+      "executionTime": 0.88,
+      "memoryUsage": -1.09,
+      "passed": true,
+      "timestamp": "2026-04-03T13:16:54.306Z"
+    },
+    {
+      "name": "getChunkArray - 块大小大于数组",
+      "description": "块大小大于数组长度",
+      "executionTime": 1.23,
+      "memoryUsage": -1,
+      "passed": true,
+      "timestamp": "2026-04-03T13:16:54.307Z"
+    },
+    {
+      "name": "大数组处理内存测试",
+      "description": "处理 100000 个对象的大数组",
+      "executionTime": 130.98,
+      "memoryUsage": 24.18,
+      "passed": true,
+      "timestamp": "2026-04-03T13:16:54.438Z"
+    }
+  ],
+  "summary": {
+    "totalTests": 14,
+    "passedTests": 14,
+    "failedTests": 0,
+    "averageExecutionTime": 11.88,
+    "timestamp": "2026-04-03T13:16:54.440Z"
+  },
+  "trends": [
+    {
+      "version": "1.0.21",
+      "averageExecutionTime": 11.88,
+      "passRate": 100,
+      "timestamp": "2026-04-03T13:16:54.440Z"
+    }
+  ]
+}
