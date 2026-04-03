@@ -6,6 +6,14 @@
     "files": [
         "/dist/*"
     ],
+    "exports": {
+        ".": {
+            "import": "./dist/esm/index.js",
+            "require": "./dist/cjs/index.js",
+            "default": "./dist/esm/index.js"
+        },
+        "./package.json": "./package.json"
+    },
     "keywords": [
         "modules",
         "web",
