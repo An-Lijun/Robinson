@@ -95,3 +95,33 @@ export function getToggleArray<T>(array: T[], item: T): T[] {
   }
   return arr;
 }
+
+
+/**
+ * 从数组中提取唯一值（去重）
+ * @param {Array} array - 原数组
+ * @returns {Array} 去重后的新数组
+ * @example
+ * ```JavaScript
+ * getUniqueValues([1, 2, 2, 3, 3, 3]); // [1, 2, 3]
+ * getUniqueValues(['a', 'b', 'a', 'c']); // ['a', 'b', 'c']
+ * getUniqueValues([{id:1}, {id:2}, {id:1}]); // [{id:1}, {id:2}]
+ * ```
+ */
+export function getUniqueValues<T>(array: T[]): T[] {
+  if (!Array.isArray(array)) return [];
+
+  const arr = deepClone(array);
+
+  // 基本类型去重：Set 最简单
+  // return [...new Set(arr)]
+
+  // 对象/引用类型去重（按值去重，最常用）
+  const seen = new Set();
+  return arr.filter((item: T) => {
+    const key = typeof item === 'object' ? JSON.stringify(item) : item;
+    if (seen.has(key)) return false;
+    seen.add(key);
+    return true;
+  });
+}

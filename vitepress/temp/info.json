@@ -139,6 +139,10 @@
     "folderNm": "string",
     "functionNm": "getUniqueId"
   },
+  "getuniquevalues": {
+    "folderNm": "array",
+    "functionNm": "getUniqueValues"
+  },
   "hasclass": {
     "folderNm": "web",
     "functionNm": "hasClass"
