@@ -131,6 +131,10 @@
     "folderNm": "date",
     "functionNm": "getTimestamp"
   },
+  "gettogglearray": {
+    "folderNm": "array",
+    "functionNm": "getToggleArray"
+  },
   "getuniqueid": {
     "folderNm": "string",
     "functionNm": "getUniqueId"

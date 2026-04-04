@@ -1,3 +1,4 @@
+import { deepClone } from '../../function/index';
 import { isEmpty } from '../../common/index';
 
 /**
@@ -58,4 +59,39 @@ export function getChunkArray<T>(array: T[], size: number = 1): T[][] {
     result.push(array.slice(i, i + size));
   }
   return result;
+}
+
+
+
+/**
+ * @beta
+ * @description 函数 `getToggleArray` 接受一个数组和一个项目，
+ * 如果数组包含该项目则移除它，如果不包含则添加它，返回处理后的新数组。
+ * @param {Array} array - 要处理的数组
+ * @param {any} item - 要切换的项目
+ * @returns {Array} 处理后的新数组
+ * @example
+ * ```JavaScript
+ * let arr = [1, 2, 3];
+ * getToggleArray(arr, 4); // [1, 2, 3, 4]
+ * getToggleArray(arr, 2); // [1, 3]
+ * ```
+ */
+export function getToggleArray<T>(array: T[], item: T): T[] {
+  const arr = deepClone(array);
+  const index = arr.findIndex((element: T) => {
+    // 对于对象和数组，使用 JSON 序列化比较内容
+    if (typeof element === 'object' && element !== null && typeof item === 'object' && item !== null) {
+      return JSON.stringify(element) === JSON.stringify(item);
+    }
+    // 对于原始类型，使用严格相等比较
+    return element === item;
+  });
+  
+  if (index !== -1) {
+    arr.splice(index, 1);
+  } else {
+    arr.push(item);
+  }
+  return arr;
 }
