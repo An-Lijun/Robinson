@@ -26,11 +26,29 @@
         "extractorMessageReporting": {
             "default": {
                 "logLevel": "warning"
+            },
+            "ae-missing-release-tag": {
+                "logLevel": "none"
             }
         },
         "tsdocMessageReporting": {
             "default": {
                 "logLevel": "warning"
+            },
+            "tsdoc-escape-greater-than": {
+                "logLevel": "none"
+            },
+            "tsdoc-malformed-inline-tag": {
+                "logLevel": "none"
+            },
+            "tsdoc-escape-right-brace": {
+                "logLevel": "none"
+            },
+            "tsdoc-param-tag-with-invalid-optional-name": {
+                "logLevel": "none"
+            },
+            "tsdoc-param-tag-missing-hyphen": {
+                "logLevel": "none"
             }
         }
     }
