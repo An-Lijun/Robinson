@@ -66,6 +66,15 @@ describe('getUniqueValues', () => {
     expect(result[1]).toEqual(obj2);
   });
 
+  test('should handle objects with different key order', () => {
+    const obj1 = { a: 1, b: 2 };
+    const obj2 = { b: 2, a: 1 };
+    const array = [obj1, obj2];
+    const result = getUniqueValues(array);
+    expect(result).toHaveLength(1);
+    expect(result[0]).toEqual(obj1);
+  });
+
   test('should handle nested objects', () => {
     const obj1 = { id: 1, nested: { value: 'test' } };
     const obj2 = { id: 2, nested: { value: 'test2' } };

@@ -98,6 +98,42 @@ export function getToggleArray<T>(array: T[], item: T): T[] {
 
 
 /**
+ * 深度比较两个值是否相等
+ * @param {any} a - 第一个值
+ * @param {any} b - 第二个值
+ * @returns {boolean} 是否相等
+ */
+function isEqual(a: any, b: any): boolean {
+  // 处理 NaN
+  if (Number.isNaN(a) && Number.isNaN(b)) return true;
+  
+  // 处理 -0 和 0
+  if (Object.is(a, b)) return true;
+  
+  // 处理 null 和 undefined
+  if (a == null || b == null) return a === b;
+  
+  // 处理基本类型
+  if (typeof a !== 'object' || typeof b !== 'object') return a === b;
+  
+  // 处理数组
+  if (Array.isArray(a) && Array.isArray(b)) {
+    if (a.length !== b.length) return false;
+    return a.every((item, index) => isEqual(item, b[index]));
+  }
+  
+  // 处理对象
+  if (Array.isArray(a) || Array.isArray(b)) return false;
+  
+  const keysA = Object.keys(a);
+  const keysB = Object.keys(b);
+  
+  if (keysA.length !== keysB.length) return false;
+  
+  return keysA.every(key => isEqual(a[key], b[key]));
+}
+
+/**
  * 从数组中提取唯一值（去重）
  * @param {Array} array - 原数组
  * @returns {Array} 去重后的新数组
@@ -116,12 +152,14 @@ export function getUniqueValues<T>(array: T[]): T[] {
   // 基本类型去重：Set 最简单
   // return [...new Set(arr)]
 
-  // 对象/引用类型去重（按值去重，最常用）
-  const seen = new Set();
-  return arr.filter((item: T) => {
-    const key = typeof item === 'object' ? JSON.stringify(item) : item;
-    if (seen.has(key)) return false;
-    seen.add(key);
-    return true;
-  });
+  // 对象/引用类型去重（使用深度比较）
+  const result: T[] = [];
+  for (const item of arr) {
+    // 检查是否已存在相同的元素
+    const exists = result.some(existing => isEqual(existing, item));
+    if (!exists) {
+      result.push(item);
+    }
+  }
+  return result;
 }
