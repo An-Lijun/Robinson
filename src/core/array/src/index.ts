@@ -163,3 +163,50 @@ export function getUniqueValues<T>(array: T[]): T[] {
   }
   return result;
 }
+
+
+
+/**
+ * 根据指定的键或条件将数组元素分组
+ * @param {Array} array - 原数组
+ * @param {string|function} groupBy - 分组键或分组函数
+ * @returns {Array} 分组后的二维数组，每个子数组代表一个分组
+ * @example
+ * ```JavaScript
+ * // 根据属性分组
+ * getGroupArray([{age: 20, name: 'a'}, {age: 20, name: 'b'}, {age: 30, name: 'c'}], 'age');
+ * // => [[{age: 20, name: 'a'}, {age: 20, name: 'b'}], [{age: 30, name: 'c'}]]
+ * 
+ * // 根据条件分组
+ * getGroupArray([1, 2, 3, 4, 5], num => num % 2 === 0 ? 'even' : 'odd');
+ * // => [[1, 3, 5], [2, 4]]
+ * ```
+ */
+export function getGroupArray<T>(array: T[], groupBy: keyof T | ((item: T) => string | number)): T[][] {
+  if (!Array.isArray(array)) return [];
+  
+  const groups: Record<string | number, T[]> = {};
+  
+  array.forEach(item => {
+    let key: string | number;
+    
+    if (typeof groupBy === 'function') {
+      // 使用函数获取分组键
+      key = groupBy(item);
+    } else {
+      // 使用属性作为分组键
+      key = item[groupBy];
+    }
+    
+    // 确保键存在且不为 undefined
+    if (key !== undefined) {
+      if (!groups[key]) {
+        groups[key] = [];
+      }
+      groups[key].push(item);
+    }
+  });
+  
+  // 将对象转换为二维数组
+  return Object.values(groups);
+}
