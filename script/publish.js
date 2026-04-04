@@ -1,89 +1,89 @@
-const { spawn, exec } = require('child_process');
+const { exec } = require('child_process');
 const packageJson = require('../package.json');
-const npmNM = process.platform === 'win32' ? 'npm.cmd' : 'npm';
-const { logNextLone, logError, logSuccess, logLogo } = require('./utils');
+const { series, task } = require('gulp');
+const { logNextLone,logSuccess,logLogo,logError } = require('./utils')
 
-/**
- * 设置镜像源 清除代理
- */
-function setRegistry () {
-  exec('npm config set registry https://registry.npmjs.org/', (error, stdout, stderr) => {
-    if (error) {
-      return logError('设置 npm 镜像失败: ', error);
-    }
-    logSuccess('已成功将 npm 镜像设置为源镜像:', stdout);
 
-    build();
-  });
-}
 
-/**
- * 发布
- */
-
-function publish () {
+task('publish-fun',(done)=>{
   console.log('正在发布...');
-  const buildProcess = spawn(npmNM, [ 'publish']);
 
-  // 当有数据输出到标准输出时的处理
-  buildProcess.stdout.on('data', (data) => {
-    console.log(`stdout: ${data}`);
+  exec('npm publish ../', (error, stdout) => {
+    if (error) {
+      // 当 npm publish 命令执行失败时，error 对象将包含错误信息
+      logError('npm publish 失败: ', error);
+      // 你可以根据具体的错误信息进行更详细的处理，例如分析错误码等
+      if (error.code === 1) {
+        logError('npm publish 失败: 可能是权限问题或包名称已存在等错误', error);
+
+      } else if (error.code === 2) {
+        logError('npm publish 失败: 可能是网络问题或 npm 服务器问题', error);
+
+      }
+      logError('npm publish 失败，正在重试...', error);
+      // 可以根据需要添加更多的错误码判断
+    } else {
+      done()
+      logSuccess(`npm publish 成功: version:${packageJson.version}`);
+    }
   });
+})
 
-  // 当有数据输出到标准错误时的处理
-  buildProcess.stderr.on('data', (buff) => {
-    // 创建一个 FileReader 对象
-    buff.toString();
-  });
 
-  // 当进程结束时的处理
-  buildProcess.on('close', (code) => {
-    logSuccess(`npm publish 成功: version:${packageJson.version}`);
-  });
-}
-
-/**
- * 提升版本
- */
-
-function prePatch () {
+task('update-version',(done)=>{
   console.log('正在提升版本号...');
+  // eslint-disable-next-line
   exec('npm version patch', (error, stdout, stderr) => {
     if (error) {
       logError('npm version 失败: ', error);
       return;
     }
+    done()
+    logSuccess('版本号更新成功');
     // npm version patch && npm run build && npm publish && exit 1
-    publish();
   });
-}
+})
 
-/**
- * 打包
- */
-function build () {
-  console.log('正在打包中...');
+task('build-fun',(done)=>{
+  exec('npm run build', (error) => {
+    console.log('正在打包中...');
 
-  const buildProcess = spawn(npmNM, ['run', 'build']);
+    if (error) {
+      logError('npm run build 失败: ', error);
+      if (error.code === 1) {
+        logError('可能是权限问题或 package.json 文件有问题，请检查文件权限和文件内容');
+      } else if (error.code === 2) {
+        logError('可能是网络问题，请检查网络连接');
+      }
+      return;
 
-  // 当有数据输出到标准输出时的处理
-  buildProcess.stdout.on('data', (data) => {
-    console.log(`stdout: ${data}`);
+    }
+    done()
+    logSuccess('打包成功');
   });
+})
 
-  // 当有数据输出到标准错误时的处理
-  buildProcess.stderr.on('data', (data) => {
-    console.error(`stderr: ${data}`);
+task('delete-proxy',(done)=>{
+  exec('npm config delete proxy', (err, stdout) => {
+    if (err) {
+      return logError('删除代理失败: ', err);
+    }
+    done()
+    logSuccess('已成功将 删除代理:', stdout);
   });
+})
 
-  // 当进程结束时的处理
-  buildProcess.on('close', (code) => {
-    prePatch();
-  });
-}
+task('change-tegistry',(done)=>{
 
-(function () {
   logLogo();
   logNextLone();
-  setRegistry();
-})();
+  exec('npm config set registry https://registry.npmjs.org/', (error, stdout) => {
+    if (error) {
+      return logError('设置 npm 镜像失败: ', error);
+    }
+    done()
+    logSuccess('已成功将 npm 镜像设置为源镜像:', stdout);
+  });
+})
+
+exports.default = series('change-tegistry', 'delete-proxy','build-fun','update-version','publish-fun');

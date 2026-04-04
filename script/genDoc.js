@@ -29,7 +29,7 @@ task('gen-etc',(done)=>{
 
 task('gen-doc',(done)=>{
   console.log('正在生成MD...');
-  const buildProcess = spawn(npmNM, ['run', 'genEtc']);
+  const buildProcess = spawn(npmNM, ['run', 'api:tsToMd']);
 
   // 当有数据输出到标准输出时的处理
   buildProcess.stdout.on('data', (data) => {
@@ -73,7 +73,7 @@ task('gen-updatelog',(done)=>{
 
 task('build-doc-temp',(done)=>{
   console.log('正在生成temp...');
-  const buildProcess = spawn(npmNM, ['run', 'doc']);
+  const buildProcess = spawn(npmNM, ['run', 'api']);
 
   // 当有数据输出到标准输出时的处理
   buildProcess.stdout.on('data', (data) => {

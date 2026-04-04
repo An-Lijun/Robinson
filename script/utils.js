@@ -44,7 +44,7 @@ function logSuccess(...arg) {
 // 打包
 function build(fun) {
   console.log('正在打包...');
-  const buildProcess = spawn(npmNM, ['run', 'buildViteDocs']);
+  const buildProcess = spawn(npmNM, ['run', 'vitepress:build']);
 
   // 当有数据输出到标准输出时的处理
   buildProcess.stdout.on('data', (data) => {
