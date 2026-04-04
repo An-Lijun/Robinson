@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 该函数检查值是否为数字。
+该函数检查值是否为数字。
 
 **Signature:**
 
@@ -25,7 +25,7 @@ declare function isNumber(value: any): boolean;
 
 boolean
 
-{<!-- -->boolean<!-- -->} - 一个布尔值。
+- 一个布尔值。
 
 ## Example
 

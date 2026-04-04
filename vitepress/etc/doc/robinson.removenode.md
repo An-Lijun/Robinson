@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 该函数从其父节点中删除指定的 DOM 元素。
+该函数从其父节点中删除指定的 DOM 元素。
 
 **Signature:**
 

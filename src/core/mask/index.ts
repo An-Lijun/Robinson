@@ -1,6 +1,6 @@
 /**
  * @beta
- * @description 字符串脱敏
+ *  字符串脱敏
  * @param {string|undefined} str - 需要脱敏的字符串。
  * @param {[number|undefined, number|undefined]} hideArea - 需要隐藏的下标范围，数组中的两个元素分别表示起始和结束下标。
  * @param {number} [maskLength] - 需要脱敏的长度，如果不提供则根据 hideArea 计算。
@@ -31,7 +31,7 @@ export function mask (
 // 用户脱敏
 /**
  * @beta
- * @description 用户账号脱敏
+ *  用户账号脱敏
  * @param {string} account - 需要脱敏的用户账号。
  * @returns {string} - 脱敏后的用户账号。
  * @example
@@ -44,7 +44,7 @@ export function maskAccount (account: string): string {
 // 身份证脱敏
 /**
  * @beta
- * @description 身份证脱敏
+ *  身份证脱敏
  * @param {string} idNo - 需要脱敏的身份证号。
  * @returns {string} - 脱敏后的身份证号。
  * @example
@@ -56,7 +56,7 @@ export function maskIdNo (idNo: string): string {
 
 /**
  * @beta
- * @description 手机号脱敏
+ *  手机号脱敏
  * @param {string|number} phone - 需要脱敏的手机号。
  * @returns {string} - 脱敏后的手机号。
  * @example
@@ -68,9 +68,9 @@ export function maskPhone (phone?: string | number): string {
 
 /**
  * @beta
- * @description 用户名脱敏
- * @param {string} name - 需要脱敏的用户名。
- * @returns {string} - 脱敏后的用户名。
+ *  用户名脱敏
+ * @param  name - 需要脱敏的用户名。
+ * @returns  - 脱敏后的用户名。
  * @example
  * maskNm("张三");// 返回 "张*"
  * maskNm("张三丰");// 返回 "张**"
@@ -81,9 +81,9 @@ export function maskNm (name: string): string {
 
 /**
  * @beta
- * @description 港澳台,回乡证等脱敏
- * @param {string} card - 需要脱敏的港澳台,回乡证等。
- * @returns {string} - 脱敏后的港澳台,回乡证等。
+ *  港澳台,回乡证等脱敏
+ * @param  card - 需要脱敏的港澳台,回乡证等。
+ * @returns  - 脱敏后的港澳台,回乡证等。
  * @example
  * maskCard("12345678901234");// 返回 "12**********34"
  */
@@ -93,9 +93,9 @@ export function maskCard (card: string): string {
 
 /**
  * @beta
- * @description 邮箱脱敏
- * @param {string} email - 需要脱敏的邮箱。
- * @returns {string} - 脱敏后的邮箱。
+ *  邮箱脱敏
+ * @param  email - 需要脱敏的邮箱。
+ * @returns - 脱敏后的邮箱。
  * @example
  * maskEmail("123456789@example.com");// 返回 "123*****@example.com"
  */

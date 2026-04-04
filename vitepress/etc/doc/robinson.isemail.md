@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 检查字符串是否为合法email地址
+检查字符串是否为合法email地址
 
 **Signature:**
 
@@ -25,7 +25,7 @@ declare function isEmail(s: string): boolean;
 
 boolean
 
-{<!-- -->boolean<!-- -->} - 一个布尔值。
+- 一个布尔值。
 
 ## Example
 

@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数isString 检查给定值是否是字符串。
+函数isString 检查给定值是否是字符串。
 
 **Signature:**
 
@@ -19,13 +19,13 @@ declare function isString(value: any): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  value | any | 参数“value”的类型为“any”，这意味着它可以接受任何数据类型。 |
+|  value | any | 参数"value"的类型为"any"，这意味着它可以接受任何数据类型。 |
 
 **Returns:**
 
 boolean
 
-{<!-- -->boolean<!-- -->} - 一个布尔值。
+- 一个布尔值。
 
 ## Example
 

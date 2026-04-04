@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 柯里化函数接受一个函数作为输入并返回一个新函数，该函数可以使用多个参数或以柯里化方式调用。
+柯里化函数接受一个函数作为输入并返回一个新函数，该函数可以使用多个参数或以柯里化方式调用。
 
 **Signature:**
 
@@ -25,7 +25,7 @@ declare function currying(fn: Function): Function;
 
 Function
 
-{<!-- -->Function<!-- -->} - 正在返回柯里化函数。
+- 正在返回柯里化函数。
 
 ## Example
 

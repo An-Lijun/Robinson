@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 将Base64编码的字符串转换为Blob对象
+将Base64编码的字符串转换为Blob对象
 
 **Signature:**
 

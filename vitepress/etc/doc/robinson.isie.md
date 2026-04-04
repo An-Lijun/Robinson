@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 判断是否是IE浏览器
+判断是否是IE浏览器
 
 **Signature:**
 
@@ -25,7 +25,7 @@ declare function isIE(win: Iwindow): boolean;
 
 boolean
 
-{<!-- -->boolean<!-- -->} - 一个布尔值。
+- 一个布尔值。
 
 ## Example
 

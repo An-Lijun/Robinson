@@ -2,9 +2,9 @@ import { is } from '../../../index';
 
 /**
  * @beta
- * @description 判断是否为16进制颜色
- * @param {string} color 需要验证的颜色字符串
- * @returns {boolean} 如果是16进制颜色返回true，否则返回false
+ *  判断是否为16进制颜色
+ * @param color - 需要验证的颜色字符串
+ * @returns  如果是16进制颜色返回true，否则返回false
  * @example
  * ```JavaScript
  *     isHex('#FD7086') //true
@@ -18,9 +18,9 @@ export function isHex (color: string) {
 
 /**
  * @beta
- * @description 判断是否为rgb颜色
- * @param {string} color 需要验证的颜色字符串
- * @returns {boolean} 如果是rgb颜色返回true，否则返回false
+ *  判断是否为rgb颜色
+ * @param color - 需要验证的颜色字符串
+ * @returns  如果是rgb颜色返回true，否则返回false
  * @example
  * ```JavaScript
  *     isRgb('#FD7086') //false
@@ -47,9 +47,9 @@ export function isRgb (color: string) {
 
 /**
  * @beta
- * @description 判断是否为rgba颜色
- * @param {string} color 需要验证的颜色字符串
- * @returns {boolean} 如果是rgba颜色返回true，否则返回false
+ *  判断是否为rgba颜色
+ * @param color - 需要验证的颜色字符串
+ * @returns  如果是rgba颜色返回true，否则返回false
  * @example
  * ```JavaScript
  *     isRgba('#FD7086') // false

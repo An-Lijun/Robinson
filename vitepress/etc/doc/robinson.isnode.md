@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 该函数检查元素是否是节点。
+该函数检查元素是否是节点。
 
 **Signature:**
 

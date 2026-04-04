@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数“asignData”将属性从“obj2”复制到“obj1”，并可选择执行附加函数。
+函数“asignData”将属性从“obj2”复制到“obj1”，并可选择执行附加函数。
 
 **Signature:**
 
@@ -26,7 +26,7 @@ declare function asignData(obj1: DAMNU_ENABLE, obj2: DAMNU_ENABLE): DAMNU_ENABLE
 
 DAMNU\_ENABLE
 
-{<!-- -->DAMNU\_ENABLE<!-- -->} - 合并后的对象。
+- 合并后的对象。
 
 ## Example
 

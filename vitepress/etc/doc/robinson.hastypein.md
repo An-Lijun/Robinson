@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 该函数检查给定值的类型是否存在于给定类型数组中。
+该函数检查给定值的类型是否存在于给定类型数组中。
 
 **Signature:**
 
@@ -26,7 +26,7 @@ declare function hasTypeIn(value: any, types: Array<string>): boolean;
 
 boolean
 
-{<!-- -->boolean<!-- -->} 一个布尔值。
+一个布尔值。
 
 ## Example
 

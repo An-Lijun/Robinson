@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 该函数检查值是否为简单值（数字、字符串、布尔值、符号、null、undefined 或 bigint）或复杂值（函数、对象、数组、集合、映射）。
+该函数检查值是否为简单值（数字、字符串、布尔值、符号、null、undefined 或 bigint）或复杂值（函数、对象、数组、集合、映射）。
 
 **Signature:**
 
@@ -25,7 +25,7 @@ declare function isSimpleType(value: any): boolean;
 
 boolean
 
-{<!-- -->boolean<!-- -->} 函数 isSimpleType 返回一个布尔值。
+函数 isSimpleType 返回一个布尔值。
 
 ## Example
 

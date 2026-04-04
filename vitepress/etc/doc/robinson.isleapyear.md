@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 判断给定年份是否为闰年。
+判断给定年份是否为闰年。
 
 **Signature:**
 
@@ -25,7 +25,7 @@ declare function isLeapYear(year: string | number): boolean;
 
 boolean
 
-{<!-- -->boolean<!-- -->} - 如果是闰年返回 true，否则返回 false。
+- 如果是闰年返回 true，否则返回 false。
 
 ## Example
 

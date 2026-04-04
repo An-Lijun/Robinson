@@ -8,11 +8,11 @@ interface IRgba {
 
 /**
  * @beta
- * @description 将颜色对象转换为rgba颜色字符串
+ * 将颜色对象转换为rgba颜色字符串
  *
  * @param colorObj - 颜色对象，包含r、g、b分量，可选a分量
- * @param {10000} - 透明度的小数点后保留位数，默认为10000（即保留4位小数）
- * @returns {string} 返回一个rgba格式的字符串
+ * @param n - 透明度的小数点后保留位数，默认为10000（即保留4位小数）
+ * @returns 返回一个rgba格式的字符串
  * @example
  * ```javascript
  * let obj = { r: 255, g: 255, b: 255 };
@@ -26,13 +26,13 @@ export const toRgbaString = (colorObj: IRgba, n = 10000) => {
 
 /**
  * @beta
- * @description 解析十六进制颜色字符串为RGBA对象
+ * 解析十六进制颜色字符串为RGBA对象
  *
  * 该函数接受一个十六进制颜色字符串（例如 "#RRGGBB" 或 "#RGB"），
  * 并将其解析为一个包含红（r）、绿（g）、蓝（b）和透明度（a）分量的对象
  *
  * @param color - 十六进制颜色字符串
- * @returns {{r:"",g:"",b:"",a:""}} 包含RGBA分量的对象
+ * @returns 包含RGBA分量的对象
  * @example
  * ```javascript
  * parseHexColor('#FF0000'); // { r: 255, g: 0, b: 0, a: 1 }
@@ -58,10 +58,10 @@ export const parseHexColor = (color: string): IRgba => {
 };
 /**
  * @beta
- * @description 解析rgba颜色字符串为颜色对象
+ * 解析rgba颜色字符串为颜色对象
  *
  * @param color - rgba颜色字符串
- * @returns { r: 255, g: 0, b: 0, a: 0.5} 包含RGBA分量的对象
+ * @returns 包含RGBA分量的对象
  * @example
  * ```javascript
  * parseRgbaColor('rgba(255, 0, 0, 0.5)'); // { r: 255, g: 0, b: 0, a: 0.5 }
@@ -77,12 +77,12 @@ export const parseRgbaColor = (color: string): IRgba => {
 };
 /**
  * @beta
- * @description 解析颜色字符串为颜色对象
+ * 解析颜色字符串为颜色对象
  *
  * 该函数可以解析十六进制颜色字符串或rgba颜色字符串为颜色对象
  *
  * @param color - 颜色字符串
- * @returns {string} 包含RGBA分量的对象，如果无法解析则返回空字符串
+ * @returns 包含RGBA分量的对象，如果无法解析则返回空字符串
  * @example
  * ```javascript
  * parseColorString('#FF0000');         // { r: 255, g: 0, b: 0, a: 1 }
@@ -99,10 +99,10 @@ export const parseColorString = (color: string): IRgba | string => {
 };
 /**
  * @beta
- * @description 将十六进制颜色字符串转换为rgba颜色字符串
+ * 将十六进制颜色字符串转换为rgba颜色字符串
  *
  * @param hex - 十六进制颜色字符串
- * @returns {string} 转换后的rgba颜色字符串，如果输入无效则返回空字符串
+ * @returns 转换后的rgba颜色字符串，如果输入无效则返回空字符串
  * @example
  * ```javascript
  * hexToRgba('#FD7086'); // 'rgba(253,112,134,1)'
@@ -119,10 +119,10 @@ export function hexToRgba (hex: string): string {
 
 /**
  * @beta
- * @description 将十六进制颜色字符串转换为rgb颜色字符串
+ * 将十六进制颜色字符串转换为rgb颜色字符串
  *
  * @param hex - 十六进制颜色字符串
- * @returns {string} 转换后的rgb颜色字符串，如果输入无效则返回空字符串
+ * @returns 转换后的rgb颜色字符串，如果输入无效则返回空字符串
  * @example
  * ```javascript
  * hexToRgb('#FD7086'); // 'rgb(253,112,134)'
@@ -145,10 +145,10 @@ export function hexToRgb (hex: string): string {
 
 /**
  * @beta
- * @description 将rgb颜色字符串转换为十六进制颜色字符串
+ * 将rgb颜色字符串转换为十六进制颜色字符串
  *
  * @param color - rgb颜色字符串
- * @returns {string} 转换后的十六进制颜色字符串，如果输入无效则返回空字符串
+ * @returns 转换后的十六进制颜色字符串，如果输入无效则返回空字符串
  * @example
  * ```javascript
  * rgbToHex('rgb(0,0,0)'); // '#000000'
@@ -166,10 +166,10 @@ export function rgbToHex (color: string): string {
 
 /**
  * @beta
- * @description 将rgba颜色字符串转换为十六进制颜色字符串
+ * 将rgba颜色字符串转换为十六进制颜色字符串
  *
  * @param color - rgba颜色字符串
- * @returns {string} 转换后的十六进制颜色字符串，如果输入无效则返回空字符串
+ * @returns 转换后的十六进制颜色字符串，如果输入无效则返回空字符串
  * @example
  * ```javascript
  * rgbaToHex('rgba(0,0,0,1)'); // '#000000'

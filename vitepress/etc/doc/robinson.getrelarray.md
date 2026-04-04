@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数“getRelArray”接受一个数组作为输入，并返回一个包含所有非空元素的新数组。
+函数“getRelArray”接受一个数组作为输入，并返回一个包含所有非空元素的新数组。
 
 **Signature:**
 
@@ -25,7 +25,7 @@ declare function getRelArray(array: Array<any>): Array<any>;
 
 Array&lt;any&gt;
 
-{<!-- -->Array<!-- -->} 过滤掉空数据的新数组。
+过滤掉空数据的新数组。
 
 ## Example
 

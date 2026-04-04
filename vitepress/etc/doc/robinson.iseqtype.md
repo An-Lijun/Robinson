@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数“isEqType”检查两个值的类型是否相等。
+函数“isEqType”检查两个值的类型是否相等。
 
 **Signature:**
 
@@ -26,7 +26,10 @@ declare function isEqType(value: any, value2: any): boolean;
 
 boolean
 
-{<!-- -->boolean<!-- -->} 一个布尔值。
+一个布尔值。
+
+## Example
+
 
 ```JavaScript
 let a =1;

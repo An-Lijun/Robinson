@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 将图片URL转换为Base64编码的字符串
+将图片URL转换为Base64编码的字符串
 
 **Signature:**
 

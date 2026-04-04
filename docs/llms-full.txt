@@ -3670,6 +3670,236 @@ VitePress 支持使用 [Algolia DocSearch](https://docsearch.algolia.com/docs/w
 ---
 
 ---
+url: /etc/performance-report.md
+---
+# 性能测试报告
+
+生成时间: 2026-04-03T13:16:54.440Z
+
+## 📊 测试摘要
+
+| 指标 | 数值 |
+|------|------|
+| 总测试数 | 14 |
+| 通过测试 | 14 |
+| 失败测试 | 0 |
+| 平均执行时间 | 11.88ms |
+| 通过率 | 100.00% |
+
+## 📋 详细测试结果
+
+### 1. isArray - 大数组检查
+
+**状态**: ✅ 通过
+
+**执行时间**: 0.87ms
+
+**性能评级**: 🚀 优秀
+
+**描述**: 检查 10000 个元素的数组
+
+***
+
+### 2. getRelArray - 过滤空值
+
+**状态**: ✅ 通过
+
+**执行时间**: 1.27ms
+
+**性能评级**: 🚀 优秀
+
+**描述**: 过滤包含空值的数组
+
+**内存使用**: -0.07MB
+
+***
+
+### 3. getChunkArray - 数组分块
+
+**状态**: ✅ 通过
+
+**执行时间**: 8.69ms
+
+**性能评级**: 🚀 优秀
+
+**描述**: 将 10000 个元素分块为 100 个一组
+
+**内存使用**: 1.37MB
+
+***
+
+### 4. hasClass - 类名检查
+
+**状态**: ✅ 通过
+
+**执行时间**: 0.87ms
+
+**性能评级**: 🚀 优秀
+
+**描述**: 检查元素是否包含指定类名
+
+***
+
+### 5. compose - 函数组合
+
+**状态**: ✅ 通过
+
+**执行时间**: 2.77ms
+
+**性能评级**: 🚀 优秀
+
+**描述**: 组合两个函数并执行
+
+**内存使用**: -1.37MB
+
+***
+
+### 6. pipe - 函数管道
+
+**状态**: ✅ 通过
+
+**执行时间**: 1.77ms
+
+**性能评级**: 🚀 优秀
+
+**描述**: 通过管道执行两个函数
+
+**内存使用**: 2.56MB
+
+***
+
+### 7. isObjectLike - 对象类型检查
+
+**状态**: ✅ 通过
+
+**执行时间**: 0.52ms
+
+**性能评级**: 🚀 优秀
+
+**描述**: 检查大型对象是否为类对象类型
+
+***
+
+### 8. deepClone - 复杂对象克隆
+
+**状态**: ✅ 通过
+
+**执行时间**: 4.53ms
+
+**性能评级**: 🚀 优秀
+
+**描述**: 克隆包含嵌套对象和数组的复杂结构
+
+**内存使用**: -2.59MB
+
+***
+
+### 9. debounce - 防抖函数
+
+**状态**: ✅ 通过
+
+**执行时间**: 11.15ms
+
+**性能评级**: 🚀 优秀
+
+**描述**: 快速调用防抖函数 100 次
+
+**内存使用**: 1.49MB
+
+***
+
+### 10. throttle - 节流函数
+
+**状态**: ✅ 通过
+
+**执行时间**: 0.46ms
+
+**性能评级**: 🚀 优秀
+
+**描述**: 快速调用节流函数 100 次
+
+**内存使用**: 0.31MB
+
+***
+
+### 11. getChunkArray - 空数组
+
+**状态**: ✅ 通过
+
+**执行时间**: 0.28ms
+
+**性能评级**: 🚀 优秀
+
+**描述**: 处理空数组
+
+**内存使用**: 0.76MB
+
+***
+
+### 12. getChunkArray - 单元素数组
+
+**状态**: ✅ 通过
+
+**执行时间**: 0.88ms
+
+**性能评级**: 🚀 优秀
+
+**描述**: 处理单元素数组
+
+**内存使用**: -1.09MB
+
+***
+
+### 13. getChunkArray - 块大小大于数组
+
+**状态**: ✅ 通过
+
+**执行时间**: 1.23ms
+
+**性能评级**: 🚀 优秀
+
+**描述**: 块大小大于数组长度
+
+**内存使用**: -1MB
+
+***
+
+### 14. 大数组处理内存测试
+
+**状态**: ✅ 通过
+
+**执行时间**: 130.98ms
+
+**性能评级**: ⚡ 良好
+
+**描述**: 处理 100000 个对象的大数组
+
+**内存使用**: 24.18MB
+
+***
+
+## 💡 性能优化建议
+
+### 通用优化建议
+
+* 使用原生 API 替代手动实现
+* 避免在循环中进行重复计算
+* 使用适当的数据结构（Map vs Object）
+* 考虑使用缓存机制优化重复操作
+* 使用泛型提高类型安全性和性能
+* 避免不必要的类型转换和断言
+
+## 📈 性能趋势分析
+
+### 历史趋势
+
+| 版本 | 平均执行时间 | 通过率 |
+|------|--------------|--------|
+| 1.0.21 | 11.88ms | 100.00% |
+
+---
+
+---
 url: /etc\vitepress\src/withVue.md
 ---
 # 在md使用vue
@@ -6291,75 +6521,6 @@ url: /etc\apiExtractor\src/config.md
 ---
 
 ---
-url: /etc\doc/robinson.addclass.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [addClass](./robinson.addclass.md)
-
-## addClass() function
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-该函数将一个类添加到 DOM 元素。
-
-**Signature:**
-
-```typescript
-declare function addClass(dom: Element, classNm: string): void;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  dom | Element | dom 参数的类型为 Element，表示要添加该类的 DOM 元素。 |
-|  classNm | string | classNm 参数是一个字符串，表示要添加到 dom 元素的类的名称。 |
-
-**Returns:**
-
-void
-
-## Example
-
-```JavaScript
-   let div= document.createElement('div')
-   addClass(div,'aa')
-   div.className => "aa"
-```
-
----
-
----
-url: /etc/changelog.md
----
-## 1.0.16
-
-## 1.0.15
-
-## 1.0.14
-
-## 1.0.13
-
-## 1.0.12
-
-## 1.0.11
-
-## 1.0.10
-
-## 1.0.9
-
-## 1.0.8
-
-## 1.0.7
-
-## 1.0.6
-
-## 1.0.4
-
-## 1.0.0
-
----
-
----
 url: /etc\doc/robinson.addnode.md
 ---
 [Home](./index.md) > [robinson](./robinson.md) > [addNode](./robinson.addnode.md)
@@ -6403,6 +6564,44 @@ void
 ---
 
 ---
+url: /etc\doc/robinson.addclass.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [addClass](./robinson.addclass.md)
+
+## addClass() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+该函数将一个类添加到 DOM 元素。
+
+**Signature:**
+
+```typescript
+declare function addClass(dom: Element, classNm: string): void;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  dom | Element | dom 参数的类型为 Element，表示要添加该类的 DOM 元素。 |
+|  classNm | string | classNm 参数是一个字符串，表示要添加到 dom 元素的类的名称。 |
+
+**Returns:**
+
+void
+
+## Example
+
+```JavaScript
+   let div= document.createElement('div')
+   addClass(div,'aa')
+   div.className => "aa"
+```
+
+---
+
+---
 url: /etc/doc.md
 ---
 [Home](./index.md)
@@ -6414,6 +6613,47 @@ url: /etc/doc.md
 |  Package | Description |
 |  --- | --- |
 |  [robinson](./robinson.md) |  |
+
+---
+
+---
+url: /etc\doc/robinson.bind.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [bind](./robinson.bind.md)
+
+## bind() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+该函数将事件侦听器绑定到 TypeScript 中的 DOM 元素。
+
+**Signature:**
+
+```typescript
+declare function bind(dom: Node, eventType: string, callBack: EventListenerOrEventListenerObject, isCatch?: boolean): void;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  dom | Node | dom 参数是将事件监听器附加到的 DOM 元素。它可以是任何有效的 DOM 元素 |
+|  eventType | string | eventType 参数是一个字符串，指定要侦听的事件类型。事件类型的示例包括“单击”、“按下键”、“鼠标悬停”等。 |
+|  callBack | EventListenerOrEventListenerObject | callBack 参数是当 DOM 元素上发生指定事件时将执行的函数。它可以是实现EventListener 或 EventListenerObject 接口的函数或对象。 |
+|  isCatch | boolean | *(Optional)* isCatch 参数是一个布尔值，用于确定事件监听器在处理事件时是否应使用捕获阶段（true）或冒泡阶段（false）。默认情况下，它设置为“false”，这意味着事件侦听器将使用冒泡阶段。 |
+
+**Returns:**
+
+void
+
+## Example
+
+```JavaScript
+   let btn =document.querySelect('button');
+   bind(btn,'clic',()=>{
+     console.log('123')
+   })
+```
 
 ---
 
@@ -6499,43 +6739,33 @@ const blob = base64ToBlob('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...
 ---
 
 ---
-url: /etc\doc/robinson.bind.md
+url: /etc/changelog.md
 ---
-[Home](./index.md) > [robinson](./robinson.md) > [bind](./robinson.bind.md)
+## 1.0.16
 
-## bind() function
+## 1.0.15
 
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+## 1.0.14
 
-该函数将事件侦听器绑定到 TypeScript 中的 DOM 元素。
+## 1.0.13
 
-**Signature:**
+## 1.0.12
 
-```typescript
-declare function bind(dom: Node, eventType: string, callBack: EventListenerOrEventListenerObject, isCatch?: boolean): void;
-```
+## 1.0.11
 
-## Parameters
+## 1.0.10
 
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  dom | Node | dom 参数是将事件监听器附加到的 DOM 元素。它可以是任何有效的 DOM 元素 |
-|  eventType | string | eventType 参数是一个字符串，指定要侦听的事件类型。事件类型的示例包括“单击”、“按下键”、“鼠标悬停”等。 |
-|  callBack | EventListenerOrEventListenerObject | callBack 参数是当 DOM 元素上发生指定事件时将执行的函数。它可以是实现EventListener 或 EventListenerObject 接口的函数或对象。 |
-|  isCatch | boolean | *(Optional)* isCatch 参数是一个布尔值，用于确定事件监听器在处理事件时是否应使用捕获阶段（true）或冒泡阶段（false）。默认情况下，它设置为“false”，这意味着事件侦听器将使用冒泡阶段。 |
+## 1.0.9
 
-**Returns:**
+## 1.0.8
 
-void
+## 1.0.7
 
-## Example
+## 1.0.6
 
-```JavaScript
-   let btn =document.querySelect('button');
-   bind(btn,'clic',()=>{
-     console.log('123')
-   })
-```
+## 1.0.4
+
+## 1.0.0
 
 ---
 
@@ -6572,6 +6802,75 @@ Promise对象，解析为Base64编码的字符串
 ## Example
 
 blobToBase64(new Blob(\['Hello, world!'], { type: 'text/plain' })) .then(base64 => console.log(base64));
+
+---
+
+---
+url: /etc\doc/robinson.compose.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [compose](./robinson.compose.md)
+
+## compose() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+组合函数，将多个函数从右到左依次调用。
+
+**Signature:**
+
+```typescript
+declare function compose(...fns: Array<Function>): Function;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  fns | Array\<Function> | 要组合的函数。 |
+
+**Returns:**
+
+Function
+
+{Function} - 返回一个组合后的函数。
+
+## Example
+
+```JavaScript
+const addOne = x => x + 1;
+const double = x => x * 2;
+const composed = compose(double, addOne);
+composed(2);// 返回 6
+```
+
+---
+
+---
+url: /etc\doc/robinson.copytoclipboard.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [copyToClipboard](./robinson.copytoclipboard.md)
+
+## copyToClipboard() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+将文本复制到剪贴板。
+
+**Signature:**
+
+```typescript
+declare function copyToClipboard(text: string): void;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  text | string | 要复制到剪贴板的文本内容。 |
+
+**Returns:**
+
+void
 
 ---
 
@@ -6613,46 +6912,6 @@ calc(0.1, 0.2);// 返回 0.3
 calc(0.1, 0.2, '-');// 返回 -0.1
 calc(0.1, 0.2, '*');// 返回 0.02
 calc(0.1, 0.2, '/');// 返回 0.5
-```
-
----
-
----
-url: /etc\doc/robinson.compose.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [compose](./robinson.compose.md)
-
-## compose() function
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-组合函数，将多个函数从右到左依次调用。
-
-**Signature:**
-
-```typescript
-declare function compose(...fns: Array<Function>): Function;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  fns | Array\<Function> | 要组合的函数。 |
-
-**Returns:**
-
-Function
-
-{Function} - 返回一个组合后的函数。
-
-## Example
-
-```JavaScript
-const addOne = x => x + 1;
-const double = x => x * 2;
-const composed = compose(double, addOne);
-composed(2);// 返回 6
 ```
 
 ---
@@ -6739,35 +6998,6 @@ curriedAdd(2)(3);// 返回 5
 ---
 
 ---
-url: /etc\doc/robinson.copytoclipboard.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [copyToClipboard](./robinson.copytoclipboard.md)
-
-## copyToClipboard() function
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-将文本复制到剪贴板。
-
-**Signature:**
-
-```typescript
-declare function copyToClipboard(text: string): void;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  text | string | 要复制到剪贴板的文本内容。 |
-
-**Returns:**
-
-void
-
----
-
----
 url: /etc\doc/robinson.debounce.md
 ---
 [Home](./index.md) > [robinson](./robinson.md) > [debounce](./robinson.debounce.md)
@@ -6807,6 +7037,41 @@ debouncedLog(); // 立即执行
 debouncedLog(); // 1秒内再次调用不会执行
 debouncedLog.cancel(); // 取消执行
 ```
+
+---
+
+---
+url: /etc\doc/robinson.downloadbybase64.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [downloadByBase64](./robinson.downloadbybase64.md)
+
+## downloadByBase64() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+通过Base64编码的字符串下载文件
+
+**Signature:**
+
+```typescript
+declare function downloadByBase64(buf: string, fileNm: string, suffix: string): void;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  buf | string | Base64编码的字符串 |
+|  fileNm | string | 下载后的文件名 |
+|  suffix | string | 下载后的文件后缀 |
+
+**Returns:**
+
+void
+
+## Example
+
+downloadByBase64('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...', 'example.png', 'png');
 
 ---
 
@@ -6851,29 +7116,29 @@ any
 ---
 
 ---
-url: /etc\doc/robinson.downloadbybase64.md
+url: /etc\doc/robinson.downloadbyblob.md
 ---
-[Home](./index.md) > [robinson](./robinson.md) > [downloadByBase64](./robinson.downloadbybase64.md)
+[Home](./index.md) > [robinson](./robinson.md) > [downloadByBlob](./robinson.downloadbyblob.md)
 
-## downloadByBase64() function
+## downloadByBlob() function
 
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-通过Base64编码的字符串下载文件
+通过Blob对象下载文件
 
 **Signature:**
 
 ```typescript
-declare function downloadByBase64(buf: string, fileNm: string, suffix: string): void;
+declare function downloadByBlob(blob: BlobPart, fileNm: string, suffix?: string): void;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  buf | string | Base64编码的字符串 |
+|  blob | BlobPart | Blob文件流 |
 |  fileNm | string | 下载后的文件名 |
-|  suffix | string | 下载后的文件后缀 |
+|  suffix | string | *(Optional)* 下载后的文件类型，默认为'txt' |
 
 **Returns:**
 
@@ -6881,26 +7146,7 @@ void
 
 ## Example
 
-downloadByBase64('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...', 'example.png', 'png');
-
----
-
----
-url: /etc\doc/robinson.eventbus._constructor_.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [EventBus](./robinson.eventbus.md) > [(constructor)](./robinson.eventbus._constructor_.md)
-
-## EventBus.(constructor)
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-Constructs a new instance of the `EventBus` class
-
-**Signature:**
-
-```typescript
-constructor();
-```
+downloadByBlob(new Blob(\['Hello, world!'], { type: 'text/plain' }), 'example.txt');
 
 ---
 
@@ -6940,37 +7186,51 @@ downloadByUrl('https://example.com/image.png', 'example.png');
 ---
 
 ---
-url: /etc\doc/robinson.downloadbyblob.md
+url: /etc\doc/robinson.eventbus.emit.md
 ---
-[Home](./index.md) > [robinson](./robinson.md) > [downloadByBlob](./robinson.downloadbyblob.md)
+[Home](./index.md) > [robinson](./robinson.md) > [EventBus](./robinson.eventbus.md) > [emit](./robinson.eventbus.emit.md)
 
-## downloadByBlob() function
+## EventBus.emit() method
 
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-通过Blob对象下载文件
+“emit”函数触发与特定事件名称关联的所有事件处理程序，并将任何参数传递给它们。
 
 **Signature:**
 
 ```typescript
-declare function downloadByBlob(blob: BlobPart, fileNm: string, suffix?: string): void;
+emit(eventName: string, ...Args: any): void;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  blob | BlobPart | Blob文件流 |
-|  fileNm | string | 下载后的文件名 |
-|  suffix | string | *(Optional)* 下载后的文件类型，默认为'txt' |
+|  eventName | string | 表示要发出的事件名称的字符串。 |
+|  Args | any | Args 是一个剩余参数，允许将无限数量的参数传递给 emit 函数。这些参数可以是任何类型。 |
 
 **Returns:**
 
 void
 
-## Example
+---
 
-downloadByBlob(new Blob(\['Hello, world!'], { type: 'text/plain' }), 'example.txt');
+---
+url: /etc\doc/robinson.eventbus._constructor_.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [EventBus](./robinson.eventbus.md) > [(constructor)](./robinson.eventbus._constructor_.md)
+
+## EventBus.(constructor)
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+Constructs a new instance of the `EventBus` class
+
+**Signature:**
+
+```typescript
+constructor();
+```
 
 ---
 
@@ -6996,36 +7256,6 @@ clear(eventName: string): void;
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  eventName | string | eventName 参数是一个字符串，表示要清除的事件的名称。 |
-
-**Returns:**
-
-void
-
----
-
----
-url: /etc\doc/robinson.eventbus.emit.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [EventBus](./robinson.eventbus.md) > [emit](./robinson.eventbus.emit.md)
-
-## EventBus.emit() method
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-“emit”函数触发与特定事件名称关联的所有事件处理程序，并将任何参数传递给它们。
-
-**Signature:**
-
-```typescript
-emit(eventName: string, ...Args: any): void;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  eventName | string | 表示要发出的事件名称的字符串。 |
-|  Args | any | Args 是一个剩余参数，允许将无限数量的参数传递给 emit 函数。这些参数可以是任何类型。 |
 
 **Returns:**
 
@@ -7072,6 +7302,46 @@ const eventBus = new EventBus(); eventBus.on('myEvent', () => { console.log('myE
 ---
 
 ---
+url: /etc\doc/robinson.getafterdate.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [getAfterDate](./robinson.getafterdate.md)
+
+## getAfterDate() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+计算给定日期之后的日期，并返回格式化后的结果。
+
+**Signature:**
+
+```typescript
+declare function getAfterDate(date: Tday, option: IOptions): string;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  date | Tday | 起始日期，可以是 dayjs 对象、Date 对象或字符串。 |
+|  option | IOptions | 操作选项。 |
+
+**Returns:**
+
+string
+
+{string} - 返回格式化后的日期字符串。
+
+## Example
+
+```javascript
+getAfterDate(dayjs('2024-03-02 08:00:00'), { pattern: 'YYYY年MM月DD日' }) // '2024年03月03日'
+getAfterDate(dayjs('2024-03-02 08:00:00'),
+{ unitType: 'M', pattern: 'YYYY年MM月DD日' }) // '2024年04月02日'
+```
+
+---
+
+---
 url: /etc\doc/robinson.eventbus.off.md
 ---
 [Home](./index.md) > [robinson](./robinson.md) > [EventBus](./robinson.eventbus.md) > [off](./robinson.eventbus.off.md)
@@ -7092,36 +7362,6 @@ off(eventName: string, fn: Function): void;
 |  --- | --- | --- |
 |  eventName | string |  |
 |  fn | Function |  |
-
-**Returns:**
-
-void
-
----
-
----
-url: /etc\doc/robinson.eventbus.on.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [EventBus](./robinson.eventbus.md) > [on](./robinson.eventbus.on.md)
-
-## EventBus.on() method
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-函数“on”将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。
-
-**Signature:**
-
-```typescript
-on(eventName: string, eventFn: Function): void;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  eventName | string | eventName 是一个字符串参数，表示事件的名称。它用于标识eventObj对象中的事件。 |
-|  eventFn | Function | eventFn 参数是当指定事件发生时将执行的函数。 |
 
 **Returns:**
 
@@ -7168,42 +7408,32 @@ formatDate(dayjs('2024-03-01 08:00:00'), 'YYYY年MM月DD日') // '2024年03月01
 ---
 
 ---
-url: /etc\doc/robinson.getafterdate.md
+url: /etc\doc/robinson.eventbus.on.md
 ---
-[Home](./index.md) > [robinson](./robinson.md) > [getAfterDate](./robinson.getafterdate.md)
+[Home](./index.md) > [robinson](./robinson.md) > [EventBus](./robinson.eventbus.md) > [on](./robinson.eventbus.on.md)
 
-## getAfterDate() function
+## EventBus.on() method
 
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-计算给定日期之后的日期，并返回格式化后的结果。
+函数“on”将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。
 
 **Signature:**
 
 ```typescript
-declare function getAfterDate(date: Tday, option: IOptions): string;
+on(eventName: string, eventFn: Function): void;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  date | Tday | 起始日期，可以是 dayjs 对象、Date 对象或字符串。 |
-|  option | IOptions | 操作选项。 |
+|  eventName | string | eventName 是一个字符串参数，表示事件的名称。它用于标识eventObj对象中的事件。 |
+|  eventFn | Function | eventFn 参数是当指定事件发生时将执行的函数。 |
 
 **Returns:**
 
-string
-
-{string} - 返回格式化后的日期字符串。
-
-## Example
-
-```javascript
-getAfterDate(dayjs('2024-03-02 08:00:00'), { pattern: 'YYYY年MM月DD日' }) // '2024年03月03日'
-getAfterDate(dayjs('2024-03-02 08:00:00'),
-{ unitType: 'M', pattern: 'YYYY年MM月DD日' }) // '2024年04月02日'
-```
+void
 
 ---
 
@@ -7372,45 +7602,6 @@ string
 ---
 
 ---
-url: /etc\doc/robinson.getfilechunk.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [getFileChunk](./robinson.getfilechunk.md)
-
-## getFileChunk() function
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-生成文件切片数组
-
-**Signature:**
-
-```typescript
-declare function getFileChunk(file: File, chunkSize?: number): Array<{
-    index: number;
-    file: Blob;
-}>;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  file | File | 文件对象 |
-|  chunkSize | number | *(Optional)* 每个切片的大小（字节），默认为1MB |
-
-**Returns:**
-
-Array<{ index: number; file: Blob; }>
-
-切片数组，每个元素包含索引和Blob对象
-
-## Example
-
-getFileChunk(fileInput.files\[0], 1024 \* 1024).forEach(chunk => console.log(chunk));
-
----
-
----
 url: /etc\doc/robinson.getfilesize.md
 ---
 [Home](./index.md) > [robinson](./robinson.md) > [getFileSize](./robinson.getfilesize.md)
@@ -7447,37 +7638,41 @@ getFileSize(fileInput.files\[0], 'kb'); // 返回文件大小（KB）
 ---
 
 ---
-url: /etc\doc/robinson.getfiletype.md
+url: /etc\doc/robinson.getfilechunk.md
 ---
-[Home](./index.md) > [robinson](./robinson.md) > [getFileType](./robinson.getfiletype.md)
+[Home](./index.md) > [robinson](./robinson.md) > [getFileChunk](./robinson.getfilechunk.md)
 
-## getFileType() function
+## getFileChunk() function
 
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-获取文件后缀名
+生成文件切片数组
 
 **Signature:**
 
 ```typescript
-declare function getFileType(file: File): string | undefined;
+declare function getFileChunk(file: File, chunkSize?: number): Array<{
+    index: number;
+    file: Blob;
+}>;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  file | File | 源文件 |
+|  file | File | 文件对象 |
+|  chunkSize | number | *(Optional)* 每个切片的大小（字节），默认为1MB |
 
 **Returns:**
 
-string | undefined
+Array<{ index: number; file: Blob; }>
 
-文件后缀名
+切片数组，每个元素包含索引和Blob对象
 
 ## Example
 
-getFileType(fileInput.files\[0]); // 返回文件后缀名（如 'jpg'）
+getFileChunk(fileInput.files\[0], 1024 \* 1024).forEach(chunk => console.log(chunk));
 
 ---
 
@@ -7591,42 +7786,37 @@ NodeList 或 null。
 ---
 
 ---
-url: /etc\doc/robinson.getrandom.md
+url: /etc\doc/robinson.getfiletype.md
 ---
-[Home](./index.md) > [robinson](./robinson.md) > [getRandom](./robinson.getrandom.md)
+[Home](./index.md) > [robinson](./robinson.md) > [getFileType](./robinson.getfiletype.md)
 
-## getRandom() function
+## getFileType() function
 
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-函数 getRandom 生成指定范围内具有指定小数位数的随机数。
+获取文件后缀名
 
 **Signature:**
 
 ```typescript
-declare function getRandom(min: number, max: number, point?: number): number;
+declare function getFileType(file: File): string | undefined;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  min | number | 随机数范围的最小值。 |
-|  max | number | “max”参数表示您要生成的最大值。 |
-|  point | number | *(Optional)* “point”参数是一个可选参数，它指定将随机数舍入到的小数位数。如果没有为“point”提供值，则随机数将以整数形式返回。 |
+|  file | File | 源文件 |
 
 **Returns:**
 
-number
+string | undefined
 
-{number} - 指定最小值和最大值之间的随机数，具有指定的小数位数。
+文件后缀名
 
 ## Example
 
-```JavaScript
-   getRandom(1, 5) // 1~5 包含1,5
-   getRandom(1, 5, 1) // 1.0~5 包含 1 5
-```
+getFileType(fileInput.files\[0]); // 返回文件后缀名（如 'jpg'）
 
 ---
 
@@ -7669,6 +7859,46 @@ Array\<any>
 ---
 
 ---
+url: /etc\doc/robinson.getrandom.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [getRandom](./robinson.getrandom.md)
+
+## getRandom() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+函数 getRandom 生成指定范围内具有指定小数位数的随机数。
+
+**Signature:**
+
+```typescript
+declare function getRandom(min: number, max: number, point?: number): number;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  min | number | 随机数范围的最小值。 |
+|  max | number | “max”参数表示您要生成的最大值。 |
+|  point | number | *(Optional)* “point”参数是一个可选参数，它指定将随机数舍入到的小数位数。如果没有为“point”提供值，则随机数将以整数形式返回。 |
+
+**Returns:**
+
+number
+
+{number} - 指定最小值和最大值之间的随机数，具有指定的小数位数。
+
+## Example
+
+```JavaScript
+   getRandom(1, 5) // 1~5 包含1,5
+   getRandom(1, 5, 1) // 1.0~5 包含 1 5
+```
+
+---
+
+---
 url: /etc\doc/robinson.gettimestamp.md
 ---
 [Home](./index.md) > [robinson](./robinson.md) > [getTimestamp](./robinson.gettimestamp.md)
@@ -7706,32 +7936,41 @@ getTimestamp(dayjs('2024-03-01 08:00:00')) // 1709251200000
 ---
 
 ---
-url: /etc\doc/robinson.getuniqueid.md
+url: /etc\doc/robinson.hasclass.md
 ---
-[Home](./index.md) > [robinson](./robinson.md) > [getUniqueId](./robinson.getuniqueid.md)
+[Home](./index.md) > [robinson](./robinson.md) > [hasClass](./robinson.hasclass.md)
 
-## getUniqueId() function
+## hasClass() function
 
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-该函数使用随机字符串模式生成唯一 ID。
+该函数检查元素是否具有特定的类名。
 
 **Signature:**
 
 ```typescript
-declare function getUniqueId(): string;
+declare function hasClass(dom: Element, classNm: String): boolean;
 ```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  dom | Element | “dom”参数的类型为“Element”，表示我们要检查其是否存在类的 DOM 元素。 |
+|  classNm | String | “classNm”参数是一个字符串，表示您要在“dom”元素中检查的类名。 |
 
 **Returns:**
 
-string
+boolean
 
-{string} - 函数“getUniqueId”返回格式为“xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx”的唯一标识符字符串。
+一个布尔值，指示给定的 DOM 元素是否具有指定的类名。
 
 ## Example
 
 ```JavaScript
- getUniqueId() // '627ad809-60fc-47b1-be5d-e0ae1ef903ca'
+   let div =document.createElement('div');
+   div.classList="a1 a2 a3"
+   hasClass(div,'a1')  => true
 ```
 
 ---
@@ -7776,41 +8015,32 @@ boolean
 ---
 
 ---
-url: /etc\doc/robinson.hasclass.md
+url: /etc\doc/robinson.getuniqueid.md
 ---
-[Home](./index.md) > [robinson](./robinson.md) > [hasClass](./robinson.hasclass.md)
+[Home](./index.md) > [robinson](./robinson.md) > [getUniqueId](./robinson.getuniqueid.md)
 
-## hasClass() function
+## getUniqueId() function
 
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-该函数检查元素是否具有特定的类名。
+该函数使用随机字符串模式生成唯一 ID。
 
 **Signature:**
 
 ```typescript
-declare function hasClass(dom: Element, classNm: String): boolean;
+declare function getUniqueId(): string;
 ```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  dom | Element | “dom”参数的类型为“Element”，表示我们要检查其是否存在类的 DOM 元素。 |
-|  classNm | String | “classNm”参数是一个字符串，表示您要在“dom”元素中检查的类名。 |
 
 **Returns:**
 
-boolean
+string
 
-一个布尔值，指示给定的 DOM 元素是否具有指定的类名。
+{string} - 函数“getUniqueId”返回格式为“xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx”的唯一标识符字符串。
 
 ## Example
 
 ```JavaScript
-   let div =document.createElement('div');
-   div.classList="a1 a2 a3"
-   hasClass(div,'a1')  => true
+ getUniqueId() // '627ad809-60fc-47b1-be5d-e0ae1ef903ca'
 ```
 
 ---
@@ -8151,40 +8381,39 @@ boolean
 ---
 
 ---
-url: /etc\doc/robinson.isdecimal.md
+url: /etc\doc/robinson.isemail.md
 ---
-[Home](./index.md) > [robinson](./robinson.md) > [isDecimal](./robinson.isdecimal.md)
+[Home](./index.md) > [robinson](./robinson.md) > [isEmail](./robinson.isemail.md)
 
-## isDecimal() function
+## isEmail() function
 
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 
-检查变量是否为实数
+检查字符串是否为合法email地址
 
 **Signature:**
 
 ```typescript
-declare function isDecimal(s: string | number): boolean;
+declare function isEmail(s: string): boolean;
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  s | string | number | 要检查的变量 |
+|  s | string | 字符串 |
 
 **Returns:**
 
 boolean
 
-{boolean} - 检查结果
+{boolean} - 一个布尔值。
 
 ## Example
 
 ```JavaScript
- isDecimal(123)// true
- isDecimal('123.45') // true
- isDecimal('abc') // false
+ let email = 'test@example.com'; isEmail(email) // true
+ let email = 'invalid-email'; isEmail(email) // false
 ```
 
 ---
@@ -8223,44 +8452,6 @@ boolean
 ```JavaScript
  let div = document.createElement('div'); isElement(div) // true
  let str = 'not an element'; isElement(str) //false
-```
-
----
-
----
-url: /etc\doc/robinson.isemail.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [isEmail](./robinson.isemail.md)
-
-## isEmail() function
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-检查字符串是否为合法email地址
-
-**Signature:**
-
-```typescript
-declare function isEmail(s: string): boolean;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  s | string | 字符串 |
-
-**Returns:**
-
-boolean
-
-{boolean} - 一个布尔值。
-
-## Example
-
-```JavaScript
- let email = 'test@example.com'; isEmail(email) // true
- let email = 'invalid-email'; isEmail(email) // false
 ```
 
 ---
@@ -8350,6 +8541,45 @@ isEqType(value,value2) // false
 ---
 
 ---
+url: /etc\doc/robinson.isdecimal.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [isDecimal](./robinson.isdecimal.md)
+
+## isDecimal() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+检查变量是否为实数
+
+**Signature:**
+
+```typescript
+declare function isDecimal(s: string | number): boolean;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  s | string | number | 要检查的变量 |
+
+**Returns:**
+
+boolean
+
+{boolean} - 检查结果
+
+## Example
+
+```JavaScript
+ isDecimal(123)// true
+ isDecimal('123.45') // true
+ isDecimal('abc') // false
+```
+
+---
+
+---
 url: /etc\doc/robinson.iseqvalue.md
 ---
 [Home](./index.md) > [robinson](./robinson.md) > [isEqValue](./robinson.iseqvalue.md)
@@ -8422,41 +8652,6 @@ boolean
  let path = 'https://example.com'; isExternal(path) // true
  let path = '/internal/path'; isExternal(path)// false
 ```
-
----
-
----
-url: /etc\doc/robinson.isfunction.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [isFunction](./robinson.isfunction.md)
-
-## isFunction() function
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-该函数检查给定值是否是函数。
-
-**Signature:**
-
-```typescript
-declare function isFunction(value: any): boolean;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  value | any | “value”参数是我们想要检查它是否是函数的任何值。 |
-
-**Returns:**
-
-boolean
-
-{boolean} - 一个布尔值。
-
-## Example
-
-isFunction(() => {}); // 返回 true isFunction(123); // 返回 false
 
 ---
 
@@ -8571,6 +8766,41 @@ boolean
  let id = '11010519491231002X'; isIdCard(id) // true
  let id = '11010519491231002Y'; isIdCard(id) // false
 ```
+
+---
+
+---
+url: /etc\doc/robinson.isfunction.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [isFunction](./robinson.isfunction.md)
+
+## isFunction() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+该函数检查给定值是否是函数。
+
+**Signature:**
+
+```typescript
+declare function isFunction(value: any): boolean;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  value | any | “value”参数是我们想要检查它是否是函数的任何值。 |
+
+**Returns:**
+
+boolean
+
+{boolean} - 一个布尔值。
+
+## Example
+
+isFunction(() => {}); // 返回 true isFunction(123); // 返回 false
 
 ---
 
@@ -8921,44 +9151,6 @@ boolean
 ---
 
 ---
-url: /etc\doc/robinson.isorigindate.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [isOriginDate](./robinson.isorigindate.md)
-
-## isOriginDate() function
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-是否为日期格式
-
-**Signature:**
-
-```typescript
-declare function isOriginDate(val: any): boolean;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  val | any | 参数“val”的类型为“any”，这意味着它可以是任何数据类型。 |
-
-**Returns:**
-
-boolean
-
-{boolean} - 一个布尔值。
-
-## Example
-
-```JavaScript
- let date = new Date(); isOriginDate(date) // true
- let str = '2023-10-01'; isOriginDate(str) // false
-```
-
----
-
----
 url: /etc\doc/robinson.ispromise.md
 ---
 [Home](./index.md) > [robinson](./robinson.md) > [isPromise](./robinson.ispromise.md)
@@ -8992,6 +9184,82 @@ boolean
 ```JavaScript
  let promise = new Promise(() => {}); isPromise(promise)// true
  let str = 'not a promise'; isPromise(str)// false
+```
+
+---
+
+---
+url: /etc\doc/robinson.isreftype.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [isRefType](./robinson.isreftype.md)
+
+## isRefType() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+该函数检查值是否为引用类型。
+
+**Signature:**
+
+```typescript
+declare function isRefType(value: any): boolean;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  value | any | “value”参数的类型为“any”，这意味着它可以接受任何类型的值。 |
+
+**Returns:**
+
+boolean
+
+{boolean} 一个布尔值。
+
+## Example
+
+```JavaScript
+   let num =123; isRefType(num) // true
+   let obj ={};  isRefType(obj) // false
+```
+
+---
+
+---
+url: /etc\doc/robinson.isorigindate.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [isOriginDate](./robinson.isorigindate.md)
+
+## isOriginDate() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+是否为日期格式
+
+**Signature:**
+
+```typescript
+declare function isOriginDate(val: any): boolean;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  val | any | 参数“val”的类型为“any”，这意味着它可以是任何数据类型。 |
+
+**Returns:**
+
+boolean
+
+{boolean} - 一个布尔值。
+
+## Example
+
+```JavaScript
+ let date = new Date(); isOriginDate(date) // true
+ let str = '2023-10-01'; isOriginDate(str) // false
 ```
 
 ---
@@ -9032,44 +9300,6 @@ boolean
 ```JavaScript
  let n = 7; isRange(n, 7, 8) // true 包含7 8
  let n = 7; isRange(n, 7, 7) // true 包含7
-```
-
----
-
----
-url: /etc\doc/robinson.isreftype.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [isRefType](./robinson.isreftype.md)
-
-## isRefType() function
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-该函数检查值是否为引用类型。
-
-**Signature:**
-
-```typescript
-declare function isRefType(value: any): boolean;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  value | any | “value”参数的类型为“any”，这意味着它可以接受任何类型的值。 |
-
-**Returns:**
-
-boolean
-
-{boolean} 一个布尔值。
-
-## Example
-
-```JavaScript
-   let num =123; isRefType(num) // true
-   let obj ={};  isRefType(obj) // false
 ```
 
 ---
@@ -9311,43 +9541,6 @@ let a =Symbol(); isSymbol(a) // true
 ---
 
 ---
-url: /etc\doc/robinson.isundefined.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [isUndefined](./robinson.isundefined.md)
-
-## isUndefined() function
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-函数“isUndefined”检查值是否未定义。
-
-**Signature:**
-
-```typescript
-declare function isUndefined(value: any): boolean;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  value | any | “value”参数的类型为“any”，这意味着它可以接受任何类型的值。 |
-
-**Returns:**
-
-boolean
-
-{boolean} 函数 isUndefined 返回一个布尔值。
-
-## Example
-
-```JavaScript
-   let a; isUndefined(a) // true
-```
-
----
-
----
 url: /etc\doc/robinson.isurl.md
 ---
 [Home](./index.md) > [robinson](./robinson.md) > [isUrl](./robinson.isurl.md)
@@ -9381,6 +9574,43 @@ boolean
 ```JavaScript
  let url = 'https://example.com'; isUrl(url) // true
  let url = 'invalid-url'; isUrl(url) // false
+```
+
+---
+
+---
+url: /etc\doc/robinson.isundefined.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [isUndefined](./robinson.isundefined.md)
+
+## isUndefined() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+函数“isUndefined”检查值是否未定义。
+
+**Signature:**
+
+```typescript
+declare function isUndefined(value: any): boolean;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  value | any | “value”参数的类型为“any”，这意味着它可以接受任何类型的值。 |
+
+**Returns:**
+
+boolean
+
+{boolean} 函数 isUndefined 返回一个布尔值。
+
+## Example
+
+```JavaScript
+   let a; isUndefined(a) // true
 ```
 
 ---
@@ -9746,6 +9976,44 @@ piped(2);// 返回 6
 ---
 
 ---
+url: /etc\doc/robinson.removenode.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [removeNode](./robinson.removenode.md)
+
+## removeNode() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+该函数从其父节点中删除指定的 DOM 元素。
+
+**Signature:**
+
+```typescript
+declare function removeNode(parentNode: Element, dom: Element): void;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  parentNode | Element | parentNode 参数是包含 dom 元素的元素。它是您要从中删除“dom”元素的元素。 |
+|  dom | Element | dom 参数是要从其父节点中删除的元素。 |
+
+**Returns:**
+
+void
+
+## Example
+
+```JavaScript
+   let div =document.createElement('div');
+   document.body.appendChild(div)
+   removeNode(document.body,div)
+```
+
+---
+
+---
 url: /etc\doc/robinson.preventdefault.md
 ---
 [Home](./index.md) > [robinson](./robinson.md) > [preventDefault](./robinson.preventdefault.md)
@@ -9807,116 +10075,6 @@ printByBlob(new Blob(\['Hello, world!'], { type: 'text/plain' }));
 ---
 
 ---
-url: /etc\doc/robinson.printbydom.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [printByDom](./robinson.printbydom.md)
-
-## printByDom() function
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-通过DOM元素打印内容
-
-**Signature:**
-
-```typescript
-declare function printByDom(el: HTMLElement, custStyle?: string): void;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  el | HTMLElement | 要打印的DOM元素 |
-|  custStyle | string | *(Optional)* 自定义CSS样式 |
-
-**Returns:**
-
-void
-
-## Example
-
-printByDom(document.getElementById('print-content'), 'body { font-size: 12px; }');
-
----
-
----
-url: /etc\doc/robinson.removenode.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [removeNode](./robinson.removenode.md)
-
-## removeNode() function
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-该函数从其父节点中删除指定的 DOM 元素。
-
-**Signature:**
-
-```typescript
-declare function removeNode(parentNode: Element, dom: Element): void;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  parentNode | Element | parentNode 参数是包含 dom 元素的元素。它是您要从中删除“dom”元素的元素。 |
-|  dom | Element | dom 参数是要从其父节点中删除的元素。 |
-
-**Returns:**
-
-void
-
-## Example
-
-```JavaScript
-   let div =document.createElement('div');
-   document.body.appendChild(div)
-   removeNode(document.body,div)
-```
-
----
-
----
-url: /etc\doc/robinson.removeclass.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [removeClass](./robinson.removeclass.md)
-
-## removeClass() function
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-该函数从给定的 DOM 元素中删除指定的类名。
-
-**Signature:**
-
-```typescript
-declare function removeClass(dom: Element, classNm: string): void;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  dom | Element | “dom”参数的类型为“Element”，表示要从中删除类的 DOM 元素。 |
-|  classNm | string | “classNm”参数是一个字符串，表示要从“dom”元素中删除的类的名称。 |
-
-**Returns:**
-
-void
-
-## Example
-
-```JavaScript
-   let div =document.createElement('div');
-   div.className ='a1 a2 a3'
-   removeClass(div,'a1')
-```
-
----
-
----
 url: /etc\doc/robinson.rendertmp.md
 ---
 [Home](./index.md) > [robinson](./robinson.md) > [renderTmp](./robinson.rendertmp.md)
@@ -9969,6 +10127,78 @@ string
           <div>住址:{{ 北京顺路 }}</div>
       </div>
 ```
+
+---
+
+---
+url: /etc\doc/robinson.removeclass.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [removeClass](./robinson.removeclass.md)
+
+## removeClass() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+该函数从给定的 DOM 元素中删除指定的类名。
+
+**Signature:**
+
+```typescript
+declare function removeClass(dom: Element, classNm: string): void;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  dom | Element | “dom”参数的类型为“Element”，表示要从中删除类的 DOM 元素。 |
+|  classNm | string | “classNm”参数是一个字符串，表示要从“dom”元素中删除的类的名称。 |
+
+**Returns:**
+
+void
+
+## Example
+
+```JavaScript
+   let div =document.createElement('div');
+   div.className ='a1 a2 a3'
+   removeClass(div,'a1')
+```
+
+---
+
+---
+url: /etc\doc/robinson.printbydom.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [printByDom](./robinson.printbydom.md)
+
+## printByDom() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+通过DOM元素打印内容
+
+**Signature:**
+
+```typescript
+declare function printByDom(el: HTMLElement, custStyle?: string): void;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  el | HTMLElement | 要打印的DOM元素 |
+|  custStyle | string | *(Optional)* 自定义CSS样式 |
+
+**Returns:**
+
+void
+
+## Example
+
+printByDom(document.getElementById('print-content'), 'body { font-size: 12px; }');
 
 ---
 
@@ -10091,6 +10321,35 @@ rgbaToHex('#000000'); // ''
 ---
 
 ---
+url: /etc\doc/robinson.stoppropagation.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [stopPropagation](./robinson.stoppropagation.md)
+
+## stopPropagation() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+函数 stopPropagation 阻止事件在事件链中向上冒泡。
+
+**Signature:**
+
+```typescript
+declare function stopPropagation(event: Event): void;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  event | Event | 事件参数是一个表示发生的事件的对象。它包含有关事件的信息，例如事件类型、目标元素以及与事件关联的任何其他数据。在这种情况下，事件参数的类型为Event，它是一个通用事件对象，可以 |
+
+**Returns:**
+
+void
+
+---
+
+---
 url: /etc\doc/robinson.rgbtohex.md
 ---
 [Home](./index.md) > [robinson](./robinson.md) > [rgbToHex](./robinson.rgbtohex.md)
@@ -10167,35 +10426,6 @@ Node | null
 ---
 
 ---
-url: /etc\doc/robinson.stoppropagation.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [stopPropagation](./robinson.stoppropagation.md)
-
-## stopPropagation() function
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-函数 stopPropagation 阻止事件在事件链中向上冒泡。
-
-**Signature:**
-
-```typescript
-declare function stopPropagation(event: Event): void;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  event | Event | 事件参数是一个表示发生的事件的对象。它包含有关事件的信息，例如事件类型、目标元素以及与事件关联的任何其他数据。在这种情况下，事件参数的类型为Event，它是一个通用事件对象，可以 |
-
-**Returns:**
-
-void
-
----
-
----
 url: /etc\doc/robinson.throttle.md
 ---
 [Home](./index.md) > [robinson](./robinson.md) > [throttle](./robinson.throttle.md)
@@ -10236,39 +10466,6 @@ throttledLog(); // 立即执行
 throttledLog(); // 1秒内再次调用不会执行
 throttledLog.cancel(); // 取消执行
 ```
-
----
-
----
-url: /etc\doc/robinson.transhightlight.md
----
-[Home](./index.md) > [robinson](./robinson.md) > [transHightLight](./robinson.transhightlight.md)
-
-## transHightLight() function
-
-> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
-
-将字符串中的关键词高亮显示。
-
-**Signature:**
-
-```typescript
-declare function transHightLight(str: string, keyWords: string | Array<string>, color?: string): string;
-```
-
-## Parameters
-
-|  Parameter | Type | Description |
-|  --- | --- | --- |
-|  str | string | 要进行高亮处理的原始字符串。 |
-|  keyWords | string | Array\<string> | 要高亮的关键字，多个关键字之间可以不使用分隔符。 |
-|  color | string | *(Optional)* 高亮显示的颜色，默认为 '#0053db'。 |
-
-**Returns:**
-
-string
-
-返回一个新的字符串，其中关键字被包裹在带有指定颜色样式的 span 标签中。
 
 ---
 
@@ -10353,6 +10550,39 @@ void
 ---
 
 ---
+url: /etc\doc/robinson.transhightlight.md
+---
+[Home](./index.md) > [robinson](./robinson.md) > [transHightLight](./robinson.transhightlight.md)
+
+## transHightLight() function
+
+> This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
+
+将字符串中的关键词高亮显示。
+
+**Signature:**
+
+```typescript
+declare function transHightLight(str: string, keyWords: string | Array<string>, color?: string): string;
+```
+
+## Parameters
+
+|  Parameter | Type | Description |
+|  --- | --- | --- |
+|  str | string | 要进行高亮处理的原始字符串。 |
+|  keyWords | string | Array\<string> | 要高亮的关键字，多个关键字之间可以不使用分隔符。 |
+|  color | string | *(Optional)* 高亮显示的颜色，默认为 '#0053db'。 |
+
+**Returns:**
+
+string
+
+返回一个新的字符串，其中关键字被包裹在带有指定颜色样式的 span 标签中。
+
+---
+
+---
 url: /etc\doc/robinson.urltobase64.md
 ---
 [Home](./index.md) > [robinson](./robinson.md) > [urlToBase64](./robinson.urltobase64.md)
@@ -10385,6 +10615,33 @@ Promise对象，解析为Base64编码的字符串
 ## Example
 
 urlToBase64('https://example.com/image.png').then(base64 => console.log(base64));
+
+---
+
+---
+url: /etc\jest\src/introduce.md
+---
+## 二、Jest 简介
+
+### 2.1 定义与功能概述
+
+Jest 是一个 JavaScript 测试框架，它提供了一系列工具和功能，帮助开发者编写和运行测试用例。Jest 的核心功能包括简单易用的断言库、自动模拟机制、快照测试、测试覆盖率报告生成等。通过这些功能，Jest 能够让测试过程变得更加简单、高效，同时提高测试的准确性和可靠性。
+
+### 2.2 特点与优势
+
+* **简洁易用**：Jest 的语法简洁明了，易于上手。开发者可以通过简单的 API 编写测试用例，减少学习成本。
+
+- **自动模拟**：Jest 能够自动模拟模块和函数，大大简化了测试过程中对依赖项的处理。
+
+* **快照测试**：快照测试功能可以方便地对比代码输出的变化，确保代码的行为符合预期。
+
+- **快速高效**：Jest 采用了并行测试和缓存机制，能够显著提高测试的执行速度。
+
+* **丰富的插件生态**：Jest 拥有丰富的插件和扩展，开发者可以根据项目需求进行定制化配置。
+
+### 2.3 与其他测试框架的对比
+
+在 JavaScript 测试领域，除了 Jest，还有 Mocha、Jasmine 等知名测试框架。与 Mocha 相比，Jest 具有更简洁的语法和更强大的自动模拟功能，无需额外配置复杂的断言库和模拟工具。与 Jasmine 相比，Jest 在性能和功能上更具优势，尤其是在处理大型项目和复杂测试场景时表现更为出色。
 
 ---
 
@@ -10488,50 +10745,6 @@ test('2 is even', () => {
 ---
 
 ---
-url: /etc\jest\src/introduce.md
----
-## 二、Jest 简介
-
-### 2.1 定义与功能概述
-
-Jest 是一个 JavaScript 测试框架，它提供了一系列工具和功能，帮助开发者编写和运行测试用例。Jest 的核心功能包括简单易用的断言库、自动模拟机制、快照测试、测试覆盖率报告生成等。通过这些功能，Jest 能够让测试过程变得更加简单、高效，同时提高测试的准确性和可靠性。
-
-### 2.2 特点与优势
-
-* **简洁易用**：Jest 的语法简洁明了，易于上手。开发者可以通过简单的 API 编写测试用例，减少学习成本。
-
-- **自动模拟**：Jest 能够自动模拟模块和函数，大大简化了测试过程中对依赖项的处理。
-
-* **快照测试**：快照测试功能可以方便地对比代码输出的变化，确保代码的行为符合预期。
-
-- **快速高效**：Jest 采用了并行测试和缓存机制，能够显著提高测试的执行速度。
-
-* **丰富的插件生态**：Jest 拥有丰富的插件和扩展，开发者可以根据项目需求进行定制化配置。
-
-### 2.3 与其他测试框架的对比
-
-在 JavaScript 测试领域，除了 Jest，还有 Mocha、Jasmine 等知名测试框架。与 Mocha 相比，Jest 具有更简洁的语法和更强大的自动模拟功能，无需额外配置复杂的断言库和模拟工具。与 Jasmine 相比，Jest 在性能和功能上更具优势，尤其是在处理大型项目和复杂测试场景时表现更为出色。
-
----
-
----
-url: /etc\jest\src/introduction.md
----
-![image.png](/assets/jest.png)
-
-## 一、引言
-
-### 1.1 软件测试的重要性
-
-在软件开发的生命周期中，软件测试是确保软件质量、稳定性和可靠性的关键环节。通过有效的测试，可以发现代码中的潜在缺陷、错误和逻辑漏洞，避免在生产环境中出现严重问题，降低维护成本，提高用户满意度。软件测试不仅有助于提升产品质量，还能增强团队的信心，促进项目的顺利推进。
-
-### 1.2 Jest 的诞生背景与发展历程
-
-Jest 由 Facebook 开发并开源，旨在解决 JavaScript 项目在测试过程中面临的各种挑战。随着 JavaScript 在前端和后端开发中的广泛应用，对高效、易用的测试框架的需求日益增长。Jest 应运而生，它凭借其简洁的语法、强大的功能和良好的性能，迅速在 JavaScript 开发者社区中获得了广泛的认可和使用。自发布以来，Jest 不断更新迭代，添加了许多新特性和功能，逐渐成为 JavaScript 测试领域的主流框架之一。
-
----
-
----
 url: /etc\jest\src/mockFun.md
 ---
 ## 七、模拟函数（Mock Functions）
@@ -10594,6 +10807,23 @@ test('manually mocked function', () => {
 - **测试异步操作**：模拟异步操作的结果，以便在测试中控制和验证异步行为。
 
 * **测试边缘情况**：通过模拟不同的输入和返回值，测试函数在各种边缘情况下的表现。
+
+---
+
+---
+url: /etc\jest\src/introduction.md
+---
+![image.png](/assets/jest.png)
+
+## 一、引言
+
+### 1.1 软件测试的重要性
+
+在软件开发的生命周期中，软件测试是确保软件质量、稳定性和可靠性的关键环节。通过有效的测试，可以发现代码中的潜在缺陷、错误和逻辑漏洞，避免在生产环境中出现严重问题，降低维护成本，提高用户满意度。软件测试不仅有助于提升产品质量，还能增强团队的信心，促进项目的顺利推进。
+
+### 1.2 Jest 的诞生背景与发展历程
+
+Jest 由 Facebook 开发并开源，旨在解决 JavaScript 项目在测试过程中面临的各种挑战。随着 JavaScript 在前端和后端开发中的广泛应用，对高效、易用的测试框架的需求日益增长。Jest 应运而生，它凭借其简洁的语法、强大的功能和良好的性能，迅速在 JavaScript 开发者社区中获得了广泛的认可和使用。自发布以来，Jest 不断更新迭代，添加了许多新特性和功能，逐渐成为 JavaScript 测试领域的主流框架之一。
 
 ---
 
@@ -11166,6 +11396,7 @@ url: /temp/robinson.api.md
 
 import { BigSource } from 'big.js';
 import dayjs from 'dayjs';
+import { default as default_2 } from 'dayjs';
 
 // @beta
 export function addClass(dom: Element, classNm: string): void;
@@ -11204,9 +11435,9 @@ export function copyToClipboard(text: string): void;
 //
 // @beta
 export const createCache: (storage: any, parmas?: ParamsInter) => {
-    "__#9309@#storage": any;
-    "__#9309@#encode": Function;
-    "__#9309@#decode": Function;
+    "__#9089@#storage": any;
+    "__#9089@#encode": Function;
+    "__#9089@#decode": Function;
     setCache(key: string, value: any, expire: number): void;
     getCache(encodeKey: string): any;
     removeCache(key: string): void;
@@ -11223,6 +11454,8 @@ export function debounce(fn: Function, delay: number, isLimmediate?: boolean): F
 
 // @beta
 export function deepClone(originalValue: any): any;
+
+export default default_2;
 
 // @beta
 export function downloadByBase64(buf: string, fileNm: string, suffix: string): void;
@@ -11257,7 +11490,7 @@ export function getAfterDate(date: Tday, option: IOptions): string;
 export function getBeforeDate(date: Tday, option: IOptions): string;
 
 // @beta
-export function getChunkArray(array: Array<any>, size?: number): Array<Array<any>>;
+export function getChunkArray<T>(array: T[], size?: number): T[][];
 
 // @beta
 export function getDiff(start: Tday, end: Tday, unitType: dayjs.OpUnitType, float?: boolean): number;
@@ -11278,6 +11511,9 @@ export function getFileSize(file: File, unit?: string): number;
 export function getFileType(file: File): string | undefined;
 
 // @beta
+export function getGroupArray<T>(array: T[], groupBy: keyof T | ((item: T) => string | number)): T[][];
+
+// @beta
 export function getMimeType(suffix: String): "" | "audio/aac" | "application/x-abiword" | "image/apng" | "application/x-freearc" | "image/avif" | "video/x-msvideo" | "application/vnd.amazon.ebook" | "application/octet-stream" | "image/bmp" | "application/x-bzip" | "application/x-bzip2" | "application/x-cdf" | "application/x-csh" | "text/css" | "text/csv" | "application/msword" | "application/vnd.openxmlformats-officedocument.wordprocessingml.document" | "application/vnd.ms-fontobject" | "application/epub+zip" | "application/gzip" | "image/gif" | "text/html" | "image/x-icon" | "text/calendar" | "application/java-archive" | "image/jpeg" | "text/javascript" | "application/json" | "application/ld+json" | "audio/midi" | "audio/mpeg" | "video/mp4" | "video/mpeg" | "application/vnd.apple.installer+xml" | "application/vnd.oasis.opendocument.presentation" | "application/vnd.oasis.opendocument.spreadsheet" | "application/vnd.oasis.opendocument.text" | "audio/ogg" | "video/ogg" | "application/ogg" | "audio/opus" | "font/otf" | "image/png" | "application/x-httpd-php" | "application/pdf" | "application/vnd.ms-powerpoint" | "application/vnd.openxmlformats-officedocument.presentationml.presentation" | "application/vnd.rar" | "application/rtf" | "application/x-sh" | "image/svg+xml" | "application/x-shockwave-flash" | "application/x-tar" | "image/tiff" | "video/mp2t" | "application/x-font-ttf" | "text/plain" | "application/vnd.visio" | "audio/wav" | "audio/webm" | "video/webm" | "image/webp" | "font/woff" | "font/woff2" | "application/xhtml+xml" | "application/vnd.ms-excel" | "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet" | "application/xml" | "application/vnd.mozilla.xul+xml" | "application/zip" | "video/3gpp" | "video/32" | "application/x-7z-compressed";
 
 // @beta
@@ -11296,10 +11532,16 @@ export function getRelArray(array: Array<any>): Array<any>;
 export function getTimestamp(date: Tday): number;
 
 // @beta
+export function getToggleArray<T>(array: T[], item: T): T[];
+
+// @beta
 export function getUniqueId(): string;
 
 // @beta
-export function hasClass(dom: Element, classNm: String): boolean;
+export function getUniqueValues<T>(array: T[]): T[];
+
+// @beta
+export function hasClass(dom: Element, classNm: string): boolean;
 
 // @beta
 export function hasTypeIn(value: any, types: Array<string>): boolean;

@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 检查变量是否为实数
+检查变量是否为实数
 
 **Signature:**
 
@@ -25,7 +25,7 @@ declare function isDecimal(s: string | number): boolean;
 
 boolean
 
-{<!-- -->boolean<!-- -->} - 检查结果
+- 检查结果
 
 ## Example
 

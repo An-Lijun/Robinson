@@ -175,7 +175,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!addClass:function(1)",
-          "docComment": "/**\n * @description 该函数将一个类添加到 DOM 元素。\n *\n * @param dom - `dom` 参数的类型为 `Element`，表示要添加该类的 DOM 元素。\n *\n * @param classNm - `classNm` 参数是一个字符串，表示要添加到 `dom` 元素的类的名称。\n *\n * @example\n * ```JavaScript\n *    let div= document.createElement('div')\n *    addClass(div,'aa')\n *    div.className => \"aa\"\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数将一个类添加到 DOM 元素。\n *\n * @param dom - `dom` 参数的类型为 `Element`，表示要添加该类的 DOM 元素。\n *\n * @param classNm - `classNm` 参数是一个字符串，表示要添加到 `dom` 元素的类的名称。\n *\n * @example\n * ```JavaScript\n *    let div= document.createElement('div')\n *    addClass(div,'aa')\n *    div.className => \"aa\"\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -207,7 +207,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -237,7 +237,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!addNode:function(1)",
-          "docComment": "/**\n * @description 函数“addNode”将 DOM 元素或字符串插入到父 DOM 元素的指定位置。\n *\n * @param parentDom - `parentDom` 参数是将新节点插入的 DOM 元素。\n *\n * @param dom - “dom”参数可以是“Element”或“String”。它表示需要添加到“parentDom”的元素或 HTML 字符串。\n *\n * @param position - “position”参数是可选的，默认值为“afterbegin”。它指定新节点相对于父节点应插入的位置。 “position。它可以具有以下值之一： beforebegin parentDom元素的前面 afterbegin parentDom元素内部的第一个子节点之前 beforeend parentDom元素内部的最后一个子节点之后 afterend parentDom元素的后面\n *\n * @example\n * ```JavaScript\n *  let parent =document.querySelect('#box');\n *  let newDom =document.createElement('div')\n *  addNode(parent,newDom,'beforeBegin')\n * ---\n *   let parent =document.querySelect('#box');\n *   let str = `<div>123 </div>`\n *   addNode(parent,str,'beforeBegin')\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数“addNode”将 DOM 元素或字符串插入到父 DOM 元素的指定位置。\n *\n * @param parentDom - `parentDom` 参数是将新节点插入的 DOM 元素。\n *\n * @param dom - “dom”参数可以是“Element”或“String”。它表示需要添加到“parentDom”的元素或 HTML 字符串。\n *\n * @param position - “position”参数是可选的，默认值为“afterbegin”。它指定新节点相对于父节点应插入的位置。 “position。它可以具有以下值之一： beforebegin parentDom元素的前面 afterbegin parentDom元素内部的第一个子节点之前 beforeend parentDom元素内部的最后一个子节点之后 afterend parentDom元素的后面\n *\n * @example\n * ```JavaScript\n *  let parent =document.querySelect('#box');\n *  let newDom =document.createElement('div')\n *  addNode(parent,newDom,'beforeBegin')\n * ---\n *   let parent =document.querySelect('#box');\n *   let str = `<div>123 </div>`\n *   addNode(parent,str,'beforeBegin')\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -288,7 +288,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 9,
             "endIndex": 10
@@ -326,7 +326,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!asignData:function(1)",
-          "docComment": "/**\n * @description 函数“asignData”将属性从“obj2”复制到“obj1”，并可选择执行附加函数。\n *\n * @param obj1 - obj1 是第一个将被分配数据的对象。\n *\n * @param obj2 - obj2 是一个对象，其中包含将根据匹配键分配给 obj1 的数据。\n *\n * @returns {DAMNU_ENABLE} - 合并后的对象。\n *\n * @example\n * ```JavaScript\n * let o = {\n *   a: 123,\n * };\n * let b = {\n *   a: 456,\n *   b: 111,\n * };\n * let result = asignData(o, b);\n * // result: { a: 456 }\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数“asignData”将属性从“obj2”复制到“obj1”，并可选择执行附加函数。\n *\n * @param obj1 - obj1 是第一个将被分配数据的对象。\n *\n * @param obj2 - obj2 是一个对象，其中包含将根据匹配键分配给 obj1 的数据。\n *\n * @returns - 合并后的对象。\n *\n * @example\n * ```JavaScript\n * let o = {\n *   a: 123,\n * };\n * let b = {\n *   a: 456,\n *   b: 111,\n * };\n * let result = asignData(o, b);\n * // result: { a: 456 }\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -360,7 +360,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -390,7 +390,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!base64ToBlob:function(1)",
-          "docComment": "/**\n * @description 将Base64编码的字符串转换为Blob对象\n *\n * @param base64 - Base64编码的字符串\n *\n * @returns Blob对象\n *\n * @example\n *\n * const blob = base64ToBlob('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...');\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 将Base64编码的字符串转换为Blob对象\n *\n * @param base64 - Base64编码的字符串\n *\n * @returns Blob对象\n *\n * @example\n *\n * const blob = base64ToBlob('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...');\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -414,7 +414,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -436,7 +436,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!bind:function(1)",
-          "docComment": "/**\n * @description 该函数将事件侦听器绑定到 TypeScript 中的 DOM 元素。\n *\n * @param dom - `dom` 参数是将事件监听器附加到的 DOM 元素。它可以是任何有效的 DOM 元素\n *\n * @param eventType - eventType 参数是一个字符串，指定要侦听的事件类型。事件类型的示例包括“单击”、“按下键”、“鼠标悬停”等。\n *\n * @param callBack - `callBack` 参数是当 DOM 元素上发生指定事件时将执行的函数。它可以是实现EventListener 或 EventListenerObject 接口的函数或对象。\n *\n * @param isCatch - isCatch 参数是一个布尔值，用于确定事件监听器在处理事件时是否应使用捕获阶段（true）或冒泡阶段（false）。默认情况下，它设置为“false”，这意味着事件侦听器将使用冒泡阶段。\n *\n * @example\n * ```JavaScript\n *    let btn =document.querySelect('button');\n *    bind(btn,'clic',()=>{\n *      console.log('123')\n *    })\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数将事件侦听器绑定到 TypeScript 中的 DOM 元素。\n *\n * @param dom - `dom` 参数是将事件监听器附加到的 DOM 元素。它可以是任何有效的 DOM 元素\n *\n * @param eventType - eventType 参数是一个字符串，指定要侦听的事件类型。事件类型的示例包括“单击”、“按下键”、“鼠标悬停”等。\n *\n * @param callBack - `callBack` 参数是当 DOM 元素上发生指定事件时将执行的函数。它可以是实现EventListener 或 EventListenerObject 接口的函数或对象。\n *\n * @param isCatch - isCatch 参数是一个布尔值，用于确定事件监听器在处理事件时是否应使用捕获阶段（true）或冒泡阶段（false）。默认情况下，它设置为“false”，这意味着事件侦听器将使用冒泡阶段。\n *\n * @example\n * ```JavaScript\n *    let btn = document.querySelector('button');\n *    bind(btn, 'click', () => {\n *      console.log('123');\n *    });\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -485,7 +485,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 9,
             "endIndex": 10
@@ -531,7 +531,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!blobToBase64:function(1)",
-          "docComment": "/**\n * @description 将Blob对象转换为Base64编码的字符串\n *\n * @param blob - Blob对象\n *\n * @param suffix - 文件后缀，默认为'png'\n *\n * @returns Promise对象，解析为Base64编码的字符串\n *\n * @example\n *\n * blobToBase64(new Blob(['Hello, world!'], { type: 'text/plain' })) .then(base64 => console.log(base64));\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 将Blob对象转换为Base64编码的字符串\n *\n * @param blob - Blob对象\n *\n * @param suffix - 文件后缀，默认为'png'\n *\n * @returns Promise对象，解析为Base64编码的字符串\n *\n * @example\n *\n * blobToBase64(new Blob(['Hello, world!'], { type: 'text/plain' })) .then(base64 => console.log(base64));\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -568,7 +568,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 7
@@ -598,7 +598,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!calc:function(1)",
-          "docComment": "/**\n * @description 数值计算\n *\n * @param number1 - 第一个数字。\n *\n * @param number2 - 第二个数字。\n *\n * @param operate - 操作符，默认为 '+'。\n *\n * @returns {number} - 计算结果。\n *\n * @example\n * ```javascript\n * calc(0.1, 0.2);// 返回 0.3\n * calc(0.1, 0.2, '-');// 返回 -0.1\n * calc(0.1, 0.2, '*');// 返回 0.02\n * calc(0.1, 0.2, '/');// 返回 0.5\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 数值计算\n *\n * @param number1 - 第一个数字。\n *\n * @param number2 - 第二个数字。\n *\n * @param operate - 操作符，默认为 '+'。\n *\n * @returns - 计算结果。\n *\n * @example\n * ```javascript\n * calc(0.1, 0.2);// 返回 0.3\n * calc(0.1, 0.2, '-');// 返回 -0.1\n * calc(0.1, 0.2, '*');// 返回 0.02\n * calc(0.1, 0.2, '/');// 返回 0.5\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -640,7 +640,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/math/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/math/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -678,7 +678,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!compose:function(1)",
-          "docComment": "/**\n * @description 组合函数，将多个函数从右到左依次调用。\n *\n * @param fns - 要组合的函数。\n *\n * @returns {Function} - 返回一个组合后的函数。\n *\n * @example\n * ```JavaScript\n * const addOne = x => x + 1;\n * const double = x => x * 2;\n * const composed = compose(double, addOne);\n * composed(2);// 返回 6\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 组合函数，将多个函数从右到左依次调用。\n *\n * @param fns - 要组合的函数。\n *\n * @returns - 返回一个组合后的函数。\n *\n * @example\n * ```JavaScript\n * const addOne = x => x + 1;\n * const double = x => x * 2;\n * const composed = compose(double, addOne);\n * composed(2);// 返回 6\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -716,7 +716,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 6,
             "endIndex": 7
@@ -738,7 +738,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!copyToClipboard:function(1)",
-          "docComment": "/**\n * @description 将文本复制到剪贴板。\n *\n * @param text - 要复制到剪贴板的文本内容。\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 将文本复制到剪贴板。\n *\n * @param text - 要复制到剪贴板的文本内容。\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -761,7 +761,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/other.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/other.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -783,7 +783,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!createCache:function(1)",
-          "docComment": "/**\n * @description createCache 函数创建一个缓存对象，该对象可以使用指定的存储机制和编码/解码函数来存储和检索数据。\n *\n * @param storage - `storage` 参数是一个可选参数，它指定用于缓存的存储机制。它可以是实现与 localStorage 对象相同接口的任何对象，例如 sessionStorage 或自定义存储实现。如果没有提供存储对象，则`localStorage`\n *\n * @param parmas - “parmas”参数是一个包含两个属性的对象：“encode”和“decode”。这些属性是用于在将值存储到缓存之前对值进行编码和解码的函数。 这些函数的默认值是恒等函数，这意味着它们不执行任何编码或解码。\n *\n * @returns 函数“createCache”返回“Cache”类的实例。 setCache(key:String,value:Any,expire:超时时间) 设置单个缓存 return undefined getCache(key:String) 根据传入key获取单个缓存 return undefined removeCache(key:String)根据传入KEY删除单个缓存 return undefined has(key:String) 根据传入key 判断是否已经有这个数据了 return Boolean length(), return 缓存总条数 clear() 清空缓存\n *\n * @beta\n */\n",
+          "docComment": "/**\n * createCache 函数创建一个缓存对象，该对象可以使用指定的存储机制和编码/解码函数来存储和检索数据。\n *\n * @param storage - `storage` 参数是一个可选参数，它指定用于缓存的存储机制。它可以是实现与 localStorage 对象相同接口的任何对象，例如 sessionStorage 或自定义存储实现。如果没有提供存储对象，则`localStorage`\n *\n * @param parmas - \"parmas\"参数是一个包含两个属性的对象：\"encode\"和\"decode\"。这些属性是用于在将值存储到缓存之前对值进行编码和解码的函数。 这些函数的默认值是恒等函数，这意味着它们不执行任何编码或解码。\n *\n * @returns 函数\"createCache\"返回\"Cache\"类的实例。 setCache(key:String,value:Any,expire:超时时间) 设置单个缓存 return undefined getCache(key:String) 根据传入key获取单个缓存 return undefined removeCache(key:String)根据传入KEY删除单个缓存 return undefined has(key:String) 根据传入key 判断是否已经有这个数据了 return Boolean length(), return 缓存总条数 clear() 清空缓存\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -808,7 +808,7 @@
             },
             {
               "kind": "Content",
-              "text": "{\n    \"__#9309@#storage\": any;\n    \"__#9309@#encode\": "
+              "text": "{\n    \"__#9089@#storage\": any;\n    \"__#9089@#encode\": "
             },
             {
               "kind": "Reference",
@@ -817,7 +817,7 @@
             },
             {
               "kind": "Content",
-              "text": ";\n    \"__#9309@#decode\": "
+              "text": ";\n    \"__#9089@#decode\": "
             },
             {
               "kind": "Reference",
@@ -829,7 +829,7 @@
               "text": ";\n    setCache(key: string, value: any, expire: number): void;\n    getCache(encodeKey: string): any;\n    removeCache(key: string): void;\n    has(key: string): boolean;\n    length(): any;\n    clear(): void;\n}"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/cache.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/cache.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 10
@@ -859,7 +859,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!currying:function(1)",
-          "docComment": "/**\n * @description 柯里化函数接受一个函数作为输入并返回一个新函数，该函数可以使用多个参数或以柯里化方式调用。\n *\n * @param fn - 参数“fn”是我们要应用柯里化的函数。\n *\n * @returns {Function} - 正在返回柯里化函数。\n *\n * @example\n * ```JavaScript\n * const add = (a, b) => a + b;\n * const curriedAdd = currying(add);\n * curriedAdd(2)(3);// 返回 5\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 柯里化函数接受一个函数作为输入并返回一个新函数，该函数可以使用多个参数或以柯里化方式调用。\n *\n * @param fn - 参数“fn”是我们要应用柯里化的函数。\n *\n * @returns - 正在返回柯里化函数。\n *\n * @example\n * ```JavaScript\n * const add = (a, b) => a + b;\n * const curriedAdd = currying(add);\n * curriedAdd(2)(3);// 返回 5\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -884,7 +884,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -906,7 +906,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!debounce:function(1)",
-          "docComment": "/**\n * @description 防抖函数，限制函数调用的频率。\n *\n * @param fn - “fn”参数是您想要限制的函数。\n *\n * @param delay - “delay”参数是函数调用之间的最小时间间隔（以毫秒为单位）。\n *\n * @param isLimmediate - “isLimmediate”参数决定该函数是在调用时立即执行还是等待指定的“delay”时间过去后才第一次执行该函数。\n *\n * @returns {Function} - 返回一个防抖函数。\n *\n * @example\n * ```JavaScript\n * const log = () => console.log('Logged');\n * const debouncedLog = debounce(log, 1000, true);\n * debouncedLog(); // 立即执行\n * debouncedLog(); // 1秒内再次调用不会执行\n * debouncedLog.cancel(); // 取消执行\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 防抖函数，限制函数调用的频率。\n *\n * @param fn - “fn”参数是您想要限制的函数。\n *\n * @param delay - “delay”参数是函数调用之间的最小时间间隔（以毫秒为单位）。\n *\n * @param isLimmediate - “isLimmediate”参数决定该函数是在调用时立即执行还是等待指定的“delay”时间过去后才第一次执行该函数。\n *\n * @returns - 返回一个防抖函数。\n *\n * @example\n * ```JavaScript\n * const log = () => console.log('Logged');\n * const debouncedLog = debounce(log, 1000, true);\n * debouncedLog(); // 立即执行\n * debouncedLog(); // 1秒内再次调用不会执行\n * debouncedLog.cancel(); // 取消执行\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -947,7 +947,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -985,7 +985,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!deepClone:function(1)",
-          "docComment": "/**\n * @description “deepClone”函数用于创建对象或数组的深层副本，包括处理复杂类型，例如集合、映射和符号。\n *\n * @param originalValue - OriginalValue 参数是您要深度克隆的值。它可以是任何数据类型，包括对象、数组、集合、映射、函数以及字符串或数字等简单值。\n *\n * @returns {any} - 函数“deepClone”返回“originalValue”参数的深度克隆。\n *\n * @example\n * ```JavaScript\n *    let data = {\n *      a: [1, 2]\n *    };\n *    let cloneData = deepClone(data);\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * “deepClone”函数用于创建对象或数组的深层副本，包括处理复杂类型，例如集合、映射和符号。\n *\n * @param originalValue - OriginalValue 参数是您要深度克隆的值。它可以是任何数据类型，包括对象、数组、集合、映射、函数以及字符串或数字等简单值。\n *\n * @returns - 函数“deepClone”返回“originalValue”参数的深度克隆。\n *\n * @example\n * ```JavaScript\n *    let data = {\n *      a: [1, 2]\n *    };\n *    let cloneData = deepClone(data);\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1008,7 +1008,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -1030,7 +1030,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!downloadByBase64:function(1)",
-          "docComment": "/**\n * @description 通过Base64编码的字符串下载文件\n *\n * @param buf - Base64编码的字符串\n *\n * @param fileNm - 下载后的文件名\n *\n * @param suffix - 下载后的文件后缀\n *\n * @example\n *\n * downloadByBase64('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...', 'example.png', 'png');\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 通过Base64编码的字符串下载文件\n *\n * @param buf - Base64编码的字符串\n *\n * @param fileNm - 下载后的文件名\n *\n * @param suffix - 下载后的文件后缀\n *\n * @example\n *\n * downloadByBase64('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...', 'example.png', 'png');\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1069,7 +1069,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -1107,7 +1107,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!downloadByBlob:function(1)",
-          "docComment": "/**\n * @description 通过Blob对象下载文件\n *\n * @param blob - Blob文件流\n *\n * @param fileNm - 下载后的文件名\n *\n * @param suffix - 下载后的文件类型，默认为'txt'\n *\n * @example\n *\n * downloadByBlob(new Blob(['Hello, world!'], { type: 'text/plain' }), 'example.txt');\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 通过Blob对象下载文件\n *\n * @param blob - Blob文件流\n *\n * @param fileNm - 下载后的文件名\n *\n * @param suffix - 下载后的文件类型，默认为'txt'\n *\n * @example\n *\n * downloadByBlob(new Blob(['Hello, world!'], { type: 'text/plain' }), 'example.txt');\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1147,7 +1147,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -1185,7 +1185,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!downloadByUrl:function(1)",
-          "docComment": "/**\n * @description 通过URL下载图片到本地\n *\n * @param url - 图片路径\n *\n * @param filename - 下载后的文件名\n *\n * @param type - 下载后的文件类型\n *\n * @example\n *\n * downloadByUrl('https://example.com/image.png', 'example.png');\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 通过URL下载图片到本地\n *\n * @param url - 图片路径\n *\n * @param filename - 下载后的文件名\n *\n * @param type - 下载后的文件类型\n *\n * @example\n *\n * downloadByUrl('https://example.com/image.png', 'example.png');\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1224,7 +1224,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -1262,14 +1262,14 @@
         {
           "kind": "Class",
           "canonicalReference": "robinson!EventBus:class",
-          "docComment": "/**\n * @description 函数“on”将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。\n *\n * @param eventName - 表示事件的名称的字符串。\n *\n * @param eventFn - 当指定事件发生时将执行的函数。\n *\n * @example\n *\n * const eventBus = new EventBus(); eventBus.on('myEvent', () => { console.log('myEvent triggered'); });\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数\"on\"将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。\n *\n * @param eventName - 表示事件的名称的字符串。\n *\n * @param eventFn - 当指定事件发生时将执行的函数。\n *\n * @example\n *\n * const eventBus = new EventBus(); eventBus.on('myEvent', () => { console.log('myEvent triggered'); });\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
               "text": "declare class EventBus "
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/eventBus.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/eventBus.d.ts",
           "releaseTag": "Beta",
           "isAbstract": false,
           "name": "EventBus",
@@ -1341,7 +1341,7 @@
             {
               "kind": "Method",
               "canonicalReference": "robinson!EventBus#emit:member(1)",
-              "docComment": "/**\n * “emit”函数触发与特定事件名称关联的所有事件处理程序，并将任何参数传递给它们。\n *\n * @param eventName - 表示要发出的事件名称的字符串。\n *\n * @param Args - Args 是一个剩余参数，允许将无限数量的参数传递给 emit 函数。这些参数可以是任何类型。\n */\n",
+              "docComment": "/**\n * \"emit\"函数触发与特定事件名称关联的所有事件处理程序，并将任何参数传递给它们。\n *\n * @param eventName - 表示要发出的事件名称的字符串。\n *\n * @param Args - Args 是一个剩余参数，允许将无限数量的参数传递给 emit 函数。这些参数可以是任何类型。\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -1470,7 +1470,7 @@
             {
               "kind": "Method",
               "canonicalReference": "robinson!EventBus#on:member(1)",
-              "docComment": "/**\n * 函数“on”将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。\n *\n * @param eventName - eventName 是一个字符串参数，表示事件的名称。它用于标识eventObj对象中的事件。\n *\n * @param eventFn - eventFn 参数是当指定事件发生时将执行的函数。\n */\n",
+              "docComment": "/**\n * 函数\"on\"将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。\n *\n * @param eventName - eventName 是一个字符串参数，表示事件的名称。它用于标识eventObj对象中的事件。\n *\n * @param eventFn - eventFn 参数是当指定事件发生时将执行的函数。\n */\n",
               "excerptTokens": [
                 {
                   "kind": "Content",
@@ -1538,7 +1538,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!formatDate:function(1)",
-          "docComment": "/**\n * @description 格式化时间。\n *\n * @param date - 输入的日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @param pattern - 格式化模式，默认为 'YYYY-MM-DD'。\n *\n * @returns {string} - 返回格式化后的时间字符串。\n *\n * @example\n * ```javascript\n * formatDate(dayjs('2024-03-01 08:00:00'), 'YYYY年MM月DD日') // '2024年03月01日'\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 格式化时间。\n *\n * @param date - 输入的日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @param pattern - 格式化模式，默认为 'YYYY-MM-DD'。\n *\n * @returns - 返回格式化后的时间字符串。\n *\n * @example\n * ```javascript\n * formatDate(dayjs('2024-03-01 08:00:00'), 'YYYY年MM月DD日') // '2024年03月01日'\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1570,7 +1570,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -1600,7 +1600,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!getAfterDate:function(1)",
-          "docComment": "/**\n * @description 计算给定日期之后的日期，并返回格式化后的结果。\n *\n * @param date - 起始日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @param option - 操作选项。\n *\n * @returns {string} - 返回格式化后的日期字符串。\n *\n * @example\n * ```javascript\n * getAfterDate(dayjs('2024-03-02 08:00:00'), { pattern: 'YYYY年MM月DD日' }) // '2024年03月03日'\n * getAfterDate(dayjs('2024-03-02 08:00:00'),\n * { unitType: 'M', pattern: 'YYYY年MM月DD日' }) // '2024年04月02日'\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 计算给定日期之后的日期，并返回格式化后的结果。\n *\n * @param date - 起始日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @param option - 操作选项。\n *\n * @returns - 返回格式化后的日期字符串。\n *\n * @example\n * ```javascript\n * getAfterDate(dayjs('2024-03-02 08:00:00'), { pattern: 'YYYY年MM月DD日' }) // '2024年03月03日'\n * getAfterDate(dayjs('2024-03-02 08:00:00'),\n * { unitType: 'M', pattern: 'YYYY年MM月DD日' }) // '2024年04月02日'\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1633,7 +1633,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -1663,7 +1663,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!getBeforeDate:function(1)",
-          "docComment": "/**\n * @description 计算给定日期之前的日期，并返回格式化后的结果。\n *\n * @param date - 起始日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @param option - 操作选项。\n *\n * @returns {string} - 返回格式化后的日期字符串。\n *\n * @example\n * ```javascript\n * getBeforeDate(dayjs('2024-03-02 08:00:00'), { pattern: 'YYYY年MM月DD日' }) // '2024年03月01日'\n * getBeforeDate(dayjs('2024-03-02 08:00:00'),\n * { unitType: 'M', pattern: 'YYYY年MM月DD日' }) // '2024年02月02日'\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 计算给定日期之前的日期，并返回格式化后的结果。\n *\n * @param date - 起始日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @param option - 操作选项。\n *\n * @returns - 返回格式化后的日期字符串。\n *\n * @example\n * ```javascript\n * getBeforeDate(dayjs('2024-03-02 08:00:00'), { pattern: 'YYYY年MM月DD日' }) // '2024年03月01日'\n * getBeforeDate(dayjs('2024-03-02 08:00:00'),\n * { unitType: 'M', pattern: 'YYYY年MM月DD日' }) // '2024年02月02日'\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1696,7 +1696,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -1726,20 +1726,15 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!getChunkArray:function(1)",
-          "docComment": "/**\n * @description `chunkArray` 函数接受一个数组和一个大小参数，并返回一个新数组，其中原始数组被分割成指定大小的较小数组。\n *\n * @param  - {Array} - `array` 参数是任何类型的数组。它是需要被分成更小的数组的数组。\n *\n * @param size - “size”参数指定数组每个块中应包含的元素数量。默认情况下，它设置为 1，这意味着每个元素将位于其自己的单独块中。\n *\n * @returns {[Array]} 数组的数组。每个内部数组都包含原始数组中的一块元素。每个块的大小由“size”参数确定。\n *\n * @example\n * ```JavaScript\n * let a=[1,2,3,4,5,6]\n *  getChunkArray(a,2) // [[1,2],[3,4],[5,6]]\n * let a=[1,2,3,4,5,6]\n *  getChunkArray(a,3) // [[1,2,3],[4,5,6]]\n * let a={}\n *  getChunkArray(a,3) // params is not a array\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * `chunkArray` 函数接受一个数组和一个大小参数，并返回一个新数组，其中原始数组被分割成指定大小的较小数组。\n *\n * @param array - `array` 参数是任何类型的数组。它是需要被分成更小的数组的数组。\n *\n * @param size - \"size\"参数指定数组每个块中应包含的元素数量。默认情况下，它设置为 1，这意味着每个元素将位于其自己的单独块中。\n *\n * @returns 数组的数组。每个内部数组都包含原始数组中的一块元素。每个块的大小由\"size\"参数确定。\n *\n * @example\n * ```JavaScript\n * let a=[1,2,3,4,5,6]\n *  getChunkArray(a,2) // [[1,2],[3,4],[5,6]]\n * let a=[1,2,3,4,5,6]\n *  getChunkArray(a,3) // [[1,2,3],[4,5,6]]\n * let a={}\n *  getChunkArray(a,3) // params is not a array\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
-              "text": "declare function getChunkArray(array: "
-            },
-            {
-              "kind": "Reference",
-              "text": "Array",
-              "canonicalReference": "!Array:interface"
+              "text": "declare function getChunkArray<T>(array: "
             },
             {
               "kind": "Content",
-              "text": "<any>"
+              "text": "T[]"
             },
             {
               "kind": "Content",
@@ -1754,32 +1749,18 @@
               "text": "): "
             },
             {
-              "kind": "Reference",
-              "text": "Array",
-              "canonicalReference": "!Array:interface"
-            },
-            {
               "kind": "Content",
-              "text": "<"
-            },
-            {
-              "kind": "Reference",
-              "text": "Array",
-              "canonicalReference": "!Array:interface"
-            },
-            {
-              "kind": "Content",
-              "text": "<any>>"
+              "text": "T[][]"
             },
             {
               "kind": "Content",
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/array/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/array/src/index.d.ts",
           "returnTypeTokenRange": {
-            "startIndex": 6,
-            "endIndex": 10
+            "startIndex": 5,
+            "endIndex": 6
           },
           "releaseTag": "Beta",
           "overloadIndex": 1,
@@ -1788,17 +1769,30 @@
               "parameterName": "array",
               "parameterTypeTokenRange": {
                 "startIndex": 1,
-                "endIndex": 3
+                "endIndex": 2
               },
               "isOptional": false
             },
             {
               "parameterName": "size",
               "parameterTypeTokenRange": {
-                "startIndex": 4,
-                "endIndex": 5
+                "startIndex": 3,
+                "endIndex": 4
               },
               "isOptional": true
+            }
+          ],
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
             }
           ],
           "name": "getChunkArray"
@@ -1806,7 +1800,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!getDiff:function(1)",
-          "docComment": "/**\n * @description 计算两个日期之间的差值。\n *\n * @param start - 开始日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @param end - 结束日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @param unitType - 时间单位类型。\n *\n * @param float - 是否返回浮点数，默认为 false。\n *\n * @returns {number} - 返回两个日期之间的差值。\n *\n * @example\n * ```javascript\n * getDiff(dayjs('2024-03-02 08:00:00'), dayjs('2024-03-03 08:00:00'), 'd') // 1\n * getDiff(dayjs('2024-03-02 08:00:00'), dayjs('2024-04-03 08:00:00'), 'd') // 32\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 计算两个日期之间的差值。\n *\n * @param start - 开始日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @param end - 结束日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @param unitType - 时间单位类型。\n *\n * @param float - 是否返回浮点数，默认为 false。\n *\n * @returns - 返回两个日期之间的差值。\n *\n * @example\n * ```javascript\n * getDiff(dayjs('2024-03-02 08:00:00'), dayjs('2024-03-03 08:00:00'), 'd') // 1\n * getDiff(dayjs('2024-03-02 08:00:00'), dayjs('2024-04-03 08:00:00'), 'd') // 32\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1856,7 +1850,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 9,
             "endIndex": 10
@@ -1902,7 +1896,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!getEtc:function(1)",
-          "docComment": "/**\n * @description 函数“getEtc”接受一个字符串值并返回指定长度的子字符串，并在末尾附加一个可选的“etcStr”。\n *\n * @param value - value 参数是一个字符串，表示需要截断的输入值。\n *\n * @param len - “len”参数是要从“value”参数中提取的字符串的长度。\n *\n * @param etcStr - `etcStr` 参数是一个字符串，表示如果长度超过指定的 `len` 参数，则要在切片字符串末尾附加的字符。默认情况下，它设置为“...”。\n *\n * @returns {string} - 一个字符串。\n *\n * @example\n * ```JavaScript\n *  let str = '123456'; getEtc(str, 3) // '123...'\n *  let str = '123456'; getEtc(str, 3, 'etc') // '123etc'\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数“getEtc”接受一个字符串值并返回指定长度的子字符串，并在末尾附加一个可选的“etcStr”。\n *\n * @param value - value 参数是一个字符串，表示需要截断的输入值。\n *\n * @param len - “len”参数是要从“value”参数中提取的字符串的长度。\n *\n * @param etcStr - `etcStr` 参数是一个字符串，表示如果长度超过指定的 `len` 参数，则要在切片字符串末尾附加的字符。默认情况下，它设置为“...”。\n *\n * @returns - 一个字符串。\n *\n * @example\n * ```JavaScript\n *  let str = '123456'; getEtc(str, 3) // '123...'\n *  let str = '123456'; getEtc(str, 3, 'etc') // '123etc'\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -1941,7 +1935,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -1979,7 +1973,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!getFileChunk:function(1)",
-          "docComment": "/**\n * @description 生成文件切片数组\n *\n * @param file - 文件对象\n *\n * @param chunkSize - 每个切片的大小（字节），默认为1MB\n *\n * @returns 切片数组，每个元素包含索引和Blob对象\n *\n * @example\n *\n * getFileChunk(fileInput.files[0], 1024 * 1024).forEach(chunk => console.log(chunk));\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 生成文件切片数组\n *\n * @param file - 文件对象\n *\n * @param chunkSize - 每个切片的大小（字节），默认为1MB\n *\n * @returns 切片数组，每个元素包含索引和Blob对象\n *\n * @example\n *\n * getFileChunk(fileInput.files[0], 1024 * 1024).forEach(chunk => console.log(chunk));\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2025,7 +2019,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 9
@@ -2055,7 +2049,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!getFileSize:function(1)",
-          "docComment": "/**\n * @description 获取文件大小\n *\n * @param file - 源文件\n *\n * @param unit - 单位（'b', 'kb', 'm', 'g'），默认为'b'\n *\n * @returns 文件大小（指定单位）\n *\n * @example\n *\n * getFileSize(fileInput.files[0], 'kb'); // 返回文件大小（KB）\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 获取文件大小\n *\n * @param file - 源文件\n *\n * @param unit - 单位（'b', 'kb', 'm', 'g'），默认为'b'\n *\n * @returns 文件大小（指定单位）\n *\n * @example\n *\n * getFileSize(fileInput.files[0], 'kb'); // 返回文件大小（KB）\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2087,7 +2081,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -2117,7 +2111,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!getFileType:function(1)",
-          "docComment": "/**\n * @description 获取文件后缀名\n *\n * @param file - 源文件\n *\n * @returns 文件后缀名\n *\n * @example\n *\n * getFileType(fileInput.files[0]); // 返回文件后缀名（如 'jpg'）\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 获取文件后缀名\n *\n * @param file - 源文件\n *\n * @returns 文件后缀名\n *\n * @example\n *\n * getFileType(fileInput.files[0]); // 返回文件后缀名（如 'jpg'）\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2141,7 +2135,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -2162,8 +2156,82 @@
         },
         {
           "kind": "Function",
+          "canonicalReference": "robinson!getGroupArray:function(1)",
+          "docComment": "/**\n * 根据指定的键或条件将数组元素分组\n *\n * @param array - 原数组\n *\n * @param groupBy - 分组键或分组函数\n *\n * @returns 分组后的二维数组，每个子数组代表一个分组\n *\n * @example\n * ```JavaScript\n * // 根据属性分组\n * getGroupArray([{age: 20, name: 'a'}, {age: 20, name: 'b'}, {age: 30, name: 'c'}], 'age');\n * // => [[{age: 20, name: 'a'}, {age: 20, name: 'b'}], [{age: 30, name: 'c'}]]\n *\n * // 根据条件分组\n * getGroupArray([1, 2, 3, 4, 5], num => num % 2 === 0 ? 'even' : 'odd');\n * // => [[1, 3, 5], [2, 4]]\n * ```\n *\n * @beta\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare function getGroupArray<T>(array: "
+            },
+            {
+              "kind": "Content",
+              "text": "T[]"
+            },
+            {
+              "kind": "Content",
+              "text": ", groupBy: "
+            },
+            {
+              "kind": "Content",
+              "text": "keyof T | ((item: T) => string | number)"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "T[][]"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dist/esm/types/core/array/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 6
+          },
+          "releaseTag": "Beta",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "array",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "groupBy",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": false
+            }
+          ],
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "getGroupArray"
+        },
+        {
+          "kind": "Function",
           "canonicalReference": "robinson!getMimeType:function(1)",
-          "docComment": "/**\n * @description 获取文件的MIME类型\n *\n * @param suffix - 文件扩展名\n *\n * @returns 对应的MIME类型字符串\n *\n * @example\n *\n * getMimeType('jpg'); // 返回 'image/jpeg' getMimeType('docx'); //返回'application/vnd.openxmlformats-officedocument.wordprocessingml.document'\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 获取文件的MIME类型\n *\n * @param suffix - 文件扩展名\n *\n * @returns 对应的MIME类型字符串\n *\n * @example\n *\n * getMimeType('jpg'); // 返回 'image/jpeg' getMimeType('docx'); //返回'application/vnd.openxmlformats-officedocument.wordprocessingml.document'\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2187,7 +2255,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -2209,7 +2277,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!getNode:function(1)",
-          "docComment": "/**\n * @description 函数 getNode 将 DOM 元素名称作为输入，如果找到则返回相应的元素，否则返回 null。\n *\n * @param domName - `domName` 参数是一个字符串，表示您要选择的 DOM 元素的名称。\n *\n * @returns Element 对象或 null。\n *\n * @example\n * ```JavaScript\n *    getNode('#id') ===document.querySelector('#id');\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数 getNode 将 DOM 元素名称作为输入，如果找到则返回相应的元素，否则返回 null。\n *\n * @param domName - `domName` 参数是一个字符串，表示您要选择的 DOM 元素的名称。\n *\n * @returns Element 对象或 null。\n *\n * @example\n * ```JavaScript\n *    getNode('#id') ===document.querySelector('#id');\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2237,7 +2305,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 5
@@ -2259,7 +2327,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!getNodes:function(1)",
-          "docComment": "/**\n * @description 函数“getNodes”返回与给定选择器匹配的 DOM 节点的 NodeList，如果未找到节点，则返回 null。\n *\n * @param domName - `domName` 参数是一个字符串，表示您要选择的 DOM 元素的名称。\n *\n * @returns NodeList 或 null。\n *\n * @example\n * ```JavaScript\n *    let lis =getNodes('li') === document.querySelectorAll('li')\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数“getNodes”返回与给定选择器匹配的 DOM 节点的 NodeList，如果未找到节点，则返回 null。\n *\n * @param domName - `domName` 参数是一个字符串，表示您要选择的 DOM 元素的名称。\n *\n * @returns NodeList 或 null。\n *\n * @example\n * ```JavaScript\n *    let lis =getNodes('li') === document.querySelectorAll('li')\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2287,7 +2355,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 5
@@ -2309,7 +2377,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!getRandom:function(1)",
-          "docComment": "/**\n * @description 函数 getRandom 生成指定范围内具有指定小数位数的随机数。\n *\n * @param min - 随机数范围的最小值。\n *\n * @param max - “max”参数表示您要生成的最大值。\n *\n * @param point - “point”参数是一个可选参数，它指定将随机数舍入到的小数位数。如果没有为“point”提供值，则随机数将以整数形式返回。\n *\n * @returns {number} - 指定最小值和最大值之间的随机数，具有指定的小数位数。\n *\n * @example\n * ```JavaScript\n *    getRandom(1, 5) // 1~5 包含1,5\n *    getRandom(1, 5, 1) // 1.0~5 包含 1 5\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数 getRandom 生成指定范围内具有指定小数位数的随机数。\n *\n * @param min - 随机数范围的最小值。\n *\n * @param max - “max”参数表示您要生成的最大值。\n *\n * @param point - “point”参数是一个可选参数，它指定将随机数舍入到的小数位数。如果没有为“point”提供值，则随机数将以整数形式返回。\n *\n * @returns - 指定最小值和最大值之间的随机数，具有指定的小数位数。\n *\n * @example\n * ```JavaScript\n *    getRandom(1, 5) // 1~5 包含1,5\n *    getRandom(1, 5, 1) // 1.0~5 包含 1 5\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2348,7 +2416,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/number/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/number/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -2386,7 +2454,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!getRelArray:function(1)",
-          "docComment": "/**\n * @description 函数“getRelArray”接受一个数组作为输入，并返回一个包含所有非空元素的新数组。\n *\n * @param array - 参数“array”是任意类型的数组。\n *\n * @returns {Array} 过滤掉空数据的新数组。\n *\n * @example\n * ```JavaScript\n *    let arr =[1,2,3,null,undefined,4,[],{},NaN];\n *    getRelArray(arr) // [1,2,3,4]\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数“getRelArray”接受一个数组作为输入，并返回一个包含所有非空元素的新数组。\n *\n * @param array - 参数“array”是任意类型的数组。\n *\n * @returns 过滤掉空数据的新数组。\n *\n * @example\n * ```JavaScript\n *    let arr =[1,2,3,null,undefined,4,[],{},NaN];\n *    getRelArray(arr) // [1,2,3,4]\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2419,7 +2487,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/array/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/array/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 4,
             "endIndex": 6
@@ -2441,7 +2509,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!getTimestamp:function(1)",
-          "docComment": "/**\n * @description 获取当前日期的时间戳。\n *\n * @param date - 输入的日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @returns {number} - 返回时间戳（毫秒数）。\n *\n * @example\n * ```javascript\n * getTimestamp(dayjs('2024-03-01 08:00:00')) // 1709251200000\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 获取当前日期的时间戳。\n *\n * @param date - 输入的日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @returns - 返回时间戳（毫秒数）。\n *\n * @example\n * ```javascript\n * getTimestamp(dayjs('2024-03-01 08:00:00')) // 1709251200000\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2465,7 +2533,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -2486,8 +2554,82 @@
         },
         {
           "kind": "Function",
+          "canonicalReference": "robinson!getToggleArray:function(1)",
+          "docComment": "/**\n * 函数 `getToggleArray` 接受一个数组和一个项目， 如果数组包含该项目则移除它，如果不包含则添加它，返回处理后的新数组。\n *\n * @param array - 要处理的数组\n *\n * @param item - 要切换的项目\n *\n * @returns 处理后的新数组\n *\n * @example\n * ```JavaScript\n * let arr = [1, 2, 3];\n * getToggleArray(arr, 4); // [1, 2, 3, 4]\n * getToggleArray(arr, 2); // [1, 3]\n * ```\n *\n * @beta\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare function getToggleArray<T>(array: "
+            },
+            {
+              "kind": "Content",
+              "text": "T[]"
+            },
+            {
+              "kind": "Content",
+              "text": ", item: "
+            },
+            {
+              "kind": "Content",
+              "text": "T"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "T[]"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dist/esm/types/core/array/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 5,
+            "endIndex": 6
+          },
+          "releaseTag": "Beta",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "array",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            },
+            {
+              "parameterName": "item",
+              "parameterTypeTokenRange": {
+                "startIndex": 3,
+                "endIndex": 4
+              },
+              "isOptional": false
+            }
+          ],
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "getToggleArray"
+        },
+        {
+          "kind": "Function",
           "canonicalReference": "robinson!getUniqueId:function(1)",
-          "docComment": "/**\n * @description 该函数使用随机字符串模式生成唯一 ID。\n *\n * @returns {string} - 函数“getUniqueId”返回格式为“xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx”的唯一标识符字符串。\n *\n * @example\n * ```JavaScript\n *  getUniqueId() // '627ad809-60fc-47b1-be5d-e0ae1ef903ca'\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数使用随机字符串模式生成唯一 ID。\n *\n * @returns - 函数“getUniqueId”返回格式为“xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx”的唯一标识符字符串。\n *\n * @example\n * ```JavaScript\n *  getUniqueId() // '627ad809-60fc-47b1-be5d-e0ae1ef903ca'\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2502,7 +2644,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 1,
             "endIndex": 2
@@ -2514,8 +2656,66 @@
         },
         {
           "kind": "Function",
+          "canonicalReference": "robinson!getUniqueValues:function(1)",
+          "docComment": "/**\n * 从数组中提取唯一值（去重）\n *\n * @param array - 原数组\n *\n * @returns 去重后的新数组\n *\n * @example\n * ```JavaScript\n * getUniqueValues([1, 2, 2, 3, 3, 3]); // [1, 2, 3]\n * getUniqueValues(['a', 'b', 'a', 'c']); // ['a', 'b', 'c']\n * getUniqueValues([{id:1}, {id:2}, {id:1}]); // [{id:1}, {id:2}]\n * ```\n *\n * @beta\n */\n",
+          "excerptTokens": [
+            {
+              "kind": "Content",
+              "text": "declare function getUniqueValues<T>(array: "
+            },
+            {
+              "kind": "Content",
+              "text": "T[]"
+            },
+            {
+              "kind": "Content",
+              "text": "): "
+            },
+            {
+              "kind": "Content",
+              "text": "T[]"
+            },
+            {
+              "kind": "Content",
+              "text": ";"
+            }
+          ],
+          "fileUrlPath": "dist/esm/types/core/array/src/index.d.ts",
+          "returnTypeTokenRange": {
+            "startIndex": 3,
+            "endIndex": 4
+          },
+          "releaseTag": "Beta",
+          "overloadIndex": 1,
+          "parameters": [
+            {
+              "parameterName": "array",
+              "parameterTypeTokenRange": {
+                "startIndex": 1,
+                "endIndex": 2
+              },
+              "isOptional": false
+            }
+          ],
+          "typeParameters": [
+            {
+              "typeParameterName": "T",
+              "constraintTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              },
+              "defaultTypeTokenRange": {
+                "startIndex": 0,
+                "endIndex": 0
+              }
+            }
+          ],
+          "name": "getUniqueValues"
+        },
+        {
+          "kind": "Function",
           "canonicalReference": "robinson!hasClass:function(1)",
-          "docComment": "/**\n * @description 该函数检查元素是否具有特定的类名。\n *\n * @param dom - “dom”参数的类型为“Element”，表示我们要检查其是否存在类的 DOM 元素。\n *\n * @param classNm - “classNm”参数是一个字符串，表示您要在“dom”元素中检查的类名。\n *\n * @returns 一个布尔值，指示给定的 DOM 元素是否具有指定的类名。\n *\n * @example\n * ```JavaScript\n *    let div =document.createElement('div');\n *    div.classList=\"a1 a2 a3\"\n *    hasClass(div,'a1')  => true\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数检查元素是否具有特定的类名。\n *\n * @param dom - “dom”参数的类型为“Element”，表示我们要检查其是否存在类的 DOM 元素。\n *\n * @param classNm - “classNm”参数是一个字符串，表示您要在“dom”元素中检查的类名。\n *\n * @returns 一个布尔值，指示给定的 DOM 元素是否具有指定的类名。\n *\n * @example\n * ```JavaScript\n *    let div =document.createElement('div');\n *    div.classList.add('a1', 'a2', 'a3');\n *    hasClass(div,'a1')  => true\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2531,9 +2731,8 @@
               "text": ", classNm: "
             },
             {
-              "kind": "Reference",
-              "text": "String",
-              "canonicalReference": "!String:interface"
+              "kind": "Content",
+              "text": "string"
             },
             {
               "kind": "Content",
@@ -2548,7 +2747,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -2578,7 +2777,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!hasTypeIn:function(1)",
-          "docComment": "/**\n * @description 该函数检查给定值的类型是否存在于给定类型数组中。\n *\n * @param value - “value”参数是您要检查其类型的值。它可以是任何类型，例如数字、字符串、对象等。\n *\n * @param types - 表示要检查的类型的字符串数组。\n *\n * @returns {boolean} 一个布尔值。\n *\n * @example\n * ```JavaScript\n *     let a =\"123\"; isTypeIn(a,['number','array','string']) // true\n *     let a ={}; isTypeIn(a,['number','array','string']) // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数检查给定值的类型是否存在于给定类型数组中。\n *\n * @param value - “value”参数是您要检查其类型的值。它可以是任何类型，例如数字、字符串、对象等。\n *\n * @param types - 表示要检查的类型的字符串数组。\n *\n * @returns 一个布尔值。\n *\n * @example\n * ```JavaScript\n *     let a =\"123\"; isTypeIn(a,['number','array','string']) // true\n *     let a ={}; isTypeIn(a,['number','array','string']) // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2614,7 +2813,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/core/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 6,
             "endIndex": 7
@@ -2644,7 +2843,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!hexToRgb:function(1)",
-          "docComment": "/**\n * @description 将十六进制颜色字符串转换为rgb颜色字符串\n *\n * @param hex - 十六进制颜色字符串\n *\n * @returns {string} 转换后的rgb颜色字符串，如果输入无效则返回空字符串\n *\n * @example\n * ```javascript\n * hexToRgb('#FD7086'); // 'rgb(253,112,134)'\n * hexToRgb('rgb(253,112,134,0.9)'); // ''\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 将十六进制颜色字符串转换为rgb颜色字符串\n *\n * @param hex - 十六进制颜色字符串\n *\n * @returns 转换后的rgb颜色字符串，如果输入无效则返回空字符串\n *\n * @example\n * ```javascript\n * hexToRgb('#FD7086'); // 'rgb(253,112,134)'\n * hexToRgb('rgb(253,112,134,0.9)'); // ''\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2667,7 +2866,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/core/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -2689,7 +2888,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!hexToRgba:function(1)",
-          "docComment": "/**\n * @description 将十六进制颜色字符串转换为rgba颜色字符串\n *\n * @param hex - 十六进制颜色字符串\n *\n * @returns {string} 转换后的rgba颜色字符串，如果输入无效则返回空字符串\n *\n * @example\n * ```javascript\n * hexToRgba('#FD7086'); // 'rgba(253,112,134,1)'\n * hexToRgba('rgba(253,112,134,0.9)'); // ''\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 将十六进制颜色字符串转换为rgba颜色字符串\n *\n * @param hex - 十六进制颜色字符串\n *\n * @returns 转换后的rgba颜色字符串，如果输入无效则返回空字符串\n *\n * @example\n * ```javascript\n * hexToRgba('#FD7086'); // 'rgba(253,112,134,1)'\n * hexToRgba('rgba(253,112,134,0.9)'); // ''\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2712,7 +2911,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/core/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -2734,7 +2933,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!imgCompression:function(1)",
-          "docComment": "/**\n * @description 压缩图片文件\n *\n * @param file - 源文件\n *\n * @param size - 指定压缩大小（单位：MB）\n *\n * @returns Promise对象，解析为压缩后的Base64编码字符串\n *\n * @example\n *\n * imgCompression(fileInput.files[0], 0.5).then(compressedBase64 => console.log(compressedBase64));\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 压缩图片文件\n *\n * @param file - 源文件\n *\n * @param size - 指定压缩大小（单位：MB）\n *\n * @returns Promise对象，解析为压缩后的Base64编码字符串\n *\n * @example\n *\n * imgCompression(fileInput.files[0], 0.5).then(compressedBase64 => console.log(compressedBase64));\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2771,7 +2970,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 7
@@ -2801,7 +3000,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!insertStr:function(1)",
-          "docComment": "/**\n * @description 函数“insertStr”接受一个字符串、一个起始索引和一个字符，并返回一个新字符串，其中在指定索引处插入了该字符。\n *\n * @param str - `str` 参数是一个字符串，表示将在其中插入字符的原始字符串。\n *\n * @param start - start 参数是应在字符串中插入字符的索引。\n *\n * @param char - “char”参数是一个字符串，表示要插入到原始字符串中的字符或子字符串。\n *\n * @returns {string} - 在指定索引处插入指定字符的新字符串。\n *\n * @example\n * ```JavaScript\n *  let str = 'Hello'; insertStr(str, 2, 'X') // 'HeXllo'\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数“insertStr”接受一个字符串、一个起始索引和一个字符，并返回一个新字符串，其中在指定索引处插入了该字符。\n *\n * @param str - `str` 参数是一个字符串，表示将在其中插入字符的原始字符串。\n *\n * @param start - start 参数是应在字符串中插入字符的索引。\n *\n * @param char - “char”参数是一个字符串，表示要插入到原始字符串中的字符或子字符串。\n *\n * @returns - 在指定索引处插入指定字符的新字符串。\n *\n * @example\n * ```JavaScript\n *  let str = 'Hello'; insertStr(str, 2, 'X') // 'HeXllo'\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2840,7 +3039,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -2878,7 +3077,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!is:function(1)",
-          "docComment": "/**\n * @description 返回是某个类型的判断结果\n *\n * @param value - 要判断的数据\n *\n * @param type - 判断他是这个类型\n *\n * @returns {boolean} 布尔值\n *\n * @example\n * ```JavaScript\n *    let a = 1; is(a,'number')// true\n *    let b = 2; is(a,'Number') // true\n *    let c =\"2\"; is(a,'string') // true\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 返回是某个类型的判断结果\n *\n * @param value - 要判断的数据\n *\n * @param type - 判断他是这个类型\n *\n * @returns 布尔值\n *\n * @example\n * ```JavaScript\n *    let a = 1; is(a,'number')// true\n *    let b = 2; is(a,'Number') // true\n *    let c =\"2\"; is(a,'string') // true\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2909,7 +3108,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/core/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -2939,7 +3138,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isAfter:function(1)",
-          "docComment": "/**\n * @description 判断一个日期是否在另一个日期之后。\n *\n * @param start - 开始日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @param end - 结束日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @returns {boolean} - 如果开始日期在结束日期之后返回 true，否则返回 false。\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 判断一个日期是否在另一个日期之后。\n *\n * @param start - 开始日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @param end - 结束日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @returns - 如果开始日期在结束日期之后返回 true，否则返回 false。\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -2972,7 +3171,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -3002,7 +3201,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isArray:function(1)",
-          "docComment": "/**\n * @description 接受一个任意类型判断该类型是否是数组并返回。\n *\n * @param value - 参数“value”的类型为“any”，这意味着它可以接受任何数据类型。\n *\n * @returns {boolean} 一个布尔值。\n *\n * @example\n * ```javascript\n *    let a =\"789\";\n *    isArray(a) // false\n *    let n=[]\n *    isArray(n)   //true\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 接受一个任意类型判断该类型是否是数组并返回。\n *\n * @param value - 参数\"value\"的类型为\"any\"，这意味着它可以接受任何数据类型。\n *\n * @returns 一个布尔值。\n *\n * @example\n * ```javascript\n *    let a =\"789\";\n *    isArray(a) // false\n *    let n=[]\n *    isArray(n)   //true\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3025,7 +3224,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/array/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/array/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3047,7 +3246,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isBefore:function(1)",
-          "docComment": "/**\n * @description 判断一个日期是否在另一个日期之前。\n *\n * @param start - 开始日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @param end - 结束日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @returns {boolean} - 如果开始日期在结束日期之前返回 true，否则返回 false。\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 判断一个日期是否在另一个日期之前。\n *\n * @param start - 开始日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @param end - 结束日期，可以是 dayjs 对象、Date 对象或字符串。\n *\n * @returns - 如果开始日期在结束日期之前返回 true，否则返回 false。\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3080,7 +3279,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -3110,7 +3309,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isBoolean:function(1)",
-          "docComment": "/**\n * @description 函数“isBoolean”检查值是否为布尔类型。\n *\n * @param value - 参数“value”可以是任何数据类型。\n *\n * @returns {boolean} 函数 isBoolean 返回一个布尔值。\n *\n * @example\n * ```JavaScript\n *    let boo = true;\n *    isBoolean(boo) // true\n *    let str = \"true\";\n *    isBoolean(boo) // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数“isBoolean”检查值是否为布尔类型。\n *\n * @param value - 参数“value”可以是任何数据类型。\n *\n * @returns 函数 isBoolean 返回一个布尔值。\n *\n * @example\n * ```JavaScript\n *    let boo = true;\n *    isBoolean(boo) // true\n *    let str = \"true\";\n *    isBoolean(boo) // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3133,7 +3332,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/boolean/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/boolean/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3155,7 +3354,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isDecimal:function(1)",
-          "docComment": "/**\n * @description 检查变量是否为实数\n *\n * @param s - 要检查的变量\n *\n * @returns {boolean} - 检查结果\n *\n * @example\n * ```JavaScript\n *  isDecimal(123)// true\n *  isDecimal('123.45') // true\n *  isDecimal('abc') // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 检查变量是否为实数\n *\n * @param s - 要检查的变量\n *\n * @returns - 检查结果\n *\n * @example\n * ```JavaScript\n *  isDecimal(123)// true\n *  isDecimal('123.45') // true\n *  isDecimal('abc') // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3178,7 +3377,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/number/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/number/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3200,7 +3399,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isElement:function(1)",
-          "docComment": "/**\n * @description 是否为DOM元素\n *\n * @param val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。\n *\n * @returns {boolean} - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let div = document.createElement('div'); isElement(div) // true\n *  let str = 'not an element'; isElement(str) //false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 是否为DOM元素\n *\n * @param val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。\n *\n * @returns - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let div = document.createElement('div'); isElement(div) // true\n *  let str = 'not an element'; isElement(str) //false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3223,7 +3422,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/object/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/object/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3245,7 +3444,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isEmail:function(1)",
-          "docComment": "/**\n * @description 检查字符串是否为合法email地址\n *\n * @param s - 字符串\n *\n * @returns {boolean} - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let email = 'test@example.com'; isEmail(email) // true\n *  let email = 'invalid-email'; isEmail(email) // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 检查字符串是否为合法email地址\n *\n * @param s - 字符串\n *\n * @returns - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let email = 'test@example.com'; isEmail(email) // true\n *  let email = 'invalid-email'; isEmail(email) // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3268,7 +3467,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3290,7 +3489,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isEmpty:function(1)",
-          "docComment": "/**\n * @description 该函数通过将 JSON 表示形式与空数组或对象进行比较来检查值是否为空。\n *\n * @param value - “value”参数可以是任何数据类型。这是您要检查它是否为空的值。\n *\n * @returns {boolean} 一个布尔值。如果值为空（空数组或空对象）或值为假（例如 null、undefined、false、0 或空字符串）， 则返回 true。否则，返回 false。\n *\n * @example\n * ```JavaScript\n *    let a =null; isEmpty(a) // true\n *    let a =undefined; isEmpty(a) // true\n *    let a =''; isEmpty(a) // true\n *    let a={};  isEmpty(a) // true\n *    let a=[];  isEmpty(a) // true\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数通过将 JSON 表示形式与空数组或对象进行比较来检查值是否为空。\n *\n * @param value - “value”参数可以是任何数据类型。这是您要检查它是否为空的值。\n *\n * @returns 一个布尔值。如果值为空（空数组或空对象）或值为假（例如 null、undefined、false、0 或空字符串）， 则返回 true。否则，返回 false。\n *\n * @example\n * ```JavaScript\n *    let a =null; isEmpty(a) // true\n *    let a =undefined; isEmpty(a) // true\n *    let a =''; isEmpty(a) // true\n *    let a={};  isEmpty(a) // true\n *    let a=[];  isEmpty(a) // true\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3313,7 +3512,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/core/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3335,7 +3534,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isEqType:function(1)",
-          "docComment": "/**\n * @description 函数“isEqType”检查两个值的类型是否相等。\n *\n * @param value - “value”参数的类型为“any”，这意味着它可以接受任何类型的值。\n *\n * @param value2 - “value2”参数是您要与之比较类型的第二个值。\n *\n * @returns {boolean} 一个布尔值。\n * ```JavaScript\n * let a =1;\n * let b =new Number();\n * isEqType(value,value2) // true\n *\n * let a ='1';\n * let b =new Number();\n * isEqType(value,value2) // false\n *\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数“isEqType”检查两个值的类型是否相等。\n *\n * @param value - “value”参数的类型为“any”，这意味着它可以接受任何类型的值。\n *\n * @param value2 - “value2”参数是您要与之比较类型的第二个值。\n *\n * @returns 一个布尔值。\n *\n * @example\n * ```JavaScript\n * let a =1;\n * let b =new Number();\n * isEqType(value,value2) // true\n *\n * let a ='1';\n * let b =new Number();\n * isEqType(value,value2) // false\n *\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3366,7 +3565,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/core/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -3396,7 +3595,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isEqValue:function(1)",
-          "docComment": "/**\n * @description 函数“isEqValue”比较两个值，如果它们的值和类型相等则返回 true。\n *\n * @param value1 - 要比较的第一个值。它可以是任何类型。\n *\n * @param value2 - “value2”参数是要与“value1”比较的第二个值。\n *\n * @returns {boolean} 一个布尔值。\n *\n * @example\n * ```JavaScript\n * let a =NaN;let b = NaN; isEqValue(a,b) //true\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数“isEqValue”比较两个值，如果它们的值和类型相等则返回 true。\n *\n * @param value1 - 要比较的第一个值。它可以是任何类型。\n *\n * @param value2 - “value2”参数是要与“value1”比较的第二个值。\n *\n * @returns 一个布尔值。\n *\n * @example\n * ```JavaScript\n * let a =NaN;let b = NaN; isEqValue(a,b) //true\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3427,7 +3626,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/core/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -3457,7 +3656,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isExternal:function(1)",
-          "docComment": "/**\n * @description 判断是否为外链\n *\n * @param path - 路径\n *\n * @returns {boolean} - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let path = 'https://example.com'; isExternal(path) // true\n *  let path = '/internal/path'; isExternal(path)// false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 判断是否为外链\n *\n * @param path - 路径\n *\n * @returns - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let path = 'https://example.com'; isExternal(path) // true\n *  let path = '/internal/path'; isExternal(path)// false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3480,7 +3679,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3502,7 +3701,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isFinite_2:function(1)",
-          "docComment": "/**\n * @description 该函数检查一个值是否是有限数,原生的已经很好用了 这里是为了保存api统一。\n *\n * @param value - “value”参数可以是您想要检查是否是有限数的任何值。\n *\n * @returns {boolean} - 函数 isFinite 返回一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let a = 0.1 + 0.2; isFinite(a)// true\n *  let n1 = {}; isFinite(n1) // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数检查一个值是否是有限数,原生的已经很好用了 这里是为了保存api统一。\n *\n * @param value - “value”参数可以是您想要检查是否是有限数的任何值。\n *\n * @returns - 函数 isFinite 返回一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let a = 0.1 + 0.2; isFinite(a)// true\n *  let n1 = {}; isFinite(n1) // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3525,7 +3724,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/number/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/number/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3547,7 +3746,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isFunction:function(1)",
-          "docComment": "/**\n * @description 该函数检查给定值是否是函数。\n *\n * @param value - “value”参数是我们想要检查它是否是函数的任何值。\n *\n * @returns {boolean} - 一个布尔值。\n *\n * @example\n *\n * isFunction(() => {}); // 返回 true isFunction(123); // 返回 false\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数检查给定值是否是函数。\n *\n * @param value - “value”参数是我们想要检查它是否是函数的任何值。\n *\n * @returns - 一个布尔值。\n *\n * @example\n *\n * isFunction(() => {}); // 返回 true isFunction(123); // 返回 false\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3570,7 +3769,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3592,7 +3791,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isHex:function(1)",
-          "docComment": "/**\n * @description 判断是否为16进制颜色\n *\n * @param color - 需要验证的颜色字符串\n *\n * @returns {boolean} 如果是16进制颜色返回true，否则返回false\n *\n * @example\n * ```JavaScript\n *     isHex('#FD7086') //true\n *     isHex('rgba(253,112,134,0.9)') // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 判断是否为16进制颜色\n *\n * @param color - 需要验证的颜色字符串\n *\n * @returns 如果是16进制颜色返回true，否则返回false\n *\n * @example\n * ```JavaScript\n *     isHex('#FD7086') //true\n *     isHex('rgba(253,112,134,0.9)') // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3615,7 +3814,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/color/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/core/color/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3637,7 +3836,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isIdCard:function(1)",
-          "docComment": "/**\n * @description 检查是否为有效的身份证号\n *\n * @param id - 身份证号\n *\n * @returns {boolean} - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let id = '11010519491231002X'; isIdCard(id) // true\n *  let id = '11010519491231002Y'; isIdCard(id) // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 检查是否为有效的身份证号\n *\n * @param id - 身份证号\n *\n * @returns - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let id = '11010519491231002X'; isIdCard(id) // true\n *  let id = '11010519491231002Y'; isIdCard(id) // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3660,7 +3859,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3682,7 +3881,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isIE:function(1)",
-          "docComment": "/**\n * @description 判断是否是IE浏览器\n *\n * @param win - 参数“win”是一个包含navigator对象的对象。\n *\n * @returns {boolean} - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let win = { navigator: { userAgent: `Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0;\n * .NET4.0E; .NET4.0C; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729;\n *  InfoPath.3; rv:11.0) like Gecko` } };\n *  isIE(win) //true\n *  let win = { navigator: { userAgent: `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)\n *  AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15` } };\n *  isIE(win) // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 判断是否是IE浏览器\n *\n * @param win - 参数“win”是一个包含navigator对象的对象。\n *\n * @returns - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let win = { navigator: { userAgent: `Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0;\n * .NET4.0E; .NET4.0C; .NET CLR 2.0.50727; .NET CLR 3.0.30729; .NET CLR 3.5.30729;\n *  InfoPath.3; rv:11.0) like Gecko` } };\n *  isIE(win) //true\n *  let win = { navigator: { userAgent: `Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7)\n *  AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.6.1 Safari/605.1.15` } };\n *  isIE(win) // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3706,7 +3905,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/object/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/object/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3728,7 +3927,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isInt:function(1)",
-          "docComment": "/**\n * @description 函数“isInteger”检查给定值是否为整数,原生的判断已经很好用了 es6+。\n *\n * @param value - “value”参数可以是任何数据类型，例如数字、字符串、布尔值或对象。该函数将检查该值是否为整数，并返回一个布尔值来指示它是否为整数。\n *\n * @returns {boolean} - 一个布尔值，指示给定值是否为整数。\n *\n * @example\n * ```JavaScript\n *  let n = '1.1'; isInteger(n) // false\n *  let n2 = 2; isInteger(n2) // true\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数“isInteger”检查给定值是否为整数,原生的判断已经很好用了 es6+。\n *\n * @param value - “value”参数可以是任何数据类型，例如数字、字符串、布尔值或对象。该函数将检查该值是否为整数，并返回一个布尔值来指示它是否为整数。\n *\n * @returns - 一个布尔值，指示给定值是否为整数。\n *\n * @example\n * ```JavaScript\n *  let n = '1.1'; isInteger(n) // false\n *  let n2 = 2; isInteger(n2) // true\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3751,7 +3950,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/number/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/number/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3773,7 +3972,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isLeapYear:function(1)",
-          "docComment": "/**\n * @description 判断给定年份是否为闰年。\n *\n * @param year - 要判断的年份，可以是字符串或数字。\n *\n * @returns {boolean} - 如果是闰年返回 true，否则返回 false。\n *\n * @example\n * ```javascript\n * isLeapYear('2024') // true\n * isLeapYear('2025') // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 判断给定年份是否为闰年。\n *\n * @param year - 要判断的年份，可以是字符串或数字。\n *\n * @returns - 如果是闰年返回 true，否则返回 false。\n *\n * @example\n * ```javascript\n * isLeapYear('2024') // true\n * isLeapYear('2025') // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3796,7 +3995,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/date/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/date/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3818,7 +4017,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isMobileNum:function(1)",
-          "docComment": "/**\n * @description 是否为合法手机号\n *\n * @param s - 手机号\n *\n * @returns {boolean} - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let phone = '13800138000'; isMobileNum(phone) // true\n *  let phone = '12345678901'; isMobileNum(phone)// false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 是否为合法手机号\n *\n * @param s - 手机号\n *\n * @returns - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let phone = '13800138000'; isMobileNum(phone) // true\n *  let phone = '12345678901'; isMobileNum(phone)// false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3841,7 +4040,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3863,7 +4062,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isNaN_2:function(1)",
-          "docComment": "/**\n * @description 该函数检查值是否为 NaN。\n *\n * @param value - value 参数可以是任何数据类型，例如数字、字符串或对象。\n *\n * @returns {boolean} - 一个布尔值，指示给定值是否为 NaN（非数字）。\n *\n * @example\n * ```JavaScript\n *    let str = 'ad1'; isNaN(str) // true\n *    let n = 1; isNaN(n) // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数检查值是否为 NaN。\n *\n * @param value - value 参数可以是任何数据类型，例如数字、字符串或对象。\n *\n * @returns - 一个布尔值，指示给定值是否为 NaN（非数字）。\n *\n * @example\n * ```JavaScript\n *    let str = 'ad1'; isNaN(str) // true\n *    let n = 1; isNaN(n) // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3886,7 +4085,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/number/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/number/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3908,7 +4107,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isNode:function(1)",
-          "docComment": "/**\n * @description 该函数检查元素是否是节点。\n *\n * @param el - `el` 参数的类型是 `Element`，它表示 HTML DOM 中的一个元素。\n *\n * @returns 一个布尔值。如果给定元素的 nodeType 为 1 (ELEMENT_NODE)、9 (DOCUMENT_NODE) 或 11 (DOCUMENT_FRAGMENT_NODE)，则返回 true。否则，返回 false。\n *\n * @example\n * ```JavaScript\n *    let div =document.createElement('div');\n *    isNode(div) =>true\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数检查元素是否是节点。\n *\n * @param el - `el` 参数的类型是 `Element`，它表示 HTML DOM 中的一个元素。\n *\n * @returns 一个布尔值。如果给定元素的 nodeType 为 1 (ELEMENT_NODE)、9 (DOCUMENT_NODE) 或 11 (DOCUMENT_FRAGMENT_NODE)，则返回 true。否则，返回 false。\n *\n * @example\n * ```JavaScript\n *    let div =document.createElement('div');\n *    isNode(div) =>true\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3932,7 +4131,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3954,7 +4153,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isNull:function(1)",
-          "docComment": "/**\n * @description 函数“isNull”检查给定值是否为空。\n *\n * @param value - 参数“value”的类型为“any”，这意味着它可以接受任何数据类型。\n *\n * @returns {boolean} 函数 isNull 返回一个布尔值。\n * ```JavaScript\n *  let a =null; isNull(a)// true\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数“isNull”检查给定值是否为空。\n *\n * @param value - 参数“value”的类型为“any”，这意味着它可以接受任何数据类型。\n *\n * @returns 函数 isNull 返回一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let a =null; isNull(a)// true\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -3977,7 +4176,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/core/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -3999,7 +4198,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isNumber:function(1)",
-          "docComment": "/**\n * @description 该函数检查值是否为数字。\n *\n * @param value - 参数“value”可以是任何数据类型。\n *\n * @returns {boolean} - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let n = 7; isNumber(n) // true\n *  let n1 = '8'; isNumber(n1) // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数检查值是否为数字。\n *\n * @param value - 参数“value”可以是任何数据类型。\n *\n * @returns - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let n = 7; isNumber(n) // true\n *  let n1 = '8'; isNumber(n1) // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4022,7 +4221,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/number/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/number/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4044,7 +4243,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isObjectLike:function(1)",
-          "docComment": "/**\n * @description 该函数检查值是否是类对象like 类型。\n *\n * @param value - 参数“value”的类型为“any”，这意味着它可以是任何数据类型。\n *\n * @returns {boolean} - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let a = {}; isObjectLike(a) // true\n *  let a = null; isObjectLike(a) // false\n *  let a = new WeakSet(); isObjectLike(a) // true\n *  let a = []; isObjectLike(a)// true\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数检查值是否是类对象like 类型。\n *\n * @param value - 参数“value”的类型为“any”，这意味着它可以是任何数据类型。\n *\n * @returns - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let a = {}; isObjectLike(a) // true\n *  let a = null; isObjectLike(a) // false\n *  let a = new WeakSet(); isObjectLike(a) // true\n *  let a = []; isObjectLike(a)// true\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4067,7 +4266,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/object/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/object/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4089,7 +4288,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isOriginDate:function(1)",
-          "docComment": "/**\n * @description 是否为日期格式\n *\n * @param val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。\n *\n * @returns {boolean} - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let date = new Date(); isOriginDate(date) // true\n *  let str = '2023-10-01'; isOriginDate(str) // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 是否为日期格式\n *\n * @param val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。\n *\n * @returns - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let date = new Date(); isOriginDate(date) // true\n *  let str = '2023-10-01'; isOriginDate(str) // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4112,7 +4311,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/object/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/object/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4134,7 +4333,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isPromise:function(1)",
-          "docComment": "/**\n * @description 是否为Promise格式\n *\n * @param val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。\n *\n * @returns {boolean} - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let promise = new Promise(() => {}); isPromise(promise)// true\n *  let str = 'not a promise'; isPromise(str)// false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 是否为Promise格式\n *\n * @param val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。\n *\n * @returns - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let promise = new Promise(() => {}); isPromise(promise)// true\n *  let str = 'not a promise'; isPromise(str)// false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4157,7 +4356,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/object/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/object/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4179,7 +4378,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isRange:function(1)",
-          "docComment": "/**\n * @description 该函数检查给定值是否在指定范围内。\n *\n * @param value - value 参数表示要检查的数字是否在某个范围内。\n *\n * @param min - “value”参数可以是的最小值。\n *\n * @param max - “max”参数表示范围的最大值。\n *\n * @returns {boolean} - 一个布尔值，指示给定值是否在指定范围内（包括最小值，不包括最大值）。\n *\n * @example\n * ```JavaScript\n *  let n = 7; isRange(n, 7, 8) // true 包含7 8\n *  let n = 7; isRange(n, 7, 7) // true 包含7\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数检查给定值是否在指定范围内。\n *\n * @param value - value 参数表示要检查的数字是否在某个范围内。\n *\n * @param min - “value”参数可以是的最小值。\n *\n * @param max - “max”参数表示范围的最大值。\n *\n * @returns - 一个布尔值，指示给定值是否在指定范围内（包括最小值，不包括最大值）。\n *\n * @example\n * ```JavaScript\n *  let n = 7; isRange(n, 7, 8) // true 包含7 8\n *  let n = 7; isRange(n, 7, 7) // true 包含7\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4218,7 +4417,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/number/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/number/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -4256,7 +4455,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isRefType:function(1)",
-          "docComment": "/**\n * @description 该函数检查值是否为引用类型。\n *\n * @param value - “value”参数的类型为“any”，这意味着它可以接受任何类型的值。\n *\n * @returns {boolean} 一个布尔值。\n *\n * @example\n * ```JavaScript\n *    let num =123; isRefType(num) // true\n *    let obj ={};  isRefType(obj) // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数检查值是否为引用类型。\n *\n * @param value - “value”参数的类型为“any”，这意味着它可以接受任何类型的值。\n *\n * @returns 一个布尔值。\n *\n * @example\n * ```JavaScript\n *    let num =123; isRefType(num) // true\n *    let obj ={};  isRefType(obj) // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4279,7 +4478,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/core/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4301,7 +4500,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isRegExp:function(1)",
-          "docComment": "/**\n * @description 是否为正则格式\n *\n * @param val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。\n *\n * @returns {boolean} - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let regex = /abc/; isRegExp(regex) // true\n *  let str = 'abc'; isRegExp(str) // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 是否为正则格式\n *\n * @param val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。\n *\n * @returns - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let regex = /abc/; isRegExp(regex) // true\n *  let str = 'abc'; isRegExp(str) // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4324,7 +4523,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/object/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/object/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4346,7 +4545,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isRgb:function(1)",
-          "docComment": "/**\n * @description 判断是否为rgb颜色\n *\n * @param color - 需要验证的颜色字符串\n *\n * @returns {boolean} 如果是rgb颜色返回true，否则返回false\n *\n * @example\n * ```JavaScript\n *     isRgb('#FD7086') //false\n *     isRgb('rgba(253,112,134,0.9)') //false\n *     isRgb(null) // false\n *     isRgb({}) // false\n *     isRgb('rgb(255,255,255)') // true\n *     isRgb('rgb(256,256,256)') //false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 判断是否为rgb颜色\n *\n * @param color - 需要验证的颜色字符串\n *\n * @returns 如果是rgb颜色返回true，否则返回false\n *\n * @example\n * ```JavaScript\n *     isRgb('#FD7086') //false\n *     isRgb('rgba(253,112,134,0.9)') //false\n *     isRgb(null) // false\n *     isRgb({}) // false\n *     isRgb('rgb(255,255,255)') // true\n *     isRgb('rgb(256,256,256)') //false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4369,7 +4568,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/color/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/core/color/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4391,7 +4590,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isRgba:function(1)",
-          "docComment": "/**\n * @description 判断是否为rgba颜色\n *\n * @param color - 需要验证的颜色字符串\n *\n * @returns {boolean} 如果是rgba颜色返回true，否则返回false\n *\n * @example\n * ```JavaScript\n *     isRgba('#FD7086') // false\n *     isRgba('rgba(253,112,134,0.9)') // true\n *     isRgba('rgba(253,112,134,1.1)')// false\n *     isRgba(null) // false\n *     isRgba({}) // false\n *     isRgba('rgb(255,255,255)') // false\n *     isRgba('rgb(256,256,256)') // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 判断是否为rgba颜色\n *\n * @param color - 需要验证的颜色字符串\n *\n * @returns 如果是rgba颜色返回true，否则返回false\n *\n * @example\n * ```JavaScript\n *     isRgba('#FD7086') // false\n *     isRgba('rgba(253,112,134,0.9)') // true\n *     isRgba('rgba(253,112,134,1.1)')// false\n *     isRgba(null) // false\n *     isRgba({}) // false\n *     isRgba('rgb(255,255,255)') // false\n *     isRgba('rgb(256,256,256)') // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4414,7 +4613,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/color/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/core/color/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4436,7 +4635,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isSimpleType:function(1)",
-          "docComment": "/**\n * @description 该函数检查值是否为简单值（数字、字符串、布尔值、符号、null、undefined 或 bigint）或复杂值（函数、对象、数组、集合、映射）。\n *\n * @param value - 参数“value”的类型为“any”，这意味着它可以接受任何类型的值。\n *\n * @returns {boolean} 函数 isSimpleType 返回一个布尔值。\n *\n * @example\n * ```JavaScript\n *    let num =123; isSimpleType(num) // true\n *    let obj ={};  isSimpleType(obj) // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数检查值是否为简单值（数字、字符串、布尔值、符号、null、undefined 或 bigint）或复杂值（函数、对象、数组、集合、映射）。\n *\n * @param value - 参数“value”的类型为“any”，这意味着它可以接受任何类型的值。\n *\n * @returns 函数 isSimpleType 返回一个布尔值。\n *\n * @example\n * ```JavaScript\n *    let num =123; isSimpleType(num) // true\n *    let obj ={};  isSimpleType(obj) // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4459,7 +4658,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/core/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4481,7 +4680,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isString:function(1)",
-          "docComment": "/**\n * @description 函数isString 检查给定值是否是字符串。\n *\n * @param value - 参数“value”的类型为“any”，这意味着它可以接受任何数据类型。\n *\n * @returns {boolean} - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let str = 'Hello'; isString(str) // true\n *  let num = 123; isString(num) // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数isString 检查给定值是否是字符串。\n *\n * @param value - 参数\"value\"的类型为\"any\"，这意味着它可以接受任何数据类型。\n *\n * @returns - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let str = 'Hello'; isString(str) // true\n *  let num = 123; isString(num) // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4504,7 +4703,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4526,7 +4725,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isSymbol:function(1)",
-          "docComment": "/**\n * @description 该函数检查值是否是Symbol 类型的对象。\n *\n * @param value - 参数“value”可以是任何数据类型。\n *\n * @returns {boolean} 函数 isSymbol 返回一个布尔值。\n *\n * @example\n * ```JavaScript\n * let a =Symbol(); isSymbol(a) // true\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数检查值是否是Symbol 类型的对象。\n *\n * @param value - 参数\"value\"可以是任何数据类型。\n *\n * @returns 函数 isSymbol 返回一个布尔值。\n *\n * @example\n * ```JavaScript\n * let a =Symbol(); isSymbol(a) // true\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4549,7 +4748,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/symbol/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/symbol/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4571,7 +4770,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isUndefined:function(1)",
-          "docComment": "/**\n * @description 函数“isUndefined”检查值是否未定义。\n *\n * @param value - “value”参数的类型为“any”，这意味着它可以接受任何类型的值。\n *\n * @returns {boolean} 函数 isUndefined 返回一个布尔值。\n *\n * @example\n * ```JavaScript\n *    let a; isUndefined(a) // true\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数“isUndefined”检查值是否未定义。\n *\n * @param value - “value”参数的类型为“any”，这意味着它可以接受任何类型的值。\n *\n * @returns 函数 isUndefined 返回一个布尔值。\n *\n * @example\n * ```JavaScript\n *    let a; isUndefined(a) // true\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4594,7 +4793,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/common/src/validate.d.ts",
+          "fileUrlPath": "dist/esm/types/core/common/src/validate.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4616,7 +4815,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!isUrl:function(1)",
-          "docComment": "/**\n * @description 检查是否为有效的URL\n *\n * @param url - URL字符串\n *\n * @returns {boolean} - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let url = 'https://example.com'; isUrl(url) // true\n *  let url = 'invalid-url'; isUrl(url) // false\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 检查是否为有效的URL\n *\n * @param url - URL字符串\n *\n * @returns - 一个布尔值。\n *\n * @example\n * ```JavaScript\n *  let url = 'https://example.com'; isUrl(url) // true\n *  let url = 'invalid-url'; isUrl(url) // false\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4639,7 +4838,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/string/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/string/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4661,7 +4860,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!mapping:function(1)",
-          "docComment": "/**\n * @description 映射函数可以将数据进行枚举映射。\n *\n * @param enumData - 枚举数据，可以是对象或数组。\n *\n * @param options - 选项，可以是字符串或对象。\n *\n * @param expty - 如果枚举中寻找不到，返回的默认值，默认为 '--'。\n *\n * @returns {result} - 映射后的结果。\n *\n * @example\n * ```JavaScript\n * let enum1 = [{ value: 'USD', label: '美元' }, { value: 'AUD', label: '澳大利亚元' }];\n * // 返回 { value: 'USD', label: '美元' }\n * mapping(enum1, { key: 'value', keyValue: 'USD', label: 'label', type: 'object' });\n * // 返回 '美元'\n * mapping(enum1, { key: 'value', keyValue: 'USD', label: 'label', type: 'value' });\n * let enum2 = { USD: '美元', AUD: '澳大利亚元' };\n * // 返回 '美元'\n * mapping(enum2, 'USD');\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 映射函数可以将数据进行枚举映射。\n *\n * @param enumData - 枚举数据，可以是对象或数组。\n *\n * @param options - 选项，可以是字符串或对象。\n *\n * @param expty - 如果枚举中寻找不到，返回的默认值，默认为 '--'。\n *\n * @returns - 映射后的结果。\n *\n * @example\n * ```JavaScript\n * let enum1 = [{ value: 'USD', label: '美元' }, { value: 'AUD', label: '澳大利亚元' }];\n * // 返回 { value: 'USD', label: '美元' }\n * mapping(enum1, { key: 'value', keyValue: 'USD', label: 'label', type: 'object' });\n * // 返回 '美元'\n * mapping(enum1, { key: 'value', keyValue: 'USD', label: 'label', type: 'value' });\n * let enum2 = { USD: '美元', AUD: '澳大利亚元' };\n * // 返回 '美元'\n * mapping(enum2, 'USD');\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4703,7 +4902,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -4741,7 +4940,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!nodeToString:function(1)",
-          "docComment": "/**\n * @description 函数 `nodeToString` 接受一个 HTML 元素并返回它的字符串表示形式。\n *\n * @param node - `node` 参数的类型为 `Element`，它表示 DOM（文档对象模型）中的 HTML 元素。它可以是任何 HTML元素\n *\n * @returns 所提供的 HTML 元素的字符串表示形式。\n *\n * @example\n * ```JavaScript\n *    let div =document.createElement('div');\n *    nodeToString(div) => '<div></div>'\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数 `nodeToString` 接受一个 HTML 元素并返回它的字符串表示形式。\n *\n * @param node - `node` 参数的类型为 `Element`，它表示 DOM（文档对象模型）中的 HTML 元素。它可以是任何 HTML元素\n *\n * @returns 所提供的 HTML 元素的字符串表示形式。\n *\n * @example\n * ```JavaScript\n *    let div =document.createElement('div');\n *    nodeToString(div) => '<div></div>'\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4765,7 +4964,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4787,7 +4986,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!parseColorString:function(1)",
-          "docComment": "/**\n * @description 解析颜色字符串为颜色对象\n *\n * 该函数可以解析十六进制颜色字符串或rgba颜色字符串为颜色对象\n *\n * @param color - 颜色字符串\n *\n * @returns {string} 包含RGBA分量的对象，如果无法解析则返回空字符串\n *\n * @example\n * ```javascript\n * parseColorString('#FF0000');         // { r: 255, g: 0, b: 0, a: 1 }\n * parseColorString('rgba(255, 0, 0, 0.5)'); // { r: 255, g: 0, b: 0, a: 0.5 }\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 解析颜色字符串为颜色对象\n *\n * 该函数可以解析十六进制颜色字符串或rgba颜色字符串为颜色对象\n *\n * @param color - 颜色字符串\n *\n * @returns 包含RGBA分量的对象，如果无法解析则返回空字符串\n *\n * @example\n * ```javascript\n * parseColorString('#FF0000');         // { r: 255, g: 0, b: 0, a: 1 }\n * parseColorString('rgba(255, 0, 0, 0.5)'); // { r: 255, g: 0, b: 0, a: 0.5 }\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4811,7 +5010,7 @@
               "text": " | string"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/core/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 5
@@ -4833,7 +5032,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!parseHexColor:function(1)",
-          "docComment": "/**\n * @description 解析十六进制颜色字符串为RGBA对象\n *\n * 该函数接受一个十六进制颜色字符串（例如 \"#RRGGBB\" 或 \"#RGB\"）， 并将其解析为一个包含红（r）、绿（g）、蓝（b）和透明度（a）分量的对象\n *\n * @param color - 十六进制颜色字符串\n *\n * @returns {{r:\"\",g:\"\",b:\"\",a:\"\"}} 包含RGBA分量的对象\n *\n * @example\n * ```javascript\n * parseHexColor('#FF0000'); // { r: 255, g: 0, b: 0, a: 1 }\n * parseHexColor('#F00');    // { r: 255, g: 0, b: 0, a: 1 }\n * parseHexColor('#FF0000FF'); // { r: 255, g: 0, b: 0, a: 1 }\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 解析十六进制颜色字符串为RGBA对象\n *\n * 该函数接受一个十六进制颜色字符串（例如 \"#RRGGBB\" 或 \"#RGB\"）， 并将其解析为一个包含红（r）、绿（g）、蓝（b）和透明度（a）分量的对象\n *\n * @param color - 十六进制颜色字符串\n *\n * @returns 包含RGBA分量的对象\n *\n * @example\n * ```javascript\n * parseHexColor('#FF0000'); // { r: 255, g: 0, b: 0, a: 1 }\n * parseHexColor('#F00');    // { r: 255, g: 0, b: 0, a: 1 }\n * parseHexColor('#FF0000FF'); // { r: 255, g: 0, b: 0, a: 1 }\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4853,7 +5052,7 @@
               "canonicalReference": "robinson!~IRgba:interface"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/core/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4875,7 +5074,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!parseRgbaColor:function(1)",
-          "docComment": "/**\n * @description 解析rgba颜色字符串为颜色对象\n *\n * @param color - rgba颜色字符串\n *\n * @returns { r: 255, g: 0, b: 0, a: 0.5} 包含RGBA分量的对象\n *\n * @example\n * ```javascript\n * parseRgbaColor('rgba(255, 0, 0, 0.5)'); // { r: 255, g: 0, b: 0, a: 0.5 }\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 解析rgba颜色字符串为颜色对象\n *\n * @param color - rgba颜色字符串\n *\n * @returns 包含RGBA分量的对象\n *\n * @example\n * ```javascript\n * parseRgbaColor('rgba(255, 0, 0, 0.5)'); // { r: 255, g: 0, b: 0, a: 0.5 }\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4895,7 +5094,7 @@
               "canonicalReference": "robinson!~IRgba:interface"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/core/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -4917,7 +5116,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!pipe:function(1)",
-          "docComment": "/**\n * @description 从左向右执行函数。\n *\n * @param fns - 要组合的函数。\n *\n * @returns {Function} - 返回一个组合后的函数。\n *\n * @example\n * ```JavaScript\n * const addOne = x => x + 1;\n * const double = x => x * 2;\n * const piped = pipe(addOne, double);\n * piped(2);// 返回 6\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 从左向右执行函数。\n *\n * @param fns - 要组合的函数。\n *\n * @returns - 返回一个组合后的函数。\n *\n * @example\n * ```JavaScript\n * const addOne = x => x + 1;\n * const double = x => x * 2;\n * const piped = pipe(addOne, double);\n * piped(2);// 返回 6\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -4955,7 +5154,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 6,
             "endIndex": 7
@@ -5001,7 +5200,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -5023,7 +5222,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!printByBlob:function(1)",
-          "docComment": "/**\n * @description 通过Blob对象打印内容\n *\n * @param blob - Blob对象\n *\n * @param type - MIME类型，默认为'application/pdf'\n *\n * @example\n *\n * printByBlob(new Blob(['Hello, world!'], { type: 'text/plain' }));\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 通过Blob对象打印内容\n *\n * @param blob - Blob对象\n *\n * @param type - MIME类型，默认为'application/pdf'\n *\n * @example\n *\n * printByBlob(new Blob(['Hello, world!'], { type: 'text/plain' }));\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -5055,7 +5254,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -5085,7 +5284,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!printByDom:function(1)",
-          "docComment": "/**\n * @description 通过DOM元素打印内容\n *\n * @param el - 要打印的DOM元素\n *\n * @param custStyle - 自定义CSS样式\n *\n * @example\n *\n * printByDom(document.getElementById('print-content'), 'body { font-size: 12px; }');\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 通过DOM元素打印内容\n *\n * @param el - 要打印的DOM元素\n *\n * @param custStyle - 自定义CSS样式\n *\n * @example\n *\n * printByDom(document.getElementById('print-content'), 'body { font-size: 12px; }');\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -5117,7 +5316,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -5147,7 +5346,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!removeClass:function(1)",
-          "docComment": "/**\n * @description 该函数从给定的 DOM 元素中删除指定的类名。\n *\n * @param dom - “dom”参数的类型为“Element”，表示要从中删除类的 DOM 元素。\n *\n * @param classNm - “classNm”参数是一个字符串，表示要从“dom”元素中删除的类的名称。\n *\n * @example\n * ```JavaScript\n *    let div =document.createElement('div');\n *    div.className ='a1 a2 a3'\n *    removeClass(div,'a1')\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数从给定的 DOM 元素中删除指定的类名。\n *\n * @param dom - “dom”参数的类型为“Element”，表示要从中删除类的 DOM 元素。\n *\n * @param classNm - “classNm”参数是一个字符串，表示要从“dom”元素中删除的类的名称。\n *\n * @example\n * ```JavaScript\n *    let div =document.createElement('div');\n *    div.className ='a1 a2 a3'\n *    removeClass(div,'a1')\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -5179,7 +5378,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -5209,7 +5408,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!removeNode:function(1)",
-          "docComment": "/**\n * @description 该函数从其父节点中删除指定的 DOM 元素。\n *\n * @param parentNode - `parentNode` 参数是包含 `dom` 元素的元素。它是您要从中删除“dom”元素的元素。\n *\n * @param dom - `dom` 参数是要从其父节点中删除的元素。\n *\n * @example\n * ```JavaScript\n *    let div =document.createElement('div');\n *    document.body.appendChild(div)\n *    removeNode(document.body,div)\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数从其父节点中删除指定的 DOM 元素。\n *\n * @param parentNode - `parentNode` 参数是包含 `dom` 元素的元素。它是您要从中删除“dom”元素的元素。\n *\n * @param dom - `dom` 参数是要从其父节点中删除的元素。\n *\n * @example\n * ```JavaScript\n *    let div =document.createElement('div');\n *    document.body.appendChild(div)\n *    removeNode(document.body,div)\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -5242,7 +5441,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -5272,7 +5471,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!renderTmp:function(1)",
-          "docComment": "/**\n * @description 该函数获取元素的InnerHtml字符串模板,填写好内容并返回\n *\n * @param selecter - css 选择器\n *\n * @param data - `dom` 模板需要的数据\n *\n * @example\n * ```JavaScript\n *       html:\n *       <div id='user-box'> </div>\n *       <script type=\"text/html\" id=\"tpl-user\">\n *           <div>姓名:{{name}}</div>\n *           <div>年龄:{{  age  }}</div>\n *           <div>性别:{{  gender}}</div>\n *           <div>住址:{{address  }}</div>\n *       </script>\n *       JavaScript:\n *       let data ={name:\"张三\",age:28,gender:\"男\",address:\"北京顺路\"}\n *       //调用模板引擎\n *       let htmlStr=renderTmp('tpl-user',data)\n *       //操作dom渲染html结构\n *       document.getElementById('user-box').innerHTML=htmlStr\n *       resule\n *       <div id='user-box'>\n *           <div>姓名:{{ 张三 }}</div>\n *           <div>年龄:{{ 28 }}</div>\n *           <div>性别:{{ 男 }}</div>\n *           <div>住址:{{ 北京顺路 }}</div>\n *       </div>\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数获取元素的InnerHtml字符串模板,填写好内容并返回\n *\n * @param selecter - css 选择器\n *\n * @param data - `dom` 模板需要的数据\n *\n * @example\n * ```JavaScript\n *       html:\n *       <div id='user-box'> </div>\n *       <script type=\"text/html\" id=\"tpl-user\">\n *           <div>姓名:{{name}}</div>\n *           <div>年龄:{{  age  }}</div>\n *           <div>性别:{{  gender}}</div>\n *           <div>住址:{{address  }}</div>\n *       </script>\n *       JavaScript:\n *       let data ={name:\"张三\",age:28,gender:\"男\",address:\"北京顺路\"}\n *       //调用模板引擎\n *       let htmlStr=renderTmp('tpl-user',data)\n *       //操作dom渲染html结构\n *       document.getElementById('user-box').innerHTML=htmlStr\n *       resule\n *       <div id='user-box'>\n *           <div>姓名:{{ 张三 }}</div>\n *           <div>年龄:{{ 28 }}</div>\n *           <div>性别:{{ 男 }}</div>\n *           <div>住址:{{ 北京顺路 }}</div>\n *       </div>\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -5303,7 +5502,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -5373,7 +5572,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -5411,7 +5610,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!replaceNode:function(1)",
-          "docComment": "/**\n * @description 函数“replaceNode”用新的 DOM 元素或给定父元素中的字符串替换旧的 DOM 元素。\n *\n * @param parentNode - ParentNode 参数是包含 oldDom 元素的元素。它是发生替换的父元素。\n *\n * @param newDom - `newDom` 参数可以是字符串或 Node。如果它是一个字符串， 则它表示将使用“stringToNode”函数转换为节点的 HTML 标记。如果已经是一个Node，则代表新的Node将取代旧的Node\n *\n * @param oldDom - oldDom 参数是要替换为 newDom 的元素。\n *\n * @example\n * ```JavaScript\n *    let div = document.createElement('div')\n *    div.id = 'aa6'\n *    let body = docuement.body\n *    body.appendChild(div);\n *\n *    let span =document.createElement('span');\n *    replaceNode(body,span,div);\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数“replaceNode”用新的 DOM 元素或给定父元素中的字符串替换旧的 DOM 元素。\n *\n * @param parentNode - ParentNode 参数是包含 oldDom 元素的元素。它是发生替换的父元素。\n *\n * @param newDom - `newDom` 参数可以是字符串或 Node。如果它是一个字符串， 则它表示将使用“stringToNode”函数转换为节点的 HTML 标记。如果已经是一个Node，则代表新的Node将取代旧的Node\n *\n * @param oldDom - oldDom 参数是要替换为 newDom 的元素。\n *\n * @example\n * ```JavaScript\n *    let div = document.createElement('div')\n *    div.id = 'aa6'\n *    let body = docuement.body\n *    body.appendChild(div);\n *\n *    let span =document.createElement('span');\n *    replaceNode(body,span,div);\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -5457,7 +5656,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 8,
             "endIndex": 9
@@ -5495,7 +5694,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!rgbaToHex:function(1)",
-          "docComment": "/**\n * @description 将rgba颜色字符串转换为十六进制颜色字符串\n *\n * @param color - rgba颜色字符串\n *\n * @returns {string} 转换后的十六进制颜色字符串，如果输入无效则返回空字符串\n *\n * @example\n * ```javascript\n * rgbaToHex('rgba(0,0,0,1)'); // '#000000'\n * rgbaToHex('#000000'); // ''\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 将rgba颜色字符串转换为十六进制颜色字符串\n *\n * @param color - rgba颜色字符串\n *\n * @returns 转换后的十六进制颜色字符串，如果输入无效则返回空字符串\n *\n * @example\n * ```javascript\n * rgbaToHex('rgba(0,0,0,1)'); // '#000000'\n * rgbaToHex('#000000'); // ''\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -5518,7 +5717,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/core/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -5540,7 +5739,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!rgbToHex:function(1)",
-          "docComment": "/**\n * @description 将rgb颜色字符串转换为十六进制颜色字符串\n *\n * @param color - rgb颜色字符串\n *\n * @returns {string} 转换后的十六进制颜色字符串，如果输入无效则返回空字符串\n *\n * @example\n * ```javascript\n * rgbToHex('rgb(0,0,0)'); // '#000000'\n * rgbToHex('#000000'); // ''\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 将rgb颜色字符串转换为十六进制颜色字符串\n *\n * @param color - rgb颜色字符串\n *\n * @returns 转换后的十六进制颜色字符串，如果输入无效则返回空字符串\n *\n * @example\n * ```javascript\n * rgbToHex('rgb(0,0,0)'); // '#000000'\n * rgbToHex('#000000'); // ''\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -5563,7 +5762,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/core/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -5585,7 +5784,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!stopPropagation:function(1)",
-          "docComment": "/**\n * @description 函数 stopPropagation 阻止事件在事件链中向上冒泡。\n *\n * @param event - 事件参数是一个表示发生的事件的对象。它包含有关事件的信息，例如事件类型、目标元素以及与事件关联的任何其他数据。在这种情况下，事件参数的类型为Event，它是一个通用事件对象，可以\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数 stopPropagation 阻止事件在事件链中向上冒泡。\n *\n * @param event - 事件参数是一个表示发生的事件的对象。它包含有关事件的信息，例如事件类型、目标元素以及与事件关联的任何其他数据。在这种情况下，事件参数的类型为Event，它是一个通用事件对象，可以\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -5609,7 +5808,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 4
@@ -5631,7 +5830,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!stringToNode:function(1)",
-          "docComment": "/**\n * @description 该函数接受一个字符串并返回新创建的 div 元素的第一个子节点，并将该字符串作为其innerHTML。\n *\n * @param str - `str` 参数是一个字符串，表示一个 HTML 元素或一组 HTML 元素。\n *\n * @returns 创建的 div 元素的第一个子节点。\n *\n * @example\n * ```JavaScript\n *    let str ='<div>123</div>'\n *    document.body.append(stringToNode(str))\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 该函数接受一个字符串并返回新创建的 div 元素的第一个子节点，并将该字符串作为其innerHTML。\n *\n * @param str - `str` 参数是一个字符串，表示一个 HTML 元素或一组 HTML 元素。\n *\n * @returns 创建的 div 元素的第一个子节点。\n *\n * @example\n * ```JavaScript\n *    let str ='<div>123</div>'\n *    document.body.append(stringToNode(str))\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -5659,7 +5858,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 3,
             "endIndex": 5
@@ -5681,7 +5880,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!throttle:function(1)",
-          "docComment": "/**\n * @description 节流函数，限制函数调用的频率。\n *\n * @param fn - “fn”参数是您想要限制的函数。\n *\n * @param immediate - “immediate”参数是函数调用之间的最小时间间隔（以毫秒为单位）。\n *\n * @param leading - “leading”参数决定该函数是在调用时立即执行还是等待指定的“immediate”时间过去后才第一次执行该函数。\n *\n * @param trailing - “trailing”参数决定是否应在上次调用后立即调用节流函数，即使指定的时间间隔（“immediate”）尚未过去。\n *\n * @returns {Function} - 返回一个节流函数。\n *\n * @example\n * ```JavaScript\n * const log = () => console.log('Logged');\n * const throttledLog = throttle(log, 1000, true, false);\n * throttledLog(); // 立即执行\n * throttledLog(); // 1秒内再次调用不会执行\n * throttledLog.cancel(); // 取消执行\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 节流函数，限制函数调用的频率。\n *\n * @param fn - “fn”参数是您想要限制的函数。\n *\n * @param immediate - “immediate”参数是函数调用之间的最小时间间隔（以毫秒为单位）。\n *\n * @param leading - “leading”参数决定该函数是在调用时立即执行还是等待指定的“immediate”时间过去后才第一次执行该函数。\n *\n * @param trailing - “trailing”参数决定是否应在上次调用后立即调用节流函数，即使指定的时间间隔（“immediate”）尚未过去。\n *\n * @returns - 返回一个节流函数。\n *\n * @example\n * ```JavaScript\n * const log = () => console.log('Logged');\n * const throttledLog = throttle(log, 1000, true, false);\n * throttledLog(); // 立即执行\n * throttledLog(); // 1秒内再次调用不会执行\n * throttledLog.cancel(); // 取消执行\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -5730,7 +5929,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/function/src/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/function/src/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 9,
             "endIndex": 10
@@ -5776,7 +5975,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!toRgbaString:function(1)",
-          "docComment": "/**\n * @description 将颜色对象转换为rgba颜色字符串\n *\n * @param colorObj - 颜色对象，包含r、g、b分量，可选a分量\n *\n * @param  - {10000} - 透明度的小数点后保留位数，默认为10000（即保留4位小数）\n *\n * @returns {string} 返回一个rgba格式的字符串\n *\n * @example\n * ```javascript\n * let obj = { r: 255, g: 255, b: 255 };\n * toRgbaString(obj); // \"rgba(255,255,255,1)\"\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 将颜色对象转换为rgba颜色字符串\n *\n * @param colorObj - 颜色对象，包含r、g、b分量，可选a分量\n *\n * @param n - 透明度的小数点后保留位数，默认为10000（即保留4位小数）\n *\n * @returns 返回一个rgba格式的字符串\n *\n * @example\n * ```javascript\n * let obj = { r: 255, g: 255, b: 255 };\n * toRgbaString(obj); // \"rgba(255,255,255,1)\"\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -5804,7 +6003,7 @@
               "text": "string"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/color/src/trans.d.ts",
+          "fileUrlPath": "dist/esm/types/core/color/src/trans.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 6
@@ -5834,7 +6033,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!transHightLight:function(1)",
-          "docComment": "/**\n * @description 将字符串中的关键词高亮显示。\n *\n * @param str - 要进行高亮处理的原始字符串。\n *\n * @param keyWords - 要高亮的关键字，多个关键字之间可以不使用分隔符。\n *\n * @param color - 高亮显示的颜色，默认为 '#0053db'。\n *\n * @returns 返回一个新的字符串，其中关键字被包裹在带有指定颜色样式的 span 标签中。\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 将字符串中的关键词高亮显示。\n *\n * @param str - 要进行高亮处理的原始字符串。\n *\n * @param keyWords - 要高亮的关键字，多个关键字之间可以不使用分隔符。\n *\n * @param color - 高亮显示的颜色，默认为 '#0053db'。\n *\n * @returns 返回一个新的字符串，其中关键字被包裹在带有指定颜色样式的 span 标签中。\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -5882,7 +6081,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/other.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/other.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 9,
             "endIndex": 10
@@ -5920,7 +6119,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!unBind:function(1)",
-          "docComment": "/**\n * @description 函数 unBind 从 DOM 元素中删除事件侦听器。\n *\n * @param dom - `dom` 参数是事件监听器所附加的 DOM 元素。\n *\n * @param eventType - eventType 参数是一个字符串，指定要删除的事件的类型。事件类型的示例包括“单击”、“按下键”、“鼠标悬停”等。\n *\n * @param fnName - `fnName` 参数是要从指定 DOM 元素中删除的事件侦听器函数或事件侦听器对象的名称。\n *\n * @example\n * ```JavaScript\n *    let div = document.querySelect('#btn');\n *    div.onclik =()=>{\n *      console.log('11')\n *    }\n *    unBind(div,'click')\n * ```\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 函数 unBind 从 DOM 元素中删除事件侦听器。\n *\n * @param dom - `dom` 参数是事件监听器所附加的 DOM 元素。\n *\n * @param eventType - eventType 参数是一个字符串，指定要删除的事件的类型。事件类型的示例包括“单击”、“按下键”、“鼠标悬停”等。\n *\n * @param fnName - `fnName` 参数是要从指定 DOM 元素中删除的事件侦听器函数或事件侦听器对象的名称。\n *\n * @example\n * ```JavaScript\n *    let div = document.querySelector('#btn');\n *    const handleClick = () => {\n *      console.log('11');\n *    };\n *    bind(div, 'click', handleClick);\n *    unBind(div, 'click', handleClick);\n * ```\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -5961,7 +6160,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/web/src/dom.d.ts",
+          "fileUrlPath": "dist/esm/types/core/web/src/dom.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 7,
             "endIndex": 8
@@ -5999,7 +6198,7 @@
         {
           "kind": "Function",
           "canonicalReference": "robinson!urlToBase64:function(1)",
-          "docComment": "/**\n * @description 将图片URL转换为Base64编码的字符串\n *\n * @param url - 图片URL\n *\n * @param suffix - 文件后缀，默认为'image/png'\n *\n * @returns Promise对象，解析为Base64编码的字符串\n *\n * @example\n *\n * urlToBase64('https://example.com/image.png').then(base64 => console.log(base64));\n *\n * @beta\n */\n",
+          "docComment": "/**\n * 将图片URL转换为Base64编码的字符串\n *\n * @param url - 图片URL\n *\n * @param suffix - 文件后缀，默认为'image/png'\n *\n * @returns Promise对象，解析为Base64编码的字符串\n *\n * @example\n *\n * urlToBase64('https://example.com/image.png').then(base64 => console.log(base64));\n *\n * @beta\n */\n",
           "excerptTokens": [
             {
               "kind": "Content",
@@ -6035,7 +6234,7 @@
               "text": ";"
             }
           ],
-          "fileUrlPath": "dist/esm/types/utils/file/index.d.ts",
+          "fileUrlPath": "dist/esm/types/core/file/index.d.ts",
           "returnTypeTokenRange": {
             "startIndex": 5,
             "endIndex": 7

@@ -8,9 +8,9 @@ interface Iwindow {
 
 /**
  * @beta
- * @description 该函数检查值是否是类对象like 类型。
- * @param {any} value - 参数“value”的类型为“any”，这意味着它可以是任何数据类型。
- * @returns {boolean} - 一个布尔值。
+ *  该函数检查值是否是类对象like 类型。
+ * @param  value - 参数“value”的类型为“any”，这意味着它可以是任何数据类型。
+ * @returns  - 一个布尔值。
  * @example
  * ```JavaScript
  *  let a = {}; isObjectLike(a) // true
@@ -25,9 +25,9 @@ export function isObjectLike (value: any): boolean {
 
 /**
  * @beta
- * @description 是否为日期格式
- * @param {any} val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。
- * @returns {boolean} - 一个布尔值。
+ *  是否为日期格式
+ * @param  val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。
+ * @returns  - 一个布尔值。
  * @example
  * ```JavaScript
  *  let date = new Date(); isOriginDate(date) // true
@@ -40,9 +40,9 @@ export function isOriginDate (val: any): boolean {
 
 /**
  * @beta
- * @description 是否为Promise格式
- * @param {any} val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。
- * @returns {boolean} - 一个布尔值。
+ *  是否为Promise格式
+ * @param  val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。
+ * @returns  - 一个布尔值。
  * @example
  * ```JavaScript
  *  let promise = new Promise(() => {}); isPromise(promise)// true
@@ -55,9 +55,9 @@ export function isPromise (val: any): boolean {
 
 /**
  * @beta
- * @description 是否为正则格式
- * @param {any} val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。
- * @returns {boolean} - 一个布尔值。
+ *  是否为正则格式
+ * @param  val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。
+ * @returns  - 一个布尔值。
  * @example
  * ```JavaScript
  *  let regex = /abc/; isRegExp(regex) // true
@@ -70,9 +70,9 @@ export function isRegExp (val: any): boolean {
 
 /**
  * @beta
- * @description 是否为DOM元素
- * @param {any} val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。
- * @returns {boolean} - 一个布尔值。
+ *  是否为DOM元素
+ * @param  val - 参数“val”的类型为“any”，这意味着它可以是任何数据类型。
+ * @returns  - 一个布尔值。
  * @example
  * ```JavaScript
  *  let div = document.createElement('div'); isElement(div) // true
@@ -87,9 +87,9 @@ let userAgentArr = ['MSIE', 'TRIDENT', 'EDGE'];
 
 /**
  * @beta
- * @description 判断是否是IE浏览器
- * @param {Iwindow} win - 参数“win”是一个包含navigator对象的对象。
- * @returns {boolean} - 一个布尔值。
+ *  判断是否是IE浏览器
+ * @param  win - 参数“win”是一个包含navigator对象的对象。
+ * @returns  - 一个布尔值。
  * @example
  * ```JavaScript
  *  let win = { navigator: { userAgent: `Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0;

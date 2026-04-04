@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 该函数将事件侦听器绑定到 TypeScript 中的 DOM 元素。
+该函数将事件侦听器绑定到 TypeScript 中的 DOM 元素。
 
 **Signature:**
 
@@ -32,9 +32,9 @@ void
 
 
 ```JavaScript
-   let btn =document.querySelect('button');
-   bind(btn,'clic',()=>{
-     console.log('123')
-   })
+   let btn = document.querySelector('button');
+   bind(btn, 'click', () => {
+     console.log('123');
+   });
 ```
 

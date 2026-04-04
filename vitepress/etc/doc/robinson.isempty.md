@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 该函数通过将 JSON 表示形式与空数组或对象进行比较来检查值是否为空。
+该函数通过将 JSON 表示形式与空数组或对象进行比较来检查值是否为空。
 
 **Signature:**
 
@@ -25,7 +25,7 @@ declare function isEmpty(value: any): boolean;
 
 boolean
 
-{<!-- -->boolean<!-- -->} 一个布尔值。如果值为空（空数组或空对象）或值为假（例如 null、undefined、false、0 或空字符串）， 则返回 true。否则，返回 false。
+一个布尔值。如果值为空（空数组或空对象）或值为假（例如 null、undefined、false、0 或空字符串）， 则返回 true。否则，返回 false。
 
 ## Example
 

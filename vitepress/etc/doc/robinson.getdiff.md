@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 计算两个日期之间的差值。
+计算两个日期之间的差值。
 
 **Signature:**
 
@@ -28,7 +28,7 @@ declare function getDiff(start: Tday, end: Tday, unitType: dayjs.OpUnitType, flo
 
 number
 
-{<!-- -->number<!-- -->} - 返回两个日期之间的差值。
+- 返回两个日期之间的差值。
 
 ## Example
 

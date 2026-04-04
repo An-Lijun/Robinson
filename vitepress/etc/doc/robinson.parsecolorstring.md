@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 解析颜色字符串为颜色对象
+解析颜色字符串为颜色对象
 
 该函数可以解析十六进制颜色字符串或rgba颜色字符串为颜色对象
 
@@ -27,7 +27,7 @@ parseColorString: (color: string) => IRgba | string
 
 IRgba \| string
 
-{<!-- -->string<!-- -->} 包含RGBA分量的对象，如果无法解析则返回空字符串
+包含RGBA分量的对象，如果无法解析则返回空字符串
 
 ## Example
 

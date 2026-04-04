@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 映射函数可以将数据进行枚举映射。
+映射函数可以将数据进行枚举映射。
 
 **Signature:**
 
@@ -27,7 +27,7 @@ declare function mapping(enumData: enumData, options: options, expty?: string): 
 
 result
 
-{<!-- -->result<!-- -->} - 映射后的结果。
+- 映射后的结果。
 
 ## Example
 

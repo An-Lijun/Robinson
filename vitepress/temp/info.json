@@ -107,6 +107,10 @@
     "folderNm": "file",
     "functionNm": "getFileType"
   },
+  "getgrouparray": {
+    "folderNm": "array",
+    "functionNm": "getGroupArray"
+  },
   "getmimetype": {
     "folderNm": "file",
     "functionNm": "getMimeType"

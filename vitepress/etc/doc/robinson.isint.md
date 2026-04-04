@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数“isInteger”检查给定值是否为整数,原生的判断已经很好用了 es6+。
+函数“isInteger”检查给定值是否为整数,原生的判断已经很好用了 es6+。
 
 **Signature:**
 
@@ -25,7 +25,7 @@ declare function isInt(value: any): boolean;
 
 boolean
 
-{<!-- -->boolean<!-- -->} - 一个布尔值，指示给定值是否为整数。
+- 一个布尔值，指示给定值是否为整数。
 
 ## Example
 

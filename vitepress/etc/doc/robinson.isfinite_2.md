@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 该函数检查一个值是否是有限数,原生的已经很好用了 这里是为了保存api统一。
+该函数检查一个值是否是有限数,原生的已经很好用了 这里是为了保存api统一。
 
 **Signature:**
 
@@ -25,7 +25,7 @@ declare function isFinite(value: any): boolean;
 
 boolean
 
-{<!-- -->boolean<!-- -->} - 函数 isFinite 返回一个布尔值。
+- 函数 isFinite 返回一个布尔值。
 
 ## Example
 

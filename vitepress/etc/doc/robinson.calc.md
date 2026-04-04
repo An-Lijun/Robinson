@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 数值计算
+数值计算
 
 **Signature:**
 
@@ -27,7 +27,7 @@ declare function calc(number1: BigSource, number2: BigSource, operate?: TOperate
 
 string
 
-{<!-- -->number<!-- -->} - 计算结果。
+- 计算结果。
 
 ## Example
 

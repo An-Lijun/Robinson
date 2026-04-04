@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 防抖函数，限制函数调用的频率。
+防抖函数，限制函数调用的频率。
 
 **Signature:**
 
@@ -27,7 +27,7 @@ declare function debounce(fn: Function, delay: number, isLimmediate?: boolean): 
 
 Function
 
-{<!-- -->Function<!-- -->} - 返回一个防抖函数。
+- 返回一个防抖函数。
 
 ## Example
 

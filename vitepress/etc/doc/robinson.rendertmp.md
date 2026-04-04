@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 该函数获取元素的InnerHtml字符串模板,填写好内容并返回
+该函数获取元素的InnerHtml字符串模板,填写好内容并返回
 
 **Signature:**
 

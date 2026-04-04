@@ -9,11 +9,11 @@ const calcMap = { '+': 'add',
 
 /**
  * @beta
- * @description 数值计算
- * @param {BigSource} number1 - 第一个数字。
- * @param {BigSource} number2 - 第二个数字。
- * @param {TOperate} [operate='+'] - 操作符，默认为 '+'。
- * @returns {number} - 计算结果。
+ *  数值计算
+ * @param  number1 - 第一个数字。
+ * @param  number2 - 第二个数字。
+ * @param operate - 操作符，默认为 '+'。
+ * @returns  - 计算结果。
  * @example
  * ```javascript
  * calc(0.1, 0.2);// 返回 0.3

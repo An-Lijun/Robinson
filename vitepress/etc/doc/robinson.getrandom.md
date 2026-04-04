@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数 getRandom 生成指定范围内具有指定小数位数的随机数。
+函数 getRandom 生成指定范围内具有指定小数位数的随机数。
 
 **Signature:**
 
@@ -27,7 +27,7 @@ declare function getRandom(min: number, max: number, point?: number): number;
 
 number
 
-{<!-- -->number<!-- -->} - 指定最小值和最大值之间的随机数，具有指定的小数位数。
+- 指定最小值和最大值之间的随机数，具有指定的小数位数。
 
 ## Example
 

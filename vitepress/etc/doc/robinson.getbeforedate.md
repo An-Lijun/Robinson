@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 计算给定日期之前的日期，并返回格式化后的结果。
+计算给定日期之前的日期，并返回格式化后的结果。
 
 **Signature:**
 
@@ -26,7 +26,7 @@ declare function getBeforeDate(date: Tday, option: IOptions): string;
 
 string
 
-{<!-- -->string<!-- -->} - 返回格式化后的日期字符串。
+- 返回格式化后的日期字符串。
 
 ## Example
 

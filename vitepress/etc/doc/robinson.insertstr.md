@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数“insertStr”接受一个字符串、一个起始索引和一个字符，并返回一个新字符串，其中在指定索引处插入了该字符。
+函数“insertStr”接受一个字符串、一个起始索引和一个字符，并返回一个新字符串，其中在指定索引处插入了该字符。
 
 **Signature:**
 
@@ -27,7 +27,7 @@ declare function insertStr(str: string, start: number, char: string): string;
 
 string
 
-{<!-- -->string<!-- -->} - 在指定索引处插入指定字符的新字符串。
+- 在指定索引处插入指定字符的新字符串。
 
 ## Example
 

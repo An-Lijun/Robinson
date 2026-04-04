@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 接受一个任意类型判断该类型是否是数组并返回。
+接受一个任意类型判断该类型是否是数组并返回。
 
 **Signature:**
 
@@ -19,13 +19,13 @@ declare function isArray(value: any): boolean;
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  value | any | 参数“value”的类型为“any”，这意味着它可以接受任何数据类型。 |
+|  value | any | 参数"value"的类型为"any"，这意味着它可以接受任何数据类型。 |
 
 **Returns:**
 
 boolean
 
-{<!-- -->boolean<!-- -->} 一个布尔值。
+一个布尔值。
 
 ## Example
 

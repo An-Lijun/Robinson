@@ -4,8 +4,8 @@ interface unitMap {
 
 /**
  * @beta
- * @description 获取文件的MIME类型
- * @param suffix 文件扩展名
+ *  获取文件的MIME类型
+ * @param suffix - 文件扩展名
  * @returns 对应的MIME类型字符串
  * @example
  * getMimeType('jpg'); // 返回 'image/jpeg'
@@ -178,9 +178,9 @@ export function getMimeType(suffix: String) {
 
 /**
  * @beta
- * @description 将Blob对象转换为Base64编码的字符串
- * @param blob Blob对象
- * @param suffix 文件后缀，默认为'png'
+ *  将Blob对象转换为Base64编码的字符串
+ * @param blob - Blob对象
+ * @param suffix - 文件后缀，默认为'png'
  * @returns Promise对象，解析为Base64编码的字符串
  * @example
  * blobToBase64(new Blob(['Hello, world!'], { type: 'text/plain' }))
@@ -205,8 +205,8 @@ export function blobToBase64 (blob: BlobPart, suffix = 'png') {
 
 /**
  * @beta
- * @description 将Base64编码的字符串转换为Blob对象
- * @param base64 Base64编码的字符串
+ *  将Base64编码的字符串转换为Blob对象
+ * @param base64 - Base64编码的字符串
  * @returns Blob对象
  * @example
  * const blob = base64ToBlob('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...');
@@ -225,9 +225,9 @@ export function base64ToBlob (base64: string): Blob {
 
 /**
  * @beta
- * @description 将图片URL转换为Base64编码的字符串
- * @param url 图片URL
- * @param suffix 文件后缀，默认为'image/png'
+ *  将图片URL转换为Base64编码的字符串
+ * @param url - 图片URL
+ * @param suffix - 文件后缀，默认为'image/png'
  * @returns Promise对象，解析为Base64编码的字符串
  * @example
  * urlToBase64('https://example.com/image.png').then(base64 => console.log(base64));
@@ -258,10 +258,10 @@ export function urlToBase64 (url: string, suffix = 'png'): Promise<string> {
 
 /**
  * @beta
- * @description 通过URL下载图片到本地
- * @param url 图片路径
- * @param filename 下载后的文件名
- * @param type 下载后的文件类型
+ *  通过URL下载图片到本地
+ * @param url - 图片路径
+ * @param filename - 下载后的文件名
+ * @param type - 下载后的文件类型
  * @example
  * downloadByUrl('https://example.com/image.png', 'example.png');
  */
@@ -289,10 +289,10 @@ export function downloadByUrl (url: string, filename?: string, type?: string) {
 
 /**
  * @beta
- * @description 通过Blob对象下载文件
- * @param blob Blob文件流
- * @param fileNm 下载后的文件名
- * @param suffix 下载后的文件类型，默认为'txt'
+ *  通过Blob对象下载文件
+ * @param blob - Blob文件流
+ * @param fileNm - 下载后的文件名
+ * @param suffix - 下载后的文件类型，默认为'txt'
  * @example
  * downloadByBlob(new Blob(['Hello, world!'], { type: 'text/plain' }), 'example.txt');
  */
@@ -312,10 +312,10 @@ export function downloadByBlob (blob: BlobPart, fileNm: string, suffix = 'txt') 
 
 /**
  * @beta
- * @description 通过Base64编码的字符串下载文件
- * @param buf Base64编码的字符串
- * @param fileNm 下载后的文件名
- * @param suffix 下载后的文件后缀
+ *  通过Base64编码的字符串下载文件
+ * @param buf - Base64编码的字符串
+ * @param fileNm - 下载后的文件名
+ * @param suffix - 下载后的文件后缀
  * @example
  * downloadByBase64('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAUA...', 'example.png', 'png');
  */
@@ -328,9 +328,9 @@ export function downloadByBase64 (buf: string, fileNm: string, suffix: string) {
 
 /**
  * @beta
- * @description 通过DOM元素打印内容
- * @param el 要打印的DOM元素
- * @param custStyle 自定义CSS样式
+ *  通过DOM元素打印内容
+ * @param el - 要打印的DOM元素
+ * @param custStyle - 自定义CSS样式
  * @example
  * printByDom(document.getElementById('print-content'), 'body { font-size: 12px; }');
  */
@@ -374,9 +374,9 @@ export function printByDom (el: HTMLElement, custStyle = '') {
 
 /**
  * @beta
- * @description 通过Blob对象打印内容
- * @param blob Blob对象
- * @param type MIME类型，默认为'application/pdf'
+ *  通过Blob对象打印内容
+ * @param blob - Blob对象
+ * @param type - MIME类型，默认为'application/pdf'
  * @example
  * printByBlob(new Blob(['Hello, world!'], { type: 'text/plain' }));
  */
@@ -405,9 +405,9 @@ export function printByBlob (blob: Blob, type = 'application/pdf') {
 
 /**
  * @beta
- * @description 压缩图片文件
- * @param file 源文件
- * @param size 指定压缩大小（单位：MB）
+ *  压缩图片文件
+ * @param file - 源文件
+ * @param size - 指定压缩大小（单位：MB）
  * @returns Promise对象，解析为压缩后的Base64编码字符串
  * @example
  * imgCompression(fileInput.files[0], 0.5).then(compressedBase64 => console.log(compressedBase64));
@@ -445,9 +445,9 @@ export function imgCompression (file: File, size: number) {
 
 /**
  * @beta
- * @description 获取文件大小
- * @param file 源文件
- * @param unit 单位（'b', 'kb', 'm', 'g'），默认为'b'
+ *  获取文件大小
+ * @param file - 源文件
+ * @param unit - 单位（'b', 'kb', 'm', 'g'），默认为'b'
  * @returns 文件大小（指定单位）
  * @example
  * getFileSize(fileInput.files[0], 'kb'); // 返回文件大小（KB）
@@ -466,8 +466,8 @@ export function getFileSize (file: File, unit: string = 'b') {
 
 /**
  * @beta
- * @description 获取文件后缀名
- * @param file 源文件
+ *  获取文件后缀名
+ * @param file - 源文件
  * @returns 文件后缀名
  * @example
  * getFileType(fileInput.files[0]); // 返回文件后缀名（如 'jpg'）
@@ -478,9 +478,9 @@ export function getFileType (file: File) {
 
 /**
  * @beta
- * @description 生成文件切片数组
- * @param file 文件对象
- * @param chunkSize 每个切片的大小（字节），默认为1MB
+ *  生成文件切片数组
+ * @param file - 文件对象
+ * @param chunkSize - 每个切片的大小（字节），默认为1MB
  * @returns 切片数组，每个元素包含索引和Blob对象
  * @example
  * getFileChunk(fileInput.files[0], 1024 * 1024).forEach(chunk => console.log(chunk));

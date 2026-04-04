@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数“isEqValue”比较两个值，如果它们的值和类型相等则返回 true。
+函数“isEqValue”比较两个值，如果它们的值和类型相等则返回 true。
 
 **Signature:**
 
@@ -26,7 +26,7 @@ declare function isEqValue(value1: any, value2: any): boolean;
 
 boolean
 
-{<!-- -->boolean<!-- -->} 一个布尔值。
+一个布尔值。
 
 ## Example
 

@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数 unBind 从 DOM 元素中删除事件侦听器。
+函数 unBind 从 DOM 元素中删除事件侦听器。
 
 **Signature:**
 
@@ -31,10 +31,11 @@ void
 
 
 ```JavaScript
-   let div = document.querySelect('#btn');
-   div.onclik =()=>{
-     console.log('11')
-   }
-   unBind(div,'click')
+   let div = document.querySelector('#btn');
+   const handleClick = () => {
+     console.log('11');
+   };
+   bind(div, 'click', handleClick);
+   unBind(div, 'click', handleClick);
 ```
 

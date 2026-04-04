@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 将颜色对象转换为rgba颜色字符串
+将颜色对象转换为rgba颜色字符串
 
 **Signature:**
 
@@ -20,13 +20,13 @@ toRgbaString: (colorObj: IRgba, n?: number) => string
 |  Parameter | Type | Description |
 |  --- | --- | --- |
 |  colorObj | IRgba | 颜色对象，包含r、g、b分量，可选a分量 |
-|  n | number | _(Optional)_ |
+|  n | number | _(Optional)_ 透明度的小数点后保留位数，默认为10000（即保留4位小数） |
 
 **Returns:**
 
 string
 
-{<!-- -->string<!-- -->} 返回一个rgba格式的字符串
+返回一个rgba格式的字符串
 
 ## Example
 

@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- “deepClone”函数用于创建对象或数组的深层副本，包括处理复杂类型，例如集合、映射和符号。
+“deepClone”函数用于创建对象或数组的深层副本，包括处理复杂类型，例如集合、映射和符号。
 
 **Signature:**
 
@@ -25,7 +25,7 @@ declare function deepClone(originalValue: any): any;
 
 any
 
-{<!-- -->any<!-- -->} - 函数“deepClone”返回“originalValue”参数的深度克隆。
+- 函数“deepClone”返回“originalValue”参数的深度克隆。
 
 ## Example
 

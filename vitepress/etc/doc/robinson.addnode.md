@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数“addNode”将 DOM 元素或字符串插入到父 DOM 元素的指定位置。
+函数“addNode”将 DOM 元素或字符串插入到父 DOM 元素的指定位置。
 
 **Signature:**
 

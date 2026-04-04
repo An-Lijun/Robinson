@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 获取当前日期的时间戳。
+获取当前日期的时间戳。
 
 **Signature:**
 
@@ -25,7 +25,7 @@ declare function getTimestamp(date: Tday): number;
 
 number
 
-{<!-- -->number<!-- -->} - 返回时间戳（毫秒数）。
+- 返回时间戳（毫秒数）。
 
 ## Example
 

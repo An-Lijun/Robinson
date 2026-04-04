@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 解析rgba颜色字符串为颜色对象
+解析rgba颜色字符串为颜色对象
 
 **Signature:**
 
@@ -25,7 +25,7 @@ parseRgbaColor: (color: string) => IRgba
 
 IRgba
 
-{ r: 255, g: 0, b: 0, a: 0.5<!-- -->} 包含RGBA分量的对象
+包含RGBA分量的对象
 
 ## Example
 

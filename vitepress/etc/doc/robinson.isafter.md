@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 判断一个日期是否在另一个日期之后。
+判断一个日期是否在另一个日期之后。
 
 **Signature:**
 
@@ -26,5 +26,5 @@ declare function isAfter(start: dayjs.ConfigType, end: dayjs.ConfigType): boolea
 
 boolean
 
-{<!-- -->boolean<!-- -->} - 如果开始日期在结束日期之后返回 true，否则返回 false。
+- 如果开始日期在结束日期之后返回 true，否则返回 false。
 

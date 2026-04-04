@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 节流函数，限制函数调用的频率。
+节流函数，限制函数调用的频率。
 
 **Signature:**
 
@@ -28,7 +28,7 @@ declare function throttle(fn: Function, immediate: number, leading?: boolean, tr
 
 Function
 
-{<!-- -->Function<!-- -->} - 返回一个节流函数。
+- 返回一个节流函数。
 
 ## Example
 

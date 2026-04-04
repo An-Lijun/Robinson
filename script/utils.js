@@ -8,22 +8,20 @@ const packageJson = require('../package.json');
  * 输出logo
  */
 // 生成网站  https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
-function logLogo () {
+function logLogo() {
   console.log(chalk.green(`
-      _   _      _ _        ______      _     _                 
-     | | | |    | | |       | ___ \\    | |   (_)                
-     | |_| | ___| | | ___   | |_/ /___ | |__  _ _ __  ___  ___  
-     |  _  |/ _ \\ | |/ _ \\  |    // _ \\| '_ \\| | '_ \\/ __|/ _ \\ 
-     | | | |  __/ | | (_) | | |\\ \\ (_) | |_) | | | | \\__ \\ (_) |
-     \\_| |_/\\___|_|_|\\___/  \\_| \\_\\___/|_.__/|_|_| |_|___/\\___/ 
-                                                                
+    ██████   ██████  ██████  ██ ███    ██ ███████  ██████  ███    ██ 
+    ██   ██ ██    ██ ██   ██ ██ ████   ██ ██      ██    ██ ████   ██ 
+    ██████  ██    ██ ██████  ██ ██ ██  ██ ███████ ██    ██ ██ ██  ██ 
+    ██   ██ ██    ██ ██   ██ ██ ██  ██ ██      ██ ██    ██ ██  ██ ██ 
+    ██   ██  ██████  ██████  ██ ██   ████ ███████  ██████  ██   ████ 
      `));
 }
 
 /**
  * 分行
  */
-function logNextLone () {
+function logNextLone() {
   console.log('_________________________________________________________________________________');
   console.log('\n');
 }
@@ -32,17 +30,19 @@ function logNextLone () {
  * 控制台输出错误
  * @param  {...any} arg
  */
-function logError (...arg) {
+function logError(...arg) {
   console.log(chalk.bgRed.white('[Error] ', ...arg));
 
 }
-function logSuccess (...arg) {
-  console.log(chalk.green('[Success] ', ...arg));
 
+// 控制台输出成功信息
+function logSuccess(...arg) {
+  console.log(chalk.green('[Success] ', ...arg));
 }
 
 
-function build (fun) {
+// 打包
+function build(fun) {
   console.log('正在打包...');
   const buildProcess = spawn(npmNM, ['run', 'buildViteDocs']);
 
@@ -59,13 +59,16 @@ function build (fun) {
   // 当进程结束时的处理
   buildProcess.on('close', (code) => {
     logSuccess('文档打包成功', packageJson.version);
-    if(fun){
+    if (fun) {
       fun()
     }
   });
 }
 
-module.exports = { logNextLone,
+module.exports = {
+  logNextLone,
   logError,
   logSuccess,
-  logLogo ,build};
+  logLogo, 
+  build
+};

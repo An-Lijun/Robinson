@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数 stopPropagation 阻止事件在事件链中向上冒泡。
+函数 stopPropagation 阻止事件在事件链中向上冒泡。
 
 **Signature:**
 

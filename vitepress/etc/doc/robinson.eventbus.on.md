@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
-函数“on”将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。
+函数"on"将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。
 
 **Signature:**
 

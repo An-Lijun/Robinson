@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数“on”将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。
+函数"on"将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。
 
 **Signature:**
 
@@ -30,7 +30,7 @@ const eventBus = new EventBus(); eventBus.on('myEvent', () =<!-- -->&gt; { conso
 |  Method | Modifiers | Description |
 |  --- | --- | --- |
 |  [clear(eventName)](./robinson.eventbus.clear.md) |  | **_(BETA)_** clear 函数从 eventObj 对象中删除事件。 |
-|  [emit(eventName, Args)](./robinson.eventbus.emit.md) |  | **_(BETA)_** “emit”函数触发与特定事件名称关联的所有事件处理程序，并将任何参数传递给它们。 |
+|  [emit(eventName, Args)](./robinson.eventbus.emit.md) |  | **_(BETA)_** "emit"函数触发与特定事件名称关联的所有事件处理程序，并将任何参数传递给它们。 |
 |  [off(eventName, fn)](./robinson.eventbus.off.md) |  | **_(BETA)_** |
-|  [on(eventName, eventFn)](./robinson.eventbus.on.md) |  | **_(BETA)_** 函数“on”将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。 |
+|  [on(eventName, eventFn)](./robinson.eventbus.on.md) |  | **_(BETA)_** 函数"on"将事件侦听器添加到事件对象，将事件函数存储在指定的事件名称下。 |
 

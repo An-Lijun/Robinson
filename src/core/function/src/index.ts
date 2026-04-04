@@ -18,9 +18,9 @@ type result = Object | string | undefined;
 
 /**
  * @beta
- * @description 该函数检查给定值是否是函数。
- * @param {any} value - “value”参数是我们想要检查它是否是函数的任何值。
- * @returns {boolean} - 一个布尔值。
+ *  该函数检查给定值是否是函数。
+ * @param  value - “value”参数是我们想要检查它是否是函数的任何值。
+ * @returns  - 一个布尔值。
  * @example
  * isFunction(() => {}); // 返回 true
  * isFunction(123); // 返回 false
@@ -31,9 +31,9 @@ export function isFunction (value: any): boolean {
 
 /**
  * @beta
- * @description “deepClone”函数用于创建对象或数组的深层副本，包括处理复杂类型，例如集合、映射和符号。
- * @param {any} originalValue - OriginalValue 参数是您要深度克隆的值。它可以是任何数据类型，包括对象、数组、集合、映射、函数以及字符串或数字等简单值。
- * @returns {any} - 函数“deepClone”返回“originalValue”参数的深度克隆。
+ *  “deepClone”函数用于创建对象或数组的深层副本，包括处理复杂类型，例如集合、映射和符号。
+ * @param  originalValue - OriginalValue 参数是您要深度克隆的值。它可以是任何数据类型，包括对象、数组、集合、映射、函数以及字符串或数字等简单值。
+ * @returns  - 函数“deepClone”返回“originalValue”参数的深度克隆。
  * @example
  * ```JavaScript
  *    let data = {
@@ -87,10 +87,10 @@ export function deepClone (originalValue: any): any {
 
 /**
  * @beta
- * @description 函数“asignData”将属性从“obj2”复制到“obj1”，并可选择执行附加函数。
- * @param {DAMNU_ENABLE} obj1 - obj1 是第一个将被分配数据的对象。
- * @param {DAMNU_ENABLE} obj2 - obj2 是一个对象，其中包含将根据匹配键分配给 obj1 的数据。
- * @returns {DAMNU_ENABLE} - 合并后的对象。
+ *  函数“asignData”将属性从“obj2”复制到“obj1”，并可选择执行附加函数。
+ * @param  obj1 - obj1 是第一个将被分配数据的对象。
+ * @param  obj2 - obj2 是一个对象，其中包含将根据匹配键分配给 obj1 的数据。
+ * @returns  - 合并后的对象。
  * @example
  * ```JavaScript
  * let o = {
@@ -116,11 +116,11 @@ export function asignData (obj1: DAMNU_ENABLE, obj2: DAMNU_ENABLE): DAMNU_ENABLE
 
 /**
  * @beta
- * @description 映射函数可以将数据进行枚举映射。
- * @param {enumData} enumData - 枚举数据，可以是对象或数组。
- * @param {options} options - 选项，可以是字符串或对象。
- * @param {string | number} expty - 如果枚举中寻找不到，返回的默认值，默认为 '--'。
- * @returns {result} - 映射后的结果。
+ *  映射函数可以将数据进行枚举映射。
+ * @param  enumData - 枚举数据，可以是对象或数组。
+ * @param  options - 选项，可以是字符串或对象。
+ * @param   expty - 如果枚举中寻找不到，返回的默认值，默认为 '--'。
+ * @returns  - 映射后的结果。
  * @example
  * ```JavaScript
  * let enum1 = [{ value: 'USD', label: '美元' }, { value: 'AUD', label: '澳大利亚元' }];
@@ -160,9 +160,9 @@ export function mapping (enumData: enumData, options: options, expty = '--'): re
 
 /**
  * @beta
- * @description 组合函数，将多个函数从右到左依次调用。
- * @param {...Function} fns - 要组合的函数。
- * @returns {Function} - 返回一个组合后的函数。
+ *  组合函数，将多个函数从右到左依次调用。
+ * @param  fns - 要组合的函数。
+ * @returns  - 返回一个组合后的函数。
  * @example
  * ```JavaScript
  * const addOne = x => x + 1;
@@ -187,9 +187,9 @@ export function compose (...fns: Array<Function>): Function {
 }
 /**
  * @beta
- * @description 柯里化函数接受一个函数作为输入并返回一个新函数，该函数可以使用多个参数或以柯里化方式调用。
- * @param {Function} fn - 参数“fn”是我们要应用柯里化的函数。
- * @returns {Function} - 正在返回柯里化函数。
+ *  柯里化函数接受一个函数作为输入并返回一个新函数，该函数可以使用多个参数或以柯里化方式调用。
+ * @param  fn - 参数“fn”是我们要应用柯里化的函数。
+ * @returns  - 正在返回柯里化函数。
  * @example
  * ```JavaScript
  * const add = (a, b) => a + b;
@@ -210,11 +210,11 @@ export function currying (fn: Function): Function {
 
 /**
  * @beta
- * @description 防抖函数，限制函数调用的频率。
- * @param {Function} fn - “fn”参数是您想要限制的函数。
- * @param {number} delay - “delay”参数是函数调用之间的最小时间间隔（以毫秒为单位）。
- * @param {boolean} isLimmediate - “isLimmediate”参数决定该函数是在调用时立即执行还是等待指定的“delay”时间过去后才第一次执行该函数。
- * @returns {Function} - 返回一个防抖函数。
+ *  防抖函数，限制函数调用的频率。
+ * @param  fn - “fn”参数是您想要限制的函数。
+ * @param delay - “delay”参数是函数调用之间的最小时间间隔（以毫秒为单位）。
+ * @param  isLimmediate - “isLimmediate”参数决定该函数是在调用时立即执行还是等待指定的“delay”时间过去后才第一次执行该函数。
+ * @returns  - 返回一个防抖函数。
  * @example
  * ```JavaScript
  * const log = () => console.log('Logged');
@@ -263,9 +263,9 @@ export function debounce (fn: Function, delay: number, isLimmediate: boolean = f
 
 /**
  * @beta
- * @description 从左向右执行函数。
- * @param {...Function} fns - 要组合的函数。
- * @returns {Function} - 返回一个组合后的函数。
+ *  从左向右执行函数。
+ * @param  fns - 要组合的函数。
+ * @returns  - 返回一个组合后的函数。
  * @example
  * ```JavaScript
  * const addOne = x => x + 1;
@@ -290,12 +290,12 @@ export function pipe (...fns: Array<Function>): Function {
 
 /**
  * @beta
- * @description 节流函数，限制函数调用的频率。
- * @param {Function} fn - “fn”参数是您想要限制的函数。
- * @param {number} immediate - “immediate”参数是函数调用之间的最小时间间隔（以毫秒为单位）。
- * @param {boolean} leading - “leading”参数决定该函数是在调用时立即执行还是等待指定的“immediate”时间过去后才第一次执行该函数。
- * @param {boolean} trailing - “trailing”参数决定是否应在上次调用后立即调用节流函数，即使指定的时间间隔（“immediate”）尚未过去。
- * @returns {Function} - 返回一个节流函数。
+ *  节流函数，限制函数调用的频率。
+ * @param  fn - “fn”参数是您想要限制的函数。
+ * @param  immediate - “immediate”参数是函数调用之间的最小时间间隔（以毫秒为单位）。
+ * @param leading - “leading”参数决定该函数是在调用时立即执行还是等待指定的“immediate”时间过去后才第一次执行该函数。
+ * @param trailing - “trailing”参数决定是否应在上次调用后立即调用节流函数，即使指定的时间间隔（“immediate”）尚未过去。
+ * @returns  - 返回一个节流函数。
  * @example
  * ```JavaScript
  * const log = () => console.log('Logged');

@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数“replaceNode”用新的 DOM 元素或给定父元素中的字符串替换旧的 DOM 元素。
+函数“replaceNode”用新的 DOM 元素或给定父元素中的字符串替换旧的 DOM 元素。
 
 **Signature:**
 

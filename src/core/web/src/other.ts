@@ -1,6 +1,6 @@
 /**
  * @beta
- * @description 将字符串中的关键词高亮显示。
+ * 将字符串中的关键词高亮显示。
  * @param str - 要进行高亮处理的原始字符串。
  * @param keyWords - 要高亮的关键字，多个关键字之间可以不使用分隔符。
  * @param color - 高亮显示的颜色，默认为 '#0053db'。
@@ -20,7 +20,7 @@ export function transHightLight (str:string, keyWords:string | Array<string>, co
 
 /**
  * @beta
- * @description 将文本复制到剪贴板。
+ * 将文本复制到剪贴板。
  * @param text - 要复制到剪贴板的文本内容。
  */
 export function copyToClipboard (text:string) {

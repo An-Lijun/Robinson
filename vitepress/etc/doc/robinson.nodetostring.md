@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数 `nodeToString` 接受一个 HTML 元素并返回它的字符串表示形式。
+函数 `nodeToString` 接受一个 HTML 元素并返回它的字符串表示形式。
 
 **Signature:**
 

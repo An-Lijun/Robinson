@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数“isUndefined”检查值是否未定义。
+函数“isUndefined”检查值是否未定义。
 
 **Signature:**
 
@@ -25,7 +25,7 @@ declare function isUndefined(value: any): boolean;
 
 boolean
 
-{<!-- -->boolean<!-- -->} 函数 isUndefined 返回一个布尔值。
+函数 isUndefined 返回一个布尔值。
 
 ## Example
 

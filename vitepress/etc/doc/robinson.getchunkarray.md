@@ -7,26 +7,26 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- `chunkArray` 函数接受一个数组和一个大小参数，并返回一个新数组，其中原始数组被分割成指定大小的较小数组。
+`chunkArray` 函数接受一个数组和一个大小参数，并返回一个新数组，其中原始数组被分割成指定大小的较小数组。
 
 **Signature:**
 
 ```typescript
-declare function getChunkArray(array: Array<any>, size?: number): Array<Array<any>>;
+declare function getChunkArray<T>(array: T[], size?: number): T[][];
 ```
 
 ## Parameters
 
 |  Parameter | Type | Description |
 |  --- | --- | --- |
-|  array | Array&lt;any&gt; |  |
-|  size | number | _(Optional)_ “size”参数指定数组每个块中应包含的元素数量。默认情况下，它设置为 1，这意味着每个元素将位于其自己的单独块中。 |
+|  array | T\[\] | <code>array</code> 参数是任何类型的数组。它是需要被分成更小的数组的数组。 |
+|  size | number | _(Optional)_ "size"参数指定数组每个块中应包含的元素数量。默认情况下，它设置为 1，这意味着每个元素将位于其自己的单独块中。 |
 
 **Returns:**
 
-Array&lt;Array&lt;any&gt;&gt;
+T\[\]\[\]
 
-{<!-- -->\[Array\]<!-- -->} 数组的数组。每个内部数组都包含原始数组中的一块元素。每个块的大小由“size”参数确定。
+数组的数组。每个内部数组都包含原始数组中的一块元素。每个块的大小由"size"参数确定。
 
 ## Example
 

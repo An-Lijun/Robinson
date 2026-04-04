@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 函数“getEtc”接受一个字符串值并返回指定长度的子字符串，并在末尾附加一个可选的“etcStr”。
+函数“getEtc”接受一个字符串值并返回指定长度的子字符串，并在末尾附加一个可选的“etcStr”。
 
 **Signature:**
 
@@ -27,7 +27,7 @@ declare function getEtc(value: string, len: number, etcStr?: string): string;
 
 string
 
-{<!-- -->string<!-- -->} - 一个字符串。
+- 一个字符串。
 
 ## Example
 

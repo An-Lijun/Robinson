@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
-“emit”函数触发与特定事件名称关联的所有事件处理程序，并将任何参数传递给它们。
+"emit"函数触发与特定事件名称关联的所有事件处理程序，并将任何参数传递给它们。
 
 **Signature:**
 

@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 组合函数，将多个函数从右到左依次调用。
+组合函数，将多个函数从右到左依次调用。
 
 **Signature:**
 
@@ -25,7 +25,7 @@ declare function compose(...fns: Array<Function>): Function;
 
 Function
 
-{<!-- -->Function<!-- -->} - 返回一个组合后的函数。
+- 返回一个组合后的函数。
 
 ## Example
 

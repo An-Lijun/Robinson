@@ -7,7 +7,7 @@
 > This API is provided as a preview for developers and may change based on feedback that we receive. Do not use this API in a production environment.
 > 
 
- 格式化时间。
+格式化时间。
 
 **Signature:**
 
@@ -26,7 +26,7 @@ declare function formatDate(date: Tday, pattern?: string): string;
 
 string
 
-{<!-- -->string<!-- -->} - 返回格式化后的时间字符串。
+- 返回格式化后的时间字符串。
 
 ## Example
 
