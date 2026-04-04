@@ -291,4 +291,4 @@ tester.saveResults(resultsPath);
 
 console.log(`\n✅ 性能测试完成！结果已保存到: ${resultsPath}`);
 console.log('💡 运行以下命令生成详细报告:');
-console.log('   npm run genPerformanceReport');
+console.log('   npm run doc:performanceReport');

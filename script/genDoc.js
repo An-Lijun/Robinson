@@ -9,7 +9,7 @@ const npmNM = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 
 task('gen-etc',(done)=>{
   console.log('正在生成report...');
-  const buildProcess = spawn(npmNM, ['run', 'genReport']);
+  const buildProcess = spawn(npmNM, ['run', 'doc:report']);
   buildProcess.stdout.on('data', (data) => {
     console.log(`stdout: ${data}`);
   });
@@ -51,7 +51,7 @@ task('gen-doc',(done)=>{
 
 task('gen-updatelog',(done)=>{
   console.log('正在生成更新日志...');
-  const buildProcess = spawn(npmNM, ['run', 'genUpdatelog']);
+  const buildProcess = spawn(npmNM, ['run', 'doc:updatelog']);
 
   // 当有数据输出到标准输出时的处理
   buildProcess.stdout.on('data', (data) => {

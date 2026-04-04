@@ -496,7 +496,7 @@ pnpm test
 pnpm build
 
 # 4. 生成文档
-pnpm genAllDocs
+pnpm doc:all
 pnpm docs:build
 
 # 5. 发布到 npm

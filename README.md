@@ -35,7 +35,7 @@ https://an-lijun.github.io/Robinson/
 npm run test:performance
 
 # 生成性能报告
-npm run genPerformanceReport
+npm run doc:performanceReport
 ```
 
 ### 性能测试内容
@@ -201,7 +201,7 @@ Robinson/
     "commit": "cz", // 提交命令
 
     "build": "npx rollup -c", //打包函数命令
-    "genAllDocs": "gulp --gulpfile script/genDoc.js", // 生成全部md文档
+    "doc:all": "gulp --gulpfile script/genDoc.js", // 生成全部md文档
     "docs:dev": "vitepress dev vitepress", // 开发vitepressDosc使用
     "docs:build": "node ./script/docBuild.js", // 打包vitepress
     "docs:preview": "vitepress preview", // 预览vitepressDosc使用
@@ -212,7 +212,7 @@ Robinson/
     "genUpdatelog": "gulp  --gulpfile script/updateLogGulp.js", //生成更新日志md命令
     "genReport" :"gulp  --gulpfile script/report.js", //生成测试报告
     "test:performance": "node test/performance.test.js", // 运行性能测试
-    "genPerformanceReport": "gulp --gulpfile script/performanceReport.js" // 生成性能报告
+    "doc:performanceReport": "gulp --gulpfile script/performanceReport.js" // 生成性能报告
  }
 ```
 
@@ -220,7 +220,7 @@ Robinson/
 项目提供了文档生成的功能，通过以下命令可以生成文档：
 
 ```bash
-npm run genAllDocs
+npm run doc:all
 npm run docs:build
 ```
 ## 测试

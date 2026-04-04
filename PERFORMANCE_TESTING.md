@@ -11,7 +11,7 @@
 npm run test:performance
 
 # 生成性能报告
-npm run genPerformanceReport
+npm run doc:performanceReport
 ```
 
 ## 性能测试内容
@@ -140,7 +140,7 @@ for (let i = 0; i < array.length; i++) {
 ```bash
 # 在 CI/CD 中运行性能测试
 npm run test:performance
-npm run genPerformanceReport
+npm run doc:performanceReport
 ```
 
 ### 2. 设置性能基准
