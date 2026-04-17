@@ -1,125 +1,722 @@
 {
-  "timestamp": "2026-04-03T13:16:54.440Z",
+  "timestamp": "2026-04-17T12:18:50.346Z",
   "tests": [
     {
-      "name": "isArray - 大数组检查",
-      "description": "检查 10000 个元素的数组",
-      "executionTime": 0.87,
+      "name": "is - 类型判断",
+      "description": "测试 is 函数类型判断性能",
+      "executionTime": 5.39,
+      "memoryUsage": 0.44,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.214Z"
+    },
+    {
+      "name": "isEmpty - 空值判断",
+      "description": "测试 isEmpty 各种空值情况",
+      "executionTime": 10.8,
+      "memoryUsage": 1.08,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.225Z"
+    },
+    {
+      "name": "isNull - null 判断",
+      "description": "测试 isNull 函数",
+      "executionTime": 0.84,
       "memoryUsage": 0,
       "passed": true,
-      "timestamp": "2026-04-03T13:16:54.269Z"
+      "timestamp": "2026-04-17T12:18:49.226Z"
+    },
+    {
+      "name": "isUndefined - undefined 判断",
+      "description": "测试 isUndefined 函数",
+      "executionTime": 1.36,
+      "memoryUsage": 0,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.228Z"
+    },
+    {
+      "name": "hasTypeIn - 类型数组判断",
+      "description": "测试 hasTypeIn 函数",
+      "executionTime": 9.66,
+      "memoryUsage": -0.57,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.238Z"
+    },
+    {
+      "name": "isSimpleType - 简单类型判断",
+      "description": "测试 isSimpleType 函数",
+      "executionTime": 2.13,
+      "memoryUsage": -0.16,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.240Z"
+    },
+    {
+      "name": "isRefType - 引用类型判断",
+      "description": "测试 isRefType 函数",
+      "executionTime": 2.55,
+      "memoryUsage": -0.38,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.243Z"
+    },
+    {
+      "name": "isEqType - 类型相等判断",
+      "description": "测试 isEqType 函数",
+      "executionTime": 1.93,
+      "memoryUsage": 0.61,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.245Z"
+    },
+    {
+      "name": "isArray - 数组判断",
+      "description": "测试 isArray 函数",
+      "executionTime": 1.05,
+      "memoryUsage": 0.77,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.246Z"
     },
     {
       "name": "getRelArray - 过滤空值",
-      "description": "过滤包含空值的数组",
-      "executionTime": 1.27,
-      "memoryUsage": -0.07,
+      "description": "测试 getRelArray 函数",
+      "executionTime": 20.42,
+      "memoryUsage": -0.82,
       "passed": true,
-      "timestamp": "2026-04-03T13:16:54.270Z"
+      "timestamp": "2026-04-17T12:18:49.267Z"
     },
     {
       "name": "getChunkArray - 数组分块",
-      "description": "将 10000 个元素分块为 100 个一组",
-      "executionTime": 8.69,
-      "memoryUsage": 1.37,
+      "description": "测试 getChunkArray 函数",
+      "executionTime": 230.31,
+      "memoryUsage": 4.42,
       "passed": true,
-      "timestamp": "2026-04-03T13:16:54.279Z"
+      "timestamp": "2026-04-17T12:18:49.498Z"
     },
     {
-      "name": "hasClass - 类名检查",
-      "description": "检查元素是否包含指定类名",
-      "executionTime": 0.87,
+      "name": "getToggleArray - 数组元素切换",
+      "description": "测试 getToggleArray 函数",
+      "executionTime": 8.9,
+      "memoryUsage": -2.37,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.507Z"
+    },
+    {
+      "name": "getUniqueValues - 数组去重",
+      "description": "测试 getUniqueValues 函数",
+      "executionTime": 9.52,
+      "memoryUsage": -1.55,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.517Z"
+    },
+    {
+      "name": "getGroupArray - 数组分组",
+      "description": "测试 getGroupArray 函数",
+      "executionTime": 2.48,
+      "memoryUsage": 2.25,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.519Z"
+    },
+    {
+      "name": "isNumber - 数字判断",
+      "description": "测试 isNumber 函数",
+      "executionTime": 2.32,
+      "memoryUsage": 1.15,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.522Z"
+    },
+    {
+      "name": "isNaN - NaN 判断",
+      "description": "测试 isNaN 函数",
+      "executionTime": 1.03,
       "memoryUsage": 0,
       "passed": true,
-      "timestamp": "2026-04-03T13:16:54.280Z"
+      "timestamp": "2026-04-17T12:18:49.523Z"
+    },
+    {
+      "name": "isInt - 整数判断",
+      "description": "测试 isInt 函数",
+      "executionTime": 0.9,
+      "memoryUsage": 0,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.524Z"
+    },
+    {
+      "name": "isFinite - 有限数判断",
+      "description": "测试 isFinite 函数",
+      "executionTime": 0.92,
+      "memoryUsage": 0,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.525Z"
+    },
+    {
+      "name": "getRandom - 随机数生成",
+      "description": "测试 getRandom 函数",
+      "executionTime": 14.58,
+      "memoryUsage": -3.7,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.540Z"
+    },
+    {
+      "name": "isRange - 范围判断",
+      "description": "测试 isRange 函数",
+      "executionTime": 0.9,
+      "memoryUsage": 0,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.541Z"
+    },
+    {
+      "name": "isFunction - 函数判断",
+      "description": "测试 isFunction 函数",
+      "executionTime": 5.2,
+      "memoryUsage": 1.42,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.546Z"
+    },
+    {
+      "name": "deepClone - 深度克隆",
+      "description": "测试 deepClone 函数",
+      "executionTime": 27.17,
+      "memoryUsage": -0.91,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.573Z"
+    },
+    {
+      "name": "deepClone - Set/Map 克隆",
+      "description": "测试 deepClone 对 Set/Map 的处理",
+      "executionTime": 3.11,
+      "memoryUsage": 2.75,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.577Z"
+    },
+    {
+      "name": "asignData - 对象数据分配",
+      "description": "测试 asignData 函数",
+      "executionTime": 7.14,
+      "memoryUsage": -3.06,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.584Z"
+    },
+    {
+      "name": "mapping - 映射函数",
+      "description": "测试 mapping 函数",
+      "executionTime": 3.79,
+      "memoryUsage": 3.7,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.588Z"
     },
     {
       "name": "compose - 函数组合",
-      "description": "组合两个函数并执行",
-      "executionTime": 2.77,
-      "memoryUsage": -1.37,
+      "description": "测试 compose 函数",
+      "executionTime": 7.28,
+      "memoryUsage": 3.72,
       "passed": true,
-      "timestamp": "2026-04-03T13:16:54.283Z"
+      "timestamp": "2026-04-17T12:18:49.595Z"
     },
     {
-      "name": "pipe - 函数管道",
-      "description": "通过管道执行两个函数",
-      "executionTime": 1.77,
-      "memoryUsage": 2.56,
+      "name": "currying - 柯里化",
+      "description": "测试 currying 函数",
+      "executionTime": 7.51,
+      "memoryUsage": -4.95,
       "passed": true,
-      "timestamp": "2026-04-03T13:16:54.285Z"
-    },
-    {
-      "name": "isObjectLike - 对象类型检查",
-      "description": "检查大型对象是否为类对象类型",
-      "executionTime": 0.52,
-      "memoryUsage": 0,
-      "passed": true,
-      "timestamp": "2026-04-03T13:16:54.286Z"
-    },
-    {
-      "name": "deepClone - 复杂对象克隆",
-      "description": "克隆包含嵌套对象和数组的复杂结构",
-      "executionTime": 4.53,
-      "memoryUsage": -2.59,
-      "passed": true,
-      "timestamp": "2026-04-03T13:16:54.291Z"
+      "timestamp": "2026-04-17T12:18:49.603Z"
     },
     {
       "name": "debounce - 防抖函数",
-      "description": "快速调用防抖函数 100 次",
-      "executionTime": 11.15,
-      "memoryUsage": 1.49,
+      "description": "测试 debounce 函数",
+      "executionTime": 14.63,
+      "memoryUsage": 0.06,
       "passed": true,
-      "timestamp": "2026-04-03T13:16:54.303Z"
+      "timestamp": "2026-04-17T12:18:49.618Z"
+    },
+    {
+      "name": "pipe - 函数管道",
+      "description": "测试 pipe 函数",
+      "executionTime": 7.08,
+      "memoryUsage": 3.64,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.625Z"
     },
     {
       "name": "throttle - 节流函数",
-      "description": "快速调用节流函数 100 次",
-      "executionTime": 0.46,
-      "memoryUsage": 0.31,
+      "description": "测试 throttle 函数",
+      "executionTime": 15.65,
+      "memoryUsage": 0.07,
       "passed": true,
-      "timestamp": "2026-04-03T13:16:54.304Z"
+      "timestamp": "2026-04-17T12:18:49.641Z"
+    },
+    {
+      "name": "calc - 精确计算",
+      "description": "测试 calc 函数",
+      "executionTime": 57.75,
+      "memoryUsage": -1.27,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.712Z"
+    },
+    {
+      "name": "isString - 字符串判断",
+      "description": "测试 isString 函数",
+      "executionTime": 2.7,
+      "memoryUsage": 2.07,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.715Z"
+    },
+    {
+      "name": "isExternal - 外链判断",
+      "description": "测试 isExternal 函数",
+      "executionTime": 1.78,
+      "memoryUsage": 1.6,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.717Z"
+    },
+    {
+      "name": "isIdCard - 身份证验证",
+      "description": "测试 isIdCard 函数",
+      "executionTime": 13.37,
+      "memoryUsage": -3.92,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.730Z"
+    },
+    {
+      "name": "isUrl - URL 判断",
+      "description": "测试 isUrl 函数",
+      "executionTime": 3.63,
+      "memoryUsage": 1.34,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.734Z"
+    },
+    {
+      "name": "isEmail - 邮箱判断",
+      "description": "测试 isEmail 函数",
+      "executionTime": 2.31,
+      "memoryUsage": 1.34,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.736Z"
+    },
+    {
+      "name": "isMobileNum - 手机号判断",
+      "description": "测试 isMobileNum 函数",
+      "executionTime": 1.81,
+      "memoryUsage": 1.07,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.738Z"
+    },
+    {
+      "name": "insertStr - 字符串插入",
+      "description": "测试 insertStr 函数",
+      "executionTime": 1.82,
+      "memoryUsage": -6.5,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.740Z"
+    },
+    {
+      "name": "getEtc - 字符串截取",
+      "description": "测试 getEtc 函数",
+      "executionTime": 0.19,
+      "memoryUsage": 0,
+      "passed": false,
+      "error": "params mast be string",
+      "timestamp": "2026-04-17T12:18:49.741Z"
+    },
+    {
+      "name": "getUniqueId - 唯一ID生成",
+      "description": "测试 getUniqueId 函数",
+      "executionTime": 32.63,
+      "memoryUsage": 0.15,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.773Z"
+    },
+    {
+      "name": "isHex - 十六进制颜色判断",
+      "description": "测试 isHex 函数",
+      "executionTime": 1.46,
+      "memoryUsage": 1.07,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.775Z"
+    },
+    {
+      "name": "isRgb - RGB 颜色判断",
+      "description": "测试 isRgb 函数",
+      "executionTime": 3.49,
+      "memoryUsage": 2.86,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.779Z"
+    },
+    {
+      "name": "isRgba - RGBA 颜色判断",
+      "description": "测试 isRgba 函数",
+      "executionTime": 2.88,
+      "memoryUsage": 2.29,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.782Z"
+    },
+    {
+      "name": "hexToRgb - 十六进制转RGB",
+      "description": "测试 hexToRgb 函数",
+      "executionTime": 5.27,
+      "memoryUsage": -2.76,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.787Z"
+    },
+    {
+      "name": "rgbToHex - RGB转十六进制",
+      "description": "测试 rgbToHex 函数",
+      "executionTime": 3.22,
+      "memoryUsage": 2.29,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.790Z"
+    },
+    {
+      "name": "hexToRgba - 十六进制转RGBA",
+      "description": "测试 hexToRgba 函数",
+      "executionTime": 6.65,
+      "memoryUsage": -1.24,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.797Z"
+    },
+    {
+      "name": "rgbaToHex - RGBA转十六进制",
+      "description": "测试 rgbaToHex 函数",
+      "executionTime": 3.12,
+      "memoryUsage": 1.72,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.800Z"
+    },
+    {
+      "name": "toRgbaString - 颜色对象转RGBA字符串",
+      "description": "测试 toRgbaString 函数",
+      "executionTime": 3.26,
+      "memoryUsage": -2.66,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.804Z"
+    },
+    {
+      "name": "parseHexColor - 解析十六进制颜色",
+      "description": "测试 parseHexColor 函数",
+      "executionTime": 5.18,
+      "memoryUsage": 2.93,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.809Z"
+    },
+    {
+      "name": "parseRgbaColor - 解析RGBA颜色",
+      "description": "测试 parseRgbaColor 函数",
+      "executionTime": 6.85,
+      "memoryUsage": -2.31,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.816Z"
+    },
+    {
+      "name": "parseColorString - 解析颜色字符串",
+      "description": "测试 parseColorString 函数",
+      "executionTime": 6.43,
+      "memoryUsage": -2.29,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.823Z"
+    },
+    {
+      "name": "getTimestamp - 获取时间戳",
+      "description": "测试 getTimestamp 函数",
+      "executionTime": 4.49,
+      "memoryUsage": 1.6,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.827Z"
+    },
+    {
+      "name": "formatDate - 日期格式化",
+      "description": "测试 formatDate 函数",
+      "executionTime": 25.93,
+      "memoryUsage": 1.65,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.853Z"
+    },
+    {
+      "name": "getBeforeDate - 获取之前日期",
+      "description": "测试 getBeforeDate 函数",
+      "executionTime": 27.02,
+      "memoryUsage": 1.65,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.880Z"
+    },
+    {
+      "name": "getAfterDate - 获取之后日期",
+      "description": "测试 getAfterDate 函数",
+      "executionTime": 26.95,
+      "memoryUsage": -6.18,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.907Z"
+    },
+    {
+      "name": "getDiff - 日期差值计算",
+      "description": "测试 getDiff 函数",
+      "executionTime": 8.5,
+      "memoryUsage": 3.35,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.916Z"
+    },
+    {
+      "name": "isLeapYear - 闰年判断",
+      "description": "测试 isLeapYear 函数",
+      "executionTime": 0.89,
+      "memoryUsage": 0,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.917Z"
+    },
+    {
+      "name": "isBefore - 日期之前判断",
+      "description": "测试 isBefore 函数",
+      "executionTime": 8.8,
+      "memoryUsage": 3.21,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.926Z"
+    },
+    {
+      "name": "isAfter - 日期之后判断",
+      "description": "测试 isAfter 函数",
+      "executionTime": 8.66,
+      "memoryUsage": -4.6,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.935Z"
+    },
+    {
+      "name": "isSymbol - Symbol 判断",
+      "description": "测试 isSymbol 函数",
+      "executionTime": 3.68,
+      "memoryUsage": 3.98,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.939Z"
+    },
+    {
+      "name": "isNode - DOM 节点判断",
+      "description": "测试 isNode 函数",
+      "executionTime": 0.16,
+      "memoryUsage": 0,
+      "passed": false,
+      "error": "Cannot read properties of null (reading 'nodeType')",
+      "timestamp": "2026-04-17T12:18:49.939Z"
+    },
+    {
+      "name": "hasClass - 类名判断",
+      "description": "测试 hasClass 函数",
+      "executionTime": 2.33,
+      "memoryUsage": -6.48,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.941Z"
+    },
+    {
+      "name": "addClass - 添加类名",
+      "description": "测试 addClass 函数",
+      "executionTime": 1.15,
+      "memoryUsage": 1.03,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.943Z"
+    },
+    {
+      "name": "removeClass - 移除类名",
+      "description": "测试 removeClass 函数",
+      "executionTime": 1.14,
+      "memoryUsage": 1.03,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.944Z"
+    },
+    {
+      "name": "replaceClass - 替换类名",
+      "description": "测试 replaceClass 函数",
+      "executionTime": 1.22,
+      "memoryUsage": 1.03,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.945Z"
+    },
+    {
+      "name": "stringToNode - 字符串转节点",
+      "description": "测试 stringToNode 函数",
+      "executionTime": 0.17,
+      "memoryUsage": 0,
+      "passed": false,
+      "error": "document is not defined",
+      "timestamp": "2026-04-17T12:18:49.945Z"
+    },
+    {
+      "name": "getNode - 获取单个节点",
+      "description": "测试 getNode 函数",
+      "executionTime": 2.2,
+      "memoryUsage": 0,
+      "passed": false,
+      "error": "Cannot find module '../src/core/web/src/dom'\nRequire stack:\n- C:\\Users\\19213\\Desktop\\openSource\\packages\\Robinson\\test\\performance.test.js",
+      "timestamp": "2026-04-17T12:18:49.948Z"
+    },
+    {
+      "name": "getNodes - 获取节点列表",
+      "description": "测试 getNodes 函数",
+      "executionTime": 1.55,
+      "memoryUsage": 0,
+      "passed": false,
+      "error": "Cannot find module '../src/core/web/src/dom'\nRequire stack:\n- C:\\Users\\19213\\Desktop\\openSource\\packages\\Robinson\\test\\performance.test.js",
+      "timestamp": "2026-04-17T12:18:49.949Z"
+    },
+    {
+      "name": "bind - 绑定事件",
+      "description": "测试 bind 函数",
+      "executionTime": 0.39,
+      "memoryUsage": 0.27,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.950Z"
+    },
+    {
+      "name": "unbind - 解绑事件",
+      "description": "测试 unbind 函数",
+      "executionTime": 0.29,
+      "memoryUsage": 0.27,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.950Z"
+    },
+    {
+      "name": "transHightLight - 高亮转换",
+      "description": "测试 transHightLight 函数",
+      "executionTime": 13.8,
+      "memoryUsage": 0.09,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.964Z"
+    },
+    {
+      "name": "createCache - 创建缓存实例",
+      "description": "测试 createCache 基本操作",
+      "executionTime": 2.92,
+      "memoryUsage": 0.85,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.967Z"
+    },
+    {
+      "name": "createCache - 大数据缓存",
+      "description": "测试 createCache 处理大数据",
+      "executionTime": 23.38,
+      "memoryUsage": 2.2,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.991Z"
+    },
+    {
+      "name": "EventBus - 事件发布订阅",
+      "description": "测试 EventBus on/off/emit/clear",
+      "executionTime": 4.4,
+      "memoryUsage": -4.13,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:49.995Z"
+    },
+    {
+      "name": "EventBus - 多次触发",
+      "description": "测试 EventBus 事件触发性能",
+      "executionTime": 5.26,
+      "memoryUsage": 4.64,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:50.000Z"
+    },
+    {
+      "name": "isObjectLike - 类对象判断",
+      "description": "测试 isObjectLike 函数",
+      "executionTime": 1.14,
+      "memoryUsage": -6.85,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:50.002Z"
+    },
+    {
+      "name": "isOriginDate - 日期对象判断",
+      "description": "测试 isOriginDate 函数",
+      "executionTime": 2.64,
+      "memoryUsage": 2.63,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:50.004Z"
+    },
+    {
+      "name": "isPromise - Promise 判断",
+      "description": "测试 isPromise 函数",
+      "executionTime": 3.63,
+      "memoryUsage": -2.12,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:50.008Z"
+    },
+    {
+      "name": "isRegExp - 正则表达式判断",
+      "description": "测试 isRegExp 函数",
+      "executionTime": 3.54,
+      "memoryUsage": 3.18,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:50.012Z"
+    },
+    {
+      "name": "isElement - DOM 元素判断",
+      "description": "测试 isElement 函数",
+      "executionTime": 3.07,
+      "memoryUsage": 3.43,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:50.015Z"
+    },
+    {
+      "name": "isIE - IE 浏览器判断",
+      "description": "测试 isIE 函数",
+      "executionTime": 4.85,
+      "memoryUsage": -4.62,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:50.020Z"
     },
     {
       "name": "getChunkArray - 空数组",
       "description": "处理空数组",
-      "executionTime": 0.28,
+      "executionTime": 0.29,
       "memoryUsage": 0.76,
       "passed": true,
-      "timestamp": "2026-04-03T13:16:54.305Z"
+      "timestamp": "2026-04-17T12:18:50.021Z"
     },
     {
       "name": "getChunkArray - 单元素数组",
       "description": "处理单元素数组",
-      "executionTime": 0.88,
-      "memoryUsage": -1.09,
+      "executionTime": 0.63,
+      "memoryUsage": 2.75,
       "passed": true,
-      "timestamp": "2026-04-03T13:16:54.306Z"
+      "timestamp": "2026-04-17T12:18:50.021Z"
     },
     {
       "name": "getChunkArray - 块大小大于数组",
       "description": "块大小大于数组长度",
-      "executionTime": 1.23,
-      "memoryUsage": -1,
+      "executionTime": 0.86,
+      "memoryUsage": -4.87,
       "passed": true,
-      "timestamp": "2026-04-03T13:16:54.307Z"
+      "timestamp": "2026-04-17T12:18:50.022Z"
+    },
+    {
+      "name": "deepClone - null 和 undefined",
+      "description": "测试 deepClone 处理基本类型",
+      "executionTime": 1.8,
+      "memoryUsage": 2.4,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:50.024Z"
+    },
+    {
+      "name": "calc - 边界计算",
+      "description": "测试 calc 边界情况",
+      "executionTime": 10.18,
+      "memoryUsage": 1.86,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:50.034Z"
     },
     {
       "name": "大数组处理内存测试",
       "description": "处理 100000 个对象的大数组",
-      "executionTime": 130.98,
-      "memoryUsage": 24.18,
+      "executionTime": 301.65,
+      "memoryUsage": 42.9,
       "passed": true,
-      "timestamp": "2026-04-03T13:16:54.438Z"
+      "timestamp": "2026-04-17T12:18:50.336Z"
+    },
+    {
+      "name": "深度嵌套对象克隆",
+      "description": "测试深度嵌套对象的克隆性能",
+      "executionTime": 8.94,
+      "memoryUsage": -7.57,
+      "passed": true,
+      "timestamp": "2026-04-17T12:18:50.345Z"
     }
   ],
   "summary": {
-    "totalTests": 14,
-    "passedTests": 14,
-    "failedTests": 0,
-    "averageExecutionTime": 11.88,
-    "timestamp": "2026-04-03T13:16:54.440Z"
+    "totalTests": 88,
+    "passedTests": 83,
+    "failedTests": 5,
+    "averageExecutionTime": 12.62,
+    "timestamp": "2026-04-17T12:18:50.346Z"
   },
   "trends": [
     {
@@ -127,6 +724,30 @@
       "averageExecutionTime": 11.88,
       "passRate": 100,
       "timestamp": "2026-04-03T13:16:54.440Z"
+    },
+    {
+      "version": "1.0.21",
+      "averageExecutionTime": 13.87,
+      "passRate": 92.04545454545455,
+      "timestamp": "2026-04-17T12:13:56.960Z"
+    },
+    {
+      "version": "1.0.21",
+      "averageExecutionTime": 11.8,
+      "passRate": 92.04545454545455,
+      "timestamp": "2026-04-17T12:16:19.407Z"
+    },
+    {
+      "version": "1.0.21",
+      "averageExecutionTime": 10.91,
+      "passRate": 93.18181818181817,
+      "timestamp": "2026-04-17T12:17:13.053Z"
+    },
+    {
+      "version": "1.0.21",
+      "averageExecutionTime": 12.62,
+      "passRate": 94.31818181818183,
+      "timestamp": "2026-04-17T12:18:50.347Z"
     }
   ]
 }
