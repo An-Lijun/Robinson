@@ -7,6 +7,9 @@ const npmNM = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 // const report = require('./report');
 // const getUpdateLog = require('./getUpdateLog');
 
+/**
+ * 生成jest自动化测试报告=>Md
+ */
 task('gen-etc',(done)=>{
   console.log('正在生成report...');
   const buildProcess = spawn(npmNM, ['run', 'doc:report']);
@@ -27,6 +30,9 @@ task('gen-etc',(done)=>{
 })
 
 
+/**
+ * 将ts类型转换为Md文档
+ */
 task('gen-doc',(done)=>{
   console.log('正在生成MD...');
   const buildProcess = spawn(npmNM, ['run', 'api:tsToMd']);
@@ -49,6 +55,9 @@ task('gen-doc',(done)=>{
 
 })
 
+/**
+ * 生成更新日志=> Md
+ */
 task('gen-updatelog',(done)=>{
   console.log('正在生成更新日志...');
   const buildProcess = spawn(npmNM, ['run', 'doc:updatelog']);
@@ -71,6 +80,9 @@ task('gen-updatelog',(done)=>{
 
 })
 
+/**
+ * 自动提取、整理、规范化你项目里的 TypeScript 类型和 API 接口，并生成统一的 API 文档文件。
+ */
 task('build-doc-temp',(done)=>{
   console.log('正在生成temp...');
   const buildProcess = spawn(npmNM, ['run', 'api']);
@@ -93,6 +105,9 @@ task('build-doc-temp',(done)=>{
 })
 
 
+/**
+ * 打包方法 生成ts类型
+ */
 task('build-function',(done)=>{
   logLogo()
   logNextLone()

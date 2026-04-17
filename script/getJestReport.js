@@ -5,6 +5,10 @@ const { series, task } = require('gulp');
 const { logNextLone, logSuccess, logLogo } = require('./utils')
 
 let markdownContent;
+
+/**
+ * 读取html文件并且将文件读成字符串
+ */
 task('read-html', (done) => {
     logLogo()
     logNextLone()
@@ -16,6 +20,10 @@ task('read-html', (done) => {
     done()
 })
 
+
+/**
+ * 将转换后的markdown内容写入到指定文件中
+ */
 task('write-md',(done)=>{
     let str = ''
     markdownContent.split('\n').forEach((line, index) => {
@@ -33,6 +41,10 @@ task('write-md',(done)=>{
     logSuccess(`HTML 文件已成功转换为 Markdown，输出文件: ${outputFilePath}`);
 })
 
+
+/**
+ * 把代码测试覆盖率报告（HTML 格式），自动转换成干净的 Markdown 文档，方便放到文档网站里展示。
+ */
 exports.default = series('read-html', 'write-md');
 
 
