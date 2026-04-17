@@ -39,7 +39,6 @@
         "test:performance": "node test/performance.test.js",
         "build": "npx rollup -c",
         "doc:create": "gulp --gulpfile script/genDoc.js",
-        "doc:build": "node ./script/docBuild.js",
         "doc:report": "gulp  --gulpfile script/getJestReport.js",
         "doc:updatelog": "gulp  --gulpfile script/getUpdateLog.js",
         "doc:performanceReport": "gulp --gulpfile script/performanceReport.js",
