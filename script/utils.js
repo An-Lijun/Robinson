@@ -6,8 +6,8 @@ const packageJson = require('../package.json');
 
 /**
  * 输出logo
+ * 生成网站  https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
  */
-// 生成网站  https://patorjk.com/software/taag/#p=display&f=Graffiti&t=Type%20Something%20
 function logLogo() {
   console.log(chalk.green(`
     ██████   ██████  ██████  ██ ███    ██ ███████  ██████  ███    ██ 
@@ -32,16 +32,21 @@ function logNextLone() {
  */
 function logError(...arg) {
   console.log(chalk.bgRed.white('[Error] ', ...arg));
-
 }
 
-// 控制台输出成功信息
+/**
+ * 控制台输出成功信息
+ * @param  {...any} arg 
+ */
 function logSuccess(...arg) {
   console.log(chalk.green('[Success] ', ...arg));
 }
 
 
-// 打包
+/**
+ * 打包
+ * @param {*} fun 
+ */
 function build(fun) {
   console.log('正在打包...');
   const buildProcess = spawn(npmNM, ['run', 'vitepress:build']);

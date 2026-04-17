@@ -41,7 +41,7 @@
         "doc:create": "gulp --gulpfile script/genDoc.js",
         "doc:build": "node ./script/docBuild.js",
         "doc:report": "gulp  --gulpfile script/report.js",
-        "doc:updatelog": "gulp  --gulpfile script/updateLogGulp.js",
+        "doc:updatelog": "gulp  --gulpfile script/getUpdateLog.js",
         "doc:performanceReport": "gulp --gulpfile script/performanceReport.js",
         "publishRobinson": "gulp  --gulpfile script/publish.js"
     },

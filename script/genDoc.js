@@ -5,7 +5,7 @@ const { series, task } = require('gulp');
 const npmNM = process.platform === 'win32' ? 'npm.cmd' : 'npm';
 
 // const report = require('./report');
-// const updateLogGulp = require('./updateLogGulp');
+// const getUpdateLog = require('./getUpdateLog');
 
 task('gen-etc',(done)=>{
   console.log('正在生成report...');

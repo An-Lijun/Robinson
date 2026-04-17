@@ -209,7 +209,7 @@ Robinson/
     "publishRobinson": "node ./script/publish.js",   //构建发布函数命令
 
     "genEtc": "api-documenter markdown -i vitepress/temp -o vitepress/etc/doc", //生成函数md文件
-    "genUpdatelog": "gulp  --gulpfile script/updateLogGulp.js", //生成更新日志md命令
+    "genUpdatelog": "gulp  --gulpfile script/getUpdateLog.js", //生成更新日志md命令
     "genReport" :"gulp  --gulpfile script/report.js", //生成测试报告
     "test:performance": "node test/performance.test.js", // 运行性能测试
     "doc:performanceReport": "gulp --gulpfile script/performanceReport.js" // 生成性能报告

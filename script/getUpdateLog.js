@@ -6,6 +6,11 @@ const path = require('path');
 
 let globcommits, globUpDateLogs
 
+/**
+ * 获取这个提交当时的 package.json 里的 version 版本号
+ * @param {*} gitHash 
+ * @returns 
+ */
 function getPackageVersion(gitHash){
     try {
         // 执行 git show 命令获取指定提交时的 package.json 内容
@@ -19,6 +24,10 @@ function getPackageVersion(gitHash){
     }
 }
 
+
+/**
+ * 获取项目所有的 Git 提交记录，并给每一条记录自动匹配当时的版本号，生成一份完整的发布日志数据。
+ */
 task('get-log-data', (done) => {
     logLogo()
     logNextLone()
@@ -51,6 +60,9 @@ task('get-log-data', (done) => {
     done()
 })
 
+/**
+ * 把上一步拿到的所有提交记录，按【版本号】分组归类，最终变成一个 “版本 → 该版本下所有提交” 的结构化日志
+ */
 task('mix-update-log', (done) => {
     // 合成更新日志
     globUpDateLogs = globcommits.reduce((obj, commit) => {
@@ -64,7 +76,9 @@ task('mix-update-log', (done) => {
     done()
 })
 
-
+/**
+ * 整理好的 “按版本分组的提交记录”，生成一份美观、带样式、可直接在网站上展示的 HTML 格式更新日志（changelog），并保存成 .md 文件。
+ */
 task('generate-changelog', (done) => {
     // 生成更新日志内容
     let changelogContent = "<h1>更新日志</h1>"
@@ -90,5 +104,5 @@ task('generate-changelog', (done) => {
     done()
 })
 
-// 导出默认任务
+// 将提交记录转换为md文档
 exports.default = series('get-log-data', 'mix-update-log','generate-changelog');
