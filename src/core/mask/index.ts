@@ -57,7 +57,7 @@ export function maskIdNo (idNo: string): string {
 /**
  * @beta
  *  手机号脱敏
- * @param {string|number} phone - 需要脱敏的手机号。
+ * @param {string | number} [phone] - 需要脱敏的手机号。
  * @returns {string} - 脱敏后的手机号。
  * @example
  * maskPhone("1234567890");// 返回 "123****5678"
@@ -69,8 +69,8 @@ export function maskPhone (phone?: string | number): string {
 /**
  * @beta
  *  用户名脱敏
- * @param  name - 需要脱敏的用户名。
- * @returns  - 脱敏后的用户名。
+ * @param {string} name - 需要脱敏的用户名。
+ * @returns {string} - 脱敏后的用户名。
  * @example
  * maskNm("张三");// 返回 "张*"
  * maskNm("张三丰");// 返回 "张**"
@@ -82,8 +82,8 @@ export function maskNm (name: string): string {
 /**
  * @beta
  *  港澳台,回乡证等脱敏
- * @param  card - 需要脱敏的港澳台,回乡证等。
- * @returns  - 脱敏后的港澳台,回乡证等。
+ * @param {string} card - 需要脱敏的港澳台,回乡证等。
+ * @returns {string} - 脱敏后的港澳台,回乡证等。
  * @example
  * maskCard("12345678901234");// 返回 "12**********34"
  */
@@ -94,8 +94,8 @@ export function maskCard (card: string): string {
 /**
  * @beta
  *  邮箱脱敏
- * @param  email - 需要脱敏的邮箱。
- * @returns - 脱敏后的邮箱。
+ * @param {string} email - 需要脱敏的邮箱。
+ * @returns {string} - 脱敏后的邮箱。
  * @example
  * maskEmail("123456789@example.com");// 返回 "123*****@example.com"
  */

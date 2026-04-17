@@ -13,6 +13,11 @@ export * from './core/color/index';
 export * from './core/symbol/index';
 export * from './core/date/index';
 export * from './core/file/index';
+export * from './core/format/index';
+export * from './core/mask/index';
+
+// AI manifest
+export * from './ai/index';
 
 // export * from './core/other/index';
 export default dayjs

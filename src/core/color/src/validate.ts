@@ -3,8 +3,8 @@ import { is } from '../../../index';
 /**
  * @beta
  *  判断是否为16进制颜色
- * @param color - 需要验证的颜色字符串
- * @returns  如果是16进制颜色返回true，否则返回false
+ * @param {string} color - 需要验证的颜色字符串
+ * @returns {boolean}  如果是16进制颜色返回true，否则返回false
  * @example
  * ```JavaScript
  *     isHex('#FD7086') //true
@@ -12,15 +12,15 @@ import { is } from '../../../index';
  * ```
  */
 export function isHex (color: string) {
-  const reg = /^#([0-9a-fA-F]{3}|[0-9a-fA-f]{6})$/;
+  const reg = /^#([0-9a-fA-F]{3}|[0-9a-fA-F]{6})$/;
   return reg.test(color);
 }
 
 /**
  * @beta
  *  判断是否为rgb颜色
- * @param color - 需要验证的颜色字符串
- * @returns  如果是rgb颜色返回true，否则返回false
+ * @param {string} color - 需要验证的颜色字符串
+ * @returns {boolean}  如果是rgb颜色返回true，否则返回false
  * @example
  * ```JavaScript
  *     isRgb('#FD7086') //false
@@ -48,8 +48,8 @@ export function isRgb (color: string) {
 /**
  * @beta
  *  判断是否为rgba颜色
- * @param color - 需要验证的颜色字符串
- * @returns  如果是rgba颜色返回true，否则返回false
+ * @param {string} color - 需要验证的颜色字符串
+ * @returns {boolean}  如果是rgba颜色返回true，否则返回false
  * @example
  * ```JavaScript
  *     isRgba('#FD7086') // false

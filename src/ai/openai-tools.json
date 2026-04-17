@@ -1,0 +1,1942 @@
+[
+  {
+    "name": "isArray",
+    "description": "接受一个任意类型判断该类型是否是数组并返回。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "参数\"value\"的类型为\"any\"，这意味着它可以接受任何数据类型。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "getRelArray",
+    "description": "函数“getRelArray”接受一个数组作为输入，并返回一个包含所有非空元素的新数组。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "array": {
+          "type": "any",
+          "description": "参数“array”是任意类型的数组。"
+        }
+      },
+      "required": [
+        "array"
+      ]
+    }
+  },
+  {
+    "name": "getChunkArray",
+    "description": "`chunkArray` 函数接受一个数组和一个大小参数，并返回一个新数组，其中原始数组被分割成指定大小的较小数组。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "array": {
+          "type": "any",
+          "description": "`array` 参数是任何类型的数组。它是需要被分成更小的数组的数组。"
+        },
+        "size": {
+          "type": "number",
+          "description": "\"size\"参数指定数组每个块中应包含的元素数量。默认情况下，它设置为 1，这意味着每个元素将位于其自己的单独块中。"
+        }
+      },
+      "required": [
+        "array",
+        "size"
+      ]
+    }
+  },
+  {
+    "name": "getToggleArray",
+    "description": "函数 `getToggleArray` 接受一个数组和一个项目， 如果数组包含该项目则移除它，如果不包含则添加它，返回处理后的新数组。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "array": {
+          "type": "any",
+          "description": "要处理的数组"
+        },
+        "item": {
+          "type": "any",
+          "description": "要切换的项目"
+        }
+      },
+      "required": [
+        "array",
+        "item"
+      ]
+    }
+  },
+  {
+    "name": "getUniqueValues",
+    "description": "深度比较两个值是否相等",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "a": {
+          "type": "any",
+          "description": "第一个值"
+        },
+        "b": {
+          "type": "any",
+          "description": "第二个值"
+        },
+        "array": {
+          "type": "any",
+          "description": "原数组"
+        }
+      },
+      "required": [
+        "a",
+        "b",
+        "array"
+      ]
+    }
+  },
+  {
+    "name": "getGroupArray",
+    "description": "根据指定的键或条件将数组元素分组",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "array": {
+          "type": "any",
+          "description": "原数组"
+        },
+        "groupBy": {
+          "type": "any",
+          "description": "分组键或分组函数"
+        }
+      },
+      "required": [
+        "array",
+        "groupBy"
+      ]
+    }
+  },
+  {
+    "name": "isBoolean",
+    "description": "函数“isBoolean”检查值是否为布尔类型。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "参数“value”可以是任何数据类型。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "hexToRgba",
+    "description": "将颜色对象转换为rgba颜色字符串",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "colorObj": {
+          "type": "any",
+          "description": "颜色对象，包含r、g、b分量，可选a分量"
+        },
+        "color": {
+          "type": "string",
+          "description": "颜色字符串"
+        },
+        "hex": {
+          "type": "string",
+          "description": "十六进制颜色字符串"
+        }
+      },
+      "required": [
+        "colorObj",
+        "color",
+        "hex"
+      ]
+    }
+  },
+  {
+    "name": "hexToRgb",
+    "description": "将十六进制颜色字符串转换为rgb颜色字符串",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "hex": {
+          "type": "string",
+          "description": "十六进制颜色字符串"
+        }
+      },
+      "required": [
+        "hex"
+      ]
+    }
+  },
+  {
+    "name": "rgbToHex",
+    "description": "将rgb颜色字符串转换为十六进制颜色字符串",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string",
+          "description": "rgb颜色字符串"
+        }
+      },
+      "required": [
+        "color"
+      ]
+    }
+  },
+  {
+    "name": "rgbaToHex",
+    "description": "将rgba颜色字符串转换为十六进制颜色字符串",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string",
+          "description": "rgba颜色字符串"
+        }
+      },
+      "required": [
+        "color"
+      ]
+    }
+  },
+  {
+    "name": "isHex",
+    "description": "判断是否为16进制颜色",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string",
+          "description": "需要验证的颜色字符串"
+        }
+      },
+      "required": [
+        "color"
+      ]
+    }
+  },
+  {
+    "name": "isRgb",
+    "description": "判断是否为rgb颜色",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string",
+          "description": "需要验证的颜色字符串"
+        }
+      },
+      "required": [
+        "color"
+      ]
+    }
+  },
+  {
+    "name": "isRgba",
+    "description": "判断是否为rgba颜色",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "color": {
+          "type": "string",
+          "description": "需要验证的颜色字符串"
+        }
+      },
+      "required": [
+        "color"
+      ]
+    }
+  },
+  {
+    "name": "is",
+    "description": "返回是某个类型的判断结果",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "要判断的数据"
+        },
+        "type": {
+          "type": "string",
+          "description": "判断他是这个类型"
+        }
+      },
+      "required": [
+        "value",
+        "type"
+      ]
+    }
+  },
+  {
+    "name": "isEmpty",
+    "description": "该函数通过将 JSON 表示形式与空数组或对象进行比较来检查值是否为空。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "“value”参数可以是任何数据类型。这是您要检查它是否为空的值。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "isNull",
+    "description": "函数“isNull”检查给定值是否为空。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "参数“value”的类型为“any”，这意味着它可以接受任何数据类型。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "isUndefined",
+    "description": "函数“isUndefined”检查值是否未定义。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "“value”参数的类型为“any”，这意味着它可以接受任何类型的值。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "hasTypeIn",
+    "description": "该函数检查给定值的类型是否存在于给定类型数组中。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "“value”参数是您要检查其类型的值。它可以是任何类型，例如数字、字符串、对象等。"
+        },
+        "types": {
+          "type": "any",
+          "description": "表示要检查的类型的字符串数组。"
+        }
+      },
+      "required": [
+        "value",
+        "types"
+      ]
+    }
+  },
+  {
+    "name": "isSimpleType",
+    "description": "该函数检查值是否为简单值（数字、字符串、布尔值、符号、null、undefined 或 bigint）或复杂值（函数、对象、数组、集合、映射）。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "参数“value”的类型为“any”，这意味着它可以接受任何类型的值。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "isRefType",
+    "description": "该函数检查值是否为引用类型。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "“value”参数的类型为“any”，这意味着它可以接受任何类型的值。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "isEqType",
+    "description": "函数“isEqType”检查两个值的类型是否相等。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "“value”参数的类型为“any”，这意味着它可以接受任何类型的值。"
+        },
+        "value2": {
+          "type": "any",
+          "description": "“value2”参数是您要与之比较类型的第二个值。"
+        }
+      },
+      "required": [
+        "value",
+        "value2"
+      ]
+    }
+  },
+  {
+    "name": "isEqValue",
+    "description": "函数“isEqValue”比较两个值，如果它们的值和类型相等则返回 true。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value1": {
+          "type": "any",
+          "description": "要比较的第一个值。它可以是任何类型。"
+        },
+        "value2": {
+          "type": "any",
+          "description": "“value2”参数是要与“value1”比较的第二个值。"
+        }
+      },
+      "required": [
+        "value1",
+        "value2"
+      ]
+    }
+  },
+  {
+    "name": "getTimestamp",
+    "description": "获取当前日期的时间戳。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "any",
+          "description": "输入的日期，可以是 dayjs 对象、Date 对象或字符串。"
+        }
+      },
+      "required": [
+        "date"
+      ]
+    }
+  },
+  {
+    "name": "formatDate",
+    "description": "格式化时间。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "any",
+          "description": "输入的日期，可以是 dayjs 对象、Date 对象或字符串。"
+        },
+        "YYYY": {
+          "type": "any",
+          "description": "MM-DD'] - 格式化模式，默认为 'YYYY-MM-DD'。"
+        }
+      },
+      "required": [
+        "date",
+        "YYYY"
+      ]
+    }
+  },
+  {
+    "name": "getBeforeDate",
+    "description": "计算给定日期之前的日期，并返回格式化后的结果。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "any",
+          "description": "起始日期，可以是 dayjs 对象、Date 对象或字符串。"
+        },
+        "option": {
+          "type": "any",
+          "description": "操作选项。"
+        }
+      },
+      "required": [
+        "date",
+        "option"
+      ]
+    }
+  },
+  {
+    "name": "getAfterDate",
+    "description": "计算给定日期之后的日期，并返回格式化后的结果。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "date": {
+          "type": "any",
+          "description": "起始日期，可以是 dayjs 对象、Date 对象或字符串。"
+        },
+        "option": {
+          "type": "any",
+          "description": "操作选项。"
+        }
+      },
+      "required": [
+        "date",
+        "option"
+      ]
+    }
+  },
+  {
+    "name": "isLeapYear",
+    "description": "计算两个日期之间的差值。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "any",
+          "description": "开始日期，可以是 dayjs 对象、Date 对象或字符串。"
+        },
+        "end": {
+          "type": "any",
+          "description": "结束日期，可以是 dayjs 对象、Date 对象或字符串。"
+        },
+        "unitType": {
+          "type": "any",
+          "description": "时间单位类型。"
+        },
+        "year": {
+          "type": "any",
+          "description": "要判断的年份，可以是字符串或数字。"
+        }
+      },
+      "required": [
+        "start",
+        "end",
+        "unitType",
+        "year"
+      ]
+    }
+  },
+  {
+    "name": "isBefore",
+    "description": "判断一个日期是否在另一个日期之前。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "any",
+          "description": "开始日期，可以是 dayjs 对象、Date 对象或字符串。"
+        },
+        "end": {
+          "type": "any",
+          "description": "结束日期，可以是 dayjs 对象、Date 对象或字符串。"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ]
+    }
+  },
+  {
+    "name": "isAfter",
+    "description": "判断一个日期是否在另一个日期之后。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "start": {
+          "type": "any",
+          "description": "开始日期，可以是 dayjs 对象、Date 对象或字符串。"
+        },
+        "end": {
+          "type": "any",
+          "description": "结束日期，可以是 dayjs 对象、Date 对象或字符串。"
+        }
+      },
+      "required": [
+        "start",
+        "end"
+      ]
+    }
+  },
+  {
+    "name": "blobToBase64",
+    "description": "获取文件的MIME类型",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "suffix": {
+          "type": "any",
+          "description": "文件扩展名"
+        },
+        "blob": {
+          "type": "any",
+          "description": "Blob对象"
+        }
+      },
+      "required": [
+        "suffix",
+        "blob"
+      ]
+    }
+  },
+  {
+    "name": "base64ToBlob",
+    "description": "将Base64编码的字符串转换为Blob对象",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "base64": {
+          "type": "string",
+          "description": "Base64编码的字符串"
+        }
+      },
+      "required": [
+        "base64"
+      ]
+    }
+  },
+  {
+    "name": "urlToBase64",
+    "description": "将图片URL转换为Base64编码的字符串",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "图片URL"
+        }
+      },
+      "required": [
+        "url"
+      ]
+    }
+  },
+  {
+    "name": "downloadByUrl",
+    "description": "通过URL下载图片到本地",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "图片路径"
+        }
+      },
+      "required": [
+        "url"
+      ]
+    }
+  },
+  {
+    "name": "downloadByBlob",
+    "description": "通过Blob对象下载文件",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "blob": {
+          "type": "any",
+          "description": "Blob文件流"
+        },
+        "fileNm": {
+          "type": "string",
+          "description": "下载后的文件名"
+        }
+      },
+      "required": [
+        "blob",
+        "fileNm"
+      ]
+    }
+  },
+  {
+    "name": "downloadByBase64",
+    "description": "通过Base64编码的字符串下载文件",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "buf": {
+          "type": "string",
+          "description": "Base64编码的字符串"
+        },
+        "fileNm": {
+          "type": "string",
+          "description": "下载后的文件名"
+        },
+        "suffix": {
+          "type": "string",
+          "description": "下载后的文件后缀"
+        }
+      },
+      "required": [
+        "buf",
+        "fileNm",
+        "suffix"
+      ]
+    }
+  },
+  {
+    "name": "printByDom",
+    "description": "通过DOM元素打印内容",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "el": {
+          "type": "object",
+          "description": "要打印的DOM元素"
+        }
+      },
+      "required": [
+        "el"
+      ]
+    }
+  },
+  {
+    "name": "printByBlob",
+    "description": "通过Blob对象打印内容",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "blob": {
+          "type": "object",
+          "description": "Blob对象"
+        }
+      },
+      "required": [
+        "blob"
+      ]
+    }
+  },
+  {
+    "name": "imgCompression",
+    "description": "压缩图片文件",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "object",
+          "description": "源文件"
+        },
+        "size": {
+          "type": "number",
+          "description": "指定压缩大小（单位：MB）"
+        }
+      },
+      "required": [
+        "file",
+        "size"
+      ]
+    }
+  },
+  {
+    "name": "getFileSize",
+    "description": "获取文件大小",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "object",
+          "description": "源文件"
+        }
+      },
+      "required": [
+        "file"
+      ]
+    }
+  },
+  {
+    "name": "getFileType",
+    "description": "获取文件后缀名",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "file": {
+          "type": "object",
+          "description": "源文件"
+        }
+      },
+      "required": [
+        "file"
+      ]
+    }
+  },
+  {
+    "name": "trimStr",
+    "description": "字符去空格格式化",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "str": {
+          "type": "string",
+          "description": "需要去空格的字符串。"
+        }
+      },
+      "required": [
+        "str"
+      ]
+    }
+  },
+  {
+    "name": "reverseInsert",
+    "description": "从末尾开始插入",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "str": {
+          "type": "string",
+          "description": "需要处理的字符串。"
+        },
+        "space": {
+          "type": "number",
+          "description": "间隔。"
+        },
+        "insertStr": {
+          "type": "string",
+          "description": "要插入的内容。"
+        }
+      },
+      "required": [
+        "str",
+        "space",
+        "insertStr"
+      ]
+    }
+  },
+  {
+    "name": "formatAmt",
+    "description": "格式化金额",
+    "parameters": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "unFormatAmt",
+    "description": "去格式化",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "val": {
+          "type": "any",
+          "description": "去格式化内容。"
+        }
+      },
+      "required": [
+        "val"
+      ]
+    }
+  },
+  {
+    "name": "toDBC",
+    "description": "将输入字符串转为全角字符",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "str": {
+          "type": "string",
+          "description": "需要转换的字符串。"
+        }
+      },
+      "required": [
+        "str"
+      ]
+    }
+  },
+  {
+    "name": "formatPhone",
+    "description": "格式化手机号",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "phone": {
+          "type": "any",
+          "description": "手机号。"
+        }
+      },
+      "required": [
+        "phone"
+      ]
+    }
+  },
+  {
+    "name": "isFunction",
+    "description": "该函数检查给定值是否是函数。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "“value”参数是我们想要检查它是否是函数的任何值。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "deepClone",
+    "description": "“deepClone”函数用于创建对象或数组的深层副本，包括处理复杂类型，例如集合、映射和符号。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "originalValue": {
+          "type": "any",
+          "description": "OriginalValue 参数是您要深度克隆的值。它可以是任何数据类型，包括对象、数组、集合、映射、函数以及字符串或数字等简单值。"
+        }
+      },
+      "required": [
+        "originalValue"
+      ]
+    }
+  },
+  {
+    "name": "asignData",
+    "description": "函数“asignData”将属性从“obj2”复制到“obj1”，并可选择执行附加函数。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "obj1": {
+          "type": "any",
+          "description": "obj1 是第一个将被分配数据的对象。"
+        },
+        "obj2": {
+          "type": "any",
+          "description": "obj2 是一个对象，其中包含将根据匹配键分配给 obj1 的数据。"
+        }
+      },
+      "required": [
+        "obj1",
+        "obj2"
+      ]
+    }
+  },
+  {
+    "name": "mapping",
+    "description": "映射函数可以将数据进行枚举映射。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "enumData": {
+          "type": "any",
+          "description": "枚举数据，可以是对象或数组。"
+        },
+        "options": {
+          "type": "any",
+          "description": "选项，可以是字符串或对象。"
+        }
+      },
+      "required": [
+        "enumData",
+        "options"
+      ]
+    }
+  },
+  {
+    "name": "compose",
+    "description": "组合函数，将多个函数从右到左依次调用。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "fns": {
+          "type": "any",
+          "description": "要组合的函数。"
+        }
+      },
+      "required": [
+        "fns"
+      ]
+    }
+  },
+  {
+    "name": "currying",
+    "description": "柯里化函数接受一个函数作为输入并返回一个新函数，该函数可以使用多个参数或以柯里化方式调用。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "fn": {
+          "type": "function",
+          "description": "参数“fn”是我们要应用柯里化的函数。"
+        }
+      },
+      "required": [
+        "fn"
+      ]
+    }
+  },
+  {
+    "name": "debounce",
+    "description": "防抖函数，限制函数调用的频率。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "fn": {
+          "type": "function",
+          "description": "“fn”参数是您想要限制的函数。"
+        },
+        "delay": {
+          "type": "number",
+          "description": "“delay”参数是函数调用之间的最小时间间隔（以毫秒为单位）。"
+        }
+      },
+      "required": [
+        "fn",
+        "delay"
+      ]
+    }
+  },
+  {
+    "name": "pipe",
+    "description": "从左向右执行函数。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "fns": {
+          "type": "any",
+          "description": "要组合的函数。"
+        }
+      },
+      "required": [
+        "fns"
+      ]
+    }
+  },
+  {
+    "name": "getStringType",
+    "description": "函数“getStringType”以字符串形式返回输入值的类型。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "“value”参数可以是任何数据类型或您想要确定其类型的值。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "mask",
+    "description": "字符串脱敏",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "str": {
+          "type": "any",
+          "description": "需要脱敏的字符串。"
+        },
+        "hideArea": {
+          "type": "any",
+          "description": "需要隐藏的下标范围，数组中的两个元素分别表示起始和结束下标。"
+        }
+      },
+      "required": [
+        "str",
+        "hideArea"
+      ]
+    }
+  },
+  {
+    "name": "maskAccount",
+    "description": "用户账号脱敏",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "account": {
+          "type": "string",
+          "description": "需要脱敏的用户账号。"
+        }
+      },
+      "required": [
+        "account"
+      ]
+    }
+  },
+  {
+    "name": "maskIdNo",
+    "description": "身份证脱敏",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "idNo": {
+          "type": "string",
+          "description": "需要脱敏的身份证号。"
+        }
+      },
+      "required": [
+        "idNo"
+      ]
+    }
+  },
+  {
+    "name": "maskPhone",
+    "description": "手机号脱敏",
+    "parameters": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "maskNm",
+    "description": "用户名脱敏",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "name": {
+          "type": "string",
+          "description": "需要脱敏的用户名。"
+        }
+      },
+      "required": [
+        "name"
+      ]
+    }
+  },
+  {
+    "name": "maskCard",
+    "description": "港澳台,回乡证等脱敏",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "card": {
+          "type": "string",
+          "description": "需要脱敏的港澳台,回乡证等。"
+        }
+      },
+      "required": [
+        "card"
+      ]
+    }
+  },
+  {
+    "name": "maskEmail",
+    "description": "邮箱脱敏",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "email": {
+          "type": "string",
+          "description": "需要脱敏的邮箱。"
+        }
+      },
+      "required": [
+        "email"
+      ]
+    }
+  },
+  {
+    "name": "calc",
+    "description": "数值计算",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "number1": {
+          "type": "any",
+          "description": "第一个数字。"
+        },
+        "number2": {
+          "type": "any",
+          "description": "第二个数字。"
+        }
+      },
+      "required": [
+        "number1",
+        "number2"
+      ]
+    }
+  },
+  {
+    "name": "isNumber",
+    "description": "该函数检查值是否为数字。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "参数\"value\"可以是任何数据类型。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "isNaN",
+    "description": "该函数检查值是否为 NaN。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "value 参数可以是任何数据类型，例如数字、字符串或对象。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "isInt",
+    "description": "函数\"isInteger\"检查给定值是否为整数,原生的判断已经很好用了 es6+。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "\"value\"参数可以是任何数据类型，例如数字、字符串、布尔值或对象。该函数将检查该值是否为整数，并返回一个布尔值来指示它是否为整数。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "isFinite",
+    "description": "该函数检查一个值是否是有限数,原生的已经很好用了 这里是为了保存api统一。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "\"value\"参数可以是您想要检查是否是有限数的任何值。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "getRandom",
+    "description": "函数 getRandom 生成指定范围内具有指定小数位数的随机数。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "min": {
+          "type": "number",
+          "description": "随机数范围的最小值。"
+        },
+        "max": {
+          "type": "number",
+          "description": "\"max\"参数表示您要生成的最大值。"
+        }
+      },
+      "required": [
+        "min",
+        "max"
+      ]
+    }
+  },
+  {
+    "name": "isRange",
+    "description": "该函数检查给定值是否在指定范围内。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "number",
+          "description": "value 参数表示要检查的数字是否在某个范围内。"
+        },
+        "min": {
+          "type": "number",
+          "description": "\"value\"参数可以是的最小值。"
+        },
+        "max": {
+          "type": "number",
+          "description": "\"max\"参数表示范围的最大值。"
+        }
+      },
+      "required": [
+        "value",
+        "min",
+        "max"
+      ]
+    }
+  },
+  {
+    "name": "isDecimal",
+    "description": "检查变量是否为实数",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "s": {
+          "type": "any",
+          "description": "要检查的变量"
+        }
+      },
+      "required": [
+        "s"
+      ]
+    }
+  },
+  {
+    "name": "isObjectLike",
+    "description": "该函数检查值是否是类对象like 类型。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "参数“value”的类型为“any”，这意味着它可以是任何数据类型。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "isOriginDate",
+    "description": "是否为日期格式",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "val": {
+          "type": "any",
+          "description": "参数“val”的类型为“any”，这意味着它可以是任何数据类型。"
+        }
+      },
+      "required": [
+        "val"
+      ]
+    }
+  },
+  {
+    "name": "isPromise",
+    "description": "是否为Promise格式",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "val": {
+          "type": "any",
+          "description": "参数“val”的类型为“any”，这意味着它可以是任何数据类型。"
+        }
+      },
+      "required": [
+        "val"
+      ]
+    }
+  },
+  {
+    "name": "isRegExp",
+    "description": "是否为正则格式",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "val": {
+          "type": "any",
+          "description": "参数“val”的类型为“any”，这意味着它可以是任何数据类型。"
+        }
+      },
+      "required": [
+        "val"
+      ]
+    }
+  },
+  {
+    "name": "isElement",
+    "description": "是否为DOM元素",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "val": {
+          "type": "any",
+          "description": "参数“val”的类型为“any”，这意味着它可以是任何数据类型。"
+        }
+      },
+      "required": [
+        "val"
+      ]
+    }
+  },
+  {
+    "name": "isIE",
+    "description": "判断是否是IE浏览器",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "win": {
+          "type": "any",
+          "description": "参数“win”是一个包含navigator对象的对象。"
+        }
+      },
+      "required": [
+        "win"
+      ]
+    }
+  },
+  {
+    "name": "isString",
+    "description": "函数isString 检查给定值是否是字符串。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "参数\"value\"的类型为\"any\"，这意味着它可以接受任何数据类型。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "isExternal",
+    "description": "判断是否为外链",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "path": {
+          "type": "any",
+          "description": "路径"
+        }
+      },
+      "required": [
+        "path"
+      ]
+    }
+  },
+  {
+    "name": "isIdCard",
+    "description": "检查是否为有效的身份证号",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "身份证号"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    }
+  },
+  {
+    "name": "isUrl",
+    "description": "检查是否为有效的URL",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "url": {
+          "type": "string",
+          "description": "URL字符串"
+        }
+      },
+      "required": [
+        "url"
+      ]
+    }
+  },
+  {
+    "name": "isEmail",
+    "description": "检查字符串是否为合法email地址",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "s": {
+          "type": "string",
+          "description": "字符串"
+        }
+      },
+      "required": [
+        "s"
+      ]
+    }
+  },
+  {
+    "name": "isMobileNum",
+    "description": "是否为合法手机号",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "s": {
+          "type": "any",
+          "description": "手机号"
+        }
+      },
+      "required": [
+        "s"
+      ]
+    }
+  },
+  {
+    "name": "insertStr",
+    "description": "函数\"insertStr\"接受一个字符串、一个起始索引和一个字符，并返回一个新字符串，其中在指定索引处插入了该字符。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "str": {
+          "type": "string",
+          "description": "`str` 参数是一个字符串，表示将在其中插入字符的原始字符串。"
+        },
+        "start": {
+          "type": "number",
+          "description": "start 参数是应在字符串中插入字符的索引。"
+        },
+        "char": {
+          "type": "string",
+          "description": "\"char\"参数是一个字符串，表示要插入到原始字符串中的字符或子字符串。"
+        }
+      },
+      "required": [
+        "str",
+        "start",
+        "char"
+      ]
+    }
+  },
+  {
+    "name": "getEtc",
+    "description": "函数\"getEtc\"接受一个字符串值并返回指定长度的子字符串，并在末尾附加一个可选的\"etcStr\"。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "string",
+          "description": "value 参数是一个字符串，表示需要截断的输入值。"
+        },
+        "len": {
+          "type": "number",
+          "description": "\"len\"参数是要从\"value\"参数中提取的字符串的长度。"
+        },
+        "etcStr": {
+          "type": "string",
+          "description": "`etcStr` 参数是一个字符串，表示如果长度超过指定的 `len` 参数，则要在切片字符串末尾附加的字符。默认情况下，它设置为\"...\"。"
+        }
+      },
+      "required": [
+        "value",
+        "len",
+        "etcStr"
+      ]
+    }
+  },
+  {
+    "name": "getUniqueId",
+    "description": "该函数使用随机字符串模式生成唯一 ID。",
+    "parameters": {
+      "type": "object",
+      "properties": {},
+      "required": []
+    }
+  },
+  {
+    "name": "isSymbol",
+    "description": "该函数检查值是否是Symbol 类型的对象。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "value": {
+          "type": "any",
+          "description": "参数\"value\"可以是任何数据类型。"
+        }
+      },
+      "required": [
+        "value"
+      ]
+    }
+  },
+  {
+    "name": "isNode",
+    "description": "该函数检查元素是否是节点。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "el": {
+          "type": "any",
+          "description": "`el` 参数的类型是 `Element`，它表示 HTML DOM 中的一个元素。"
+        }
+      },
+      "required": [
+        "el"
+      ]
+    }
+  },
+  {
+    "name": "nodeToString",
+    "description": "函数 `nodeToString` 接受一个 HTML 元素并返回它的字符串表示形式。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "node": {
+          "type": "object",
+          "description": "`node` 参数的类型为 `Element`，它表示 DOM（文档对象模型）中的 HTML 元素。它可以是任何 HTML元素"
+        }
+      },
+      "required": [
+        "node"
+      ]
+    }
+  },
+  {
+    "name": "addNode",
+    "description": "函数\"addNode\"将 DOM 元素或字符串插入到父 DOM 元素的指定位置。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "parentDom": {
+          "type": "object",
+          "description": "`parentDom` 参数是将新节点插入的 DOM 元素。"
+        },
+        "dom": {
+          "type": "any",
+          "description": "\"dom\"参数可以是\"Element\"或\"String\"。它表示需要添加到\"parentDom\"的元素或 HTML 字符串。"
+        }
+      },
+      "required": [
+        "parentDom",
+        "dom"
+      ]
+    }
+  },
+  {
+    "name": "stringToNode",
+    "description": "该函数接受一个字符串并返回新创建的 div 元素的第一个子节点，并将该字符串作为其innerHTML。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "str": {
+          "type": "string",
+          "description": "`str` 参数是一个字符串，表示一个 HTML 元素或一组 HTML 元素。"
+        }
+      },
+      "required": [
+        "str"
+      ]
+    }
+  },
+  {
+    "name": "replaceNode",
+    "description": "函数\"replaceNode\"用新的 DOM 元素或给定父元素中的字符串替换旧的 DOM 元素。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "parentNode": {
+          "type": "object",
+          "description": "ParentNode 参数是包含 oldDom 元素的元素。它是发生替换的父元素。"
+        },
+        "newDom": {
+          "type": "any",
+          "description": "`newDom` 参数可以是字符串或 Node。如果它是一个字符串， 则它表示将使用\"stringToNode\"函数转换为节点的 HTML 标记。如果已经是一个Node，则代表新的Node将取代旧的Node"
+        },
+        "oldDom": {
+          "type": "object",
+          "description": "oldDom 参数是要替换为 newDom 的元素。"
+        }
+      },
+      "required": [
+        "parentNode",
+        "newDom",
+        "oldDom"
+      ]
+    }
+  },
+  {
+    "name": "removeNode",
+    "description": "该函数从其父节点中删除指定的 DOM 元素。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "parentNode": {
+          "type": "object",
+          "description": "`parentNode` 参数是包含 `dom` 元素的元素。它是您要从中删除\"dom\"元素的元素。"
+        },
+        "dom": {
+          "type": "object",
+          "description": "`dom` 参数是要从其父节点中删除的元素。"
+        }
+      },
+      "required": [
+        "parentNode",
+        "dom"
+      ]
+    }
+  },
+  {
+    "name": "getNode",
+    "description": "函数 getNode 将 DOM 元素名称作为输入，如果找到则返回相应的元素，否则返回 null。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "domName": {
+          "type": "string",
+          "description": "`domName` 参数是一个字符串，表示您要选择的 DOM 元素的名称。"
+        }
+      },
+      "required": [
+        "domName"
+      ]
+    }
+  },
+  {
+    "name": "getNodes",
+    "description": "函数\"getNodes\"返回与给定选择器匹配的 DOM 节点的 NodeList，如果未找到节点，则返回 null。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "domName": {
+          "type": "string",
+          "description": "`domName` 参数是一个字符串，表示您要选择的 DOM 元素的名称。"
+        }
+      },
+      "required": [
+        "domName"
+      ]
+    }
+  },
+  {
+    "name": "bind",
+    "description": "该函数将事件侦听器绑定到 TypeScript 中的 DOM 元素。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "dom": {
+          "type": "any",
+          "description": "`dom` 参数是将事件监听器附加到的 DOM 元素。它可以是任何有效的 DOM 元素"
+        },
+        "eventType": {
+          "type": "string",
+          "description": "eventType 参数是一个字符串，指定要侦听的事件类型。事件类型的示例包括\"单击\"、\"按下键\"、\"鼠标悬停\"等。"
+        },
+        "callBack": {
+          "type": "any",
+          "description": "`callBack` 参数是当 DOM 元素上发生指定事件时将执行的函数。它可以是实现EventListener 或 EventListenerObject 接口的函数或对象。"
+        }
+      },
+      "required": [
+        "dom",
+        "eventType",
+        "callBack"
+      ]
+    }
+  },
+  {
+    "name": "unBind",
+    "description": "函数 unBind 从 DOM 元素中删除事件侦听器。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "dom": {
+          "type": "any",
+          "description": "`dom` 参数是事件监听器所附加的 DOM 元素。"
+        },
+        "eventType": {
+          "type": "string",
+          "description": "eventType 参数是一个字符串，指定要删除的事件的类型。事件类型的示例包括\"单击\"、\"按下键\"、\"鼠标悬停\"等。"
+        },
+        "fnName": {
+          "type": "any",
+          "description": "`fnName` 参数是要从指定 DOM 元素中删除的事件侦听器函数或事件侦听器对象的名称。"
+        }
+      },
+      "required": [
+        "dom",
+        "eventType",
+        "fnName"
+      ]
+    }
+  },
+  {
+    "name": "stopPropagation",
+    "description": "函数 stopPropagation 阻止事件在事件链中向上冒泡。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "event": {
+          "type": "any",
+          "description": "事件参数是一个表示发生的事件的对象。它包含有关事件的信息，例如事件类型、目标元素以及与事件关联的任何其他数据。在这种情况下，事件参数的类型为Event，它是一个通用事件对象，可以"
+        }
+      },
+      "required": [
+        "event"
+      ]
+    }
+  },
+  {
+    "name": "preventDefault",
+    "description": "该函数可防止事件的默认行为。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "event": {
+          "type": "any",
+          "description": "\"event\"参数是一个对象，表示已发生的事件，例如鼠标单击或按键。 它包含有关事件的信息，例如事件类型、触发事件的目标元素以及与事件关联的任何其他数据。"
+        }
+      },
+      "required": [
+        "event"
+      ]
+    }
+  },
+  {
+    "name": "addClass",
+    "description": "该函数将一个类添加到 DOM 元素。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "dom": {
+          "type": "object",
+          "description": "`dom` 参数的类型为 `Element`，表示要添加该类的 DOM 元素。"
+        },
+        "classNm": {
+          "type": "string",
+          "description": "`classNm` 参数是一个字符串，表示要添加到 `dom` 元素的类的名称。"
+        }
+      },
+      "required": [
+        "dom",
+        "classNm"
+      ]
+    }
+  },
+  {
+    "name": "removeClass",
+    "description": "该函数从给定的 DOM 元素中删除指定的类名。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "dom": {
+          "type": "object",
+          "description": "\"dom\"参数的类型为\"Element\"，表示要从中删除类的 DOM 元素。"
+        },
+        "classNm": {
+          "type": "string",
+          "description": "\"classNm\"参数是一个字符串，表示要从\"dom\"元素中删除的类的名称。"
+        }
+      },
+      "required": [
+        "dom",
+        "classNm"
+      ]
+    }
+  },
+  {
+    "name": "replaceClass",
+    "description": "该函数将给定 DOM 元素上的旧类替换为新类。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "dom": {
+          "type": "object",
+          "description": "`dom` 参数的类型为 `Node`，表示将执行类替换的 DOM 元素。"
+        },
+        "newClass": {
+          "type": "string",
+          "description": "要添加到 DOM 元素的新 CSS 类。"
+        },
+        "oldClass": {
+          "type": "string",
+          "description": "oldClass 参数是一个字符串，表示要替换的类名。"
+        }
+      },
+      "required": [
+        "dom",
+        "newClass",
+        "oldClass"
+      ]
+    }
+  },
+  {
+    "name": "hasClass",
+    "description": "该函数检查元素是否具有特定的类名。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "dom": {
+          "type": "object",
+          "description": "\"dom\"参数的类型为\"Element\"，表示我们要检查其是否存在类的 DOM 元素。"
+        },
+        "classNm": {
+          "type": "string",
+          "description": "\"classNm\"参数是一个字符串，表示您要在\"dom\"元素中检查的类名。"
+        }
+      },
+      "required": [
+        "dom",
+        "classNm"
+      ]
+    }
+  },
+  {
+    "name": "renderTmp",
+    "description": "该函数获取元素的InnerHtml字符串模板,填写好内容并返回",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "selecter": {
+          "type": "string",
+          "description": "css 选择器"
+        },
+        "data": {
+          "type": "any",
+          "description": "`dom` 模板需要的数据"
+        }
+      },
+      "required": [
+        "selecter",
+        "data"
+      ]
+    }
+  },
+  {
+    "name": "transHightLight",
+    "description": "将字符串中的关键词高亮显示。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "str": {
+          "type": "string",
+          "description": "要进行高亮处理的原始字符串。"
+        },
+        "keyWords": {
+          "type": "any",
+          "description": "要高亮的关键字，多个关键字之间可以不使用分隔符。"
+        }
+      },
+      "required": [
+        "str",
+        "keyWords"
+      ]
+    }
+  },
+  {
+    "name": "copyToClipboard",
+    "description": "将文本复制到剪贴板。",
+    "parameters": {
+      "type": "object",
+      "properties": {
+        "text": {
+          "type": "string",
+          "description": "要复制到剪贴板的文本内容。"
+        }
+      },
+      "required": [
+        "text"
+      ]
+    }
+  }
+]

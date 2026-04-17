@@ -8,12 +8,12 @@ interface ParamsInter{
 /**
  * @beta
  * createCache 函数创建一个缓存对象，该对象可以使用指定的存储机制和编码/解码函数来存储和检索数据。
- * @param storage - `storage` 参数是一个可选参数，它指定用于缓存的存储机制。它可以是实现与 localStorage 对象相同接口的任何对象，例如
+ * @param {any} storage - `storage` 参数是一个可选参数，它指定用于缓存的存储机制。它可以是实现与 localStorage 对象相同接口的任何对象，例如
  * sessionStorage 或自定义存储实现。如果没有提供存储对象，则`localStorage`
- * @param parmas -
+ * @param {ParamsInter} [parmas={ encode: (value:any) => value, decode: (value:any) => value }] -
  * "parmas"参数是一个包含两个属性的对象："encode"和"decode"。这些属性是用于在将值存储到缓存之前对值进行编码和解码的函数。
  * 这些函数的默认值是恒等函数，这意味着它们不执行任何编码或解码。
- * @returns 函数"createCache"返回"Cache"类的实例。
+ * @returns {Cache} 函数"createCache"返回"Cache"类的实例。
  *  setCache(key:String,value:Any,expire:超时时间) 设置单个缓存 return undefined
  *  getCache(key:String) 根据传入key获取单个缓存 return undefined
  *  removeCache(key:String)根据传入KEY删除单个缓存 return undefined
@@ -40,9 +40,9 @@ export const createCache = (storage:any,
     }
 
     /**
-     * @param key - 存储key
-     * @param value - 存储值
-     * @param expire - 过期时间(ms)
+     * @param {string} key - 存储key
+     * @param {any} value - 存储值
+     * @param {number} expire - 过期时间(ms)
      */
     setCache (key:string, value:any, expire:number) {
       if (isUndefined(value)) {
@@ -56,8 +56,8 @@ export const createCache = (storage:any,
     }
 
     /**
-     * @param encodeKey - 获取值key
-     * @returns 缓存值或undefined
+     * @param {string} encodeKey - 获取值key
+     * @returns {any} 缓存值或undefined
      */
     getCache (encodeKey:string) {
       //加密key
@@ -80,15 +80,15 @@ export const createCache = (storage:any,
     }
 
     /**
-     * @param key - 删除key
+     * @param {string} key - 删除key
      */
     removeCache (key:string) {
       this.#storage.removeItem(this.#encode(key));
     }
 
     /**
-     * @param key - 是否含有key
-     * @returns 是否存在该key
+     * @param {string} key - 是否含有key
+     * @returns {boolean} 是否存在该key
      */
     has (key:string) {
       return Object.keys(this.#storage).some(item => item === this.#encode(key));
@@ -96,14 +96,14 @@ export const createCache = (storage:any,
 
     /**
  * 该函数返回存储数组的长度。
- * @returns 返回“this.#storage”数组的长度。
+ * @returns {number} 返回"this.#storage"数组的长度。
  */
     length () {
       return this.#storage.length;
     }
 
     /**
-   * “清除”功能清除存储。
+   * "清除"功能清除存储。
    */
     clear () {
       this.#storage.clear();

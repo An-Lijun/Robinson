@@ -1,10 +1,10 @@
 /**
  * @beta
  * 将字符串中的关键词高亮显示。
- * @param str - 要进行高亮处理的原始字符串。
- * @param keyWords - 要高亮的关键字，多个关键字之间可以不使用分隔符。
- * @param color - 高亮显示的颜色，默认为 '#0053db'。
- * @returns 返回一个新的字符串，其中关键字被包裹在带有指定颜色样式的 span 标签中。
+ * @param {string} str - 要进行高亮处理的原始字符串。
+ * @param {string | Array<string>} keyWords - 要高亮的关键字，多个关键字之间可以不使用分隔符。
+ * @param {string} [color='#0053db'] - 高亮显示的颜色，默认为 '#0053db'。
+ * @returns {string} 返回一个新的字符串，其中关键字被包裹在带有指定颜色样式的 span 标签中。
  */
 export function transHightLight (str:string, keyWords:string | Array<string>, color = '#0053db') {
   // 创建一个正则表达式，用于匹配所有关键字
@@ -21,7 +21,7 @@ export function transHightLight (str:string, keyWords:string | Array<string>, co
 /**
  * @beta
  * 将文本复制到剪贴板。
- * @param text - 要复制到剪贴板的文本内容。
+ * @param {string} text - 要复制到剪贴板的文本内容。
  */
 export function copyToClipboard (text:string) {
   // 创建一个临时的 input 元素

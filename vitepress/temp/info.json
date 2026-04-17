@@ -11,6 +11,10 @@
     "folderNm": "web",
     "functionNm": "addNode"
   },
+  "aiversion": {
+    "folderNm": "index",
+    "functionNm": "aiVersion"
+  },
   "asigndata": {
     "folderNm": "function",
     "functionNm": "asignData"
@@ -71,9 +75,17 @@
     "folderNm": "file",
     "functionNm": "downloadByUrl"
   },
+  "formatamt": {
+    "folderNm": "format",
+    "functionNm": "formatAmt"
+  },
   "formatdate": {
     "folderNm": "date",
     "functionNm": "formatDate"
+  },
+  "formatphone": {
+    "folderNm": "format",
+    "functionNm": "formatPhone"
   },
   "getafterdate": {
     "folderNm": "date",
@@ -319,9 +331,41 @@
     "folderNm": "string",
     "functionNm": "isUrl"
   },
+  "manifestversion": {
+    "folderNm": "index",
+    "functionNm": "manifestVersion"
+  },
   "mapping": {
     "folderNm": "function",
     "functionNm": "mapping"
+  },
+  "mask": {
+    "folderNm": "mask",
+    "functionNm": "mask"
+  },
+  "maskaccount": {
+    "folderNm": "mask",
+    "functionNm": "maskAccount"
+  },
+  "maskcard": {
+    "folderNm": "mask",
+    "functionNm": "maskCard"
+  },
+  "maskemail": {
+    "folderNm": "mask",
+    "functionNm": "maskEmail"
+  },
+  "maskidno": {
+    "folderNm": "mask",
+    "functionNm": "maskIdNo"
+  },
+  "masknm": {
+    "folderNm": "mask",
+    "functionNm": "maskNm"
+  },
+  "maskphone": {
+    "folderNm": "mask",
+    "functionNm": "maskPhone"
   },
   "nodetostring": {
     "folderNm": "web",
@@ -375,6 +419,10 @@
     "folderNm": "web",
     "functionNm": "replaceNode"
   },
+  "reverseinsert": {
+    "folderNm": "format",
+    "functionNm": "reverseInsert"
+  },
   "rgbtohex": {
     "folderNm": "color",
     "functionNm": "rgbToHex"
@@ -395,6 +443,10 @@
     "folderNm": "function",
     "functionNm": "throttle"
   },
+  "todbc": {
+    "folderNm": "format",
+    "functionNm": "toDBC"
+  },
   "torgbastring": {
     "folderNm": "color",
     "functionNm": "toRgbaString"
@@ -403,9 +455,17 @@
     "folderNm": "web",
     "functionNm": "transHightLight"
   },
+  "trimstr": {
+    "folderNm": "format",
+    "functionNm": "trimStr"
+  },
   "unbind": {
     "folderNm": "web",
     "functionNm": "unBind"
+  },
+  "unformatamt": {
+    "folderNm": "format",
+    "functionNm": "unFormatAmt"
   },
   "urltobase64": {
     "folderNm": "file",

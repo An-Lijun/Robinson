@@ -281,3 +281,28 @@ npm run test
 2. 生态建设 ：提供更多插件和扩展
 3. 社区建设 ：增加贡献指南和开发者文档
 ## 总结
+
+
+# 结合Ai
+
+// 方法 1：直接读取 JSON 文件
+const manifest = require('robinson/dist/ai/manifest.json');
+
+// 方法 2：使用动态导入（ESM）
+import manifest from 'robinson/dist/ai/manifest.json';
+
+const { OpenAI } = require('openai');
+const tools = require('robinson/dist/ai/openai-tools.json');
+
+const openai = new OpenAI({ apiKey: 'your-api-key' });
+
+async function runWithAI(userQuery) {
+  const response = await openai.chat.completions.create({
+    model: 'gpt-4',
+    messages: [{ role: 'user', content: userQuery }],
+    tools: tools,
+    tool_choice: 'auto'
+  });
+  
+  // 处理 AI 响应和工具调用
+}

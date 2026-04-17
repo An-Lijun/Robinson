@@ -3,8 +3,8 @@ import Big from 'big.js';
 /**
  * @beta
  *  字符去空格格式化
- * @param  str - 需要去空格的字符串。
- * @returns  - 去除空格后的字符串。
+ * @param {string} str - 需要去空格的字符串。
+ * @returns {string} - 去除空格后的字符串。
  * @example
  * trimStr("Hello World");// 返回 "HelloWorld"
  */
@@ -15,10 +15,10 @@ export function trimStr (str: string) {
 /**
  * @beta
  *  从末尾开始插入
- * @param  str - 需要处理的字符串。
- * @param  space - 间隔。
- * @param  insertStr - 要插入的内容。
- * @returns  - 处理后的字符串。
+ * @param {string} str - 需要处理的字符串。
+ * @param {number} space - 间隔。
+ * @param {string} insertStr - 要插入的内容。
+ * @returns {string} - 处理后的字符串。
  * @example
  * reverseInsert("123456789", 3, " "); // 返回 "123 456 789"
  */
@@ -42,10 +42,10 @@ export function reverseInsert (str: string, space: number, insertStr: string) {
 /**
  * @beta
  *  格式化金额
- * @param  value - 数字。
- * @param  decimalLen - 保留小数位数,默认值为2。
- * @param  splitStr - 间隔符，默认值为","。
- * @returns  - 格式化后的金额。
+ * @param {string | number} [value] - 数字。
+ * @param {number} [decimalLen=2] - 保留小数位数,默认值为2。
+ * @param {string} [splitStr=','] - 间隔符，默认值为","。
+ * @returns {string} - 格式化后的金额。
  * @example
  * formatAmt(1234.5678);// 返回 "1,234.56"
  */
@@ -66,9 +66,9 @@ export function formatAmt (value?: string | number, decimalLen = 2, splitStr = '
 /**
  * @beta
  *  去格式化
- * @param  val - 去格式化内容。
- * @param  splitStr - 去除分隔符默认','。
- * @returns  - 去除格式化后的金额。
+ * @param {string | number} val - 去格式化内容。
+ * @param {string} [splitStr=','] - 去除分隔符默认','。
+ * @returns {string} - 去除格式化后的金额。
  * @example
  * unFormatAmt("123,456.78");  // 返回 "123456.78"
  */
@@ -80,8 +80,8 @@ export function unFormatAmt (val: string | number, splitStr = ',') {
 /**
  * @beta
  *  将输入字符串转为全角字符
- * @param  str - 需要转换的字符串。
- * @returns  - 转换后的全角字符。
+ * @param {string} str - 需要转换的字符串。
+ * @returns {string} - 转换后的全角字符。
  * @example
  * toDBC("Hello World");  // 返回 "Ｈｅｌｌｏ　Ｗｏｒｌｄ"
  */
@@ -102,8 +102,8 @@ export function toDBC (str: string) {
 /**
  * @beta
  *  格式化手机号
- * @param  phone - 手机号。
- * @returns  - 格式化后的手机号。
+ * @param {number | string} phone - 手机号。
+ * @returns {string} - 格式化后的手机号。
  * @example
  * // 返回 "1234 5678"  formatPhone(12345678);
  */

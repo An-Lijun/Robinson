@@ -4,8 +4,8 @@ import { isEmpty } from '../../common/index';
 /**
  * @beta
  * 接受一个任意类型判断该类型是否是数组并返回。
- * @param value - 参数"value"的类型为"any"，这意味着它可以接受任何数据类型。
- * @returns 一个布尔值。
+ * @param {any} value - 参数"value"的类型为"any"，这意味着它可以接受任何数据类型。
+ * @returns {boolean} 一个布尔值。
  * @example
  * ```javascript
  *    let a ="789";
@@ -21,8 +21,8 @@ export function isArray (value:any):boolean {
 /**
  * @beta
  * 函数“getRelArray”接受一个数组作为输入，并返回一个包含所有非空元素的新数组。
- * @param array - 参数“array”是任意类型的数组。
- * @returns 过滤掉空数据的新数组。
+ * @param {Array<any>} array - 参数“array”是任意类型的数组。
+ * @returns {Array<any>} 过滤掉空数据的新数组。
  * @example
  * ```JavaScript
  *    let arr =[1,2,3,null,undefined,4,[],{},NaN];
@@ -37,9 +37,9 @@ export function getRelArray (array:Array<any>):Array<any> {
 /**
  * @beta
  * `chunkArray` 函数接受一个数组和一个大小参数，并返回一个新数组，其中原始数组被分割成指定大小的较小数组。
- * @param array - `array` 参数是任何类型的数组。它是需要被分成更小的数组的数组。
- * @param size - "size"参数指定数组每个块中应包含的元素数量。默认情况下，它设置为 1，这意味着每个元素将位于其自己的单独块中。
- * @returns 数组的数组。每个内部数组都包含原始数组中的一块元素。每个块的大小由"size"参数确定。
+ * @param {T[]} array - `array` 参数是任何类型的数组。它是需要被分成更小的数组的数组。
+ * @param {number} size - "size"参数指定数组每个块中应包含的元素数量。默认情况下，它设置为 1，这意味着每个元素将位于其自己的单独块中。
+ * @returns {T[][]} 数组的数组。每个内部数组都包含原始数组中的一块元素。每个块的大小由"size"参数确定。
  * @example
  * ```JavaScript
  * let a=[1,2,3,4,5,6]
@@ -67,9 +67,9 @@ export function getChunkArray<T>(array: T[], size: number = 1): T[][] {
  * @beta
  * 函数 `getToggleArray` 接受一个数组和一个项目，
  * 如果数组包含该项目则移除它，如果不包含则添加它，返回处理后的新数组。
- * @param array - 要处理的数组
- * @param item - 要切换的项目
- * @returns 处理后的新数组
+ * @param {T[]} array - 要处理的数组
+ * @param {T} item - 要切换的项目
+ * @returns {T[]} 处理后的新数组
  * @example
  * ```JavaScript
  * let arr = [1, 2, 3];
@@ -99,9 +99,9 @@ export function getToggleArray<T>(array: T[], item: T): T[] {
 
 /**
  * 深度比较两个值是否相等
- * @param  a - 第一个值
- * @param  b - 第二个值
- * @returns  是否相等
+ * @param {any} a - 第一个值
+ * @param {any} b - 第二个值
+ * @returns {boolean} 是否相等
  */
 function isEqual(a: any, b: any): boolean {
   // 处理 NaN
@@ -136,8 +136,8 @@ function isEqual(a: any, b: any): boolean {
 /**
  * @beta
  * 从数组中提取唯一值（去重）
- * @param array - 原数组
- * @returns 去重后的新数组
+ * @param {T[]} array - 原数组
+ * @returns {T[]} 去重后的新数组
  * @example
  * ```JavaScript
  * getUniqueValues([1, 2, 2, 3, 3, 3]); // [1, 2, 3]
@@ -170,9 +170,9 @@ export function getUniqueValues<T>(array: T[]): T[] {
 /**
  * @beta
  * 根据指定的键或条件将数组元素分组
- * @param array - 原数组
- * @param groupBy - 分组键或分组函数
- * @returns 分组后的二维数组，每个子数组代表一个分组
+ * @param {T[]} array - 原数组
+ * @param {keyof T | ((item: T) => string | number)} groupBy - 分组键或分组函数
+ * @returns {T[][]} 分组后的二维数组，每个子数组代表一个分组
  * @example
  * ```JavaScript
  * // 根据属性分组
